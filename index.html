@@ -6,65 +6,167 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       background-color: #f5f5f5;
-      text-align: center;
+      color: #333;
     }
+
+    /* HEADER */
     header {
-      background-color: black;
-      color: white;
-      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background-color: #000;
     }
     header img {
-      height: 150px;
+      height: 70px;
     }
-    .container {
-      padding: 40px 20px;
-    }
-    .brand-btn {
-      display: block;
-      margin: 15px auto;
-      padding: 15px;
-      width: 250px;
-      background-color: white;
-      color: black;
+    nav a {
+      color: white;
       text-decoration: none;
-      border-radius: 8px;
+      margin-left: 20px;
       font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      font-size: 14px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+      height: 350px;
+      background: url('TU-FONDO-HERO.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    /* CATEGORÍAS */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .category-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
-    .brand-btn:hover {
-      background-color: black;
+    .category-card:hover {
+      transform: translateY(-5px);
+      background: black;
       color: white;
     }
+    .category-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 50%;
+    }
+
+    /* BOTÓN WHATSAPP */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 18px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    /* FOOTER */
     footer {
       background: #111;
       color: white;
-      padding: 20px;
-      margin-top: 40px;
+      text-align: center;
+      padding: 25px;
       font-size: 14px;
+    }
+    footer a {
+      color: #25D366;
+      text-decoration: none;
+      margin: 0 8px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <img src="Logo.png" alt="SC Parfums">
-  <h1>SC Parfums</h1>
-  <p>Catálogo Oficial</p>
+  <img src="TU-LOGO.png" alt="SC Parfums">
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="arabes.html">Árabes</a>
+    <a href="disenador.html">Diseñador</a>
+    <a href="nicho.html">Nicho</a>
+    <a href="decants.html">Decants</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
-<div class="container">
-  <a href="lattafa.html" class="brand-btn">Lattafa</a>
-  <a href="armaf.html" class="brand-btn">Armaf</a>
-  <a href="afnan.html" class="brand-btn">Afnan</a>
-  <a href="decants.html" class="brand-btn">Decants</a>
-</div>
+<section class="hero">
+  <div class="hero-text">Perfumes originales al mejor precio<br>Catálogo actualizado y atención personalizada</div>
+</section>
+
+<section class="categories">
+  <a href="arabes.html" class="category-card">
+    <img src="icon-arabes.png" alt="Árabes">
+    Árabes
+  </a>
+  <a href="disenador.html" class="category-card">
+    <img src="icon-disenador.png" alt="Diseñador">
+    Diseñador
+  </a>
+  <a href="nicho.html" class="category-card">
+    <img src="icon-nicho.png" alt="Nicho">
+    Nicho
+  </a>
+  <a href="decants.html" class="category-card">
+    <img src="icon-decants.png" alt="Decants">
+    Decants
+  </a>
+</section>
+
+<a class="whatsapp-btn" href="https://wa.me/595991861112" target="_blank">💬</a>
 
 <footer>
-  © 2026 SC Parfums - Precios sujetos a disponibilidad.
+  © 2026 SC Parfums | Paraguay<br>
+  Productos 100% originales | Medios de pago disponibles<br>
+  Seguinos en 
+  <a href="https://www.instagram.com/scparfums/">Instagram</a> |
+  <a href="https://www.tiktok.com/@scparfums">TikTok</a>
 </footer>
 
 </body>
