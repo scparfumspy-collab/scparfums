@@ -9,41 +9,41 @@
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f5f5f5;
+      text-align: center;
     }
     header {
       background-color: black;
       color: white;
       padding: 20px;
-      text-align: center;
+    }
+    header img {
+      height: 150px;
     }
     .container {
-      padding: 20px;
+      padding: 40px 20px;
     }
-    .product {
-      background: white;
+    .brand-btn {
+      display: block;
+      margin: 15px auto;
       padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-    .price {
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    .whatsapp-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #25D366;
-      color: white;
+      width: 250px;
+      background-color: white;
+      color: black;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .brand-btn:hover {
+      background-color: black;
+      color: white;
     }
     footer {
-      text-align: center;
-      padding: 20px;
       background: #111;
       color: white;
-      margin-top: 30px;
+      padding: 20px;
+      margin-top: 40px;
       font-size: 14px;
     }
   </style>
@@ -51,31 +51,16 @@
 <body>
 
 <header>
-  <img src="Logo.png" alt="SC Parfums" style="height:150px; display:block; margin: 0 auto;">
+  <img src="Logo.png" alt="SC Parfums">
   <h1>SC Parfums</h1>
   <p>Catálogo Oficial</p>
 </header>
 
 <div class="container">
-  
-  <div class="product">
-    <h2>Lattafa Fakhar Black</h2>
-    <p>Fragancia aromática fresca ideal para uso diario.</p>
-    <div class="price">Gs. 150.000</div>
-    <a class="whatsapp-btn" href="https://wa.me/595991861112" target="_blank">
-      Consultar por WhatsApp
-    </a>
-  </div>
-
-  <div class="product">
-    <h2>Yara Tous - Lattafa</h2>
-    <p>Aroma tropical con notas de mango y maracuyá.</p>
-    <div class="price">Gs. 145.000</div>
-    <a class="whatsapp-btn" href="https://wa.me/595991861112" target="_blank">
-      Consultar por WhatsApp
-    </a>
-  </div>
-
+  <a href="lattafa.html" class="brand-btn">Lattafa</a>
+  <a href="armaf.html" class="brand-btn">Armaf</a>
+  <a href="afnan.html" class="brand-btn">Afnan</a>
+  <a href="decants.html" class="brand-btn">Decants</a>
 </div>
 
 <footer>
