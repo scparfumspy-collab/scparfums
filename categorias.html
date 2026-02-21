@@ -93,6 +93,14 @@ font-size: 18px;
 box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 transition: all 0.3s ease;
 }
+
+.category-card img {
+  width: 120px;        /* ancho fijo */
+  height: 120px;       /* alto fijo */
+  object-fit: cover;   /* recorta para que no se deforme */
+  margin-bottom: 10px; /* espacio entre la imagen y el texto */
+  border-radius: 50%;  /* opcional: hace la imagen circular */
+}
 .category-card:hover {
 transform: translateY(-8px);
 background: black;
