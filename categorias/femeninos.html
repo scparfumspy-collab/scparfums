@@ -39,6 +39,21 @@
       outline: none;
       font-size: 14px;
     }
+    .hero {
+  height: 200px; /* altura moderada, no demasiado grande */
+  background: #ddd; /* color de fondo temporal, luego lo reemplazamos por imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+  position: relative;
+}
+.hero-text {
+  font-size: 32px;   /* tamaño grande pero no exagerado */
+  font-weight: 600;
+  letter-spacing: 1px;
+}
     .layout {
       display: flex;
       max-width: 1200px;
@@ -116,7 +131,9 @@
     <input type="text" placeholder="Buscar fragancia...">
   </div>
 </header>
-
+<section class="hero">
+  <div class="hero-text">Fragancias Femeninas</div>
+</section>
 <section class="layout">
   <aside class="sidebar">
     <h3>Marcas</h3>
