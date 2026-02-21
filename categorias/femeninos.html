@@ -185,8 +185,13 @@
   
 <script>
   async function cargarPerfumes() {
+    // 1. Cargar catálogo local
     const respuesta = await fetch('../data/perfumes.json');
     const perfumes = await respuesta.json();
+
+    // 2. Cargar precios desde Google Sheets (Apps Script URL)
+    const preciosResp = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AY5xjrS54yBigaOrTe_4OMYYk-jmekyniG8BjqdIddXCV7yuvAOjR_CcgbLFd1tlZemTsghtmWbihlRy_SJ5Jal48v_Q93nr3tp_C8M15TDYvoL7pj99P__tTj-edabrOTpIHft-JpQidCl1VFYoPt_re2bxw9wy_d_KMtp_2mOwuvTUHRZsN-gT81AfAueJTyOC_o4WeUNHz3ba6QuBM-Q58E2E-38e-8ElKNkqO4X57oxpLuchDDPGy6HzvUeLZBgMVmdevEv8taXiUuNtNxgHs6w68B7Yew&lib=MuhGdpCHVbtWl3sQABjAfXWqugQwYPpB1");
+    const precios = await preciosResp.json();
 
     const contenedor = document.getElementById('perfume-list');
     const sidebar = document.querySelector('.sidebar');
@@ -206,6 +211,13 @@
       const perfumesPagina = femeninos.slice(inicio, fin);
 
       perfumesPagina.forEach(perfume => {
+        // Buscar precio por ID
+        const precioData = precios.find(pr => pr.id === perfume.id);
+        let precio = "Consultar";
+        if (precioData && precioData.precio) {
+          precio = "₲ " + Number(precioData.precio).toLocaleString("es-PY");
+        }
+
         const tarjeta = document.createElement('div');
         tarjeta.className = 'perfume-card';
         tarjeta.setAttribute('data-marca', perfume.marca);
@@ -214,7 +226,7 @@
           <a href="../${perfume.pagina}">
             <img src="../${perfume.imagen}" alt="${perfume.nombre}">
             <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-            <p class="precio">${perfume.precio}</p>
+            <p class="precio">${precio}</p>
           </a>
         `;
         contenedor.appendChild(tarjeta);
@@ -299,6 +311,13 @@
           const perfumesPagina = filtrados.slice(inicio, fin);
 
           perfumesPagina.forEach(perfume => {
+            // Buscar precio por ID
+            const precioData = precios.find(pr => pr.id === perfume.id);
+            let precio = "Consultar";
+            if (precioData && precioData.precio) {
+              precio = "₲ " + Number(precioData.precio).toLocaleString("es-PY");
+            }
+
             const tarjeta = document.createElement('div');
             tarjeta.className = 'perfume-card';
             tarjeta.setAttribute('data-marca', perfume.marca);
@@ -307,7 +326,7 @@
               <a href="../${perfume.pagina}">
                 <img src="../${perfume.imagen}" alt="${perfume.nombre}">
                 <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-                <p class="precio">${perfume.precio}</p>
+                <p class="precio">${precio}</p>
               </a>
             `;
             contenedor.appendChild(tarjeta);
@@ -363,6 +382,7 @@
 
   cargarPerfumes();
 </script>
+
  
 </body>
 </html>
