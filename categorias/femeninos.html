@@ -189,29 +189,76 @@
     const perfumes = await respuesta.json();
 
     const contenedor = document.getElementById('perfume-list');
+    const sidebar = document.querySelector('.sidebar');
     contenedor.innerHTML = '';
 
-    perfumes
-      .filter(perfume => perfume.categoria === "femeninos") // solo femeninos
-      .forEach(perfume => {
-        const tarjeta = document.createElement('div');
-        tarjeta.className = 'perfume-card';
-        tarjeta.setAttribute('data-marca', perfume.marca);
+    // Filtrar solo perfumes femeninos
+    const femeninos = perfumes.filter(p => p.categoria === "femeninos");
 
-        tarjeta.innerHTML = `
-          <a href="../${perfume.pagina}">
-            <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-            <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-            <p class="precio">${perfume.precio}</p>
-          </a>
-        `;
+    // Crear tarjetas
+    femeninos.forEach(perfume => {
+      const tarjeta = document.createElement('div');
+      tarjeta.className = 'perfume-card';
+      tarjeta.setAttribute('data-marca', perfume.marca);
 
-        contenedor.appendChild(tarjeta);
+      tarjeta.innerHTML = `
+        <a href="../${perfume.pagina}">
+          <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+          <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+          <p class="precio">${perfume.precio}</p>
+        </a>
+      `;
+      contenedor.appendChild(tarjeta);
+    });
+
+    // Crear lista de marcas únicas
+    const marcasUnicas = [...new Set(femeninos.map(p => p.marca))];
+    const marcasContainer = document.createElement('div');
+    marcasContainer.innerHTML = "<h3>Marcas</h3>";
+
+    marcasUnicas.forEach(marca => {
+      const label = document.createElement('label');
+      label.innerHTML = `<input type="checkbox" value="${marca}"> ${marca}`;
+      marcasContainer.appendChild(label);
+    });
+
+    // Reemplazar contenido de la sidebar
+    sidebar.innerHTML = '';
+    sidebar.appendChild(marcasContainer);
+
+    // Agregar evento de filtrado
+    const checkboxes = marcasContainer.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const seleccionadas = [...checkboxes]
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        // Limpiar tarjetas
+        contenedor.innerHTML = '';
+
+        femeninos
+          .filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca))
+          .forEach(perfume => {
+            const tarjeta = document.createElement('div');
+            tarjeta.className = 'perfume-card';
+            tarjeta.setAttribute('data-marca', perfume.marca);
+
+            tarjeta.innerHTML = `
+              <a href="../${perfume.pagina}">
+                <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+                <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+                <p class="precio">${perfume.precio}</p>
+              </a>
+            `;
+            contenedor.appendChild(tarjeta);
+          });
       });
+    });
   }
 
   cargarPerfumes();
 </script>
-  
+ 
 </body>
 </html>
