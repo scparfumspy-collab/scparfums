@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Afnan 9AM Dive Blue EDP 90ml Unisex</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <div class="detalle-perfume">
+    <h1>Afnan 9AM Dive Blue EDP 90ml Unisex</h1>
+    <img src="../imagenes/perfumes/afnan-9am-dive-blue-edp-90ml-unisex.png" alt="Afnan 9AM Dive Blue EDP 90ml Unisex">
+    
+    <!-- Aquí se mostrará el precio dinámico -->
+    <p id="precio-perfume" class="precio"></p>
+
+    <!-- Información descriptiva -->
+    <p><strong>Notas de salida:</strong> Bergamota, Pomelo</p>
+    <p><strong>Notas de corazón:</strong> Lavanda, Menta</p>
+    <p><strong>Notas de fondo:</strong> Ámbar, Madera de cedro</p>
+    <p><strong>Descripción:</strong> Una fragancia fresca y vibrante, ideal para uso diario y ocasiones casuales.</p>
+  </div>
+
+  <script>
+  async function cargarDetalle() {
+    // ID del perfume actual (debe coincidir con el de tu Sheets y catalogo.json)
+    const perfumeId = "afnan-9am-dive-blue-edp-90ml-unisex";
+
+    // 1. Cargar precios desde Google Sheets (Apps Script URL)
+    const preciosResp = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AY5xjrS54yBigaOrTe_4OMYYk-jmekyniG8BjqdIddXCV7yuvAOjR_CcgbLFd1tlZemTsghtmWbihlRy_SJ5Jal48v_Q93nr3tp_C8M15TDYvoL7pj99P__tTj-edabrOTpIHft-JpQidCl1VFYoPt_re2bxw9wy_d_KMtp_2mOwuvTUHRZsN-gT81AfAueJTyOC_o4WeUNHz3ba6QuBM-Q58E2E-38e-8ElKNkqO4X57oxpLuchDDPGy6HzvUeLZBgMVmdevEv8taXiUuNtNxgHs6w68B7Yew&lib=MuhGdpCHVbtWl3sQABjAfXWqugQwYPpB1");
+    const precios = await preciosResp.json();
+
+    // 2. Buscar precio por ID
+    const precioData = precios.find(pr => pr.id === perfumeId);
+    let precio = "Consultar";
+    if (precioData && precioData.precio) {
+      precio = "₲ " + Number(precioData.precio).toLocaleString("es-PY");
+    }
+
+    // 3. Insertar en el HTML
+    document.getElementById("precio-perfume").textContent = precio;
+  }
+
+  cargarDetalle();
+  </script>
+</body>
+</html>
