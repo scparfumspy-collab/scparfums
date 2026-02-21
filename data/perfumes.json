@@ -1,90 +1,74 @@
 [
+{
+  "id": "afnan-9am-dive-blue-edp-90ml-unisex",
+  "nombre": "Afnan 9AM Dive Blue EDP 90ml Unisex",
+  "marca": "Afnan",
+  "imagen": "imagenes/perfumes/afnan-9am-dive-blue-edp-90ml-unisex.png",
+  "pagina": "perfumes/afnan-9am-dive-blue-edp-90ml-unisex.html",
+  "categoria": "unisex"
+},
   {
-    "nombre": "Nº5",
-    "marca": "Chanel",
-    "imagen": "imagenes/perfumes/chanel-no5.png",
-    "pagina": "perfumes/chanel-no5.html",
-    "precio": "850.000 Gs",
-    "categoria": "femeninos"
-  },
-  {
-    "nombre": "J'adore",
-    "marca": "Dior",
-    "imagen": "imagenes/perfumes/jadore.png",
-    "pagina": "perfumes/jadore.html",
-    "precio": "780.000 Gs",
-    "categoria": "femeninos"
-  },
-  {
-    "nombre": "La Vie Est Belle",
-    "marca": "Lancôme",
-    "imagen": "imagenes/perfumes/la-vie-est-belle.png",
-    "pagina": "perfumes/la-vie-est-belle.html",
-    "precio": "720.000 Gs",
-    "categoria": "femeninos"
-  },
-  {
+    "id": "lattafa-petra-edp-100ml",
     "nombre": "Petra EDP 100ML",
     "marca": "Lattafa",
     "imagen": "imagenes/perfumes/lattafa-petra.png",
     "pagina": "perfumes/lattafa-petra.html",
-    "precio": "180.000 Gs",
     "categoria": "femeninos"
   },
   {
+    "id": "armaf-odyssey-candee",
     "nombre": "Odyssey Candee EDP 100ML",
     "marca": "Armaf",
     "imagen": "imagenes/perfumes/odyssey-candee.png",
     "pagina": "perfumes/odyssey-candee.html",
-    "precio": "170.000 Gs",
     "categoria": "femeninos"
   },
    {
-    "nombre": "Odyssey Mandarin Sky EDP 100ML",
+    "id": "armaf-odyssey-mandarin-sky-edp-100ml",
+     "nombre": "Odyssey Mandarin Sky EDP 100ML",
     "marca": "Armaf",
     "imagen": "imagenes/perfumes/odyssey-mandarinsky.png",
     "pagina": "perfumes/odyssey-mandarinsky.html",
-    "precio": "180.000 Gs",
     "categoria": "masculinos"
      },
   {
+    "id": "al-whataniah-sabah-al-ward",
   "nombre": "Sabah Al Ward EDP 100ML",
     "marca": "AL Wataniah",
     "imagen": "imagenes/perfumes/sabah-al-ward.png",
     "pagina": "perfumes/sabah-al-ward.html",
-    "precio": "165.000 Gs",
     "categoria": "femeninos"
   },
   {
+    "id": "j.p.g-le-male-elixir-edp-mas-125ml",
    "nombre": "Le Male Elixir EDP 125ML",
     "marca": "Jean Paul Gaultier",
     "imagen": "imagenes/perfumes/le-male-elixir.png",
     "pagina": "perfumes/le-male-elixir.html",
-    "precio": "720.000 Gs",
     "categoria": "masculinos"
   },
    {
+     "id": "lattafa-khamrah-edp-100ml-unisex",
    "nombre": "Khamrah EDP 100ML",
     "marca": "Lattafa",
     "imagen": "imagenes/perfumes/khamrah.png",
     "pagina": "perfumes/khamrah.html",
-    "precio": "150.000 Gs",
     "categoria": "unisex"
   },
    {
+     "id": "maison-alhambra-philos-pura",
    "nombre": "Philos Pura EDP 100ML",
     "marca": "Maison Alhambra",
     "imagen": "imagenes/perfumes/philos-pura.png",
     "pagina": "perfumes/philos-pura.html",
-    "precio": "160.000 Gs",
     "categoria": "unisex"
   },
    {
+     "id": "maison-alhambra-jean-lowe-immortel-",
    "nombre": "Jean Lowe Immortel EDP 100ML",
     "marca": "Maison Alhambra",
     "imagen": "imagenes/perfumes/jean-lowe-immortel.png",
     "pagina": "perfumes/jean-lowe-immortel.html",
-    "precio": "180.000 Gs",
     "categoria": "masculinos"
   }
 ]
