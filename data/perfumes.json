@@ -1,30 +1,30 @@
 [
   {
-    "nombre": "Chanel Nº5",
+    "nombre": "Nº5",
     "marca": "Chanel",
     "imagen": "imagenes/perfumes/chanel-no5.png",
     "pagina": "perfumes/chanel-no5.html",
-    "precio": "120 USD"
+    "precio": "850.000 Gs"
   },
   {
     "nombre": "J'adore",
     "marca": "Dior",
     "imagen": "imagenes/perfumes/jadore.png",
     "pagina": "perfumes/jadore.html",
-    "precio": "110 USD"
+    "precio": "780.000 Gs"
   },
   {
     "nombre": "La Vie Est Belle",
     "marca": "Lancôme",
     "imagen": "imagenes/perfumes/la-vie-est-belle.png",
     "pagina": "perfumes/la-vie-est-belle.html",
-    "precio": "95 USD"
+    "precio": "720.000 Gs"
   }
    {
-    "nombre": "Lattafa Petra EDP 100ML",
+    "nombre": "Petra EDP 100ML",
     "marca": "Lattafa",
     "imagen": "imagenes/perfumes/lattafa-petra.png",
     "pagina": "perfumes/lattafa-petra.html",
-    "precio": "95 USD"
+    "precio": "180.000 Gs"
   }
 ]
