@@ -62,5 +62,29 @@
     "pagina": "perfumes/le-male-elixir.html",
     "precio": "720.000 Gs",
     "categoria": "masculinos"
+  },
+   {
+   "nombre": "Khamrah EDP 100ML",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/khamrah.png",
+    "pagina": "perfumes/khamrah.html",
+    "precio": "150.000 Gs",
+    "categoria": "unisex"
+  },
+   {
+   "nombre": "Philos Pura EDP 100ML",
+    "marca": "Maison Alhambra",
+    "imagen": "imagenes/perfumes/philos-pura.png",
+    "pagina": "perfumes/philos-pura.html",
+    "precio": "160.000 Gs",
+    "categoria": "unisex"
+  },
+   {
+   "nombre": "Jean Lowe Immortel EDP 100ML",
+    "marca": "Maison Alhambra",
+    "imagen": "imagenes/perfumes/jean-lowe-immortel.png",
+    "pagina": "perfumes/jean-lowe-immortel.html",
+    "precio": "180.000 Gs",
+    "categoria": "masculinos"
   }
 ]
