@@ -20,4 +20,11 @@
     "pagina": "perfumes/la-vie-est-belle.html",
     "precio": "95 USD"
   }
+   {
+    "nombre": "Lattafa Petra EDP 100ML",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-petra.png",
+    "pagina": "perfumes/lattafa-petra.html",
+    "precio": "95 USD"
+  }
 ]
