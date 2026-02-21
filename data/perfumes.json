@@ -47,6 +47,7 @@
     "precio": "180.000 Gs",
     "categoria": "masculinos"
      },
+  {
   "nombre": "Sabah Al Ward EDP 100ML",
     "marca": "AL Wataniah",
     "imagen": "imagenes/perfumes/sabah-al-ward.png",
@@ -54,6 +55,7 @@
     "precio": "165.000 Gs",
     "categoria": "femeninos"
   },
+  {
    "nombre": "Le Male Elixir EDP 125ML",
     "marca": "Jean Paul Gaultier",
     "imagen": "imagenes/perfumes/le-male-elixir.png",
