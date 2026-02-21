@@ -145,21 +145,10 @@
     <!-- más marcas -->
   </aside>
 
-  <main class="perfumes">
-    <div class="perfume-card" data-marca="Chanel">
-      <img src="../imagenes/perfumes/chanel-no5.png" alt="Chanel Nº5">
-      Chanel Nº5
-    </div>
-    <div class="perfume-card" data-marca="Dior">
-      <img src="../imagenes/perfumes/jadore.png" alt="J'adore Dior">
-      J'adore Dior
-    </div>
-    <div class="perfume-card" data-marca="Lancôme">
-      <img src="../imagenes/perfumes/la-vie-est-belle.png" alt="La Vie Est Belle">
-      La Vie Est Belle
-    </div>
-    <!-- más perfumes -->
+  <main class="perfumes" id="perfume-list">
+    <!-- Aquí se insertarán las tarjetas dinámicamente -->
   </main>
+</section>
 </section>
 
 <footer>
@@ -171,6 +160,33 @@
   <a href="https://www.tiktok.com/@scparfums">TikTok</a> |
   <a href="https://wa.me/595991861112">WhatsApp</a>
 </footer>
+  
+<script>
+  async function cargarPerfumes() {
+    const respuesta = await fetch('../data/perfumes.json');
+    const perfumes = await respuesta.json();
 
+    const contenedor = document.getElementById('perfume-list');
+    contenedor.innerHTML = '';
+
+    perfumes.forEach(perfume => {
+      const tarjeta = document.createElement('div');
+      tarjeta.className = 'perfume-card';
+      tarjeta.setAttribute('data-marca', perfume.marca);
+
+      tarjeta.innerHTML = `
+        <a href="../${perfume.pagina}">
+          <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+          <p>${perfume.nombre}</p>
+        </a>
+      `;
+
+      contenedor.appendChild(tarjeta);
+    });
+  }
+
+  cargarPerfumes();
+</script>
+  
 </body>
 </html>
