@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Chanel Nº5",
+    "marca": "Chanel",
+    "imagen": "imagenes/perfumes/chanel-no5.png",
+    "pagina": "perfumes/chanel-no5.html"
+  },
+  {
+    "nombre": "J'adore",
+    "marca": "Dior",
+    "imagen": "imagenes/perfumes/jadore.png",
+    "pagina": "perfumes/jadore.html"
+  },
+  {
+    "nombre": "La Vie Est Belle",
+    "marca": "Lancôme",
+    "imagen": "imagenes/perfumes/la-vie-est-belle.png",
+    "pagina": "perfumes/la-vie-est-belle.html"
+  }
+]
