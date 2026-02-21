@@ -102,9 +102,13 @@
     }
     .perfume-card p {
   margin: 5px 0;
+  font-size: 14px;
 }
 .perfume-card p strong {
-  color: #d32f2f; /* rojo elegante */
+  color: #000; /* marca en negro */
+}
+.perfume-card p:last-child strong {
+  color: #d32f2f; /* precio en rojo */
   font-size: 16px;
 }
     footer {
@@ -181,10 +185,10 @@
       tarjeta.className = 'perfume-card';
       tarjeta.setAttribute('data-marca', perfume.marca);
 
-      tarjeta.innerHTML = `
+  tarjeta.innerHTML = `
   <a href="../${perfume.pagina}">
     <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-    <p>${perfume.nombre}</p>
+    <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
     <p><strong>${perfume.precio}</strong></p>
   </a>
 `;
