@@ -93,23 +93,34 @@
     .perfume-card:hover {
       transform: translateY(-5px);
     }
-    .perfume-card img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      margin-bottom: 10px;
-      border-radius: 50%;
-    }
-    .perfume-card p {
+   .perfume-card img {
+  width: 150px;   /* antes 120px */
+  height: 150px;  /* antes 120px */
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.perfume-card a {
+  text-decoration: none;   /* quita subrayado */
+  color: inherit;          /* usa el color del texto normal */
+  display: block;          /* hace que todo el bloque sea clickeable */
+}
+
+.perfume-card p {
   margin: 5px 0;
   font-size: 14px;
+  color: #000; /* todo en negro por defecto */
 }
+
 .perfume-card p strong {
-  color: #000; /* marca en negro */
+  font-weight: bold; /* marca en negrita */
 }
-.perfume-card p:last-child strong {
-  color: #d32f2f; /* precio en rojo */
+
+.perfume-card p.precio {
+  color: #d32f2f; /* rojo para el precio */
   font-size: 16px;
+  font-weight: bold;
 }
     footer {
       background: #111;
@@ -185,13 +196,13 @@
       tarjeta.className = 'perfume-card';
       tarjeta.setAttribute('data-marca', perfume.marca);
 
-  tarjeta.innerHTML = `
-  <a href="../${perfume.pagina}">
-    <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-    <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-    <p><strong>${perfume.precio}</strong></p>
-  </a>
-`;
+      tarjeta.innerHTML = `
+        <a href="../${perfume.pagina}">
+          <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+          <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+          <p class="precio">${perfume.precio}</p>
+        </a>
+      `;
 
       contenedor.appendChild(tarjeta);
     });
