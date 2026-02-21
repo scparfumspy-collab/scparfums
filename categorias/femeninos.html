@@ -195,23 +195,78 @@
     // Filtrar solo perfumes femeninos
     const femeninos = perfumes.filter(p => p.categoria === "femeninos");
 
-    // Crear tarjetas
-    femeninos.forEach(perfume => {
-      const tarjeta = document.createElement('div');
-      tarjeta.className = 'perfume-card';
-      tarjeta.setAttribute('data-marca', perfume.marca);
+    // Configuración de paginación
+    const perfumesPorPagina = 20;
+    let paginaActual = 1;
 
-      tarjeta.innerHTML = `
-        <a href="../${perfume.pagina}">
-          <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-          <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-          <p class="precio">${perfume.precio}</p>
-        </a>
-      `;
-      contenedor.appendChild(tarjeta);
-    });
+    function mostrarPagina(pagina) {
+      contenedor.innerHTML = '';
+      const inicio = (pagina - 1) * perfumesPorPagina;
+      const fin = inicio + perfumesPorPagina;
+      const perfumesPagina = femeninos.slice(inicio, fin);
 
-    // Crear lista de marcas únicas
+      perfumesPagina.forEach(perfume => {
+        const tarjeta = document.createElement('div');
+        tarjeta.className = 'perfume-card';
+        tarjeta.setAttribute('data-marca', perfume.marca);
+
+        tarjeta.innerHTML = `
+          <a href="../${perfume.pagina}">
+            <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+            <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+            <p class="precio">${perfume.precio}</p>
+          </a>
+        `;
+        contenedor.appendChild(tarjeta);
+      });
+
+      renderizarBotones();
+    }
+
+    function renderizarBotones() {
+      let botonesContainer = document.getElementById('botones-paginacion');
+      if (!botonesContainer) {
+        botonesContainer = document.createElement('div');
+        botonesContainer.id = 'botones-paginacion';
+        botonesContainer.style.textAlign = 'center';
+        botonesContainer.style.marginTop = '20px';
+        contenedor.parentNode.appendChild(botonesContainer);
+      }
+      botonesContainer.innerHTML = '';
+
+      const btnInicio = document.createElement('button');
+      btnInicio.textContent = 'Inicio';
+      btnInicio.onclick = () => {
+        paginaActual = 1;
+        mostrarPagina(paginaActual);
+      };
+      botonesContainer.appendChild(btnInicio);
+
+      if (paginaActual > 1) {
+        const btnAnterior = document.createElement('button');
+        btnAnterior.textContent = 'Anterior';
+        btnAnterior.onclick = () => {
+          paginaActual--;
+          mostrarPagina(paginaActual);
+        };
+        botonesContainer.appendChild(btnAnterior);
+      }
+
+      if (paginaActual * perfumesPorPagina < femeninos.length) {
+        const btnSiguiente = document.createElement('button');
+        btnSiguiente.textContent = 'Siguiente';
+        btnSiguiente.onclick = () => {
+          paginaActual++;
+          mostrarPagina(paginaActual);
+        };
+        botonesContainer.appendChild(btnSiguiente);
+      }
+    }
+
+    // Mostrar primera página al cargar
+    mostrarPagina(paginaActual);
+
+    // Sidebar dinámico de marcas
     const marcasUnicas = [...new Set(femeninos.map(p => p.marca))];
     const marcasContainer = document.createElement('div');
     marcasContainer.innerHTML = "<h3>Marcas</h3>";
@@ -222,11 +277,10 @@
       marcasContainer.appendChild(label);
     });
 
-    // Reemplazar contenido de la sidebar
     sidebar.innerHTML = '';
     sidebar.appendChild(marcasContainer);
 
-    // Agregar evento de filtrado
+    // Filtrado por marcas con paginación
     const checkboxes = marcasContainer.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', () => {
@@ -234,12 +288,17 @@
           .filter(cb => cb.checked)
           .map(cb => cb.value);
 
-        // Limpiar tarjetas
-        contenedor.innerHTML = '';
+        const filtrados = femeninos.filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca));
 
-        femeninos
-          .filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca))
-          .forEach(perfume => {
+        paginaActual = 1;
+
+        function mostrarPaginaFiltrada(pagina) {
+          contenedor.innerHTML = '';
+          const inicio = (pagina - 1) * perfumesPorPagina;
+          const fin = inicio + perfumesPorPagina;
+          const perfumesPagina = filtrados.slice(inicio, fin);
+
+          perfumesPagina.forEach(perfume => {
             const tarjeta = document.createElement('div');
             tarjeta.className = 'perfume-card';
             tarjeta.setAttribute('data-marca', perfume.marca);
@@ -253,6 +312,51 @@
             `;
             contenedor.appendChild(tarjeta);
           });
+
+          renderizarBotonesFiltrados();
+        }
+
+        function renderizarBotonesFiltrados() {
+          let botonesContainer = document.getElementById('botones-paginacion');
+          if (!botonesContainer) {
+            botonesContainer = document.createElement('div');
+            botonesContainer.id = 'botones-paginacion';
+            botonesContainer.style.textAlign = 'center';
+            botonesContainer.style.marginTop = '20px';
+            contenedor.parentNode.appendChild(botonesContainer);
+          }
+          botonesContainer.innerHTML = '';
+
+          const btnInicio = document.createElement('button');
+          btnInicio.textContent = 'Inicio';
+          btnInicio.onclick = () => {
+            paginaActual = 1;
+            mostrarPaginaFiltrada(paginaActual);
+          };
+          botonesContainer.appendChild(btnInicio);
+
+          if (paginaActual > 1) {
+            const btnAnterior = document.createElement('button');
+            btnAnterior.textContent = 'Anterior';
+            btnAnterior.onclick = () => {
+              paginaActual--;
+              mostrarPaginaFiltrada(paginaActual);
+            };
+            botonesContainer.appendChild(btnAnterior);
+          }
+
+          if (paginaActual * perfumesPorPagina < filtrados.length) {
+            const btnSiguiente = document.createElement('button');
+            btnSiguiente.textContent = 'Siguiente';
+            btnSiguiente.onclick = () => {
+              paginaActual++;
+              mostrarPaginaFiltrada(paginaActual);
+            };
+            botonesContainer.appendChild(btnSiguiente);
+          }
+        }
+
+        mostrarPaginaFiltrada(paginaActual);
       });
     });
   }
