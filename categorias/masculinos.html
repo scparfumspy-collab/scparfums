@@ -192,11 +192,11 @@
     const sidebar = document.querySelector('.sidebar');
     contenedor.innerHTML = '';
 
-    // Filtrar solo perfumes femeninos
-    const femeninos = perfumes.filter(p => p.categoria === "masculinos");
+    // Filtrar solo perfumes masculinos
+    const masculinos = perfumes.filter(p => p.categoria === "masculinos");
 
     // Crear tarjetas
-    femeninos.forEach(perfume => {
+    masculinos.forEach(perfume => {
       const tarjeta = document.createElement('div');
       tarjeta.className = 'perfume-card';
       tarjeta.setAttribute('data-marca', perfume.marca);
@@ -237,7 +237,7 @@
         // Limpiar tarjetas
         contenedor.innerHTML = '';
 
-        femeninos
+        masculinos
           .filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca))
           .forEach(perfume => {
             const tarjeta = document.createElement('div');
