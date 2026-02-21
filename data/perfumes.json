@@ -38,5 +38,13 @@
     "pagina": "perfumes/odyssey-candee.html",
     "precio": "170.000 Gs",
     "categoria": "femeninos"
-  }
+  },
+   {
+    "nombre": "Odyssey Mandarin Sky EDP 100ML",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/odyssey-mandarinsky.png",
+    "pagina": "perfumes/odyssey-mandarinsky.html",
+    "precio": "180.000 Gs",
+    "categoria": "masculinos"
+     }
 ]
