@@ -24,10 +24,10 @@ width: auto;
 }
 
 header.small {
-  padding: 8px 25px;   /* menos espacio arriba y a los lados */
+  padding: 8px 25px;
 }
 header.small img {
-  height: 100px;       /* logo más chico */
+  height: 100px;
   width: auto;
 }
   
@@ -84,7 +84,7 @@ margin: 0 auto;
 .category-card {
 background: white;
 border-radius: 20px;
-padding: 40px 50px;
+padding: 20px;   /* reducido para mejor alineación */
 text-align: center;
 text-decoration: none;
 color: #000;
@@ -92,14 +92,18 @@ font-weight: bold;
 font-size: 18px;
 box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 transition: all 0.3s ease;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
-
 .category-card img {
-  width: 120px;        /* ancho fijo */
-  height: 120px;       /* alto fijo */
-  object-fit: cover;   /* recorta para que no se deforme */
-  margin-bottom: 10px; /* espacio entre la imagen y el texto */
-  border-radius: 50%;  /* opcional: hace la imagen circular */
+  display: block;
+  margin: 0 auto 15px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0; /* cuadradas, podés poner 10px si querés esquinas suaves */
 }
 .category-card:hover {
 transform: translateY(-8px);
@@ -164,27 +168,27 @@ margin: 0 8px;
 <section class="categories">
   <a href="categorias/femeninos.html" class="category-card">
     <img src="imagenes/iconos-categorias/icon-fragfem.png" alt="Fragancias Femeninas">
-    Fragancias Femeninas
+    <p>Fragancias Femeninas</p>
   </a>
   <a href="categorias/masculinos.html" class="category-card">
     <img src="imagenes/iconos-categorias/icon-fragmasc.png" alt="Fragancias Masculinas">
-    Fragancias Masculinas
+    <p>Fragancias Masculinas</p>
   </a>
   <a href="categorias/unisex.html" class="category-card">
     <img src="imagenes/iconos-categorias/icon-fragunisex.png" alt="Fragancias Unisex">
-    Fragancias Unisex
+    <p>Fragancias Unisex</p>
   </a>
   <a href="categorias/testers-femeninos.html" class="category-card">
     <img src="imagenes/iconos-categorias/icon-fragtesterfem.png" alt="Testers Femeninos">
-    Testers Femeninos
+    <p>Testers Femeninos</p>
   </a>
   <a href="categorias/testers-masculinos.html" class="category-card">
     <img src="imagenes/iconos-categorias/icon-fragtestermasc.png" alt="Testers Masculinos">
-    Testers Masculinos
+    <p>Testers Masculinos</p>
   </a>
   <a href="categorias/kits.html" class="category-card">
     <img src="imagenes/iconos-categorias/icon-fragkitsperfumes.png" alt="Kits de Regalo">
-    Kits de Regalo
+    <p>Kits de Regalo</p>
   </a>
 </section>
 <section class="info-section">
