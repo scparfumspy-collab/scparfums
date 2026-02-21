@@ -191,21 +191,23 @@
     const contenedor = document.getElementById('perfume-list');
     contenedor.innerHTML = '';
 
-    perfumes.forEach(perfume => {
-      const tarjeta = document.createElement('div');
-      tarjeta.className = 'perfume-card';
-      tarjeta.setAttribute('data-marca', perfume.marca);
+    perfumes
+      .filter(perfume => perfume.categoria === "femeninos") // solo femeninos
+      .forEach(perfume => {
+        const tarjeta = document.createElement('div');
+        tarjeta.className = 'perfume-card';
+        tarjeta.setAttribute('data-marca', perfume.marca);
 
-      tarjeta.innerHTML = `
-        <a href="../${perfume.pagina}">
-          <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-          <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-          <p class="precio">${perfume.precio}</p>
-        </a>
-      `;
+        tarjeta.innerHTML = `
+          <a href="../${perfume.pagina}">
+            <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+            <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+            <p class="precio">${perfume.precio}</p>
+          </a>
+        `;
 
-      contenedor.appendChild(tarjeta);
-    });
+        contenedor.appendChild(tarjeta);
+      });
   }
 
   cargarPerfumes();
