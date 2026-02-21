@@ -100,6 +100,13 @@
       margin-bottom: 10px;
       border-radius: 50%;
     }
+    .perfume-card p {
+  margin: 5px 0;
+}
+.perfume-card p strong {
+  color: #d32f2f; /* rojo elegante */
+  font-size: 16px;
+}
     footer {
       background: #111;
       color: white;
@@ -175,11 +182,12 @@
       tarjeta.setAttribute('data-marca', perfume.marca);
 
       tarjeta.innerHTML = `
-        <a href="../${perfume.pagina}">
-          <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-          <p>${perfume.nombre}</p>
-        </a>
-      `;
+  <a href="../${perfume.pagina}">
+    <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+    <p>${perfume.nombre}</p>
+    <p><strong>${perfume.precio}</strong></p>
+  </a>
+`;
 
       contenedor.appendChild(tarjeta);
     });
