@@ -192,6 +192,9 @@
     // 2. Cargar precios desde Google Sheets (Apps Script URL)
     const preciosResp = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AY5xjrS54yBigaOrTe_4OMYYk-jmekyniG8BjqdIddXCV7yuvAOjR_CcgbLFd1tlZemTsghtmWbihlRy_SJ5Jal48v_Q93nr3tp_C8M15TDYvoL7pj99P__tTj-edabrOTpIHft-JpQidCl1VFYoPt_re2bxw9wy_d_KMtp_2mOwuvTUHRZsN-gT81AfAueJTyOC_o4WeUNHz3ba6QuBM-Q58E2E-38e-8ElKNkqO4X57oxpLuchDDPGy6HzvUeLZBgMVmdevEv8taXiUuNtNxgHs6w68B7Yew&lib=MuhGdpCHVbtWl3sQABjAfXWqugQwYPpB1");
     const precios = await preciosResp.json();
+    console.log(precios);
+    console.log(perfumes); 
+    console.log(femeninos);
 
     const contenedor = document.getElementById('perfume-list');
     const sidebar = document.querySelector('.sidebar');
