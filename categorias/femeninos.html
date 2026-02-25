@@ -199,7 +199,7 @@
   const perfumes = await respuesta.json();
 
   // 2. Cargar precios desde Google Sheets (Apps Script URL)
-  const preciosResp = await fetch("TU_URL_DE_APPS_SCRIPT");
+  const preciosResp = await fetch("https://script.google.com/macros/s/AKfycbwRNLbgXD_D7Qx72KpOvcsejuMSz_UXHlrgTm9vdSZ4_DXqoxP_Cx5y858xTXsKSOX2/exec");
   const precios = await preciosResp.json();
 
   // Limpiar loader
