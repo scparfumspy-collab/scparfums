@@ -170,6 +170,9 @@
   <main class="perfumes" id="perfume-list">
     <!-- Aquí se insertarán las tarjetas dinámicamente -->
   </main>
+  <main class="perfumes" id="perfume-list"> 
+    <p id="loader">Cargando perfumes femeninos...</p> 
+  </main>
 </section>
 </section>
 
@@ -184,25 +187,49 @@
 </footer>
   
 <script>
-  async function cargarPerfumes() {
-    // 1. Cargar catálogo local
-    const respuesta = await fetch('../data/perfumes.json');
-    const perfumes = await respuesta.json();
+ async function cargarPerfumes() {
+  const contenedor = document.getElementById('perfume-list');
+  const sidebar = document.querySelector('.sidebar');
 
-    // 2. Cargar precios desde Google Sheets (Apps Script URL)
-    const preciosResp = await fetch("https://script.google.com/macros/s/AKfycbwRNLbgXD_D7Qx72KpOvcsejuMSz_UXHlrgTm9vdSZ4_DXqoxP_Cx5y858xTXsKSOX2/exec");
-    const precios = await preciosResp.json();
+  // Mostrar loader mientras se cargan datos
+  contenedor.innerHTML = '<p id="loader">Cargando perfumes femeninos...</p>';
 
-    const contenedor = document.getElementById('perfume-list');
-    const sidebar = document.querySelector('.sidebar');
-    contenedor.innerHTML = '';
+  // 1. Cargar catálogo local
+  const respuesta = await fetch('../data/perfumes.json');
+  const perfumes = await respuesta.json();
 
-    // Filtrar solo perfumes femeninos
-    const femeninos = perfumes.filter(p => p.categoria === "femeninos");
+  // 2. Cargar precios desde Google Sheets (Apps Script URL)
+  const preciosResp = await fetch("TU_URL_DE_APPS_SCRIPT");
+  const precios = await preciosResp.json();
 
-    // Configuración de paginación
-    const perfumesPorPagina = 20;
-    let paginaActual = 1;
+  // Limpiar loader
+  contenedor.innerHTML = '';
+
+  // Filtrar solo perfumes femeninos
+  const femeninos = perfumes.filter(p => p.categoria === "femeninos");
+
+  // Crear tarjetas
+  femeninos.forEach(perfume => {
+    const precioData = precios.find(pr => pr.id === perfume.id);
+    let precio = "Consultar";
+    if (precioData && precioData.precio != null) {
+      precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+    }
+
+    const tarjeta = document.createElement('div');
+    tarjeta.className = 'perfume-card';
+    tarjeta.setAttribute('data-marca', perfume.marca);
+
+    tarjeta.innerHTML = `
+      <a href="../${perfume.pagina}">
+        <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+        <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+        <p class="precio">${precio}</p>
+      </a>
+    `;
+    contenedor.appendChild(tarjeta);
+  });
+}
 
     function mostrarPagina(pagina) {
       contenedor.innerHTML = '';
