@@ -187,49 +187,75 @@
 </footer>
   
 <script>
- async function cargarPerfumes() {
+<script>
+async function cargarPerfumes() {
   const contenedor = document.getElementById('perfume-list');
   const sidebar = document.querySelector('.sidebar');
 
-  // Mostrar loader mientras se cargan datos
+  // Mostrar loader
   contenedor.innerHTML = '<p id="loader">Cargando perfumes femeninos...</p>';
 
-  // 1. Cargar catálogo local
-  const respuesta = await fetch('../data/perfumes.json');
-  const perfumes = await respuesta.json();
+  try {
+    // 1. Cargar catálogo local
+    const respuesta = await fetch('../data/perfumes.json');
+    const perfumes = await respuesta.json();
+    console.log("Perfumes cargados:", perfumes);
 
-  // 2. Cargar precios desde Google Sheets (Apps Script URL)
-  const preciosResp = await fetch("https://script.google.com/macros/s/AKfycbwRNLbgXD_D7Qx72KpOvcsejuMSz_UXHlrgTm9vdSZ4_DXqoxP_Cx5y858xTXsKSOX2/exec");
-  const precios = await preciosResp.json();
+    // 2. Cargar precios desde Google Sheets
+    const preciosResp = await fetch("https://script.google.com/macros/s/AKfycbwRNLbgXD_D7Qx72KpOvcsejuMSz_UXHlrgTm9vdSZ4_DXqoxP_Cx5y858xTXsKSOX2/exec");
+    const precios = await preciosResp.json();
+    console.log("Precios cargados:", precios);
 
-  // Limpiar loader
-  contenedor.innerHTML = '';
+    // 3. Limpiar loader
+    contenedor.innerHTML = '';
 
-  // Filtrar solo perfumes femeninos
-  const femeninos = perfumes.filter(p => p.categoria === "femeninos");
+    // 4. Filtrar solo perfumes femeninos
+    const femeninos = perfumes.filter(p => p.categoria === "femeninos");
+    console.log("Femeninos filtrados:", femeninos);
 
-  // Crear tarjetas
-  femeninos.forEach(perfume => {
-    const precioData = precios.find(pr => pr.id === perfume.id);
-    let precio = "Consultar";
-    if (precioData && precioData.precio != null) {
-      precio = "₲ " + precioData.precio.toLocaleString("es-PY");
-    }
+    // 5. Crear tarjetas
+    femeninos.forEach(perfume => {
+      const precioData = precios.find(pr => pr.id === perfume.id);
+      let precio = "Consultar";
+      if (precioData && precioData.precio != null) {
+        precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+      }
 
-    const tarjeta = document.createElement('div');
-    tarjeta.className = 'perfume-card';
-    tarjeta.setAttribute('data-marca', perfume.marca);
+      const tarjeta = document.createElement('div');
+      tarjeta.className = 'perfume-card';
+      tarjeta.setAttribute('data-marca', perfume.marca);
 
-    tarjeta.innerHTML = `
-      <a href="../${perfume.pagina}">
-        <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-        <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-        <p class="precio">${precio}</p>
-      </a>
-    `;
-    contenedor.appendChild(tarjeta);
-  });
+      tarjeta.innerHTML = `
+        <a href="../${perfume.pagina}">
+          <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+          <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+          <p class="precio">${precio}</p>
+        </a>
+      `;
+      contenedor.appendChild(tarjeta);
+    });
+
+    // 6. Sidebar dinámico
+    const marcasUnicas = [...new Set(femeninos.map(p => p.marca))];
+    const marcasContainer = document.createElement('div');
+    marcasContainer.innerHTML = "<h3>Marcas</h3>";
+    marcasUnicas.forEach(marca => {
+      const label = document.createElement('label');
+      label.innerHTML = `<input type="checkbox" value="${marca}"> ${marca}`;
+      marcasContainer.appendChild(label);
+    });
+    sidebar.innerHTML = '';
+    sidebar.appendChild(marcasContainer);
+
+  } catch (error) {
+    console.error("Error cargando perfumes:", error);
+    contenedor.innerHTML = '<p>Error al cargar perfumes.</p>';
+  }
 }
+
+cargarPerfumes();
+</script>
+
 
     function mostrarPagina(pagina) {
       contenedor.innerHTML = '';
