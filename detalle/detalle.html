@@ -8,14 +8,23 @@
 <body>
   <!-- Header con logo y menú -->
   <header>
-    <div class="logo">
-      <a href="../index.html">Mi Perfumería</a>
-    </div>
-    <nav>
-      <a href="../categorias/femeninos.html">Femeninos</a>
-      <a href="../categorias/masculinos.html">Masculinos</a>
-    </nav>
-  </header>
+   <header>
+  <img src="Logo.png" alt="SC Parfums">
+
+  <nav>
+  <a href="index.html">Inicio</a>
+  <a href="categorias.html">Categorías</a>
+  <a href="populares.html">Más Populares</a>
+  <a href="nuevo.html">Lo Nuevo</a>
+  <a href="ofertas.html">Ofertas</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+
+  <div class="search-box">
+    <input type="text" placeholder="Buscar fragancia...">
+  </div>
+</header>
 
   <main id="detalle-perfume">
     <p id="loader">Cargando detalles del perfume...</p>
@@ -57,7 +66,7 @@
         contenedor.innerHTML = `
           <div class="detalle-container">
             <div class="detalle-imagen">
-              <img src="../img/${perfume.id}.jpg" alt="${perfume.id}">
+              <img src="../imagenes/perfumes/${perfume.id}.png" alt="${perfume.nombre}">
             </div>
             <div class="detalle-info">
               <h1>${perfume.nombre || perfume.id}</h1>
