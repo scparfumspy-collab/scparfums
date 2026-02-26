@@ -4,50 +4,27 @@
   <meta charset="UTF-8">
   <title>Detalle del Perfume</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <style>
-    .detalle-container {
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
-      margin: 40px;
-    }
-    .detalle-imagen {
-      flex: 1;
-    }
-    .detalle-imagen img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 8px;
-    }
-    .detalle-info {
-      flex: 2;
-    }
-    .detalle-info h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .detalle-info section {
-      margin-bottom: 20px;
-    }
-    .detalle-info ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .detalle-info li {
-      background: #f0f0f0;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.9em;
-    }
-  </style>
 </head>
 <body>
+  <!-- Header con logo y menú -->
+  <header>
+    <div class="logo">
+      <a href="../index.html">Mi Perfumería</a>
+    </div>
+    <nav>
+      <a href="../categorias/femeninos.html">Femeninos</a>
+      <a href="../categorias/masculinos.html">Masculinos</a>
+    </nav>
+  </header>
+
   <main id="detalle-perfume">
     <p id="loader">Cargando detalles del perfume...</p>
   </main>
+
+  <!-- Botón fijo de WhatsApp -->
+  <div class="whatsapp-btn">
+    <a id="btn-whatsapp" href="#" target="_blank">Consultar por WhatsApp</a>
+  </div>
 
   <script>
     async function cargarDetalle() {
@@ -55,30 +32,27 @@
       contenedor.innerHTML = '<p id="loader">Cargando detalles del perfume...</p>';
 
       try {
-        // 1. Obtener el ID desde la URL
         const params = new URLSearchParams(window.location.search);
         const id = params.get("id");
 
-        // 2. Cargar detalles.json
+        // Cargar detalles
         const resp = await fetch('../data/detalles.json');
         const detalles = await resp.json();
-
-        // 3. Buscar el perfume por ID
         const perfume = detalles.find(p => p.id === id);
+
+        // Cargar precios
+        const preciosResp = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AY5xjrQ0kGvMknCQlBo-LPyJCKi1GrdYBCGkkrFvR5iBU7c7AMhUWNWiLUYsvIbTDjne-n97mYX4K6EaoTGXdss67vnVHRqviD85U2vNcdCAgD7F2CydaEzv5IPAX8R3cQa4Jt0i6IGuoKbR_ARoddGsj4XeS-AqIRXOruFbudrRARorBvUdYFTDBw4C6K5NQkGxUKSGPP39BqUqj6CJiB2WWL_vcaq3mUo3QyzTurldgUemqoDf4sce6jwnuk7cJIkEIyi5-cI4vPsl5kNvvGHGukV2nWuYEw&lib=MuhGdpCHVbtWl3sQABjAfXWqugQwYPpB1");
+        const precios = await preciosResp.json();
+        const precioData = precios.find(pr => pr.id === id);
+        let precio = "Consultar";
+        if (precioData && precioData.precio != null) {
+          precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+        }
 
         if (!perfume) {
           contenedor.innerHTML = '<p>Perfume no encontrado.</p>';
           return;
         }
-
-        // 4. Limpiar loader
-        contenedor.innerHTML = '';
-
-        // 5. Renderizar estructura
-        const acordesHTML = perfume.acordes.map(a => `<li>${a}</li>`).join('');
-        const salidaHTML = perfume.notas_salida.map(n => `<li>${n}</li>`).join('');
-        const corazonHTML = perfume.notas_corazon.map(n => `<li>${n}</li>`).join('');
-        const baseHTML = perfume.notas_base.map(n => `<li>${n}</li>`).join('');
 
         contenedor.innerHTML = `
           <div class="detalle-container">
@@ -87,21 +61,22 @@
             </div>
             <div class="detalle-info">
               <h1>${perfume.nombre || perfume.id}</h1>
+              <p class="precio">${precio}</p>
               <section>
                 <h3>Acordes principales</h3>
-                <ul>${acordesHTML}</ul>
+                <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
               </section>
               <section>
                 <h3>Notas de salida</h3>
-                <ul>${salidaHTML}</ul>
+                <ul>${perfume.notas_salida.map(n => `<li>${n}</li>`).join('')}</ul>
               </section>
               <section>
                 <h3>Notas de corazón</h3>
-                <ul>${corazonHTML}</ul>
+                <ul>${perfume.notas_corazon.map(n => `<li>${n}</li>`).join('')}</ul>
               </section>
               <section>
                 <h3>Notas de base</h3>
-                <ul>${baseHTML}</ul>
+                <ul>${perfume.notas_base.map(n => `<li>${n}</li>`).join('')}</ul>
               </section>
               <section>
                 <h3>Ocasiones de uso</h3>
@@ -114,6 +89,10 @@
             </div>
           </div>
         `;
+
+        // Botón de WhatsApp dinámico
+        const btnWhats = document.getElementById("btn-whatsapp");
+        btnWhats.href = `https://wa.me/595991861112?text=Hola, quiero consultar por el perfume ${perfume.nombre || perfume.id}`;
       } catch (error) {
         console.error("Error cargando detalle:", error);
         contenedor.innerHTML = '<p>Error al cargar detalles.</p>';
@@ -124,3 +103,4 @@
   </script>
 </body>
 </html>
+
