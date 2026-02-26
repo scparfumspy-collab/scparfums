@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fafafa;
+  color: #333;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.detalle-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin: 40px;
+}
+
+.detalle-imagen img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.detalle-info h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.detalle-info .precio {
+  font-size: 1.5em;
+  color: #b12704;
+  margin-bottom: 20px;
+}
+
+.detalle-info section {
+  margin-bottom: 20px;
+}
+
+.detalle-info ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detalle-info li {
+  background: #eee;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+.whatsapp-btn {
+  text-align: center;
+  margin: 30px;
+}
+
+.whatsapp-btn a {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
