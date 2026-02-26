@@ -36,7 +36,7 @@
   "nombre": "Sabah Al Ward EDP 100ML",
     "marca": "AL Wataniah",
     "imagen": "imagenes/perfumes/sabah-al-ward.png",
-    "pagina": "perfumes/sabah-al-ward.html",
+    "pagina": "detalle/detalle.html?id=al-whataniah-sabah-al-ward",
     "categoria": "femeninos"
   },
   {
