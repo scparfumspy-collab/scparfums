@@ -48,6 +48,12 @@
         const detalles = await resp.json();
         const perfume = detalles.find(p => p.id === id);
 
+        // Cargar catálogo para obtener nombre, marca, imagen y categoría
+const respCatalogo = await fetch('../data/perfumes.json');
+const catalogo = await respCatalogo.json();
+const datosBasicos = catalogo.find(p => p.id === id);
+
+
         // Cargar precios
         const preciosResp = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AY5xjrQ0kGvMknCQlBo-LPyJCKi1GrdYBCGkkrFvR5iBU7c7AMhUWNWiLUYsvIbTDjne-n97mYX4K6EaoTGXdss67vnVHRqviD85U2vNcdCAgD7F2CydaEzv5IPAX8R3cQa4Jt0i6IGuoKbR_ARoddGsj4XeS-AqIRXOruFbudrRARorBvUdYFTDBw4C6K5NQkGxUKSGPP39BqUqj6CJiB2WWL_vcaq3mUo3QyzTurldgUemqoDf4sce6jwnuk7cJIkEIyi5-cI4vPsl5kNvvGHGukV2nWuYEw&lib=MuhGdpCHVbtWl3sQABjAfXWqugQwYPpB1");
         const precios = await preciosResp.json();
@@ -62,40 +68,47 @@
           return;
         }
 
-        contenedor.innerHTML = `
-          <div class="detalle-container">
-            <div class="detalle-imagen">
-              <img src="../imagenes/perfumes/${perfume.id}.png" alt="${perfume.nombre}">
-            </div>
-            <div class="detalle-info">
-              <h1>${perfume.nombre || perfume.id}</h1>
-              <p class="precio">${precio}</p>
-              <section>
-                <h3>Acordes principales</h3>
-                <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
-              </section>
-              <section>
-                <h3>Notas de salida</h3>
-                <ul>${perfume.notas_salida.map(n => `<li>${n}</li>`).join('')}</ul>
-              </section>
-              <section>
-                <h3>Notas de corazón</h3>
-                <ul>${perfume.notas_corazon.map(n => `<li>${n}</li>`).join('')}</ul>
-              </section>
-              <section>
-                <h3>Notas de base</h3>
-                <ul>${perfume.notas_base.map(n => `<li>${n}</li>`).join('')}</ul>
-              </section>
-              <section>
-                <h3>Ocasiones de uso</h3>
-                <p>${perfume.ocasion || "No especificado"}</p>
-              </section>
-              <section>
-                <h3>Descripción</h3>
-                <p>${perfume.descripcion}</p>
-              </section>
-            </div>
-          </div>
+contenedor.innerHTML = `
+  <div class="detalle-container">
+    <div class="detalle-imagen">
+      <img src="../${datosBasicos.imagen}" alt="${datosBasicos.nombre}">
+    </div>
+    <div class="detalle-info">
+      <h1>${datosBasicos.nombre}</h1>
+      <p><strong>${datosBasicos.marca}</strong></p>
+      <p class="precio">${precio}</p>
+      <section>
+        <h3>Categoría</h3>
+        <p>${datosBasicos.categoria}</p>
+      </section>
+      <section>
+        <h3>Acordes principales</h3>
+        <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
+      </section>
+      <section>
+        <h3>Notas de salida</h3>
+        <ul>${perfume.notas_salida.map(n => `<li>${n}</li>`).join('')}</ul>
+      </section>
+      <section>
+        <h3>Notas de corazón</h3>
+        <ul>${perfume.notas_corazon.map(n => `<li>${n}</li>`).join('')}</ul>
+      </section>
+      <section>
+        <h3>Notas de base</h3>
+        <ul>${perfume.notas_base.map(n => `<li>${n}</li>`).join('')}</ul>
+      </section>
+      <section>
+        <h3>Ocasiones de uso</h3>
+        <p>${perfume.ocasion || "No especificado"}</p>
+      </section>
+      <section>
+        <h3>Descripción</h3>
+        <p>${perfume.descripcion}</p>
+      </section>
+    </div>
+  </div>
+`;
+
         `;
 
         // Botón de WhatsApp dinámico
