@@ -9,7 +9,7 @@ body {
 header {
   background-color: #000;
   color: white;
-  padding: 15px 40px;   /* más alto y con espacio lateral */
+  padding: 20px 40px;   /* más alto y con espacio lateral */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,7 +110,7 @@ header {
 
 /* Logo */
 header img {
-  height: 80px;   /* controla el tamaño del logo */
+  height: 100px;   /* controla el tamaño del logo */
   width: auto;    /* mantiene proporción */
   transform: scale(1.2);
   display: block;
