@@ -10,22 +10,25 @@
 
 <body>
 
-<!-- Aquí se cargará el header -->
+<!-- Header dinámico -->
 <div id="header"></div>
-
 <script>
-  fetch('header.html')   // index.html está en la raíz
+  fetch('header.html')
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
     });
 </script>
 
-<!-- El resto de tu contenido -->
+<!-- Hero con background -->
 <section class="hero">
-  <div class="hero-text">Perfumes originales al mejor precio<br>Catálogo actualizado y atención personalizada</div>
+  <div class="hero-text">
+    Perfumes originales al mejor precio<br>
+    Catálogo actualizado y atención personalizada
+  </div>
 </section>
 
+<!-- Categorías -->
 <section class="categories">
   <a href="arabes.html" class="category-card">
     <img src="imagenes/iconos-categorias/icon-arabes.png" alt="Árabes">
@@ -45,6 +48,7 @@
   </a>
 </section>
 
+<!-- Info -->
 <section class="info-section">
   <div class="info-card">
     <h3>💳 Métodos de Pago</h3>
@@ -52,13 +56,11 @@
     <p>Transferencias Bancarias</p>
     <p>Tarjeta de Crédito y Débito</p>
   </div>
-
   <div class="info-card">
     <h3>✅ Productos 100% Originales</h3>
     <p>Trabajamos únicamente con perfumes originales.</p>
     <p>Garantía de autenticidad en cada compra.</p>
   </div>
-
   <div class="info-card">
     <h3>🚚 Envíos a todo Paraguay</h3>
     <p>Realizamos envíos por transportadora.</p>
@@ -66,8 +68,10 @@
   </div>
 </section>
 
+<!-- Botón WhatsApp -->
 <a class="whatsapp-btn" href="https://wa.me/595991861112" target="_blank">💬</a>
 
+<!-- Footer -->
 <footer>
   © 2026 SC Parfums | Paraguay<br>
   Productos 100% originales | Medios de pago disponibles<br>
@@ -78,4 +82,3 @@
 
 </body>
 </html>
-
