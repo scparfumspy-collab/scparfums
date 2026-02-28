@@ -7,7 +7,7 @@ body {
 
 /* HEADER */
 header {
-  background-color: #222;
+  background-color: #000;
   color: white;
   padding: 25px 40px;   /* más alto y con espacio lateral */
   display: flex;
@@ -17,7 +17,7 @@ header {
 
 .hero {
   height: 420px;
-  background: url('imagenes/backgrounds/background-sauvage.jpg') center center no-repeat; 
+  background: url('/imagenes/backgrounds/background-sauvage.jpg') center center no-repeat; 
   background-size: cover;
   display: flex;
   align-items: center;
