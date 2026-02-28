@@ -61,6 +61,23 @@ header {
   border-radius: 50%;
 }
 
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  background: black;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
 
 /* Logo */
 header img {
