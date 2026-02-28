@@ -65,17 +65,17 @@ nav a:hover {
 
 /* Fondos específicos para index y categorías generales */
 .hero-index {
-  background: url('scparfums/imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
+  background: url('../imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .hero-categorias {
-  background: url('scparfums/imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
+  background: url('../imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
   background-size: cover;
 }
 
 /* ===== INDEX CATEGORY CARDS (Árabes, Diseñador, Nicho, Decants) ===== */
-.categories {
+.index-categories {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
@@ -84,37 +84,36 @@ nav a:hover {
   gap: 20px;
 }
 
-.categories .category-card {
+.index-card {
   background: white;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: 0.3s;
-  display: block;
-  text-decoration: none;   /* quita subrayado */
-  color: #000;             /* texto negro */
 }
 
-.categories .category-card:hover {
+.index-card:hover {
   transform: translateY(-5px);
 }
 
-.categories .category-card img {
+.index-card img {
   width: 100%;
   height: 150px;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 10px;
   margin-bottom: 10px;
-  border-radius: 20px;     /* esquinas redondeadas */
 }
 
-.categories .category-card h3,
-.categories .category-card p {
-  font-size: 16px;
-  color: #000;             /* asegura texto negro */
-  margin: 5px 0;
+.index-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
+.index-card p {
+  font-size: 14px;
+  color: #555;
+}
 
 /* ===== CATEGORY CARDS ===== */
 .category-section {
