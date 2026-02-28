@@ -16,7 +16,7 @@ header.small {
 }
 
 header.small img {
-  height: 80px; /* tamaño controlado */
+  height: 130px; /* tamaño fijo y uniforme */
   width: auto;
 }
 
