@@ -14,152 +14,14 @@
 <div id="header"></div>
 
 <script>
-  fetch('header.html')   // como index.html está en la raíz
+  fetch('header.html')   // index.html está en la raíz
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
     });
 </script>
 
-
-    /* HERO */
-   .hero {
-  height: 420px; /* más alto que 350 pero no exagerado */
-  background: url('imagenes/backgrounds/background-sauvage.jpg') center center no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-}
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.4);
-    }
-   .hero-text {
-  position: relative;
-  z-index: 1;
-  font-size: 36px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-    /* CATEGORÍAS */
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-  .category-card {
-  background: white;
-  border-radius: 20px;
-  padding: 50px 70px;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  font-size: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-    .category-card:hover {
-  transform: translateY(-8px);
-  background: black;
-  color: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-    .category-card img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      margin-bottom: 10px;
-      border-radius: 50%;
-  }
-      
-    .info-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-.info-card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.info-card:hover {
-  transform: translateY(-5px);
-}
-
-.info-card h3 {
-  margin-bottom: 15px;
-}
-
-    /* BOTÓN WHATSAPP */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      padding: 15px 18px;
-      border-radius: 50%;
-      font-size: 24px;
-      text-decoration: none;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-
-    /* FOOTER */
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-    }
-    footer a {
-      color: #25D366;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <img src="Logo.png" alt="SC Parfums">
-
-  <nav>
-  <a href="index.html">Inicio</a>
-  <a href="categorias.html">Categorías</a>
-  <a href="populares.html">Más Populares</a>
-  <a href="nuevo.html">Lo Nuevo</a>
-  <a href="ofertas.html">Ofertas</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
-
-  <div class="search-box">
-    <input type="text" placeholder="Buscar fragancia...">
-  </div>
-</header>
-
+<!-- El resto de tu contenido -->
 <section class="hero">
   <div class="hero-text">Perfumes originales al mejor precio<br>Catálogo actualizado y atención personalizada</div>
 </section>
@@ -182,6 +44,7 @@
     Decants
   </a>
 </section>
+
 <section class="info-section">
   <div class="info-card">
     <h3>💳 Métodos de Pago</h3>
@@ -202,6 +65,7 @@
     <p>Entregas seguras y rápidas.</p>
   </div>
 </section>
+
 <a class="whatsapp-btn" href="https://wa.me/595991861112" target="_blank">💬</a>
 
 <footer>
@@ -214,3 +78,4 @@
 
 </body>
 </html>
+
