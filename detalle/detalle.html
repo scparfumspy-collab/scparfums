@@ -8,21 +8,15 @@
 <body>
   <!-- Header con logo y menú -->
 
-<header>
-  <img src="../Logo.png" alt="SC Parfums">
-  <nav>
-    <a href="../index.html">Inicio</a>
-    <a href="../categorias/femeninos.html">Femeninos</a>
-    <a href="../categorias/masculinos.html">Masculinos</a>
-    <a href="../populares.html">Más Populares</a>
-    <a href="../nuevo.html">Lo Nuevo</a>
-    <a href="../ofertas.html">Ofertas</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-  <div class="search-box">
-    <input type="text" placeholder="Buscar fragancia...">
-  </div>
-</header>
+<div id="header"></div>
+
+<script>
+  fetch('header.html')   // ajusta la ruta según la ubicación del archivo
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    });
+</script>
 
 
   <main id="detalle-perfume">
