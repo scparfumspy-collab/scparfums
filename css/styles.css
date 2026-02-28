@@ -16,8 +16,13 @@ header.small {
 }
 
 header.small img {
-  height: 130px;
+  height: 80px; /* tamaño controlado */
   width: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -256,3 +261,4 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
