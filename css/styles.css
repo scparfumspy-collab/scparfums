@@ -1,43 +1,39 @@
-/* ===== RESET & BASE ===== */
+/* ===== RESET ===== */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
   color: #333;
 }
 
 /* ===== HEADER ===== */
-header {
-  background-color: #000;
-  color: white;
-  padding: 18px 40px;
+header.small {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 8px 25px;
+  background-color: #000;
 }
 
-header img {
-  height: 100px;
+header.small img {
+  height: 130px;
   width: auto;
-  transform: scale(1.3);
-  display: block;
-  margin-top: -10px;
 }
 
-header nav a {
+nav a {
   color: white;
-  margin-left: 30px;
   text-decoration: none;
+  margin-left: 30px;
   font-weight: bold;
   font-size: 18px;
 }
 
-header nav a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
 .search-box input {
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 20px;
   border: none;
   outline: none;
@@ -46,71 +42,81 @@ header nav a:hover {
 
 /* ===== HERO ===== */
 .hero {
-  height: 420px;
-  background: url('/scparfums/imagenes/backgrounds/background-sauvage.jpg') center center no-repeat;
-  background-size: cover;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: #fff;
   position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
 }
 
 .hero-text {
-  position: relative;
-  z-index: 1;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
   letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* ===== CATEGORIES ===== */
-.categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 40px 20px;
+/* Backgrounds específicos */
+.hero-index {
+  background: url('../imagenes/bg-index.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-categorias {
+  background: url('../imagenes/bg-categorias.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-femeninos {
+  background: url('../imagenes/bg-femeninos.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-masculinos {
+  background: url('../imagenes/bg-masculinos.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-unisex {
+  background: url('../imagenes/bg-unisex.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-testers {
+  background: url('../imagenes/bg-testers.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 30px auto;
+  padding: 0 20px;
+  gap: 30px;
 }
 
-.category-card {
+.sidebar {
+  width: 250px;
   background: white;
-  border-radius: 20px;
-  padding: 50px 70px;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  font-size: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.category-card img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.sidebar label {
+  display: block;
   margin-bottom: 10px;
-  border-radius: 50%;
+  font-size: 14px;
 }
 
-.category-card:hover {
-  transform: translateY(-8px);
-  background: black;
-  color: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
+/* ===== PERFUME CARDS ===== */
 .perfumes {
   flex: 1;
   display: grid;
@@ -161,157 +167,74 @@ header nav a:hover {
   font-weight: bold;
 }
 
-
-/* ===== INFO SECTION ===== */
-.info-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+/* ===== CATEGORY CARDS ===== */
+.category-section {
   max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-.info-card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.info-card:hover {
-  transform: translateY(-5px);
-}
-
-.info-card h3 {
-  margin-bottom: 15px;
-}
-
-/* ===== DETAIL PAGE ===== */
-.detalle-container {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: center;
   margin: 40px auto;
-  max-width: 1200px;
-}
-
-.detalle-imagen img {
-  max-width: 500px;   /* más grande */
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-}
-
-.detalle-imagen {
-  flex: 1.2;   /* ocupa más espacio que el texto */
-}
-.detalle-info {
-  flex: 1;     /* el texto ocupa menos que la imagen */
-}
-
-.detalle-titulo {
-  font-size: 2.4em;
-  margin-bottom: 10px;
-}
-
-.detalle-marca {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.precio {
-  font-size: 2em;
-  color: #b12704;
-  margin-bottom: 20px;
-}
-
-.detalle-card {
-  background: #fff;
-  padding: 12px 16px;   /* más compacto */
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-  margin-bottom: 15px;
-}
-
-.detalle-card h3 {
-  font-size: 1.1em;
-  margin-bottom: 8px;
-}
-
-.detalle-card p, 
-.detalle-card li {
-  font-size: 0.9em;
-}
-
-
-.detalle-card ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.detalle-card li {
-  background: #eee;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9em;
-}
-
-/* Fila con dos tarjetas pequeñas lado a lado */
-.detalle-row {
-  display: flex;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-.small-card {
-  flex: 1;
-  min-width: 200px;
-}
-
-/* Tarjeta grande para notas */
-.big-card {
-  max-width: 100%;
-}
-
-.big-card section {
-  margin-bottom: 12px;
-}
-
-.big-card ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.big-card li {
-  background: #eee;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 0.85em;
-}
-
-
-/* ===== WHATSAPP BUTTON ===== */
-.whatsapp-btn {
+.category-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
   text-align: center;
-  margin: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
-.whatsapp-btn a {
-  background-color: #25D366;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.category-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.category-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== INFO SECTION ===== */
+.info-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.info-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
 }
 
 /* ===== FOOTER ===== */
@@ -321,6 +244,7 @@ footer {
   text-align: center;
   padding: 25px;
   font-size: 14px;
+  margin-top: 40px;
 }
 
 footer a {
@@ -332,4 +256,3 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
