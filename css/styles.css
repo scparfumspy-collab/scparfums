@@ -111,6 +111,57 @@ header nav a:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+.perfumes {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.perfume-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.perfume-card:hover {
+  transform: translateY(-5px);
+}
+
+.perfume-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10%;
+}
+
+.perfume-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.perfume-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #000;
+}
+
+.perfume-card p strong {
+  font-weight: bold;
+}
+
+.perfume-card p.precio {
+  color: #d32f2f;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
 /* ===== INFO SECTION ===== */
 .info-section {
   display: grid;
