@@ -4,174 +4,33 @@
   <meta charset="UTF-8">
   <title>Fragancias Femeninas - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    header.small {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 25px;
-      background-color: #000;
-    }
-    header.small img {
-      height: 130px;
-      width: auto;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 30px;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .search-box input {
-      padding: 6px 10px;
-      border-radius: 20px;
-      border: none;
-      outline: none;
-      font-size: 14px;
-    }
-    .hero {
-  height: 200px; /* altura moderada, no demasiado grande */
-  background: #ddd; /* color de fondo temporal, luego lo reemplazamos por imagen */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #000;
-  position: relative;
-}
-.hero-text {
-  font-size: 32px;   /* tamaño grande pero no exagerado */
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-    .layout {
-      display: flex;
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
-      gap: 30px;
-    }
-    .sidebar {
-      width: 250px;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .sidebar h3 {
-      margin-bottom: 15px;
-    }
-    .sidebar label {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    .perfumes {
-      flex: 1;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .perfume-card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-    .perfume-card:hover {
-      transform: translateY(-5px);
-    }
-   .perfume-card img {
-  width: 150px;   /* antes 120px */
-  height: 150px;  /* antes 120px */
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 10%;
-}
-
-.perfume-card a {
-  text-decoration: none;   /* quita subrayado */
-  color: inherit;          /* usa el color del texto normal */
-  display: block;          /* hace que todo el bloque sea clickeable */
-}
-
-.perfume-card p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #000; /* todo en negro por defecto */
-}
-
-.perfume-card p strong {
-  font-weight: bold; /* marca en negrita */
-}
-
-.perfume-card p.precio {
-  color: #d32f2f; /* rojo para el precio */
-  font-size: 16px;
-  font-weight: bold;
-}
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #25D366;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-  </style>
+  <!-- CSS centralizado -->
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-<header class="small">
-  <img src="../Logo.png" alt="SC Parfums">
-  <nav>
-    <a href="../index.html">Inicio</a>
-    <a href="../categorias.html">Categorías</a>
-    <a href="../populares.html">Más Populares</a>
-    <a href="../nuevo.html">Lo Nuevo</a>
-    <a href="../ofertas.html">Ofertas</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-  <div class="search-box">
-    <input type="text" placeholder="Buscar fragancia...">
-  </div>
-</header>
+<!-- Header dinámico -->
+<div id="header"></div>
+<script>
+  fetch('../header.html')
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    });
+</script>
+
 <section class="hero">
   <div class="hero-text">Fragancias Femeninas</div>
 </section>
+
 <section class="layout">
   <aside class="sidebar">
-    <h3>Marcas</h3>
-    <label><input type="checkbox" value="Chanel"> Chanel</label>
-    <label><input type="checkbox" value="Dior"> Dior</label>
-    <label><input type="checkbox" value="Lancôme"> Lancôme</label>
-    <label><input type="checkbox" value="YSL"> Yves Saint Laurent</label>
-    <label><input type="checkbox" value="Gucci"> Gucci</label>
-    <!-- más marcas -->
+    <!-- Marcas se generan dinámicamente -->
   </aside>
 
   <main class="perfumes" id="perfume-list">
     <!-- Aquí se insertarán las tarjetas dinámicamente -->
-
   </main>
-</section>
 </section>
 
 <footer>
@@ -183,31 +42,26 @@
   <a href="https://www.tiktok.com/@scparfums">TikTok</a> |
   <a href="https://wa.me/595991861112">WhatsApp</a>
 </footer>
-  
+
 <script>
 async function cargarPerfumes() {
   const contenedor = document.getElementById('perfume-list');
   const sidebar = document.querySelector('.sidebar');
 
-  // Loader inicial
   contenedor.innerHTML = '<p id="loader">Cargando perfumes femeninos...</p>';
 
   try {
-    // 1. Catálogo local
     const respuesta = await fetch('../data/perfumes.json');
     const perfumes = await respuesta.json();
 
-    // 2. Precios desde Google Sheets
     const preciosResp = await fetch("https://script.google.com/macros/s/AKfycbwRNLbgXD_D7Qx72KpOvcsejuMSz_UXHlrgTm9vdSZ4_DXqoxP_Cx5y858xTXsKSOX2/exec");
     const precios = await preciosResp.json();
 
-    // 3. Limpiar loader
     contenedor.innerHTML = '';
 
-    // 4. Filtrar femeninos
+    // Filtrar femeninos
     const femeninos = perfumes.filter(p => p.categoria === "femeninos");
 
-    // Configuración de paginación
     const perfumesPorPagina = 20;
     let paginaActual = 1;
 
@@ -281,7 +135,6 @@ async function cargarPerfumes() {
       }
     }
 
-    // Mostrar primera página
     mostrarPagina(paginaActual);
 
     // Sidebar dinámico
@@ -298,7 +151,6 @@ async function cargarPerfumes() {
     sidebar.innerHTML = '';
     sidebar.appendChild(marcasContainer);
 
-    // Filtrado por marcas
     const checkboxes = marcasContainer.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', () => {
@@ -321,8 +173,5 @@ async function cargarPerfumes() {
 cargarPerfumes();
 </script>
 
-
-
- 
 </body>
 </html>
