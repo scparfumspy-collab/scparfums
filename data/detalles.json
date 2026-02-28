@@ -1,18 +1,18 @@
 [
   {
     "id": "al-whataniah-sabah-al-ward",
-    "acordes": ["floral blanco", "dulce", "avainillado"],
-    "notas_salida": ["pimienta rosa", "mandarina"],
-    "notas_corazon": ["jazmín", "flor de azahar", "vaina de cacao"],
-    "notas_base": ["haba tonka", "vainilla", "pachulí"],
+    "acordes": ["Floral Blanco", "Dulce", "Avainillado"],
+    "notas_salida": ["Pimienta Rosa", "Mandarina"],
+    "notas_corazon": ["Jazmín", "Flor de Azahar", "Vaina de Cacao"],
+    "notas_base": ["Haba tonka", "Vainilla", "Pachulí"],
     "descripcion": "Una fragancia femenina con notas florales, dulces y un toque especiado, que evocan la delicadeza de un jardín en flor."
   },
   {
     "id": "maison-alhambra-jean-lowe-immortel-",
-    "acordes": ["fresco especiado", "citrico", "aromático"],
-    "notas_salida": ["jengibre", "pomelo", "bergamota"],
-    "notas_corazon": ["romero", "cedro", "salvia", "geranio", "notas acuáticas"],
-    "notas_base": ["ámbar", "ládamn", "ambroxan"],
-    "descripcion": "Una fragancia intensa y sofisticada que combina especias con maderas nobles, perfecta para dejar huella."
+    "acordes": ["Fresco Especiado", "Citrico", "Aromático"],
+    "notas_salida": ["Jengibre", "Pomelo", "Bergamota"],
+    "notas_corazon": ["Romero", "Cedro", "Salvia", "Geranio", "Notas Acuáticas"],
+    "notas_base": ["Ámbar", "LádanO", "Ambroxan"],
+    "descripcion": "Una fragancia intensa y sofisticada que combina la frescura de lo citrico, con un toque herbal y ambarado, perfecta para dejar huella."
   }
 ]
