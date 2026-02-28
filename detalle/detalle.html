@@ -26,6 +26,26 @@
   <a id="btn-whatsapp" href="#" target="_blank">Consultar por WhatsApp</a>
 </div>
 
+<!-- Info extra (igual que en categorías) -->
+<section class="info-section">
+  <div class="info-card">
+    <h3>💳 Métodos de Pago</h3>
+    <p>Efectivo</p>
+    <p>Transferencias Bancarias</p>
+    <p>Tarjeta de Crédito y Débito</p>
+  </div>
+  <div class="info-card">
+    <h3>✅ Productos 100% Originales</h3>
+    <p>Trabajamos únicamente con perfumes originales.</p>
+    <p>Garantía de autenticidad en cada compra.</p>
+  </div>
+  <div class="info-card">
+    <h3>🚚 Envíos a todo Paraguay</h3>
+    <p>Realizamos envíos por transportadora.</p>
+    <p>Entregas seguras y rápidas.</p>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
   © 2026 SC Parfums | Paraguay<br>
@@ -77,30 +97,29 @@
             <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
             <p class="precio">${precio}</p>
 
-            <div class="detalle-card">
-              <h3>Categoría</h3>
-              <p>${datosBasicos.categoria}</p>
-            </div>
-            <div class="detalle-card">
+            <div class="detalle-card small-card">
               <h3>Acordes principales</h3>
               <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
             </div>
-            <div class="detalle-card">
-              <h3>Notas de salida</h3>
-              <ul>${perfume.notas_salida.map(n => `<li>${n}</li>`).join('')}</ul>
+
+            <div class="detalle-card small-card">
+              <h3>Categoría</h3>
+              <p>${datosBasicos.categoria}</p>
             </div>
-            <div class="detalle-card">
-              <h3>Notas de corazón</h3>
-              <ul>${perfume.notas_corazon.map(n => `<li>${n}</li>`).join('')}</ul>
+
+            <div class="detalle-card big-card">
+              <h3>Notas</h3>
+              <section><strong>Salida:</strong>
+                <ul>${perfume.notas_salida.map(n => `<li>${n}</li>`).join('')}</ul>
+              </section>
+              <section><strong>Corazón:</strong>
+                <ul>${perfume.notas_corazon.map(n => `<li>${n}</li>`).join('')}</ul>
+              </section>
+              <section><strong>Base:</strong>
+                <ul>${perfume.notas_base.map(n => `<li>${n}</li>`).join('')}</ul>
+              </section>
             </div>
-            <div class="detalle-card">
-              <h3>Notas de base</h3>
-              <ul>${perfume.notas_base.map(n => `<li>${n}</li>`).join('')}</ul>
-            </div>
-            <div class="detalle-card">
-              <h3>Ocasiones de uso</h3>
-              <p>${perfume.ocasion || "No especificado"}</p>
-            </div>
+
             <div class="detalle-card">
               <h3>Descripción</h3>
               <p>${perfume.descripcion}</p>
@@ -121,4 +140,5 @@
 </script>
 </body>
 </html>
+
 
