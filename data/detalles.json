@@ -21,7 +21,15 @@
     "notas_salida": ["Ron", "Ciruela"],
     "notas_corazon": ["Nardos", "Coco"],
     "notas_base": ["Vainilla", "Almizcle", "Praliné"],
-    "descripcion": "Una fragancia intensa y sofisticada que combina la frescura de lo citrico, con un toque herbal y ambarado, perfecta para dejar huella."
+    "descripcion": "Una fragancia floral y gourmand que combina la intensidad del ron y la ciruela con un corazón cremoso de coco y nardos, sobre un fondo cálido de vainilla y praliné."
+  },
+  {
+      "id": "armaf-odyssey-mandarin-sky-edp-100ml",
+    "acordes": ["Citrico", "Caramelo", "Dulce"],
+    "notas_salida": ["Mandarina", "Naranja", "Azafrán", "Salvia"],
+    "notas_corazon": ["Caramelo", "Haba Tonka"],
+    "notas_base": ["Ambroxan", "Cedro", "Vetiver"],
+    "descripcion": "Una fragancia dulce y potente, con mandarina brillante y notas de caramelo que envuelven en un aroma irresistible."
   }
 
 ]
