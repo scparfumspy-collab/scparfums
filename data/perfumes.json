@@ -4,7 +4,7 @@
   "nombre": "Afnan 9AM Dive Blue EDP 90ml Unisex",
   "marca": "Afnan",
   "imagen": "imagenes/perfumes/afnan-9am-dive-blue-edp-90ml-unisex.png",
-  "pagina": "perfumes/afnan-9am-dive-blue-edp-90ml-unisex.html",
+  "pagina": "detalle/detalle.html?id=afnan-9am-dive-blue-edp-90ml-unisex",
   "categoria": "unisex"
 },
   {
@@ -12,7 +12,7 @@
     "nombre": "Petra EDP 100ML",
     "marca": "Lattafa",
     "imagen": "imagenes/perfumes/lattafa-petra.png",
-    "pagina": "perfumes/lattafa-petra.html",
+    "pagina": "detalle/detalle.html?id=lattafa-petra-edp-100ml",
     "categoria": "femeninos"
   },
   {
@@ -20,7 +20,7 @@
     "nombre": "Odyssey Candee EDP 100ML",
     "marca": "Armaf",
     "imagen": "imagenes/perfumes/odyssey-candee.png",
-    "pagina": "perfumes/odyssey-candee.html",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-candee",
     "categoria": "femeninos"
   },
    {
@@ -28,7 +28,7 @@
      "nombre": "Odyssey Mandarin Sky EDP 100ML",
     "marca": "Armaf",
     "imagen": "imagenes/perfumes/odyssey-mandarinsky.png",
-    "pagina": "perfumes/odyssey-mandarinsky.html",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-mandarin-sky-edp-100ml",
     "categoria": "masculinos"
      },
   {
@@ -44,7 +44,7 @@
    "nombre": "Le Male Elixir EDP 125ML",
     "marca": "Jean Paul Gaultier",
     "imagen": "imagenes/perfumes/le-male-elixir.png",
-    "pagina": "perfumes/le-male-elixir.html",
+    "pagina": "detalle/detalle.html?id=j.p.g-le-male-elixir-edp-mas-125ml",
     "categoria": "masculinos"
   },
    {
@@ -52,7 +52,7 @@
    "nombre": "Khamrah EDP 100ML",
     "marca": "Lattafa",
     "imagen": "imagenes/perfumes/khamrah.png",
-    "pagina": "perfumes/khamrah.html",
+    "pagina": "detalle/detalle.html?id=lattafa-khamrah-edp-100ml-unisex",
     "categoria": "unisex"
   },
    {
@@ -60,7 +60,7 @@
    "nombre": "Philos Pura EDP 100ML",
     "marca": "Maison Alhambra",
     "imagen": "imagenes/perfumes/philos-pura.png",
-    "pagina": "perfumes/philos-pura.html",
+    "pagina": "detalle/detalle.html?id=maison-alhambra-philos-pura",
     "categoria": "unisex"
   },
    {
@@ -68,7 +68,7 @@
    "nombre": "Jean Lowe Immortel EDP 100ML",
     "marca": "Maison Alhambra",
     "imagen": "imagenes/perfumes/jean-lowe-immortel.png",
-    "pagina": "perfumes/jean-lowe-immortel.html",
+    "pagina": "detalle/detalle.html?id=maison-alhambra-jean-lowe-immortel-",
     "categoria": "masculinos"
   }
 ]
