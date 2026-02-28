@@ -110,6 +110,7 @@ header {
 header img {
   height: 120px;   /* controla el tamaño del logo */
   width: auto;    /* mantiene proporción */
+  transform: scale(1.3);
   display: block;
   margin-top: -20px; /* opcional: lo sube un poco para que no empuje el header */
 }
