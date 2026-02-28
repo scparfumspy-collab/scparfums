@@ -9,7 +9,7 @@ body {
 header {
   background-color: #000;
   color: white;
-  padding: 25px 40px;   /* más alto y con espacio lateral */
+  padding: 20px 40px;   /* más alto y con espacio lateral */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@ header {
 
 .hero {
   height: 420px;
-  background: url('/imagenes/backgrounds/background-sauvage.jpg') center center no-repeat; 
+  background: url('imagenes/backgrounds/background-sauvage.jpg') center center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -26,6 +26,7 @@ header {
   color: white;
   position: relative;
 }
+
 .hero::after {
   content: "";
   position: absolute;
