@@ -14,5 +14,13 @@
     "notas_corazon": ["Romero", "Cedro", "Salvia", "Geranio", "Notas Acuáticas"],
     "notas_base": ["Ámbar", "LádanO", "Ambroxan"],
     "descripcion": "Una fragancia intensa y sofisticada que combina la frescura de lo citrico, con un toque herbal y ambarado, perfecta para dejar huella."
+  },
+      "id": "lattafa-petra-edp-100ml",
+    "acordes": ["Dulce", "Avainillado", "Coco", "Floral Blanco"],
+    "notas_salida": ["Ron", "Ciruela"],
+    "notas_corazon": ["Nardos", "Coco"],
+    "notas_base": ["Vainilla", "Almizcle", "Praliné"],
+    "descripcion": "Una fragancia intensa y sofisticada que combina la frescura de lo citrico, con un toque herbal y ambarado, perfecta para dejar huella."
   }
+
 ]
