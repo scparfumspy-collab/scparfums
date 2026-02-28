@@ -17,7 +17,7 @@ header {
 
 .hero {
   height: 420px;
-  background: url('imagenes/backgrounds/background-sauvage.jpg') center center no-repeat;
+  background: url('/scparfums/imagenes/backgrounds/background-sauvage.jpg') center center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -26,6 +26,7 @@ header {
   color: white;
   position: relative;
 }
+
 
 .hero::after {
   content: "";
