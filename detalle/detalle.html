@@ -87,46 +87,48 @@
         return;
       }
 
-      contenedor.innerHTML = `
-        <div class="detalle-container">
-          <div class="detalle-imagen">
-            <img src="../${datosBasicos.imagen}" alt="${datosBasicos.nombre}">
-          </div>
-          <div class="detalle-info">
-            <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
-            <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
-            <p class="precio">${precio}</p>
+contenedor.innerHTML = `
+  <div class="detalle-container">
+    <div class="detalle-imagen">
+      <img src="../${datosBasicos.imagen}" alt="${datosBasicos.nombre}">
+    </div>
+    <div class="detalle-info">
+      <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
+      <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
+      <p class="precio">${precio}</p>
 
-            <div class="detalle-card small-card">
-              <h3>Acordes principales</h3>
-              <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
-            </div>
+      <div class="detalle-card">
+        <h3>Descripción</h3>
+        <p>${perfume.descripcion}</p>
+      </div>
 
-            <div class="detalle-card small-card">
-              <h3>Categoría</h3>
-              <p>${datosBasicos.categoria}</p>
-            </div>
-
-            <div class="detalle-card big-card">
-              <h3>Notas</h3>
-              <section><strong>Salida:</strong>
-                <ul>${perfume.notas_salida.map(n => `<li>${n}</li>`).join('')}</ul>
-              </section>
-              <section><strong>Corazón:</strong>
-                <ul>${perfume.notas_corazon.map(n => `<li>${n}</li>`).join('')}</ul>
-              </section>
-              <section><strong>Base:</strong>
-                <ul>${perfume.notas_base.map(n => `<li>${n}</li>`).join('')}</ul>
-              </section>
-            </div>
-
-            <div class="detalle-card">
-              <h3>Descripción</h3>
-              <p>${perfume.descripcion}</p>
-            </div>
-          </div>
+      <div class="detalle-row">
+        <div class="detalle-card small-card">
+          <h3>Acordes principales</h3>
+          <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
         </div>
-      `;
+        <div class="detalle-card small-card">
+          <h3>Categoría</h3>
+          <p>${datosBasicos.categoria}</p>
+        </div>
+      </div>
+
+      <div class="detalle-card big-card">
+        <h3>Notas</h3>
+        <section><strong>Salida:</strong>
+          <ul>${perfume.notas_salida.map(n => `<li>${n}</li>`).join('')}</ul>
+        </section>
+        <section><strong>Corazón:</strong>
+          <ul>${perfume.notas_corazon.map(n => `<li>${n}</li>`).join('')}</ul>
+        </section>
+        <section><strong>Base:</strong>
+          <ul>${perfume.notas_base.map(n => `<li>${n}</li>`).join('')}</ul>
+        </section>
+      </div>
+    </div>
+  </div>
+`;
+
 
       const btnWhats = document.getElementById("btn-whatsapp");
       btnWhats.href = `https://wa.me/595991861112?text=Hola, quiero consultar por el perfume ${perfume.nombre || perfume.id}`;
