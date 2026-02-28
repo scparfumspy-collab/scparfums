@@ -4,24 +4,20 @@
   <meta charset="UTF-8">
   <title>Fragancias Masculinas - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Usa el mismo CSS que femeninos -->
+  <!-- CSS centralizado -->
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-<header class="small">
-  <img src="../Logo.png" alt="SC Parfums">
-  <nav>
-    <a href="../index.html">Inicio</a>
-    <a href="../categorias.html">Categorías</a>
-    <a href="../populares.html">Más Populares</a>
-    <a href="../nuevo.html">Lo Nuevo</a>
-    <a href="../ofertas.html">Ofertas</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-  <div class="search-box">
-    <input type="text" placeholder="Buscar fragancia...">
-  </div>
-</header>
+<!-- Header dinámico -->
+<div id="header"></div>
+<script>
+  fetch('../header.html')
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    });
+</script>
 
 <section class="hero">
   <div class="hero-text">Fragancias Masculinas</div>
@@ -179,3 +175,4 @@ cargarPerfumes();
 
 </body>
 </html>
+
