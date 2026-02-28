@@ -149,14 +149,17 @@ header nav a:hover {
 }
 
 .detalle-imagen img {
-  max-width: 450px;   /* más grande */
+  max-width: 600px;   /* más grande */
   border-radius: 12px;
   display: block;
   margin: 0 auto;
 }
 
+.detalle-imagen {
+  flex: 1.2;   /* ocupa más espacio que el texto */
+}
 .detalle-info {
-  flex: 1;
+  flex: 1;     /* el texto ocupa menos que la imagen */
 }
 
 .detalle-titulo {
@@ -177,15 +180,22 @@ header nav a:hover {
 
 .detalle-card {
   background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  margin-bottom: 20px;
+  padding: 12px 16px;   /* más compacto */
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
 }
 
 .detalle-card h3 {
-  margin-bottom: 10px;
+  font-size: 1.1em;
+  margin-bottom: 8px;
 }
+
+.detalle-card p, 
+.detalle-card li {
+  font-size: 0.9em;
+}
+
 
 .detalle-card ul {
   list-style: none;
