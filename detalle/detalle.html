@@ -54,7 +54,7 @@
       const catalogo = await respCatalogo.json();
       const datosBasicos = catalogo.find(p => p.id === id);
 
-      const preciosResp = await fetch("URL_DE_TU_SCRIPT_DE_PRECIOS");
+      const preciosResp = await fetch("https://script.google.com/macros/s/AKfycbwRNLbgXD_D7Qx72KpOvcsejuMSz_UXHlrgTm9vdSZ4_DXqoxP_Cx5y858xTXsKSOX2/exec");
       const precios = await preciosResp.json();
       const precioData = precios.find(pr => pr.id === id);
       let precio = "Consultar";
