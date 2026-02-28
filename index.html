@@ -12,37 +12,16 @@
       color: #333;
     }
 
-    /* HEADER */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      background-color: #000;
-    }
-    header img { 
-      height: 120px;
-      transform: scale(1.3);
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 40px;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    nav a:hover {
-      text-decoration: underline;
+   <div id="header"></div>
 
-    }
+<script>
+  fetch('header.html')   // como index.html está en la raíz, aquí no necesitas ../
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    });
+</script>
 
-      .search-box input {
-  padding: 8px 12px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-}
 
     /* HERO */
    .hero {
