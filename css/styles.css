@@ -108,9 +108,10 @@ header {
 
 /* Logo */
 header img {
-  height: 80px;   /* controla el tamaño del logo */
+  height: 120px;   /* controla el tamaño del logo */
   width: auto;    /* mantiene proporción */
   display: block;
+  margin-top: -20px; /* opcional: lo sube un poco para que no empuje el header */
 }
 
 /* Navegación */
