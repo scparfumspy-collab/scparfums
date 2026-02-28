@@ -5,21 +5,45 @@ body {
   color: #333;
 }
 
+/* HEADER */
 header {
   background-color: #222;
   color: white;
-  padding: 15px;
+  padding: 25px 40px;   /* más alto y con espacio lateral */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header img { height: 80px; /* ajusta según lo que quieras */ width: auto; /* mantiene proporción */ }
+/* Logo */
+header img {
+  height: 80px;   /* controla el tamaño del logo */
+  width: auto;    /* mantiene proporción */
+  display: block;
+}
+
+/* Navegación */
 header nav a {
   color: white;
-  margin-left: 20px;
+  margin-left: 30px;   /* más espacio entre enlaces */
   text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;     /* más grande y legible */
 }
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Caja de búsqueda */
+.search-box input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
 
 .detalle-container {
   display: flex;
