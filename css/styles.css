@@ -149,7 +149,7 @@ header nav a:hover {
 }
 
 .detalle-imagen img {
-  max-width: 600px;   /* más grande */
+  max-width: 500px;   /* más grande */
   border-radius: 12px;
   display: block;
   margin: 0 auto;
