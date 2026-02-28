@@ -202,6 +202,35 @@ header nav a:hover {
   font-size: 0.9em;
 }
 
+.small-card {
+  max-width: 300px;
+  display: inline-block;
+}
+
+.big-card {
+  max-width: 600px;
+}
+
+.big-card section {
+  margin-bottom: 12px;
+}
+
+.big-card ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.big-card li {
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+}
+
+
 /* ===== WHATSAPP BUTTON ===== */
 .whatsapp-btn {
   text-align: center;
