@@ -1,3 +1,4 @@
+/* ===== RESET & BASE ===== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,16 +6,45 @@ body {
   color: #333;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
   background-color: #000;
   color: white;
-  padding: 18px 40px;   /* más alto y con espacio lateral */
+  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+header img {
+  height: 100px;
+  width: auto;
+  transform: scale(1.3);
+  display: block;
+  margin-top: -10px;
+}
+
+header nav a {
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.search-box input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* ===== HERO ===== */
 .hero {
   height: 420px;
   background: url('/scparfums/imagenes/backgrounds/background-sauvage.jpg') center center no-repeat;
@@ -27,7 +57,6 @@ header {
   position: relative;
 }
 
-
 .hero::after {
   content: "";
   position: absolute;
@@ -35,12 +64,23 @@ header {
   width: 100%; height: 100%;
   background: rgba(0,0,0,0.4);
 }
+
 .hero-text {
   position: relative;
   z-index: 1;
   font-size: 36px;
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+/* ===== CATEGORIES ===== */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .category-card {
@@ -55,21 +95,13 @@ header {
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
 }
+
 .category-card img {
   width: 140px;
   height: 140px;
   object-fit: cover;
   margin-bottom: 10px;
   border-radius: 50%;
-}
-
-.categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .category-card:hover {
@@ -79,6 +111,7 @@ header {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* ===== INFO SECTION ===== */
 .info-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -105,70 +138,56 @@ header {
   margin-bottom: 15px;
 }
 
-
-
-
-/* Logo */
-header img {
-  height: 100px;   /* controla el tamaño del logo */
-  width: auto;    /* mantiene proporción */
-  transform: scale(1.3);
-  display: block;
-  margin-top: -10px; /* opcional: lo sube un poco para que no empuje el header */
-}
-
-/* Navegación */
-header nav a {
-  color: white;
-  margin-left: 30px;   /* más espacio entre enlaces */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;     /* más grande y legible */
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* Caja de búsqueda */
-.search-box input {
-  padding: 8px 12px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-}
-
-
+/* ===== DETAIL PAGE ===== */
 .detalle-container {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   align-items: flex-start;
-  margin: 40px;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1200px;
 }
 
 .detalle-imagen img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
+  max-width: 350px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
 }
 
-.detalle-info h1 {
-  font-size: 2em;
+.detalle-info {
+  flex: 1;
+}
+
+.detalle-titulo {
+  font-size: 2.2em;
   margin-bottom: 10px;
 }
 
-.detalle-info .precio {
-  font-size: 1.5em;
+.detalle-marca {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-size: 1.8em;
   color: #b12704;
   margin-bottom: 20px;
 }
 
-.detalle-info section {
+.detalle-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   margin-bottom: 20px;
 }
 
-.detalle-info ul {
+.detalle-card h3 {
+  margin-bottom: 10px;
+}
+
+.detalle-card ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -176,13 +195,14 @@ header nav a:hover {
   gap: 10px;
 }
 
-.detalle-info li {
+.detalle-card li {
   background: #eee;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.9em;
 }
 
+/* ===== WHATSAPP BUTTON ===== */
 .whatsapp-btn {
   text-align: center;
   margin: 30px;
@@ -197,6 +217,7 @@ header nav a:hover {
   font-weight: bold;
 }
 
+/* ===== FOOTER ===== */
 footer {
   background: #111;
   color: white;
@@ -204,11 +225,13 @@ footer {
   padding: 25px;
   font-size: 14px;
 }
+
 footer a {
   color: #25D366;
   text-decoration: none;
   margin: 0 8px;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
