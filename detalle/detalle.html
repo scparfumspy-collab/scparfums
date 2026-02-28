@@ -10,13 +10,16 @@
 
 <div id="header"></div>
 
+<div id="header"></div>
+
 <script>
-  fetch('header.html')   // ajusta la ruta según la ubicación del archivo
+  fetch('../header.html')
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
     });
 </script>
+
 
 
   <main id="detalle-perfume">
