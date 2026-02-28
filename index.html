@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <title>SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    }
+  <!-- Enlaza tu CSS externo -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-   <div id="header"></div>
+<body>
+
+<!-- Aquí se cargará el header -->
+<div id="header"></div>
 
 <script>
-  fetch('header.html')   // como index.html está en la raíz, aquí no necesitas ../
+  fetch('header.html')   // como index.html está en la raíz
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
