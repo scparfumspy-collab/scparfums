@@ -14,10 +14,7 @@ header {
   align-items: center;
 }
 
-header .logo img {
-  height: 40px;
-}
-
+header img { height: 80px; /* ajusta según lo que quieras */ width: auto; /* mantiene proporción */ }
 header nav a {
   color: white;
   margin-left: 20px;
