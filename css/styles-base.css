@@ -65,12 +65,12 @@ nav a:hover {
 
 /* Fondos específicos para index y categorías generales */
 .hero-index {
-  background: url('imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
+  background: url('/scparfums/imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .hero-categorias {
-  background: url('imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
+  background: url('/scparfums/imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -111,8 +111,8 @@ nav a:hover {
 }
 
 .index-card p {
-  font-size: 14px;
-  color: #555;
+  font-size: 16px;
+  color: #000;
 }
 
 /* ===== CATEGORY CARDS ===== */
@@ -152,7 +152,7 @@ nav a:hover {
 }
 
 .category-card p {
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
 }
 
