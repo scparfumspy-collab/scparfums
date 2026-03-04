@@ -73,21 +73,24 @@ nav a:hover {
 }
 
 .detalle-titulo {
-  font-size: 28px;
+  font-size: 34px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .detalle-marca {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
 .precio {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
   color: #d32f2f;
   margin-bottom: 20px;
+  display: inline-block; /* permite poner botón al lado */
+  margin-right: 15px;
+}
 }
 
 .detalle-card {
@@ -200,5 +203,30 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/* ===== BOTÓN HACER PEDIDO ===== */
+.pedido-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.pedido-btn:hover {
+  background-color: #1ebe5d;
+}
+
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
 
 
