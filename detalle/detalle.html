@@ -96,6 +96,15 @@ contenedor.innerHTML = `
       <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
       <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
       <p class="precio">${precio}</p>
+      <p class="precio">
+  ${precio}
+  <a href="https://wa.me/595991861112?text=Hola, quiero hacer un pedido del perfume ${datosBasicos.nombre}" 
+     target="_blank" class="pedido-btn">
+    <img src="../imagenes/iconos/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+    Hacer pedido
+  </a>
+</p>
+
 
       <div class="detalle-card">
         <h3>Descripción</h3>
