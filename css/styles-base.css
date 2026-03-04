@@ -144,12 +144,12 @@ nav a:hover {
 }
 
 .category-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  width: auto;
+  height: 100px; /* más bajo que 150px */
+  margin: 0 auto 10px;
+  display: block;
 }
+
 
 .category-card h3,
 .category-card p {
