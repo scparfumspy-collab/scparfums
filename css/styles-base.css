@@ -66,13 +66,13 @@ nav a:hover {
 /* Fondos específicos para index y categorías generales */
 .hero-index {
   background: url('../imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
-  background-size: contain;
+  background-size: cover;
   background-color: #000;
 }
 
 .hero-categorias {
   background: url('../imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
-  background-size: contain;
+  background-size: cover;
   background-color: #000;
 }
 
