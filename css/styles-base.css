@@ -145,7 +145,7 @@ nav a:hover {
 
 .category-card img {
   width: auto;
-  height: 130px; /* más bajo que 150px */
+  height: 140px; /* más bajo que 150px */
   margin: 0 auto 10px;
   display: block;
 }
