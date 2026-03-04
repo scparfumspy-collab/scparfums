@@ -92,8 +92,6 @@ nav a:hover {
   display: inline-block; /* permite poner botón al lado */
   margin-right: 15px;
 }
-}
-
 .detalle-card {
   background: #fafafa;
   padding: 15px;
