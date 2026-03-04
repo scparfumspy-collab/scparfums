@@ -127,6 +127,31 @@ nav a:hover {
   margin-bottom: 5px;
 }
 
+/* ===== BOTÓN WHATSAPP ===== */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-btn a {
+  display: inline-block;
+  background-color: #25D366; /* verde WhatsApp */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn a:hover {
+  background-color: #1ebe5d;
+}
+
 /* ===== INFO SECTION ===== */
 .info-section {
   max-width: 1200px;
