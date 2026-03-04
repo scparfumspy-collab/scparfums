@@ -16,7 +16,7 @@ header.small {
 }
 
 header.small img {
-  height: 130px; /* tamaño fijo y uniforme */
+  height: 130px;
   width: auto;
 }
 
@@ -45,172 +45,86 @@ nav a:hover {
   font-size: 14px;
 }
 
-/* ===== HERO ===== */
-.hero {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
-}
-
-.hero-text {
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-
-/* Backgrounds específicos */
-.hero-index {
-  background: url('../imagenes/bg-index.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-.hero-categorias {
-  background: url('../imagenes/bg-categorias.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-.hero-femeninos {
-  background: url('../imagenes/bg-femeninos.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-.hero-masculinos {
-  background: url('../imagenes/bg-masculinos.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-.hero-unisex {
-  background: url('../imagenes/bg-unisex.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-.hero-testers {
-  background: url('../imagenes/bg-testers.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-/* ===== LAYOUT ===== */
-.layout {
-  display: flex;
+/* ===== DETALLE PERFUME ===== */
+.detalle-container {
   max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 20px;
-  gap: 30px;
-}
-
-.sidebar {
-  width: 250px;
-  background: white;
+  margin: 40px auto;
   padding: 20px;
-  border-radius: 10px;
+  display: flex;
+  gap: 40px;
+  background: #fff;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.sidebar h3 {
+.detalle-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.detalle-imagen img {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.detalle-info {
+  flex: 2;
+}
+
+.detalle-titulo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.detalle-marca {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d32f2f;
+  margin-bottom: 20px;
+}
+
+.detalle-card {
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.detalle-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.detalle-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.small-card {
+  flex: 1;
+}
+
+.big-card {
+  margin-top: 20px;
+}
+
+.big-card section {
   margin-bottom: 15px;
 }
 
-.sidebar label {
+.big-card strong {
   display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-/* ===== PERFUME CARDS ===== */
-.perfumes {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.perfume-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.perfume-card:hover {
-  transform: translateY(-5px);
-}
-
-.perfume-card img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 10%;
-}
-
-.perfume-card a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.perfume-card p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #000;
-}
-
-.perfume-card p strong {
-  font-weight: bold;
-}
-
-.perfume-card p.precio {
-  color: #d32f2f;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* ===== CATEGORY CARDS ===== */
-.category-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.category-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.category-card:hover {
-  transform: translateY(-5px);
-}
-
-.category-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.category-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.category-card p {
-  font-size: 14px;
-  color: #555;
+  margin-bottom: 5px;
 }
 
 /* ===== INFO SECTION ===== */
@@ -261,4 +175,5 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
 
