@@ -47,7 +47,7 @@ nav a:hover {
 
 /* ===== HERO ===== */
 .hero {
-  height: 300px; /* más alto en index/categorías */
+  height: 400px; /* más alto en index/categorías */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,12 +66,14 @@ nav a:hover {
 /* Fondos específicos para index y categorías generales */
 .hero-index {
   background: url('../imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
-  background-size: cover;
+  background-size: contain;
+  background-color: #000;
 }
 
 .hero-categorias {
   background: url('../imagenes/backgrounds/background-sauvage.jpg') no-repeat center center;
-  background-size: cover;
+  background-size: contain;
+  background-color: #000;
 }
 
 /* ===== INDEX CATEGORY CARDS (Árabes, Diseñador, Nicho, Decants) ===== */
