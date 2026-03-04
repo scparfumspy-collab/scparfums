@@ -30,6 +30,29 @@
     "notas_corazon": ["Caramelo", "Haba Tonka"],
     "notas_base": ["Ambroxan", "Cedro", "Vetiver"],
     "descripcion": "Una fragancia dulce y potente, con mandarina brillante y notas de caramelo que envuelven en un aroma irresistible."
+  },
+ {
+      "id": "armaf-odyssey-candee",
+    "acordes": ["Afrutado", "Caramelo", "Dulce"],
+    "notas_salida": ["Fresa", "Frambuesa", "Geranio", "Durazno"],
+    "notas_corazon": ["Caramelo", "Jazmín", "Maracuyá"],
+    "notas_base": ["Pachulí", "Almizcle", "Ámbar"],
+    "descripcion": "Una fragancia femenina y vibrante que combina la dulzura jugosa de frutos rojos y durazno con un corazón gourmand de caramelo y maracuyá, sobre un fondo cálido de pachulí, almizcle y ámbar."
+  },
+   {
+      "id": "j.p.g-le-male-elixir-edp-mas-125ml",
+    "acordes": ["Avainillado", "Dulce", "Amielado"],
+    "notas_salida": ["Lavanda", "Menta"],
+    "notas_corazon": ["Vainilla", "Benjuí", "Maracuyá"],
+    "notas_base": ["Miel", "Haba Tonka", "Tabaco"],
+    "descripcion": "Una fragancia elegante y seductora, ideal para climas frescos o fríos, perfecta para ocasiones nocturnas donde quieras destacar con carácter y sofisticación."
+  },
+   {
+      "id": "lattafa-khamrah-edp-100ml-unisex",
+    "acordes": ["Dulce", "Cálido Especiado", "Avainillado"],
+    "notas_salida": ["Canela", "Nuez Moscada"],
+    "notas_corazon": ["Dátiles", "Praliné", "Nardos"],
+    "notas_base": ["Vainilla", "Haba Tonka", "Mirra", "Benjuí", "Ámbar"],
+    "descripcion": "Una fragancia cálida y especiada, perfecta para climas frescos o fríos, ideal en ocasiones elegantes y nocturnas donde quieras destacar con un aura envolvente."
   }
-
 ]
