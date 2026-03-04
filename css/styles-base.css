@@ -38,11 +38,12 @@ nav a:hover {
 }
 
 .search-box input {
-  padding: 6px 10px;
-  border-radius: 20px;
+  width: 250px;          /* ancho mayor */
+  padding: 10px 15px;    /* más alto y espacioso */
+  border-radius: 25px;   /* bordes más redondeados */
   border: none;
   outline: none;
-  font-size: 14px;
+  font-size: 16px;       /* texto más grande */
 }
 
 /* ===== HERO ===== */
