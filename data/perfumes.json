@@ -1,12 +1,4 @@
 [
-{
-  "id": "afnan-9am-dive-blue-edp-90ml-unisex",
-  "nombre": "Afnan 9AM Dive Blue EDP 90ml Unisex",
-  "marca": "Afnan",
-  "imagen": "imagenes/perfumes/afnan-9am-dive-blue-edp-90ml-unisex.png",
-  "pagina": "detalle/detalle.html?id=afnan-9am-dive-blue-edp-90ml-unisex",
-  "categoria": "unisex"
-},
   {
     "id": "lattafa-petra-edp-100ml",
     "nombre": "Petra EDP 100ML",
@@ -34,7 +26,7 @@
   {
     "id": "al-whataniah-sabah-al-ward",
   "nombre": "Sabah Al Ward EDP 100ML",
-    "marca": "AL Wataniah",
+    "marca": "Al Wataniah",
     "imagen": "imagenes/perfumes/al-whataniah-sabah-al-ward.png",
     "pagina": "detalle/detalle.html?id=al-whataniah-sabah-al-ward",
     "categoria": "femeninos"
