@@ -59,8 +59,11 @@ async function cargarPerfumes() {
 
     contenedor.innerHTML = '';
 
-    // Filtrar masculinos
-    const masculinos = perfumes.filter(p => p.categoria === "masculinos");
+// Filtrar masculinos y ordenar alfabéticamente por nombre
+const masculinos = perfumes
+  .filter(p => p.categoria === "masculinos")
+  .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+
 
     const perfumesPorPagina = 20;
     let paginaActual = 1;
