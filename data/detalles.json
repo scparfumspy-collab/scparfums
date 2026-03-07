@@ -54,5 +54,28 @@
     "notas_corazon": ["Dátiles", "Praliné", "Nardos"],
     "notas_base": ["Vainilla", "Haba Tonka", "Mirra", "Benjuí", "Ámbar"],
     "descripcion": "Una fragancia cálida y especiada, perfecta para climas frescos o fríos, ideal en ocasiones elegantes y nocturnas donde quieras destacar con un aura envolvente."
+  },
+     {
+      "id": "afnan-9am-dive-blue-edp-90ml-unisex",
+    "acordes": ["Afrutado", "Fresco", "Amaderado"],
+    "notas_salida": ["Limón", "Menta", "Grosellas Negras"],
+    "notas_corazon": ["Manzana", "Cedro", "Incienso"],
+    "notas_base": ["Jengibre", "Sándalo", "Pachulí"],
+    "descripcion": "Una fragancia fresca y versátil, perfecta para climas cálidos y días soleados, ideal para un estilo casual y dinámico que transmite energía y vitalidad."
+  },
+  {
+      "id": "afnan-9pm-edp-mas-100ml",
+    "acordes": ["Avainillado", "Afrutado", "Dulce"],
+    "notas_salida": ["Manzana", "Canela", "Lavanda", "Bergamota"],
+    "notas_corazon": ["Flor de Azahar", "Lirio de los Valles"],
+    "notas_base": ["Vainilla", "Haba Tonka", "Ámbar"],
+    "descripcion": "Una fragancia cálida y seductora, perfecta para climas frescos o fríos, ideal en ocasiones nocturnas y eventos donde quieras destacar con estilo y confianza."
+  },
+        "id": "afnan-9pm-fem-edp-100ml",
+    "acordes": ["Amaderado", "Afrutado", "Floral"],
+    "notas_salida": ["Frambuesa", "Violeta", "Manzana", "Naranja"],
+    "notas_corazon": ["Rosa", "Iris", "Peonía", "Jazmín"],
+    "notas_base": ["Pino", "Ciprés", "Ámbar", "Cedrp"],
+    "descripcion": "Una fragancia femenina elegante y versátil, perfecta para climas templados o frescos, ideal tanto en ocasiones casuales como en momentos especiales donde quieras resaltar con sofisticación."
   }
 ]
