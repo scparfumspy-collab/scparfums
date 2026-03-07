@@ -5,7 +5,7 @@
     "marca": "Lattafa",
     "imagen": "imagenes/perfumes/lattafa-petra.png",
     "pagina": "detalle/detalle.html?id=lattafa-petra-edp-100ml",
-    "categoria": "femeninos"
+    "categoria": "femeninos",
     "categoria2": "Árabes"
   },
   {
@@ -14,7 +14,7 @@
     "marca": "Armaf",
     "imagen": "imagenes/perfumes/odyssey-candee.png",
     "pagina": "detalle/detalle.html?id=armaf-odyssey-candee",
-    "categoria": "femeninos"
+    "categoria": "femeninos",
     "categoria2": "Árabes"
   },
    {
@@ -23,7 +23,7 @@
     "marca": "Armaf",
     "imagen": "imagenes/perfumes/odyssey-mandarinsky.png",
     "pagina": "detalle/detalle.html?id=armaf-odyssey-mandarin-sky-edp-100ml",
-    "categoria": "masculinos"
+    "categoria": "masculinos",
      "categoria2": "Árabes"
      },
   {
@@ -32,7 +32,7 @@
     "marca": "Al Wataniah",
     "imagen": "imagenes/perfumes/al-whataniah-sabah-al-ward.png",
     "pagina": "detalle/detalle.html?id=al-whataniah-sabah-al-ward",
-    "categoria": "femeninos"
+    "categoria": "femeninos",
     "categoria2": "Árabes"
   },
   {
@@ -41,7 +41,7 @@
     "marca": "Jean Paul Gaultier",
     "imagen": "imagenes/perfumes/le-male-elixir.png",
     "pagina": "detalle/detalle.html?id=j.p.g-le-male-elixir-edp-mas-125ml",
-    "categoria": "masculinos"
+    "categoria": "masculinos",
     "categoria2": "Diseñador"
   },
    {
@@ -50,7 +50,7 @@
     "marca": "Lattafa",
     "imagen": "imagenes/perfumes/khamrah.png",
     "pagina": "detalle/detalle.html?id=lattafa-khamrah-edp-100ml-unisex",
-    "categoria": "unisex"
+    "categoria": "unisex",
      "categoria2": "Árabes"
   },
    {
@@ -59,7 +59,7 @@
     "marca": "Maison Alhambra",
     "imagen": "imagenes/perfumes/philos-pura.png",
     "pagina": "detalle/detalle.html?id=maison-alhambra-philos-pura",
-    "categoria": "unisex"
+    "categoria": "unisex",
      "categoria2": "Árabes"
   },
    {
@@ -68,7 +68,7 @@
     "marca": "Maison Alhambra",
     "imagen": "imagenes/perfumes/jean-lowe-immortel.png",
     "pagina": "detalle/detalle.html?id=maison-alhambra-jean-lowe-immortel-",
-    "categoria": "masculinos"
+    "categoria": "masculinos",
      "categoria2": "Árabes"
   },
      {
@@ -77,7 +77,7 @@
     "marca": "Afnan",
     "imagen": "imagenes/perfumes/afnan-9pm-edp-mas-100ml.png",
     "pagina": "detalle/detalle.html?id=afnan-9pm-edp-mas-100ml",
-    "categoria": "masculinos"
+    "categoria": "masculinos",
     "categoria2": "Árabes"
   },
     {   
@@ -86,7 +86,7 @@
     "marca": "Afnan",
     "imagen": "imagenes/perfumes/afnan-9am-dive-blue-edp-90ml-unisex.png",
     "pagina": "detalle/detalle.html?id=afnan-9am-dive-blue-edp-90ml-unisex",
-    "categoria": "unisex"
+    "categoria": "unisex",
       "categoria2": "Árabes"
   },
     {   
@@ -95,7 +95,7 @@
     "marca": "Afnan",
     "imagen": "imagenes/perfumes/afnan-9pm-fem-edp-100ml.png",
     "pagina": "detalle/detalle.html?id=afnan-9pm-fem-edp-100ml",
-    "categoria": "femeninos"
+    "categoria": "femeninos",
       "categoria2": "Árabes"
   },
       {   
@@ -104,7 +104,7 @@
     "marca": "Afnan",
     "imagen": "imagenes/perfumes/afnan-9pm-rebel-edp-100ml.png",
     "pagina": "detalle/detalle.html?id=afnan-9pm-rebel-edp-100ml",
-    "categoria": "masculinos"
+    "categoria": "masculinos",
       "categoria2": "Árabes"
   },
         {   
@@ -113,7 +113,7 @@
     "marca": "Afnan",
     "imagen": "imagenes/perfumes/afnan-9pm-edp-mas-100ml-tester.png",
     "pagina": "detalle/detalle.html?id=afnan-9pm-edp-mas-100ml-tester",
-    "categoria": "tester masculinos"
+    "categoria": "tester masculinos",
     "categoria2": "Árabes"
   },
         {   
@@ -122,7 +122,7 @@
     "marca": "Afnan",
     "imagen": "imagenes/perfumes/afnan-9pm-rebel-tester.png",
     "pagina": "detalle/detalle.html?id=afnan-9pm-rebel-tester",
-    "categoria": "tester masculinos"
+    "categoria": "tester masculinos",
     "categoria2": "Árabes"
   },
           {   
@@ -131,7 +131,7 @@
     "marca": "Al Haramain",
     "imagen": "imagenes/perfumes/al-haramain-amber-oud-dubai-aqua-100ml-tester.png",
     "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-dubai-aqua-100ml-tester",
-    "categoria": "tester masculinos"
+    "categoria": "tester masculinos",
     "categoria2": "Árabes"
   },
             {   
@@ -140,7 +140,7 @@
     "marca": "Armani",
     "imagen": "imagenes/perfumes/armani-code-edp-75ml-tester.png",
     "pagina": "detalle/detalle.html?id=armani-code-edp-75ml-tester",
-    "categoria": "tester masculinos"
+    "categoria": "tester masculinos",
     "categoria2": "Diseñador"
   }
 ]
