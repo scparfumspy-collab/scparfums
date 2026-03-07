@@ -76,8 +76,16 @@
     "acordes": ["Amaderado", "Afrutado", "Floral"],
     "notas_salida": ["Frambuesa", "Violeta", "Manzana", "Naranja"],
     "notas_corazon": ["Rosa", "Iris", "Peonía", "Jazmín"],
-    "notas_base": ["Pino", "Ciprés", "Ámbar", "Cedrp"],
+    "notas_base": ["Pino", "Ciprés", "Ámbar", "Cedro"],
     "descripcion": "Una fragancia femenina elegante y versátil, perfecta para climas templados o frescos, ideal tanto en ocasiones casuales como en momentos especiales donde quieras resaltar con sofisticación."
+  },
+    {   
+    "id": "maison-alhambra-philos-pura",
+    "acordes": ["Cítrico", "Afrutado", "Dulce"],
+    "notas_salida": ["Naranja", "Bergamota", "Limón"],
+    "notas_corazon": ["Frutas"],
+    "notas_base": ["Vainilla", "Almizcle Blanco", "Ámbar"],
+    "descripcion": "Una fragancia fresca y luminosa, perfecta para climas cálidos y templados, ideal para un estilo casual y versátil que transmite energía y vitalidad."
   },
   {        
     "id": "afnan-9pm-rebel-edp-100ml",
