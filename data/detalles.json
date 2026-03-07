@@ -71,11 +71,20 @@
     "notas_base": ["Vainilla", "Haba Tonka", "Ámbar"],
     "descripcion": "Una fragancia cálida y seductora, perfecta para climas frescos o fríos, ideal en ocasiones nocturnas y eventos donde quieras destacar con estilo y confianza."
   },
-        "id": "afnan-9pm-fem-edp-100ml",
+  {   
+    "id": "afnan-9pm-fem-edp-100ml",
     "acordes": ["Amaderado", "Afrutado", "Floral"],
     "notas_salida": ["Frambuesa", "Violeta", "Manzana", "Naranja"],
     "notas_corazon": ["Rosa", "Iris", "Peonía", "Jazmín"],
     "notas_base": ["Pino", "Ciprés", "Ámbar", "Cedrp"],
     "descripcion": "Una fragancia femenina elegante y versátil, perfecta para climas templados o frescos, ideal tanto en ocasiones casuales como en momentos especiales donde quieras resaltar con sofisticación."
+  }
+  {        
+    "id": "afnan-9pm-rebel-edp-100ml",
+    "acordes": ["Amaderado", "Afrutado", "Dulce", "Fresco],
+    "notas_salida": ["Piña", "Mandarina", "Manzana"],
+    "notas_corazon": ["Musgo de Roble", "Cedro", "Vainilla"],
+    "notas_base": ["Madera Seca", "Ámbar Gris", "Caramelo", "Almizcle"],
+    "descripcion": "Una fragancia moderna y atrevida, perfecta para climas cálidos o templados, ideal en ocasiones casuales y dinámicas donde quieras destacar con frescura y personalidad."
   }
 ]
