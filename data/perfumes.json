@@ -134,7 +134,7 @@
     "categoria": "tester masculinos",
     "categoria2": "Árabes"
   },
-            {   
+    {   
     "id": "armani-code-edp-75ml-tester",
    "nombre": "Armani Code Tester EDP 75ML",
     "marca": "Armani",
@@ -142,5 +142,42 @@
     "pagina": "detalle/detalle.html?id=armani-code-edp-75ml-tester",
     "categoria": "tester masculinos",
     "categoria2": "Diseñador"
+  },
+      {   
+    "id": "armani-my-way-nectar-edp-90ml-tester",
+   "nombre": "My Way Néctar Tester EDP 90ML",
+    "marca": "Armani",
+    "imagen": "imagenes/perfumes/armani-my-way-nectar-edp-90ml-tester.png",
+    "pagina": "detalle/detalle.html?id=armani-my-way-nectar-edp-90ml-tester",
+    "categoria": "tester femeninos",
+    "categoria2": "Diseñador"
+  },
+      {   
+    "id": "armani-sí-edp-intense-100ml-tester",
+   "nombre": "Armani Sí Tester EDP 100ML",
+    "marca": "Armani",
+    "imagen": "imagenes/perfumes/armani-sí-edp-intense-100ml-tester.png",
+    "pagina": "detalle/detalle.html?id=armani-sí-edp-intense-100ml-tester",
+    "categoria": "tester femeninos",
+    "categoria2": "Diseñador"
+  },
+        {   
+    "id": "chanel-coco-mademoiselle-tester",
+   "nombre": "Coco Mademoiselle Tester EDP 100ML",
+    "marca": "Chanel",
+    "imagen": "imagenes/perfumes/chanel-coco-mademoiselle-tester.png",
+    "pagina": "detalle/detalle.html?id=chanel-coco-mademoiselle-tester",
+    "categoria": "tester femeninos",
+    "categoria2": "Diseñador"
+  },
+    {   
+    "id": "afnan-souvenir-blooming-bliss-tester-edp-100ml",
+   "nombre": "Souvenir Blooming Bliss Tester EDP 100ML",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-souvenir-blooming-bliss-tester-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=afnan-souvenir-blooming-bliss-tester-edp-100ml",
+    "categoria": "tester femeninos",
+    "categoria2": "Árabes"
   }
+  
 ]
