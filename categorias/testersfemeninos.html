@@ -59,10 +59,11 @@ async function cargarPerfumes() {
 
     contenedor.innerHTML = '';
 
-    // Normalizar categoría para que funcione con espacios y mayúsculas
-    const testersFem = perfumes
-      .filter(p => p.categoria && p.categoria.toLowerCase().replace(/\s+/g, '') === "testersfemeninos")
-      .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+// Filtrar testers femeninos y ordenar alfabéticamente por nombre
+const testersFem = perfumes
+  .filter(p => p.categoria && p.categoria.toLowerCase().replace(/\s+/g, '') === "testersfemeninos")
+  .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+
 
     const perfumesPorPagina = 20;
     let paginaActual = 1;
