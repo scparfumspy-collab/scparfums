@@ -110,5 +110,21 @@
     "notas_corazon": ["Flor de Azahar", "Lirio de los Valles"],
     "notas_base": ["Vainilla", "Haba Tonka", "Ámbar"],
     "descripcion": "Una fragancia cálida y seductora, perfecta para climas frescos o fríos, ideal en ocasiones nocturnas y eventos donde quieras destacar con estilo y confianza."
+  },
+    {
+      "id": "al-haramain-amber-oud-dubai-aqua-100ml-tester",
+    "acordes": ["Cítrico", "Verde", "Aromático"],
+    "notas_salida": ["Bergamota", "Notas Verdes", "Mandarina"],
+    "notas_corazon": ["Melón", "Ámbar", "Grosellas Negras, "Piña"],
+    "notas_base": ["Almizcle", "Petit Grain", "Gálbano", "Vainilla"],
+    "descripcion": "Una fragancia fresca y sofisticada, perfecta para climas cálidos y templados, ideal para un estilo versátil que funciona tanto en ocasiones casuales como en momentos especiales."
+  },
+      {
+      "id": "armani-code-edp-75ml-tester",
+    "acordes": ["Fresco Especiado", "Avainillado", "Cítrico"],
+    "notas_salida": ["Mandarina"],
+    "notas_corazon": ["Nuez Moscada"],
+    "notas_base": ["Haba Tonka"],
+    "descripcion": "Una fragancia masculina elegante y sofisticada, perfecta para climas templados o frescos, ideal en ocasiones formales y nocturnas donde quieras proyectar distinción y seguridad"
   }
 ]
