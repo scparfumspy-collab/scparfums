@@ -126,5 +126,38 @@
     "notas_corazon": ["Nuez Moscada"],
     "notas_base": ["Haba Tonka"],
     "descripcion": "Una fragancia masculina elegante y sofisticada, perfecta para climas templados o frescos, ideal en ocasiones formales y nocturnas donde quieras proyectar distinción y seguridad"
+  },
+        {
+      "id": "armani-my-way-nectar-edp-90ml-tester",
+    "acordes": ["Floral", "Cítrico", "Dulce"],
+    "notas_salida": ["Pera", "Flor de Azahar", "Bergamota"],
+    "notas_corazon": ["Nardos", "Jazmín", "Hojas de Violeta"],
+    "notas_base": ["Almizcle Blanco", "Vainilla Bourbon", "Cedro"],
+    "descripcion": "Una fragancia femenina luminosa y sofisticada, perfecta para climas cálidos y templados, ideal en ocasiones elegantes y especiales donde quieras transmitir frescura y delicadeza."
+  },
+        {
+      "id": "armani-sí-edp-intense-100ml-tester",
+    "acordes": ["Afrutado", "Avainillado", "Floral"],
+    "notas_salida": ["Grosellas Negras"],
+    "notas_corazon": ["Rosa de Mayo", "Davana"],
+    "notas_base": ["Vainilla Bourbon", "Vainilla", "Té Negro"],
+    "descripcion": "Una fragancia femenina sofisticada y envolvente, perfecta para climas frescos o templados, ideal en ocasiones elegantes y nocturnas donde quieras proyectar seguridad y distinción."
+  },
+        {
+      "id": "chanel-coco-mademoiselle-tester",
+    "acordes": ["Cítrico", "Amaderado", "Dulce"],
+    "notas_salida": ["Naranja", "Mandarina", "Bergamota", "Flor de Azahar"],
+    "notas_corazon": ["Rosa Turca", "Jazmín", "Mimosa", "Ylang-Ylang"],
+    "notas_base": ["Pachulí", "Almizcle Blanco", "Vainilla", "Vétiver"],
+    "descripcion": "Una fragancia femenina icónica y sofisticada, perfecta para climas templados o frescos, ideal en ocasiones elegantes y especiales donde quieras proyectar distinción y modernidad atemporal."
+  },
+        {
+      "id": "afnan-souvenir-blooming-bliss-tester-edp-100ml",
+    "acordes": ["Amaderado", "Avainillado", "Dulce"],
+    "notas_salida": ["Vainilla"],
+    "notas_corazon": ["Caramelo", "Coco", "Palo Santo"],
+    "notas_base": ["Almizcle Blanco", "Sándalo"],
+    "descripcion": "Una fragancia femenina dulce y envolvente, perfecta para climas frescos o templados, ideal en ocasiones elegantes y nocturnas donde quieras destacar con un aire sofisticado y seductor."
   }
+  
 ]
