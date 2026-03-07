@@ -70,5 +70,27 @@
     "imagen": "imagenes/perfumes/jean-lowe-immortel.png",
     "pagina": "detalle/detalle.html?id=maison-alhambra-jean-lowe-immortel-",
     "categoria": "masculinos"
+  },
+     {
+     "id": "afnan-9pm-edp-mas-100ml",
+   "nombre": "9PM EDP 100ML",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/philos-pura.png",
+    "pagina": "detalle/detalle.html?id=afnan-9pm-edp-mas-100ml",
+    "categoria": "masculinos"
+  },
+       "id": "afnan-9am-dive-blue-edp-90ml-unisex",
+   "nombre": "9AM Dive EDP 100ML",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/philos-pura.png",
+    "pagina": "detalle/detalle.html?id=afnan-9am-dive-blue-edp-90ml-unisex",
+    "categoria": "unisex"
+  },
+       "id": "afnan-9pm-fem-edp-100ml",
+   "nombre": "9PM Pour Femme EDP 100ML",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/philos-pura.png",
+    "pagina": "detalle/detalle.html?id=afnan-9pm-fem-edp-100ml",
+    "categoria": "femeninos"
   }
 ]
