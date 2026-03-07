@@ -94,5 +94,37 @@
     "imagen": "imagenes/perfumes/afnan-9pm-rebel-edp-100ml.png",
     "pagina": "detalle/detalle.html?id=afnan-9pm-rebel-edp-100ml",
     "categoria": "masculinos"
+  },
+        {   
+    "id": "afnan-9pm-edp-mas-100ml-tester",
+   "nombre": "9PM Tester EDP 100ML",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-9pm-edp-mas-100ml-tester.png",
+    "pagina": "detalle/detalle.html?id=afnan-9pm-edp-mas-100ml-tester",
+    "categoria": "tester masculinos"
+  },
+        {   
+    "id": "afnan-9pm-rebel-tester",
+   "nombre": "9PM Rebel Tester EDP 100ML",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-9pm-rebel-tester.png",
+    "pagina": "detalle/detalle.html?id=afnan-9pm-rebel-tester",
+    "categoria": "tester masculinos"
+  },
+          {   
+    "id": "al-haramain-amber-oud-dubai-aqua-100ml-tester",
+   "nombre": "Amber Oud Aqua Dubai Tester EDP 100ML",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-amber-oud-dubai-aqua-100ml-tester.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-dubai-aqua-100ml-tester",
+    "categoria": "tester masculinos"
+  },
+            {   
+    "id": "armani-code-edp-75ml-tester",
+   "nombre": "Armani Code Tester EDP 75ML",
+    "marca": "Armani",
+    "imagen": "imagenes/perfumes/armani-code-edp-75ml-tester.png",
+    "pagina": "detalle/detalle.html?id=armani-code-edp-75ml-tester",
+    "categoria": "tester masculinos"
   }
 ]
