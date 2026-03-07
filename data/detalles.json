@@ -94,5 +94,21 @@
     "notas_corazon": ["Musgo de Roble", "Cedro", "Vainilla"],
     "notas_base": ["Madera Seca", "Ámbar Gris", "Caramelo", "Almizcle"],
     "descripcion": "Una fragancia moderna y atrevida, perfecta para climas cálidos o templados, ideal en ocasiones casuales y dinámicas donde quieras destacar con frescura y personalidad."
+  },
+    {        
+    "id": "afnan-9pm-rebel-tester",
+    "acordes": ["Amaderado", "Afrutado", "Dulce", "Fresco"],
+    "notas_salida": ["Piña", "Mandarina", "Manzana"],
+    "notas_corazon": ["Musgo de Roble", "Cedro", "Vainilla"],
+    "notas_base": ["Madera Seca", "Ámbar Gris", "Caramelo", "Almizcle"],
+    "descripcion": "Una fragancia moderna y atrevida, perfecta para climas cálidos o templados, ideal en ocasiones casuales y dinámicas donde quieras destacar con frescura y personalidad."
+  },
+  {
+      "id": "afnan-9pm-edp-mas-100ml-tester",
+    "acordes": ["Avainillado", "Afrutado", "Dulce"],
+    "notas_salida": ["Manzana", "Canela", "Lavanda", "Bergamota"],
+    "notas_corazon": ["Flor de Azahar", "Lirio de los Valles"],
+    "notas_base": ["Vainilla", "Haba Tonka", "Ámbar"],
+    "descripcion": "Una fragancia cálida y seductora, perfecta para climas frescos o fríos, ideal en ocasiones nocturnas y eventos donde quieras destacar con estilo y confianza."
   }
 ]
