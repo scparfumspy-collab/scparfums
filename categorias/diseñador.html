@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fragancias de Diseñador - SC Parfums</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS centralizado -->
+  <link rel="stylesheet" href="../css/styles-base.css">
+</head>
+<body>
+
+<!-- Header dinámico -->
+<div id="header"></div>
+<script>
+  fetch('../header.html')
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    });
+</script>
+
+<section class="hero">
+  <div class="hero-text">Fragancias de Diseñador</div>
+</section>
+
+<section class="layout">
+  <aside class="sidebar">
+    <!-- Marcas se generan dinámicamente -->
+  </aside>
+
+  <main class="perfumes" id="perfume-list">
+    <!-- Aquí se insertarán las tarjetas dinámicamente -->
+  </main>
+</section>
+
+<footer>
+  © 2026 SC Parfums | Paraguay<br>
+  Productos 100% originales | Medios de pago disponibles<br>
+  Seguinos en 
+  <a href="https://www.facebook.com/SCParfums">Facebook</a> |
+  <a href="https://www.instagram.com/scparfumspy">Instagram</a> |
+  <a href="https://www.tiktok.com/@scparfums">TikTok</a> |
+  <a href="https://wa.me/595991861112">WhatsApp</a>
+</footer>
+
+<script src="../data/config.js"></script>
+<script>
+async function cargarPerfumes() {
+  const contenedor = document.getElementById('perfume-list');
+  const sidebar = document.querySelector('.sidebar');
+
+  contenedor.innerHTML = '<p id="loader">Cargando fragancias de diseñador...</p>';
+
+  try {
+    const respuesta = await fetch('../data/perfumes.json');
+    const perfumes = await respuesta.json();
+
+    const preciosResp = await fetch(CONFIG.preciosURL);
+    const precios = await preciosResp.json();
+
+    contenedor.innerHTML = '';
+
+    // Filtrar por categoria2 = "Diseñador"
+    const disenador = perfumes
+      .filter(p => p.categoria2 && p.categoria2.toLowerCase() === "diseñador")
+      .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+
+    const perfumesPorPagina = 20;
+    let paginaActual = 1;
+
+    function mostrarPagina(pagina, lista = disenador) {
+      contenedor.innerHTML = '';
+      const inicio = (pagina - 1) * perfumesPorPagina;
+      const fin = inicio + perfumesPorPagina;
+      const perfumesPagina = lista.slice(inicio, fin);
+
+      perfumesPagina.forEach(perfume => {
+        const precioData = precios.find(pr => pr.id === perfume.id);
+        let precio = "Consultar";
+        if (precioData && precioData.precio != null) {
+          precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+        }
+
+        const tarjeta = document.createElement('div');
+        tarjeta.className = 'perfume-card';
+        tarjeta.setAttribute('data-marca', perfume.marca);
+
+        tarjeta.innerHTML = `
+          <a href="../${perfume.pagina}">
+            <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+            <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+            <p class="precio">${precio}</p>
+          </a>
+        `;
+        contenedor.appendChild(tarjeta);
+      });
+
+      renderizarBotones(lista);
+    }
+
+    function renderizarBotones(lista) {
+      let botonesContainer = document.getElementById('botones-paginacion');
+      if (!botonesContainer) {
+        botonesContainer = document.createElement('div');
+        botonesContainer.id = 'botones-paginacion';
+        botonesContainer.style.textAlign = 'center';
+        botonesContainer.style.marginTop = '20px';
+        contenedor.parentNode.appendChild(botonesContainer);
+      }
+      botonesContainer.innerHTML = '';
+
+      const btnInicio = document.createElement('button');
+      btnInicio.textContent = 'Inicio';
+      btnInicio.onclick = () => {
+        paginaActual = 1;
+        mostrarPagina(paginaActual, lista);
+      };
+      botonesContainer.appendChild(btnInicio);
+
+      if (paginaActual > 1) {
+        const btnAnterior = document.createElement('button');
+        btnAnterior.textContent = 'Anterior';
+        btnAnterior.onclick = () => {
+          paginaActual--;
+          mostrarPagina(paginaActual, lista);
+        };
+        botonesContainer.appendChild(btnAnterior);
+      }
+
+      if (paginaActual * perfumesPorPagina < lista.length) {
+        const btnSiguiente = document.createElement('button');
+        btnSiguiente.textContent = 'Siguiente';
+        btnSiguiente.onclick = () => {
+          paginaActual++;
+          mostrarPagina(paginaActual, lista);
+        };
+        botonesContainer.appendChild(btnSiguiente);
+      }
+    }
+
+    mostrarPagina(paginaActual);
+
+    // Sidebar dinámico con marcas
+    const marcasUnicas = [...new Set(disenador.map(p => p.marca))];
+    const marcasContainer = document.createElement('div');
+    marcasContainer.innerHTML = "<h3>Marcas</h3>";
+
+    marcasUnicas.forEach(marca => {
+      const label = document.createElement('label');
+      label.innerHTML = `<input type="checkbox" value="${marca}"> ${marca}`;
+      marcasContainer.appendChild(label);
+    });
+
+    sidebar.innerHTML = '';
+    sidebar.appendChild(marcasContainer);
+
+    const checkboxes = marcasContainer.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const seleccionadas = [...checkboxes]
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        const filtrados = disenador.filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca));
+        paginaActual = 1;
+        mostrarPagina(paginaActual, filtrados);
+      });
+    });
+
+  } catch (error) {
+    console.error("Error cargando perfumes:", error);
+    contenedor.innerHTML = '<p>Error al cargar perfumes.</p>';
+  }
+}
+
+cargarPerfumes();
+</script>
+
+</body>
+</html>
