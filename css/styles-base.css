@@ -76,6 +76,40 @@ nav a:hover {
   background-size: cover;
   background-color: #000;
 }
+.hero-masculinos {
+  background: url('../imagenes/backgrounds/background-masculinos.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+}
+
+.hero-femeninos {
+  background: url('../imagenes/backgrounds/background-femeninos.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+}
+
+.hero-unisex {
+  background: url('../imagenes/backgrounds/background-unisex.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+}
+
+.hero-testers-femeninos {
+  background: url('../imagenes/backgrounds/background-testers-femeninos.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+}
+
+.hero-testers-masculinos {
+  background: url('../imagenes/backgrounds/background-testers-masculinos.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+}
+
+.hero-kits {
+  background: url('../imagenes/backgrounds/background-kits.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
 
 /* ===== INDEX CATEGORY CARDS (Árabes, Diseñador, Nicho, Decants) ===== */
 .index-categories {
