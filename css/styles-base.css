@@ -77,13 +77,13 @@ nav a:hover {
   background-color: #000;
 }
 .hero-masculinos {
-  background: url('../imagenes/backgrounds/background-masculinos.jpg') no-repeat center center;
+  background: url('../imagenes/backgrounds/background-masc.png') no-repeat center center;
   background-size: cover;
   background-color: #000;
 }
 
 .hero-femeninos {
-  background: url('../imagenes/backgrounds/background-femeninos.jpg') no-repeat center center;
+  background: url('../imagenes/backgrounds/background-fem.png') no-repeat center center;
   background-size: cover;
   background-color: #000;
 }
