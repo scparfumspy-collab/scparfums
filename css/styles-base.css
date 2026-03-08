@@ -95,13 +95,13 @@ nav a:hover {
 }
 
 .hero-testers-femeninos {
-  background: url('../imagenes/backgrounds/background-testers-femeninos.jpg') no-repeat center center;
+  background: url('../imagenes/backgrounds/background-testfem.png') no-repeat center center;
   background-size: cover;
   background-color: #000;
 }
 
 .hero-testers-masculinos {
-  background: url('../imagenes/backgrounds/background-testers-masculinos.jpg') no-repeat center center;
+  background: url('../imagenes/backgrounds/background-testmasc.png') no-repeat center center;
   background-size: cover;
   background-color: #000;
 }
