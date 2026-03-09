@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let perfumesCache = [];
 
   // Cargar perfumes.json una sola vez
-  fetch("/scparfums/data/perfumes.json")
+  fetch("data/perfumes.json")
     .then(resp => resp.json())
     .then(data => { perfumesCache = data; })
     .catch(err => console.error("Error cargando perfumes:", err));
