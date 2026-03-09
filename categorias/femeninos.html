@@ -12,11 +12,10 @@
 <!-- Header dinámico -->
 <div id="header"></div>
 <script>
-  fetch('header.html')
+  fetch('../header.html')
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
-      // Inicializar buscador después de insertar el header
       initHeaderSearch();
     });
 
