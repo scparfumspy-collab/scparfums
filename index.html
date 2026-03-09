@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/styles-base.css">
 </head>
 
-
 <body>
 
 <!-- Header dinámico -->
@@ -18,6 +17,10 @@
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
+      // Ahora que el header está insertado, cargo el JS
+      const script = document.createElement("script");
+      script.src = "js/header.js";
+      document.body.appendChild(script);
     });
 </script>
 
@@ -81,7 +84,5 @@
   <a href="https://www.tiktok.com/@scparfums">TikTok</a>
 </footer>
 
-  <script src="js/header.js"></script>
-  
 </body>
 </html>
