@@ -27,7 +27,7 @@
 
     if (!searchInput || !searchButton || !suggestionsBox) return;
 
-    fetch("data/perfumes.json")
+   fetch("../data/perfumes.json")
       .then(resp => resp.json())
       .then(data => { perfumesCache = data; })
       .catch(err => console.error("Error cargando perfumes:", err));
