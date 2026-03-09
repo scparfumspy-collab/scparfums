@@ -8,29 +8,59 @@
     <a href="/scparfums/ofertas.html">Ofertas</a>
     <a href="#contacto">Contacto</a>
   </nav>
-<div class="search-box">
-  <input type="text" id="searchInput" placeholder="Buscar fragancia...">
-  <div id="searchSuggestions" class="suggestions"></div>
-</div>
-
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.getElementById("searchInput");
-  if (searchInput) {
-    searchInput.addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        const query = searchInput.value.trim().toLowerCase();
-        if (query) {
-          // Redirigir a una página de resultados
-          window.location.href = "/scparfums/buscar.html?q=" + encodeURIComponent(query);
-        }
-      }
-    });
-  }
-});
-</script>
-
-  
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar fragancia...">
+    <div id="searchSuggestions" class="suggestions"></div>
+  </div>
 </header>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  const suggestionsBox = document.getElementById("searchSuggestions");
+  let perfumesCache = [];
 
+  // Cargar perfumes.json una sola vez
+  fetch("/scparfums/data/perfumes.json")
+    .then(resp => resp.json())
+    .then(data => { perfumesCache = data; })
+    .catch(err => console.error("Error cargando perfumes:", err));
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim().toLowerCase();
+    suggestionsBox.innerHTML = "";
+    if (!query) {
+      suggestionsBox.style.display = "none";
+      return;
+    }
+
+    const resultados = perfumesCache.filter(p =>
+      p.nombre.toLowerCase().includes(query) ||
+      p.marca.toLowerCase().includes(query)
+    ).slice(0, 10);
+
+    if (resultados.length === 0) {
+      suggestionsBox.style.display = "none";
+      return;
+    }
+
+    resultados.forEach(perfume => {
+      const item = document.createElement("div");
+      item.textContent = perfume.marca + " - " + perfume.nombre;
+      item.addEventListener("click", () => {
+        window.location.href = "/scparfums/" + perfume.pagina;
+      });
+      suggestionsBox.appendChild(item);
+    });
+
+    suggestionsBox.style.display = "block";
+  });
+
+  // Ocultar sugerencias si se hace clic fuera
+  document.addEventListener("click", (e) => {
+    if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+      suggestionsBox.style.display = "none";
+    }
+  });
+});
+</script>
