@@ -45,6 +45,26 @@ nav a:hover {
   outline: none;
   font-size: 16px;       /* texto más grande */
 }
+.suggestions {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 250px;
+  display: none; /* oculto por defecto */
+  z-index: 1000;
+}
+
+.suggestions div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions div:hover {
+  background: #f0f0f0;
+}
 
 /* ===== HERO ===== */
 .hero {
