@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultados = perfumesCache.filter(p =>
       p.nombre.toLowerCase().includes(query) ||
       p.marca.toLowerCase().includes(query)
-    ).slice(0, 10);
+    ).slice(0, 10); // máximo 10 sugerencias
 
     if (resultados.length === 0) {
       suggestionsBox.style.display = "none";
@@ -64,3 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
