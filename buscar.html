@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados de búsqueda - SC Parfums</title>
+  <link rel="stylesheet" href="css/styles-base.css">
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+    fetch('header.html')
+      .then(resp => resp.text())
+      .then(html => { document.getElementById('header').innerHTML = html; });
+  </script>
+
+  <main id="perfume-list"></main>
+
+  <script src="data/config.js"></script>
+  <script>
+  async function cargarBusqueda() {
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("q")?.toLowerCase() || "";
+    const contenedor = document.getElementById("perfume-list");
+
+    if (!query) {
+      contenedor.innerHTML = "<p>No se ingresó ninguna búsqueda.</p>";
+      return;
+    }
+
+    contenedor.innerHTML = "<p>Buscando...</p>";
+
+    try {
+      const respuesta = await fetch("data/perfumes.json");
+      const perfumes = await respuesta.json();
+      const preciosResp = await fetch(CONFIG.preciosURL);
+      const precios = await preciosResp.json();
+
+      const resultados = perfumes.filter(p =>
+        p.nombre.toLowerCase().includes(query) ||
+        p.marca.toLowerCase().includes(query)
+      );
+
+      contenedor.innerHTML = "";
+
+      if (resultados.length === 0) {
+        contenedor.innerHTML = "<p>No se encontraron fragancias.</p>";
+        return;
+      }
+
+      resultados.forEach(perfume => {
+        const precioData = precios.find(pr => pr.id === perfume.id);
+        let precio = "Consultar";
+        if (precioData && precioData.precio != null) {
+          precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+        }
+
+        const tarjeta = document.createElement("div");
+        tarjeta.className = "perfume-card";
+        tarjeta.innerHTML = `
+          <a href="${perfume.pagina}">
+            <img src="${perfume.imagen}" alt="${perfume.nombre}">
+            <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+            <p class="precio">${precio}</p>
+          </a>
+        `;
+        contenedor.appendChild(tarjeta);
+      });
+    } catch (error) {
+      console.error("Error en búsqueda:", error);
+      contenedor.innerHTML = "<p>Error al buscar perfumes.</p>";
+    }
+  }
+
+  cargarBusqueda();
+  </script>
+</body>
+</html>
