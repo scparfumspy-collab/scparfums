@@ -17,11 +17,74 @@
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
-      // Ahora que el header está insertado, cargo el JS
-      const script = document.createElement("script");
-      script.src = "js/header.js";
-      document.body.appendChild(script);
+
+      // Ahora que el header está insertado, inicializo el buscador
+      initHeaderSearch();
     });
+
+  function initHeaderSearch() {
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+    const suggestionsBox = document.getElementById("searchSuggestions");
+    let perfumesCache = [];
+
+    if (!searchInput || !searchButton || !suggestionsBox) {
+      console.error("Header no cargado correctamente");
+      return;
+    }
+
+    // Cargar perfumes.json
+    fetch("data/perfumes.json")
+      .then(resp => resp.json())
+      .then(data => { perfumesCache = data; })
+      .catch(err => console.error("Error cargando perfumes:", err));
+
+    // Autocompletado
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      suggestionsBox.innerHTML = "";
+      if (!query) {
+        suggestionsBox.style.display = "none";
+        return;
+      }
+
+      const resultados = perfumesCache.filter(p =>
+        p.nombre.toLowerCase().includes(query) ||
+        p.marca.toLowerCase().includes(query)
+      ).slice(0, 10);
+
+      if (resultados.length === 0) {
+        suggestionsBox.style.display = "none";
+        return;
+      }
+
+      resultados.forEach(perfume => {
+        const item = document.createElement("div");
+        item.textContent = perfume.marca + " - " + perfume.nombre;
+        item.addEventListener("click", () => {
+          window.location.href = "/scparfums/" + perfume.pagina;
+        });
+        suggestionsBox.appendChild(item);
+      });
+
+      suggestionsBox.style.display = "block";
+    });
+
+    // Botón Buscar
+    searchButton.addEventListener("click", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (query) {
+        window.location.href = "/scparfums/buscar.html?q=" + encodeURIComponent(query);
+      }
+    });
+
+    // Ocultar sugerencias si se hace clic fuera
+    document.addEventListener("click", (e) => {
+      if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+        suggestionsBox.style.display = "none";
+      }
+    });
+  }
 </script>
 
 <!-- Hero con background -->
