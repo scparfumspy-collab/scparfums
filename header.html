@@ -8,9 +8,10 @@
     <a href="/scparfums/ofertas.html">Ofertas</a>
     <a href="#contacto">Contacto</a>
   </nav>
-  <div class="search-box">
-    <input type="text" placeholder="Buscar fragancia...">
-  </div>
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Buscar fragancia...">
+  <div id="searchSuggestions" class="suggestions"></div>
+</div>
 
   <script>
 document.addEventListener("DOMContentLoaded", () => {
