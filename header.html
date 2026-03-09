@@ -11,6 +11,25 @@
   <div class="search-box">
     <input type="text" placeholder="Buscar fragancia...">
   </div>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  if (searchInput) {
+    searchInput.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        const query = searchInput.value.trim().toLowerCase();
+        if (query) {
+          // Redirigir a una página de resultados
+          window.location.href = "/scparfums/buscar.html?q=" + encodeURIComponent(query);
+        }
+      }
+    });
+  }
+});
+</script>
+
+  
 </header>
 
 
