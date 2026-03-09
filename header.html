@@ -10,6 +10,7 @@
   </nav>
   <div class="search-box">
     <input type="text" id="searchInput" placeholder="Buscar fragancia...">
+    <button id="searchButton">Buscar</button>
     <div id="searchSuggestions" class="suggestions"></div>
   </div>
 </header>
@@ -17,6 +18,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
+  const searchButton = document.getElementById("searchButton");
   const suggestionsBox = document.getElementById("searchSuggestions");
   let perfumesCache = [];
 
@@ -26,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => { perfumesCache = data; })
     .catch(err => console.error("Error cargando perfumes:", err));
 
+  // Autocompletado
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.trim().toLowerCase();
     suggestionsBox.innerHTML = "";
@@ -37,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultados = perfumesCache.filter(p =>
       p.nombre.toLowerCase().includes(query) ||
       p.marca.toLowerCase().includes(query)
-    ).slice(0, 10); // máximo 10 sugerencias
+    ).slice(0, 10);
 
     if (resultados.length === 0) {
       suggestionsBox.style.display = "none";
@@ -56,6 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
     suggestionsBox.style.display = "block";
   });
 
+  // Botón Buscar → redirige a buscar.html
+  searchButton.addEventListener("click", () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (query) {
+      window.location.href = "/scparfums/buscar.html?q=" + encodeURIComponent(query);
+    }
+  });
+
   // Ocultar sugerencias si se hace clic fuera
   document.addEventListener("click", (e) => {
     if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
@@ -64,4 +75,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-
