@@ -140,35 +140,47 @@ const masculinos = perfumes
     const perfumesPorPagina = 20;
     let paginaActual = 1;
 
-    function mostrarPagina(pagina, lista = masculinos) {
-      contenedor.innerHTML = '';
-      const inicio = (pagina - 1) * perfumesPorPagina;
-      const fin = inicio + perfumesPorPagina;
-      const perfumesPagina = lista.slice(inicio, fin);
+function mostrarPagina(pagina, lista = masculinos) {
+  contenedor.innerHTML = '';
+  const inicio = (pagina - 1) * perfumesPorPagina;
+  const fin = inicio + perfumesPorPagina;
+  const perfumesPagina = lista.slice(inicio, fin);
 
-      perfumesPagina.forEach(perfume => {
-        const precioData = precios.find(pr => pr.id === perfume.id);
-        let precio = "Consultar";
-        if (precioData && precioData.precio != null) {
-          precio = "₲ " + precioData.precio.toLocaleString("es-PY");
-        }
-
-        const tarjeta = document.createElement('div');
-        tarjeta.className = 'perfume-card';
-        tarjeta.setAttribute('data-marca', perfume.marca);
-
-        tarjeta.innerHTML = `
-          <a href="../${perfume.pagina}">
-            <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-            <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-            <p class="precio">${precio}</p>
-          </a>
-        `;
-        contenedor.appendChild(tarjeta);
-      });
-
-      renderizarBotones(lista);
+  perfumesPagina.forEach(perfume => {
+    const precioData = precios.find(pr => pr.id === perfume.id);
+    let precio = "Consultar";
+    if (precioData && precioData.precio != null) {
+      precio = "₲ " + precioData.precio.toLocaleString("es-PY");
     }
+
+    const tarjeta = document.createElement('div');
+    tarjeta.className = 'perfume-card';
+    tarjeta.setAttribute('data-marca', perfume.marca);
+
+    // Crear enlace
+    const enlace = document.createElement('a');
+    enlace.href = `../${perfume.pagina}`;
+    enlace.innerHTML = `
+      <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+      <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+      <p class="precio">${precio}</p>
+    `;
+
+    // Evento de Analytics
+    enlace.addEventListener("click", () => {
+      gtag('event', 'click_perfume', {
+        event_category: 'Perfumes',
+        event_label: perfume.nombre,
+        value: 1
+      });
+    });
+
+    tarjeta.appendChild(enlace);
+    contenedor.appendChild(tarjeta);
+  });
+
+  renderizarBotones(lista);
+}
 
     function renderizarBotones(lista) {
       let botonesContainer = document.getElementById('botones-paginacion');
