@@ -139,6 +139,8 @@ const testersMasc = perfumes
   .filter(p => p.categoria && p.categoria.toLowerCase().replace(/\s+/g, '') === "testersmasculinos")
   .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
 
+        const perfumesPorPagina = 20;
+    let paginaActual = 1;
 
 function mostrarPagina(pagina, lista = testersMasc) {
   contenedor.innerHTML = '';
