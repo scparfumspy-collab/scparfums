@@ -139,6 +139,9 @@ async function cargarPerfumes() {
       .filter(p => p.categoria === "kits")
       .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
 
+        const perfumesPorPagina = 20;
+    let paginaActual = 1;
+
 function mostrarPagina(pagina, lista = kits) {
   contenedor.innerHTML = '';
   const inicio = (pagina - 1) * perfumesPorPagina;
