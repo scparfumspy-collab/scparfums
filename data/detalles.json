@@ -166,6 +166,14 @@
     "notas_corazon": ["Pimienta de Jamaica", "Cuero", "Lavanda"],
     "notas_base": ["Vainilla", "Pachulí", "Ládano", "Heliántemo"],
     "descripcion": "Una fragancia intensa y especiada, perfecta para climas frescos o fríos, ideal en ocasiones nocturnas y elegantes donde quieras proyectar fuerza, misterio y sofisticación."
+  },
+        {
+      "id": "armaf-club-de-nuit-intense-edt-mas-105ml",
+    "acordes": ["Cítrico", "Afrutado", "Ahumado"],
+    "notas_salida": ["Limón", "Piña", "Bergamota"],
+    "notas_corazon": ["Abedul", "Jazmín", "Rosa"],
+    "notas_base": ["Almizcle", "Ámbar Gris", "Pachulí"],
+    "descripcion": "Una fragancia masculina poderosa y sofisticada, perfecta para climas templados o frescos, ideal en ocasiones elegantes y nocturnas donde quieras proyectar seguridad, distinción y carácter."
   }
   
 ]
