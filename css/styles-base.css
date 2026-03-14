@@ -234,6 +234,51 @@ nav a:hover {
 .category-card.top2 { border: 2px solid silver; }
 .category-card.top3 { border: 2px solid #cd7f32; } /* bronce */
 
+/* Sección de populares en grid */
+.populares-section .category-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Tarjetas más pequeñas y cuadradas */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;   /* más compactas */
+  height: 280px;  /* cuadradas */
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card img {
+  width: 100%;
+  height: 180px; /* altura fija para imagen */
+  object-fit: contain;
+  border-bottom: 1px solid #eee;
+}
+
+.category-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.category-card .precio {
+  color: red;
+  font-weight: bold;
+}
+
 /* ===== INFO SECTION ===== */
 .info-section {
   max-width: 1200px;
