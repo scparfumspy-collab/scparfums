@@ -196,5 +196,60 @@
     "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-intense-edt-mas-105ml",
     "categoria": "masculinos",
     "categoria2": "Árabes"
+  },
+     {  
+      "id": "al-haramain-amber-oud-dubai-aqua-100ml",
+   "nombre": "Amber Oud Aqua Duabi EDP 100ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-amber-oud-dubai-aqua-100ml.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-dubai-aqua-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+       {  
+      "id": "al-haramain-amber-oud-dubai-night-100ml",
+   "nombre": "Amber Oud Duabi Night EDP 100ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-amber-oud-dubai-night-100ml.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-dubai-night-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+         {  
+      "id": "al-haramain-amber-oud-gold-120ml",
+   "nombre": "Amber Oud Gold Edition EDP 120ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-amber-oud-gold-120ml.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-gold-120ml",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+           {  
+      "id": "al-haramain-amber-oud-black-edp-100ml",
+   "nombre": "Amber Oud Black Edition EDP 75ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-amber-oud-black-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-black-edp-100ml",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+             {  
+      "id": "al-haramain-amber-oud-ultra-violet-120ml",
+   "nombre": "Amber Oud Ultra Violet EDP 120ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-amber-oud-ultra-violet-120ml.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-ultra-violet-120ml",
+    "categoria": "Femeninos",
+    "categoria2": "Árabes"
+  },
+     {
+             {  
+      "id": "al-haramain-amber-oud-carbon-edit-100ml",
+   "nombre": "Amber Oud Carbon Edition EDP 120ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-amber-oud-carbon-edit-100ml.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-carbon-edit-100ml",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
   }
 ]
