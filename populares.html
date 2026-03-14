@@ -136,30 +136,27 @@
 </footer>
 
 <!-- Script para cargar ranking -->
-<script>
 async function cargarPopulares() {
   const contenedor = document.getElementById('lista-populares');
   const estado = document.getElementById('estado-carga');
 
   estado.style.display = "block";
-estado.textContent = "Cargando perfumes populares...";
+  estado.textContent = "Cargando perfumes populares...";
 
   try {
-    // Cargar catálogo completo
     const respPerfumes = await fetch("data/perfumes.json");
     const perfumes = await respPerfumes.json();
 
-    // Cargar precios desde Apps Script
     const respPrecios = await fetch(CONFIG.preciosURL);
     const precios = await respPrecios.json();
 
-    // Cargar ranking de populares
     const respPopulares = await fetch("data/perfumes_populares.json");
     const populares = await respPopulares.json();
 
+    // limpiar loader y ocultar mensaje
     contenedor.innerHTML = '';
+    estado.style.display = "none";
 
-    // Ordenar por número de eventos
     populares.sort((a, b) => b["Número de eventos"] - a["Número de eventos"]);
     const top = populares.slice(0, 50);
 
@@ -173,14 +170,12 @@ estado.textContent = "Cargando perfumes populares...";
       const detalle = perfumes.find(perf => perf.nombre === p["perfume clicado"]);
       if (!detalle) return;
 
-      // Buscar precio por id
       const precioData = precios.find(pr => pr.id === detalle.id);
       let precio = "Consultar";
       if (precioData && precioData.precio != null) {
         precio = "₲ " + precioData.precio.toLocaleString("es-PY");
       }
 
-      // Crear tarjeta igual que categorías
       const tarjeta = document.createElement('div');
       tarjeta.className = 'perfume-card';
       tarjeta.setAttribute('data-marca', detalle.marca);
@@ -193,7 +188,6 @@ estado.textContent = "Cargando perfumes populares...";
         <p class="precio">${precio}</p>
       `;
 
-      // Destacar Top 3
       if (i === 0) tarjeta.classList.add("top1");
       if (i === 1) tarjeta.classList.add("top2");
       if (i === 2) tarjeta.classList.add("top3");
@@ -208,7 +202,7 @@ estado.textContent = "Cargando perfumes populares...";
 }
 
 cargarPopulares();
-</script>
+
 
 
 
