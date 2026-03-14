@@ -146,6 +146,14 @@
 
     estado.style.display = "none";
 
+    // Normalizar precios: si viene un objeto único, convertirlo en array
+    let preciosArray = [];
+    if (Array.isArray(precios)) {
+      preciosArray = precios;
+    } else if (precios && precios.id) {
+      preciosArray = [precios];
+    }
+
     // Ordenar por número de eventos
     populares.sort((a, b) => b["Número de eventos"] - a["Número de eventos"]);
     const top = populares.slice(0, 50);
@@ -157,12 +165,11 @@
     }
 
     top.forEach((p, i) => {
-      // Buscar datos completos en perfumes.json
       const detalle = perfumes.find(perf => perf.nombre === p["perfume clicado"]);
       if (!detalle) return;
 
       // Buscar precio usando el id del perfume
-      const precioObj = precios.find(pr => pr.id === detalle.id);
+      const precioObj = preciosArray.find(pr => pr.id === detalle.id);
       const precio = precioObj ? precioObj.precio : "Consultar";
 
       // Crear tarjeta igual que categorías
@@ -206,6 +213,7 @@
     console.error("Error cargando JSON:", err);
   });
 </script>
+
 
 
 
