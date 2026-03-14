@@ -135,48 +135,67 @@
 
 <!-- Script para cargar ranking -->
 <script>
-  fetch("data/perfumes_populares.json")
-    .then(resp => resp.json())
-    .then(data => {
-      const lista = document.getElementById("lista-populares");
-      const estado = document.getElementById("estado-carga");
+  Promise.all([
+    fetch("data/perfumes_populares.json").then(r => r.json()),
+    fetch("data/perfumes.json").then(r => r.json())
+  ])
+  .then(([populares, perfumes]) => {
+    const lista = document.getElementById("lista-populares");
+    const estado = document.getElementById("estado-carga");
 
-      // Ocultar mensaje de carga
-      estado.style.display = "none";
+    estado.style.display = "none";
 
-      // Ordenar por número de eventos (descendente)
-      data.sort((a, b) => b["Número de eventos"] - a["Número de eventos"]);
-      const top = data.slice(0, 50);
+    // Ordenar por número de eventos
+    populares.sort((a, b) => b["Número de eventos"] - a["Número de eventos"]);
+    const top = populares.slice(0, 50);
 
-      if (top.length === 0) {
-        estado.style.display = "block";
-        estado.textContent = "No hay datos disponibles todavía.";
-        return;
-      }
+    if (top.length === 0) {
+      estado.style.display = "block";
+      estado.textContent = "No hay datos disponibles todavía.";
+      return;
+    }
 
-      top.forEach((p, i) => {
-        const li = document.createElement("li");
-        const link = document.createElement("a");
-        link.href = "catalogo.html?perfume=" + encodeURIComponent(p["perfume clicado"]);
-        link.textContent = `${i+1}. ${p["perfume clicado"]}`;
+    top.forEach((p, i) => {
+      // Buscar datos completos en perfumes.json
+      const detalle = perfumes.find(perf => perf.nombre === p["perfume clicado"]);
+      if (!detalle) return; // si no encuentra, salta
 
-        // Evento GA4
-        link.addEventListener("click", () => {
-          gtag("event", "perfume_click", {
-            event_category: "interacción",
-            event_label: p["perfume clicado"]
-          });
+      // Crear tarjeta igual que categorías
+      const card = document.createElement("a");
+      card.href = "/scparfums/" + detalle.pagina;
+      card.className = "category-card";
+
+      const img = document.createElement("img");
+      img.src = detalle.imagen;
+      img.alt = detalle.nombre;
+
+      const nombre = document.createElement("p");
+      nombre.textContent = detalle.marca + " - " + detalle.nombre;
+
+      const precio = document.createElement("p");
+      precio.textContent = "₲ " + detalle.precio;
+
+      card.appendChild(img);
+      card.appendChild(nombre);
+      card.appendChild(precio);
+
+      // Evento GA4
+      card.addEventListener("click", () => {
+        gtag("event", "perfume_click", {
+          event_category: "interacción",
+          event_label: detalle.nombre
         });
-
-        li.appendChild(link);
-        lista.appendChild(li);
       });
-    })
-    .catch(err => {
-      const estado = document.getElementById("estado-carga");
-      estado.textContent = "Error cargando perfumes populares.";
-      console.error("Error cargando JSON:", err);
+
+      lista.appendChild(card);
     });
+  })
+  .catch(err => {
+    const estado = document.getElementById("estado-carga");
+    estado.textContent = "Error cargando perfumes populares.";
+    console.error("Error cargando JSON:", err);
+  });
+</script>
 </script>
 
 </body>
