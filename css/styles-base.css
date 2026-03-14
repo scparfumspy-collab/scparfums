@@ -230,6 +230,10 @@ nav a:hover {
   font-weight: bold; /* ahora en negrita */
 }
 
+.category-card.top1 { border: 2px solid gold; }
+.category-card.top2 { border: 2px solid silver; }
+.category-card.top3 { border: 2px solid #cd7f32; } /* bronce */
+
 /* ===== INFO SECTION ===== */
 .info-section {
   max-width: 1200px;
