@@ -198,6 +198,11 @@ contenedor.innerHTML = `
     </div>
   </div>
 `;
+      gtag('event', 'click_perfume', {
+  event_category: 'Perfumes',
+  event_label: datosBasicos.nombre,
+  value: 1
+});
 
 
       const btnWhats = document.getElementById("btn-whatsapp");
