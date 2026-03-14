@@ -158,6 +158,14 @@
     "notas_corazon": ["Caramelo", "Coco", "Palo Santo"],
     "notas_base": ["Almizcle Blanco", "Sándalo"],
     "descripcion": "Una fragancia femenina dulce y envolvente, perfecta para climas frescos o templados, ideal en ocasiones elegantes y nocturnas donde quieras destacar con un aire sofisticado y seductor."
+  },
+      {
+      "id": "afnan-9pm-elixir-edp-100ml",
+    "acordes": ["Cálido Especiado", "Avainillado", "Aromático"],
+    "notas_salida": ["Cardamomo", "Nuez Moscada", "Elemí"],
+    "notas_corazon": ["Pimienta de Jamaica", "Cuero", "Lavanda"],
+    "notas_base": ["Vainilla", "Pachulí", "Ládano", Heliántemo"],
+    "descripcion": "Una fragancia intensa y especiada, perfecta para climas frescos o fríos, ideal en ocasiones nocturnas y elegantes donde quieras proyectar fuerza, misterio y sofisticación."
   }
   
 ]
