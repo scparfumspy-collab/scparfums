@@ -146,12 +146,10 @@
 
     estado.style.display = "none";
 
-    // Normalizar precios: si viene un objeto único, convertirlo en array
-    let preciosArray = [];
-    if (Array.isArray(precios)) {
-      preciosArray = precios;
-    } else if (precios && precios.id) {
-      preciosArray = [precios];
+    // Aseguramos que precios sea un array
+    let preciosArray = Array.isArray(precios) ? precios : [];
+    if (!Array.isArray(precios)) {
+      console.error("Formato inesperado de precios:", precios);
     }
 
     // Ordenar por número de eventos
@@ -165,6 +163,7 @@
     }
 
     top.forEach((p, i) => {
+      // Buscar datos completos en perfumes.json
       const detalle = perfumes.find(perf => perf.nombre === p["perfume clicado"]);
       if (!detalle) return;
 
@@ -213,8 +212,6 @@
     console.error("Error cargando JSON:", err);
   });
 </script>
-
-
 
 
 </body>
