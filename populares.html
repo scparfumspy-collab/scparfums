@@ -141,7 +141,8 @@ async function cargarPopulares() {
   const contenedor = document.getElementById('lista-populares');
   const estado = document.getElementById('estado-carga');
 
-  contenedor.innerHTML = '<p id="loader">Cargando perfumes populares...</p>';
+  estado.style.display = "block";
+estado.textContent = "Cargando perfumes populares...";
 
   try {
     // Cargar catálogo completo
