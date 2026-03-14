@@ -151,7 +151,7 @@ async function cargarPopulares() {
     const respPrecios = await fetch(CONFIG.preciosURL);
     const precios = await respPrecios.json();
 
-    const respPopulares = await fetch("data/perfumes_populares.json");
+    const respPopulares = await fetch("data/perfumes_populares.json?v=" + Date.now());
     const populares = await respPopulares.json();
 
     contenedor.innerHTML = '';
