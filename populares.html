@@ -138,7 +138,7 @@
   Promise.all([
     fetch("data/perfumes_populares.json").then(r => r.json()),
     fetch("data/perfumes.json").then(r => r.json()),
-    fetch("https://script.google.com/macros/s/TU_ID_DE_SCRIPT/exec").then(r => r.json())
+    fetch("https://script.google.com/macros/s/AKfycbwRNLbgXD_D7Qx72KpOvcsejuMSz_UXHlrgTm9vdSZ4_DXqoxP_Cx5y858xTXsKSOX2/exec").then(r => r.json())
   ])
   .then(([populares, perfumes, precios]) => {
     const contenedor = document.getElementById("lista-populares");
