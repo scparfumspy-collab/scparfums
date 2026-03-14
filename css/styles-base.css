@@ -274,6 +274,10 @@ nav a:hover {
   color: red;
   font-weight: bold;
 }
+.perfume-card.top1 { border: 2px solid gold; }
+.perfume-card.top2 { border: 2px solid silver; }
+.perfume-card.top3 { border: 2px solid #cd7f32; } /* bronce */
+
 /* ===== INFO SECTION ===== */
 .info-section {
   max-width: 1200px;
