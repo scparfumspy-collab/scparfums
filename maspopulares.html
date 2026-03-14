@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfumes más populares</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- Header centralizado -->
+  <div id="header"></div>
+
+  <!-- Hero -->
+  <section class="hero hero-populares">
+    <div class="hero-content">
+      <h1>Perfumes más populares</h1>
+      <p>Descubre cuáles son los favoritos de nuestros visitantes</p>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <main>
+    <h2>Top perfumes más clicados</h2>
+    <ol id="lista-populares"></ol>
+  </main>
+
+  <!-- Footer centralizado -->
+  <div id="footer"></div>
+
+  <!-- Script -->
+  <script>
+    // Cargar header y footer centralizados
+    fetch("../partials/header.html")
+      .then(resp => resp.text())
+      .then(html => document.getElementById("header").innerHTML = html);
+
+    fetch("../partials/footer.html")
+      .then(resp => resp.text())
+      .then(html => document.getElementById("footer").innerHTML = html);
+
+    // Cargar ranking de perfumes
+    fetch("../data/perfumes_populares.json")
+      .then(resp => resp.json())
+      .then(data => {
+        const lista = document.getElementById("lista-populares");
+        // Ordenar por número de eventos (descendente)
+        data.sort((a, b) => b["Número de eventos"] - a["Número de eventos"]);
+        // Tomar solo los primeros 50
+        const top = data.slice(0, 50);
+
+        top.forEach((p, i) => {
+          const li = document.createElement("li");
+
+          // Crear enlace clicable hacia catálogo
+          const link = document.createElement("a");
+          link.href = `../catalogo.html?perfume=${encodeURIComponent(p["perfume clicado"])}`;
+          link.textContent = `${i+1}. ${p["perfume clicado"]} — ${p["Número de eventos"]} clics`;
+
+          // Registrar evento de clic en GA4
+          link.addEventListener("click", () => {
+            gtag("event", "perfume_click", {
+              event_category: "interacción",
+              event_label: p["perfume clicado"]
+            });
+          });
+
+          li.appendChild(link);
+          lista.appendChild(li);
+        });
+      })
+      .catch(err => console.error("Error cargando JSON:", err));
+  </script>
+</body>
+</html>
