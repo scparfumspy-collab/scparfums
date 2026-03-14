@@ -178,6 +178,14 @@
     "pagina": "detalle/detalle.html?id=afnan-souvenir-blooming-bliss-tester-edp-100ml",
     "categoria": "testers femeninos",
     "categoria2": "Árabes"
+  },
+  {  
+      "id": "afnan-9pm-elixir-edp-100ml",
+   "nombre": "9PM Elixir EDP 100ML",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-9pm-elixir-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=afnan-9pm-elixir-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
   }
-  
 ]
