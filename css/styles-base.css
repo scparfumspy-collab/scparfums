@@ -132,6 +132,21 @@ nav a:hover {
   background-color: #000;
   }
 
+/* Hero para Más Populares */
+.hero-populares {
+  background: url('../imagenes/backgrounds/background-populares.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  height: 300px; /* más bajo que los 400px de index/categorías */
+}
+
+.hero-populares .hero-text {
+  font-size: 32px; /* más pequeño que los 45px */
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
 /* ===== INDEX CATEGORY CARDS (Árabes, Diseñador, Nicho, Decants) ===== */
 .index-categories {
   max-width: 1200px;
