@@ -174,6 +174,53 @@
     "notas_corazon": ["Abedul", "Jazmín", "Rosa"],
     "notas_base": ["Almizcle", "Ámbar Gris", "Pachulí"],
     "descripcion": "Una fragancia masculina poderosa y sofisticada, perfecta para climas templados o frescos, ideal en ocasiones elegantes y nocturnas donde quieras proyectar seguridad, distinción y carácter."
+  },
+          {
+      "id": "al-haramain-amber-oud-dubai-aqua-100ml",
+    "acordes": ["Cítrico", "Verde", "Aromático"],
+    "notas_salida": ["Bergamota", "Notas Verdes", "Mandarina"],
+    "notas_corazon": ["Melón", "Ámbar", "Grosellas Negras", "Piña"],
+    "notas_base": ["Almizcle", "Petit Grain", "Gálbano", "Vainilla"],
+    "descripcion": "Una fragancia fresca y sofisticada, perfecta para climas cálidos y templados, ideal en ocasiones versátiles donde quieras transmitir energía, modernidad y un toque elegante."
+  },
+          {
+      "id": "al-haramain-amber-oud-dubai-night-100ml",
+    "acordes": ["Ambarado", "Cálido Especiado", "Floral"],
+    "notas_salida": ["Azafrán", "Elemí", "Bergamota"],
+    "notas_corazon": ["Oud", "Lirio", "Rosa de Bulgaria"],
+    "notas_base": ["Almizcle Blanco", "Ámbar", "Haba Tonka", "Musgo de Roble"],
+    "descripcion": "Una fragancia masculina intensa y sofisticada, perfecta para climas frescos o fríos, ideal en ocasiones nocturnas y elegantes donde quieras proyectar misterio, distinción y carácter."
+  },
+     {
+      "id": "al-haramain-amber-oud-gold-120ml",
+    "acordes": ["Dulce", "Afrutado", "Almizclado"],
+    "notas_salida": ["Bergamota", "Notas Verdes"],
+    "notas_corazon": ["Melón", "Piña", "Ámbar", "Acorde Goloso"],
+    "notas_base": ["Almizcle", "Vainilla", "Notas Amaderadas"],
+    "descripcion": "Una fragancia luminosa y sofisticada, perfecta para climas cálidos y templados, ideal en ocasiones elegantes y versátiles donde quieras transmitir frescura, modernidad y un toque envolvente de dulzura."
+  },
+   {
+      "id": "al-haramain-amber-oud-black-edp-100ml",
+    "acordes": ["Ambarado", "Aromático", "Cálido Especiado"],
+    "notas_salida": ["Cardamomo", "Lavanda", "Notas Amaderadas"],
+    "notas_corazon": ["Cuero", "Ámbar", "Haba Tonka"],
+    "notas_base": ["Benjuí", "Vetiver", "Ámbar Gris"],
+    "descripcion": "Una fragancia intensa y sofisticada, perfecta para climas frescos o fríos, ideal en ocasiones nocturnas y elegantes donde quieras proyectar carácter, misterio y distinción."
+  },
+     {
+      "id": "al-haramain-amber-oud-ultra-violet-120ml",
+    "acordes": ["Floral", "Nardos", "Rosas"],
+    "notas_salida": ["Rosa", "Bergamota", "Jengibre"],
+    "notas_corazon": ["Nardos", "Jazmín", "Flores Blancas"],
+    "notas_base": ["Roble", "Almizcle", "Pachulí"],
+    "descripcion": "Una fragancia femenina elegante y vibrante, perfecta para climas templados o cálidos, ideal en ocasiones especiales y sofisticadas donde quieras transmitir frescura, sensualidad y distinción.."
+  },
+     {
+      "id": "al-haramain-amber-oud-carbon-edit-100ml",
+    "acordes": ["Aromático", "Fresco Especiado", "Amaderado", "Marino"],
+    "notas_salida": ["Bergamota", "Lavanda", "Romero"],
+    "notas_corazon": ["Notas Marinas", "Geranio", "Salvia"],
+    "notas_base": ["Musgo", "Vetiver", "Ámbar", "Cedro"],
+    "descripcion": "Una fragancia fresca y aromática, perfecta para climas cálidos y templados, ideal en ocasiones versátiles y elegantes donde quieras transmitir energía, sofisticación y un aire moderno."
   }
-  
 ]
