@@ -134,12 +134,15 @@
 </footer>
 
 <!-- Script para cargar ranking -->
+<!-- Script para cargar ranking -->
 <script>
   Promise.all([
     fetch("data/perfumes_populares.json").then(r => r.json()),
-    fetch("data/perfumes.json").then(r => r.json())
+    fetch("data/perfumes.json").then(r => r.json()),
+    // Apps Script que devuelve precios
+    fetch("https://script.google.com/macros/s/AKfycbwRNLbgXD_D7Qx72KpOvcsejuMSz_UXHlrgTm9vdSZ4_DXqoxP_Cx5y858xTXsKSOX2/exec").then(r => r.json())
   ])
-  .then(([populares, perfumes]) => {
+  .then(([populares, perfumes, precios]) => {
     const lista = document.getElementById("lista-populares");
     const estado = document.getElementById("estado-carga");
 
@@ -158,7 +161,10 @@
     top.forEach((p, i) => {
       // Buscar datos completos en perfumes.json
       const detalle = perfumes.find(perf => perf.nombre === p["perfume clicado"]);
-      if (!detalle) return; // si no encuentra, salta
+      if (!detalle) return;
+
+      // Buscar precio en el JSON de precios (Apps Script)
+      const precio = precios[detalle.nombre] || "Consultar";
 
       // Crear tarjeta igual que categorías
       const card = document.createElement("a");
@@ -172,12 +178,12 @@
       const nombre = document.createElement("p");
       nombre.textContent = detalle.marca + " - " + detalle.nombre;
 
-      const precio = document.createElement("p");
-      precio.textContent = "₲ " + detalle.precio;
+      const precioEl = document.createElement("p");
+      precioEl.textContent = "₲ " + precio;
 
       card.appendChild(img);
       card.appendChild(nombre);
-      card.appendChild(precio);
+      card.appendChild(precioEl);
 
       // Evento GA4
       card.addEventListener("click", () => {
@@ -186,6 +192,11 @@
           event_label: detalle.nombre
         });
       });
+
+      // Destacar Top 3
+      if (i === 0) card.classList.add("top1");
+      if (i === 1) card.classList.add("top2");
+      if (i === 2) card.classList.add("top3");
 
       lista.appendChild(card);
     });
@@ -196,7 +207,7 @@
     console.error("Error cargando JSON:", err);
   });
 </script>
-</script>
+
 
 </body>
 </html>
