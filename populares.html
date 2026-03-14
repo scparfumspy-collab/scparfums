@@ -135,22 +135,26 @@
 
 <!-- Script para cargar ranking -->
 <script>
-  Promise.all([
-    fetch("data/perfumes_populares.json").then(r => r.json()),
-    fetch("data/perfumes.json").then(r => r.json()),
-    fetch("https://script.google.com/macros/s/AKfycbwRNLbgXD_D7Qx72KpOvcsejuMSz_UXHlrgTm9vdSZ4_DXqoxP_Cx5y858xTXsKSOX2/exec").then(r => r.json())
-  ])
-  .then(([populares, perfumes, precios]) => {
-    const contenedor = document.getElementById("lista-populares");
-    const estado = document.getElementById("estado-carga");
+async function cargarPopulares() {
+  const contenedor = document.getElementById('lista-populares');
+  const estado = document.getElementById('estado-carga');
 
-    estado.style.display = "none";
+  contenedor.innerHTML = '<p id="loader">Cargando perfumes populares...</p>';
 
-    // Aseguramos que precios sea un array
-    let preciosArray = Array.isArray(precios) ? precios : [];
-    if (!Array.isArray(precios)) {
-      console.error("Formato inesperado de precios:", precios);
-    }
+  try {
+    // Cargar catálogo completo
+    const respPerfumes = await fetch("data/perfumes.json");
+    const perfumes = await respPerfumes.json();
+
+    // Cargar precios desde Apps Script
+    const respPrecios = await fetch(CONFIG.preciosURL);
+    const precios = await respPrecios.json();
+
+    // Cargar ranking de populares
+    const respPopulares = await fetch("data/perfumes_populares.json");
+    const populares = await respPopulares.json();
+
+    contenedor.innerHTML = '';
 
     // Ordenar por número de eventos
     populares.sort((a, b) => b["Número de eventos"] - a["Número de eventos"]);
@@ -163,55 +167,46 @@
     }
 
     top.forEach((p, i) => {
-      // Buscar datos completos en perfumes.json
       const detalle = perfumes.find(perf => perf.nombre === p["perfume clicado"]);
       if (!detalle) return;
 
-      // Buscar precio usando el id del perfume
-      const precioObj = preciosArray.find(pr => pr.id === detalle.id);
-      const precio = precioObj ? precioObj.precio : "Consultar";
+      // Buscar precio por id
+      const precioData = precios.find(pr => pr.id === detalle.id);
+      let precio = "Consultar";
+      if (precioData && precioData.precio != null) {
+        precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+      }
 
       // Crear tarjeta igual que categorías
-      const card = document.createElement("a");
-      card.href = "/scparfums/" + detalle.pagina;
-      card.className = "category-card";
+      const tarjeta = document.createElement('div');
+      tarjeta.className = 'perfume-card';
+      tarjeta.setAttribute('data-marca', detalle.marca);
 
-      const img = document.createElement("img");
-      img.src = detalle.imagen;
-      img.alt = detalle.nombre;
-
-      const nombre = document.createElement("p");
-      nombre.textContent = detalle.marca + " - " + detalle.nombre;
-
-      const precioEl = document.createElement("p");
-      precioEl.textContent = "₲ " + precio;
-
-      card.appendChild(img);
-      card.appendChild(nombre);
-      card.appendChild(precioEl);
-
-      // Evento GA4
-      card.addEventListener("click", () => {
-        gtag("event", "perfume_click", {
-          event_category: "interacción",
-          event_label: detalle.nombre
-        });
-      });
+      const enlace = document.createElement('a');
+      enlace.href = `/scparfums/${detalle.pagina}`;
+      enlace.innerHTML = `
+        <img src="${detalle.imagen}" alt="${detalle.nombre}">
+        <p><strong>${detalle.marca}</strong> - ${detalle.nombre}</p>
+        <p class="precio">${precio}</p>
+      `;
 
       // Destacar Top 3
-      if (i === 0) card.classList.add("top1");
-      if (i === 1) card.classList.add("top2");
-      if (i === 2) card.classList.add("top3");
+      if (i === 0) tarjeta.classList.add("top1");
+      if (i === 1) tarjeta.classList.add("top2");
+      if (i === 2) tarjeta.classList.add("top3");
 
-      contenedor.appendChild(card);
+      tarjeta.appendChild(enlace);
+      contenedor.appendChild(tarjeta);
     });
-  })
-  .catch(err => {
-    const estado = document.getElementById("estado-carga");
+  } catch (err) {
     estado.textContent = "Error cargando perfumes populares.";
     console.error("Error cargando JSON:", err);
-  });
+  }
+}
+
+cargarPopulares();
 </script>
+
 
 
 </body>
