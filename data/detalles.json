@@ -222,5 +222,173 @@
     "notas_corazon": ["Notas Marinas", "Geranio", "Salvia"],
     "notas_base": ["Musgo", "Vetiver", "Ámbar", "Cedro"],
     "descripcion": "Una fragancia fresca y aromática, perfecta para climas cálidos y templados, ideal en ocasiones versátiles y elegantes donde quieras transmitir energía, sofisticación y un aire moderno."
+  },
+       {
+      "id": "al-haramain-detour-noir",
+    "acordes": ["Avainillado", "Amaderado", "Fresco Especiado"],
+    "notas_salida": ["Manzana", "Lavanda", "Jazmín", "Violeta"],
+    "notas_corazon": ["Vainilla", "Pachulí", "Bergamota"],
+    "notas_base": ["Sándalo", "Cardamomo", "Pimienta", "Madera de Gaiac", "Geranio"],
+    "descripcion": "Una fragancia especiada y envolvente, perfecta para climas templados o frescos, ideal en ocasiones nocturnas y elegantes donde quieras proyectar sofisticación, misterio y carácter distintivo."
+  },
+         {
+      "id": "al-whataniah-special-oud",
+    "acordes": ["Amaderado", "Cuero", "Cálido Especiado"],
+    "notas_salida": ["Cuero", "Durazno", "Azafrán", "Caramelo"],
+    "notas_corazon": ["Notas Amaderadas", "Pimienta Rosa", "Ládano"],
+    "notas_base": ["Oud", "Pachulí", "Vainilla", "Benjuí", "Almizcle"],
+    "descripcion": "Una fragancia intensa y opulenta, perfecta para climas frescos o fríos, ideal en ocasiones elegantes y nocturnas donde quieras transmitir lujo, misterio y sofisticación con un carácter distintivo."
+  },
+           {
+      "id": "al-whataniah-sabah-al-ward-sugar-edp-100ml",
+    "acordes": ["Afrutado", "Dulce", "Floral"],
+    "notas_salida": ["Frambuesa", "Moras Azules", "Grosellas Negras", "Fresas"],
+    "notas_corazon": ["Jazmín", "Violeta"],
+    "notas_base": ["Almizcle", "Musgo de Roble", "Ámbar", "Vainilla", "Rosas"],
+    "descripcion": "Una fragancia femenina dulce y vibrante, perfecta para climas cálidos y templados, ideal en ocasiones juveniles y alegres donde quieras transmitir frescura, encanto y un aire sofisticado con un toque goloso."
+  },
+             {
+      "id": "armaf-club-de-nuit-woman-",
+    "acordes": ["Cítrico", "Pachulí", "Amaderado"],
+    "notas_salida": ["Naranja", "Bergamota", "Toronja", "Durazno"],
+    "notas_corazon": ["Jazmín", "Rosa", "Geranio", "Lichi"],
+    "notas_base": ["Pachulí", "Almizcle", "Vetiver", "Vainilla"],
+    "descripcion": "Una fragancia femenina floral y frutal, perfecta para climas cálidos y templados, ideal en ocasiones elegantes y versátiles donde quieras transmitir frescura, encanto y sofisticación con un aire moderno."
+  },
+               {
+      "id": "armaf-club-de-nuit-iconic-105ml",
+    "acordes": ["Cítrico", "Amaderado", "Fresco Especiado"],
+    "notas_salida": ["Toronja", "Limón", "Menta", "Pimienta Rosa"],
+    "notas_corazon": ["Jengibre", "Melón", "Jazmín", "Nuez Moscada"],
+    "notas_base": ["Notas Amaderadas", "Incienso", "Sándalo", "Ámbar", "Cedro"],
+    "descripcion": "Una fragancia masculina fresca y especiada, perfecta para climas cálidos y templados, ideal en ocasiones modernas y versátiles donde quieras transmitir energía, elegancia y un carácter vibrante."
+  },
+               {
+      "id": "armaf-club-de-nuit-imperiale",
+    "acordes": ["Rosas", "Almizclado", "Atalcado"],
+    "notas_salida": ["Lichi", "Bergamota", "Nuez Moscada"],
+    "notas_corazon": ["Rosa Turca", "Vainilla", "Almizcle", "Peonía"],
+    "notas_base": ["Vainilla", "Incienso", "Cachemira", "Cedro"],
+    "descripcion": "Una fragancia femenina elegante y sofisticada, perfecta para climas templados o cálidos, ideal en ocasiones especiales y versátiles donde quieras transmitir frescura, sensualidad y un aire moderno con un toque refinado."
+  },
+                 {
+      "id": "armaf-club-de-nuit-milestone",
+    "acordes": ["Marino", "Amaderado", "Aromático"],
+    "notas_salida": ["Notas Marinas", "Frutos Rojos", "Bergamota"],
+    "notas_corazon": ["Violeta", "Maderas Blancas", "Sándalo"],
+    "notas_base": ["Almizcle", "Ambroxan", "Vetiver"],
+    "descripcion": "Una fragancia elegante y versátil, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y sofisticadas donde quieras transmitir frescura, modernidad y un aire refinado con carácter distintivo."
+  },
+                 {
+      "id": "armaf-club-de-nuit-urban-elixir-mas-edp-105ml",
+    "acordes": ["Ambarado", "Fresco Especiado", "Cítrico", "Aromático"],
+    "notas_salida": ["Bergamota", "Pimienta Rosa", "Flor de Azahar", "Jazmín"],
+    "notas_corazon": ["Lavanda", "Elemí", "Geranio", "Vetiver", "Azafrán"],
+    "notas_base": ["Ambroxan", "Ámbar", "Cedro", "Pachulí"],
+    "descripcion": "Una fragancia masculina moderna y sofisticada, perfecta para climas templados o frescos, ideal en ocasiones nocturnas y elegantes donde quieras transmitir energía, distinción y un carácter audaz."
+  },
+                   {
+      "id": "armaf-club-de-nuit-sillage-edp-105ml",
+    "acordes": ["Cítrico", "Almizclado", "Amaderado"],
+    "notas_salida": ["Bergamota", "Lima Ácida", "Limón", "Grosellas Negras", "Jengibre"],
+    "notas_corazon": ["Rosa", "Iris", "Jazmín"],
+    "notas_base": ["Almizcle", "Ambroxan", "Sándalo", "Cedro"],
+    "descripcion": "Una fragancia elegante y vibrante, perfecta para climas templados o cálidos, ideal en ocasiones diurnas y sofisticadas donde quieras transmitir frescura, modernidad y un aire refinado con carácter distintivo."
+  },
+                   {
+      "id": "armaf-club-de-nuit-untold-edp-105ml",
+    "acordes": ["Amaderado", "Ambarado", "Cálido Especiado"],
+    "notas_salida": ["Azafrán", "Jazmín"],
+    "notas_corazon": ["Amberwood", "Ámbar Gris"],
+    "notas_base": ["Resina de Abeto", "Cedro"],
+    "descripcion": "Una fragancia unisex sofisticada y misteriosa, perfecta para climas frescos o templados, ideal en ocasiones nocturnas y elegantes donde quieras transmitir lujo, intensidad y un carácter distintivo con un aire enigmático."
+  },
+                     {
+      "id": "armaf-club-de-nuit-maleka-edp-105ml",
+    "acordes": ["Iris", "Atalcado", "Afrutado"],
+    "notas_salida": ["Bergamota", "Lichi", "Pimienta Rosa"],
+    "notas_corazon": ["Raiz de Lirio"],
+    "notas_base": ["Praliné", "Ambroxan", "Sándalo"],
+    "descripcion": "Una fragancia femenina floral y frutal, perfecta para climas cálidos y templados, ideal en ocasiones modernas y sofisticadas donde quieras transmitir frescura, encanto y un aire elegante con un toque gourmand."
+  },
+                     {
+      "id": "armaf-club-de-nuit-oud",
+    "acordes": ["Afrutado", "Dulce", "Amaderado"],
+    "notas_salida": ["Durazno", "Pera", "Maracuyá", "Piña", "Bergamota"],
+    "notas_corazon": ["Cachemira", "Jazmín", "Fresía", "Hojas de Violeta"],
+    "notas_base": ["Almizcle", "Oud Camboyano", "Vainilla", "Ámbar"],
+    "descripcion": "Una fragancia unisex intensa y sofisticada, perfecta para climas frescos o templados, ideal en ocasiones nocturnas y elegantes donde quieras transmitir lujo, misterio y un carácter distintivo con un toque moderno y envolvente."
+  },
+  {
+        "id": "armaf-odyssey-aqua-100ml",
+    "acordes": ["Aromático", "Cítrico", "Fresco Especiado", "Verde"],
+    "notas_salida": ["Naranja", "Toronja", "Abrótano"],
+    "notas_corazon": ["Menta", "Lavanda"],
+    "notas_base": ["Ambroxan", "Ciprés", "Pachulí"],
+    "descripcion": "Una fragancia masculina fresca y aromática, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y versátiles donde quieras transmitir energía, vitalidad y un aire moderno con carácter elegante."
+  },
+  {
+        "id": "armaf-odyssey-ba-ha-mas",
+    "acordes": ["Marino", "Acuático", "Afrutado"],
+    "notas_salida": ["Melón", "Algas", "Sal", "Manzana", "Pera", Ciruela"],
+    "notas_corazon": ["Notas Acuáticas", "Musgo de Roble", "Nenúfar"],
+    "notas_base": ["Almizcle", "Ámbar", "Cedro", "Azúcar"],
+    "descripcion": "Una fragancia unisex acuática y aromática, perfecta para climas cálidos y tropicales, ideal en ocasiones diurnas y relajadas donde quieras transmitir frescura, energía y un aire exótico con un toque moderno y vibrante."
+  },
+                       {
+      "id": "armaf-odyssey-go-mango",
+    "acordes": ["Tropical", "Dulce", "Afrutado"],
+    "notas_salida": ["Limón", "Pimienta Rosa", "Jengibre", "Flores Blancas"],
+    "notas_corazon": ["Mango", "Haba Tonka", "Madera Seca"],
+    "notas_base": ["Vainilla", "Madera de Gaiac", "Almizcle", "Ámbar"],
+    "descripcion": "Una fragancia unisex oriental floral con un toque frutal exótico, perfecta para climas cálidos y tropicales, ideal en ocasiones modernas y alegres donde quieras transmitir energía, frescura y un aire sofisticado con un carácter goloso y vibrante."
+  },
+  {
+      "id": "armaf-odyssey-homme-white-",
+    "acordes": ["Ambarado", "Cítrico", "Amaderado"],
+    "notas_salida": ["Pimienta Rosa ", "Toronja", "Yuzu"],
+    "notas_corazon": ["Hojas de Violeta", "Notas Marinas"],
+    "notas_base": ["Ámbar", "Amberwood", "Madera de Gaiac"],
+    "descripcion": "Una fragancia masculina oriental fougère fresca y sofisticada, perfecta para climas templados y cálidos, ideal en ocasiones diurnas y modernas donde quieras transmitir energía, elegancia y un aire contemporáneo con carácter distintivo."
+  },
+    {
+      "id": "armaf-odyssey-homme-black",
+    "acordes": ["Ambarado", "Cálido Especiado", "Avainillado"],
+    "notas_salida": ["Vainilla", "Ámbar"],
+    "notas_corazon": ["Notas Orientales", "Especias", "Iris"],
+    "notas_base": ["Vainilla", "Cuero", "Jazmín"],
+    "descripcion": "Una fragancia masculina oriental intensa y sofisticada, perfecta para climas templados y frescos, ideal en ocasiones nocturnas y elegantes donde quieras transmitir misterio, poder y un carácter distintivo con un aire moderno y envolvente."
+  },
+      {
+      "id": "armaf-odyssey-mega-edp-mas-100ml",
+    "acordes": ["Cítrico", "Aromático", "Fresco Especiado"],
+    "notas_salida": ["Limón", "Naranja", "Bergamota", "Jengibre", "Menta"],
+    "notas_corazon": ["Piña", "Salvia", "Enebro", "Geranio"],
+    "notas_base": ["Almizcle", "Cedro", "Haba Tonka", "Vetiver"],
+    "descripcion": "Una fragancia masculina amaderada aromática, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y dinámicas donde quieras transmitir energía, frescura y un aire moderno con carácter vibrante y seguro."
+  },
+    {
+      "id": "armaf-odyssey-limoni-fresh-edp-100ml",
+    "acordes": ["Cítrico", "Fresco Especiado", "Aromático"],
+    "notas_salida": ["Limón ", "Naranja", "Mandarina", "Bergamota"],
+    "notas_corazon": ["Flor de Azahar", "Notas Marinas", "Jengibre"],
+    "notas_base": ["Té", "Almizcle", "Ámbar"],
+    "descripcion": "Una fragancia cítrica y refrescante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y relajadas donde quieras transmitir energía, vitalidad y un aire moderno con carácter luminoso y vibrante."
+  },
+    {
+      "id": "armaf-odyssey-dubai-chocolat",
+    "acordes": ["Cálido Especiado", "Dulce", "Amaderado"],
+    "notas_salida": ["Café", "Pistacho", "Avellana", "Knafeh", "Praliné"],
+    "notas_corazon": ["Chocolate", "Vainilla", "Cardamomo"],
+    "notas_base": ["Caramelo", "Haba Tonka", "Amberwood"],
+    "descripcion": "Una fragancia unisex oriental vainilla con un carácter gourmand y sofisticado, perfecta para climas frescos o templados, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir lujo, dulzura y un aire moderno con un toque irresistible y envolvente."
+  },
+       {
+      "id": "armaf-odyssey-tyrant-edp-100ml",
+    "acordes": ["Cítrico", "Aromático", "Fresco Especiado"],
+    "notas_salida": ["Toronja", "Cítricos"],
+    "notas_corazon": ["Pimienta", "Lavanda", "Geranio", "Elemí"],
+    "notas_base": ["Ambroxan", "Notas Amaderadas", "Cedro", "Vetiver"],
+    "descripcion": "Una fragancia masculina oriental amaderada, perfecta para climas templados y frescos, ideal en ocasiones nocturnas y sofisticadas donde quieras transmitir fuerza, elegancia y un aire moderno con carácter poderoso y distintivo."
   }
 ]
