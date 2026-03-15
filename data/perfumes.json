@@ -250,5 +250,194 @@
     "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-carbon-edit-100ml",
     "categoria": "Unisex",
     "categoria2": "Árabes"
+  },
+       {
+      "id": "al-haramain-detour-noir",
+   "nombre": "Detour Noir EDP 100ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-detour-noir.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-detour-noir",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+         {
+      "id": "al-whataniah-special-oud",
+   "nombre": "Special Oud EDP 100ml",
+    "marca": "Al Wataniah",
+    "imagen": "imagenes/perfumes/al-whataniah-special-oud.png",
+    "pagina": "detalle/detalle.html?id=al-whataniah-special-oud",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+           {
+      "id": "al-whataniah-sabah-al-ward-sugar-edp-100ml",
+   "nombre": "Sabah Al Ward Sugar EDP 100ml",
+    "marca": "Al Wataniah",
+    "imagen": "imagenes/perfumes/al-whataniah-sabah-al-ward-sugar-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=al-whataniah-sabah-al-ward-sugar-edp-100ml",
+    "categoria": "Femeninos",
+    "categoria2": "Árabes"
+  },
+           {
+      "id": "armaf-club-de-nuit-woman-",
+   "nombre": "Club de Nuit Woman EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-club-de-nuit-woman-.png",
+    "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-woman-",
+    "categoria": "Femeninos",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "armaf-club-de-nuit-iconic-105ml",
+   "nombre": "Club de Nuit Iconic EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-club-de-nuit-iconic-105ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-iconic-105ml",
+    "categoria": "Masculinos",
+    "categoria2": "Árabes"
+  },
+             {
+      "id": "armaf-club-de-nuit-imperiale",
+   "nombre": "Club de Nuit Imperiale EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-club-de-nuit-imperiale.png",
+    "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-imperiale",
+    "categoria": "Femeninos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "armaf-club-de-nuit-milestone",
+   "nombre": "Club de Nuit Milestone EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-club-de-nuit-milestone.png",
+    "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-milestone",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+               {
+      "id": "armaf-club-de-nuit-urban-elixir-mas-edp-105ml",
+   "nombre": "Club de Nuit Urban Elixir EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-club-de-nuit-urban-elixir-mas-edp-105ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-urban-elixir-mas-edp-105ml",
+    "categoria": "Masculinos",
+    "categoria2": "Árabes"
+  },
+      {
+      "id": "armaf-club-de-nuit-sillage-edp-105ml",
+   "nombre": "Club de Nuit Sillage EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-club-de-nuit-sillage-edp-105ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-sillage-edp-105ml",
+    "categoria": "Masculinos",
+    "categoria2": "Árabes"
+  },
+                 {
+      "id": "armaf-club-de-nuit-untold-edp-105ml",
+   "nombre": "Club de Nuit Untold EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-club-de-nuit-untold-edp-105ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-untold-edp-105ml",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+        {
+      "id": "armaf-club-de-nuit-maleka-edp-105ml",
+   "nombre": "Club de Nuit Maleka EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-club-de-nuit-maleka-edp-105ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-maleka-edp-105ml",
+    "categoria": "Femeninos",
+    "categoria2": "Árabes"
+  },
+          {
+      "id": "armaf-club-de-nuit-oud",
+   "nombre": "Club de Nuit Oud EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-club-de-nuit-oud.png",
+    "pagina": "detalle/detalle.html?id=armaf-club-de-nuit-oud",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+          {
+      "id": "armaf-odyssey-aqua-100ml",
+   "nombre": "Odyssey Aqua EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-aqua-100ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-aqua-100ml",
+    "categoria": "Masculinos",
+    "categoria2": "Árabes"
+  },
+          {
+      "id": "armaf-odyssey-ba-ha-mas",
+   "nombre": "Odyssey Ba Ha Mas EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-ba-ha-mas.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-ba-ha-mas",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+            {
+      "id": "armaf-odyssey-go-mango",
+   "nombre": "Odyssey Go Mango EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-go-mango.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-go-mango",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+            {
+      "id": "armaf-odyssey-homme-white-",
+   "nombre": "Odyssey Homme White EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-homme-white-.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-homme-white-",
+    "categoria": "Masculinos",
+    "categoria2": "Árabes"
+  },
+              {
+      "id": "armaf-odyssey-homme-black",
+   "nombre": "Odyssey Homme EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-homme-black.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-homme-black",
+    "categoria": "Masculinos",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "armaf-odyssey-mega-edp-mas-100ml",
+   "nombre": "Odyssey Mega EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-mega-edp-mas-100ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-mega-edp-mas-100ml",
+    "categoria": "Masculinos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "armaf-odyssey-limoni-fresh-edp-100ml",
+   "nombre": "Odyssey Limoni EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-limoni-fresh-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-limoni-fresh-edp-100ml",
+    "categoria": "Masculinos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "armaf-odyssey-dubai-chocolat",
+   "nombre": "Odyssey Dubai Chocolat EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-dubai-chocolat.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-dubai-chocolat",
+    "categoria": "Unisex",
+    "categoria2": "Árabes"
+  },
+      {
+      "id": "armaf-odyssey-tyrant-edp-100ml",
+   "nombre": "Odyssey Tyrant EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-tyrant-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-tyrant-edp-100ml",
+    "categoria": "Masculinos",
+    "categoria2": "Árabes"
   }
 ]
