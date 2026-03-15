@@ -183,47 +183,58 @@ function mostrarPagina(pagina, lista = arabes) {
 }
 
 
-    function renderizarBotones(lista) {
-      let botonesContainer = document.getElementById('botones-paginacion');
-      if (!botonesContainer) {
-        botonesContainer = document.createElement('div');
-        botonesContainer.id = 'botones-paginacion';
-        botonesContainer.style.textAlign = 'center';
-        botonesContainer.style.marginTop = '20px';
-        contenedor.parentNode.appendChild(botonesContainer);
-      }
-      botonesContainer.innerHTML = '';
+function renderizarBotones(lista) {
+  // Crear contenedor arriba
+  let topContainer = document.getElementById('botones-paginacion-top');
+  if (!topContainer) {
+    topContainer = document.createElement('div');
+    topContainer.id = 'botones-paginacion-top';
+    topContainer.className = 'botones-paginacion';
+    contenedor.parentNode.insertBefore(topContainer, contenedor);
+  }
 
-      const btnInicio = document.createElement('button');
-      btnInicio.textContent = 'Inicio';
-      btnInicio.onclick = () => {
-        paginaActual = 1;
+  // Crear contenedor abajo
+  let bottomContainer = document.getElementById('botones-paginacion-bottom');
+  if (!bottomContainer) {
+    bottomContainer = document.createElement('div');
+    bottomContainer.id = 'botones-paginacion-bottom';
+    bottomContainer.className = 'botones-paginacion';
+    contenedor.parentNode.appendChild(bottomContainer);
+  }
+
+  // Renderizar en ambos
+  [topContainer, bottomContainer].forEach(container => {
+    container.innerHTML = '';
+
+    const btnInicio = document.createElement('button');
+    btnInicio.textContent = 'Inicio';
+    btnInicio.onclick = () => {
+      paginaActual = 1;
+      mostrarPagina(paginaActual, lista);
+    };
+    container.appendChild(btnInicio);
+
+    if (paginaActual > 1) {
+      const btnAnterior = document.createElement('button');
+      btnAnterior.textContent = 'Anterior';
+      btnAnterior.onclick = () => {
+        paginaActual--;
         mostrarPagina(paginaActual, lista);
       };
-      botonesContainer.appendChild(btnInicio);
-
-      if (paginaActual > 1) {
-        const btnAnterior = document.createElement('button');
-        btnAnterior.textContent = 'Anterior';
-        btnAnterior.onclick = () => {
-          paginaActual--;
-          mostrarPagina(paginaActual, lista);
-        };
-        botonesContainer.appendChild(btnAnterior);
-      }
-
-      if (paginaActual * perfumesPorPagina < lista.length) {
-        const btnSiguiente = document.createElement('button');
-        btnSiguiente.textContent = 'Siguiente';
-        btnSiguiente.onclick = () => {
-          paginaActual++;
-          mostrarPagina(paginaActual, lista);
-        };
-        botonesContainer.appendChild(btnSiguiente);
-      }
+      container.appendChild(btnAnterior);
     }
 
-    mostrarPagina(paginaActual);
+    if (paginaActual * perfumesPorPagina < lista.length) {
+      const btnSiguiente = document.createElement('button');
+      btnSiguiente.textContent = 'Siguiente';
+      btnSiguiente.onclick = () => {
+        paginaActual++;
+        mostrarPagina(paginaActual, lista);
+      };
+      container.appendChild(btnSiguiente);
+    }
+  });
+}
 
     // Sidebar dinámico con marcas
     const marcasUnicas = [...new Set(arabes.map(p => p.marca))];
