@@ -232,7 +232,7 @@ async function cargarPerfumes() {
       });
     }
 
-    // 👉 Llamada inicial para mostrar la primera página
+    // 👉 Mostrar la primera página al cargar
     mostrarPagina(paginaActual, arabes);
 
     // Sidebar dinámico con marcas
@@ -252,4 +252,4 @@ async function cargarPerfumes() {
     const checkboxes = marcasContainer.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', () => {
-        const seleccionadas = [...checkbox
+        const seleccionadas = [...checkboxes]
