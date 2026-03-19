@@ -7,18 +7,14 @@
   <!-- CSS centralizado -->
   <link rel="stylesheet" href="../css/styles-base.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  // Tu ID de medición
-  gtag('config', 'G-C1MM9FN44X');
-</script>
-
-  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C1MM9FN44X');
+  </script>
 </head>
 <body>
 
@@ -40,7 +36,7 @@
 
     if (!searchInput || !searchButton || !suggestionsBox) return;
     
-fetch("../data/perfumes.json")
+    fetch("../data/perfumes.json")
       .then(resp => resp.json())
       .then(data => { perfumesCache = data; })
       .catch(err => console.error("Error cargando perfumes:", err));
@@ -90,19 +86,13 @@ fetch("../data/perfumes.json")
   }
 </script>
 
-
 <section class="hero">
   <div class="hero-text">Fragancias Árabes</div>
 </section>
 
 <section class="layout">
-  <aside class="sidebar">
-    <!-- Marcas se generan dinámicamente -->
-  </aside>
-
-  <main class="perfumes" id="perfume-list">
-    <!-- Aquí se insertarán las tarjetas dinámicamente -->
-  </main>
+  <aside class="sidebar"></aside>
+  <main class="perfumes" id="perfume-list"></main>
 </section>
 
 <footer>
@@ -133,115 +123,117 @@ async function cargarPerfumes() {
     contenedor.innerHTML = '';
 
     // Filtrar por categoria2 = "Árabes"
-const arabes = perfumes
-  .filter(p => {
-    if (!p.categoria2) return false;
-    const cat = p.categoria2.toLowerCase()
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-      .trim();
-    return cat === "arabes";
-  })
-  .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+    const arabes = perfumes
+      .filter(p => {
+        if (!p.categoria2) return false;
+        const cat = p.categoria2
+          .toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          .trim();
+        return cat === "arabes";
+      })
+      .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
 
+    const perfumesPorPagina = 20;
+    let paginaActual = 1;
 
-const perfumesPorPagina = 20;
-let paginaActual = 1;
+    function mostrarPagina(pagina, lista = arabes) {
+      contenedor.innerHTML = '';
+      const inicio = (pagina - 1) * perfumesPorPagina;
+      const fin = inicio + perfumesPorPagina;
+      const perfumesPagina = lista.slice(inicio, fin);
 
-function mostrarPagina(pagina, lista = arabes) {
-  contenedor.innerHTML = '';
-  const inicio = (pagina - 1) * perfumesPorPagina;
-  const fin = inicio + perfumesPorPagina;
-  const perfumesPagina = lista.slice(inicio, fin);
+      if (perfumesPagina.length === 0) {
+        contenedor.innerHTML = '<p>No se encontraron perfumes en esta categoría.</p>';
+        return;
+      }
 
-  perfumesPagina.forEach(perfume => {
-    const precioData = precios.find(pr => pr.id === perfume.id);
-    let precio = "Consultar";
-    if (precioData && precioData.precio != null) {
-      precio = "₲ " + precioData.precio.toLocaleString("es-PY");
-    }
+      perfumesPagina.forEach(perfume => {
+        const precioData = precios.find(pr => pr.id === perfume.id);
+        let precio = "Consultar";
+        if (precioData && precioData.precio != null) {
+          precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+        }
 
-    const tarjeta = document.createElement('div');
-    tarjeta.className = 'perfume-card';
-    tarjeta.setAttribute('data-marca', perfume.marca);
+        const tarjeta = document.createElement('div');
+        tarjeta.className = 'perfume-card';
+        tarjeta.setAttribute('data-marca', perfume.marca);
 
-    // Crear enlace
-    const enlace = document.createElement('a');
-    enlace.href = `../${perfume.pagina}`;
-    enlace.innerHTML = `
-      <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-      <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-      <p class="precio">${precio}</p>
-    `;
+        const enlace = document.createElement('a');
+        enlace.href = `../${perfume.pagina}`;
+        enlace.innerHTML = `
+          <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+          <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+          <p class="precio">${precio}</p>
+        `;
 
-    // Evento de Analytics
-    enlace.addEventListener("click", () => {
-      gtag('event', 'click_perfume', {
-        event_category: 'Perfumes',
-        event_label: perfume.nombre,
-        value: 1
+        enlace.addEventListener("click", () => {
+          gtag('event', 'click_perfume', {
+            event_category: 'Perfumes',
+            event_label: perfume.nombre,
+            value: 1
+          });
+        });
+
+        tarjeta.appendChild(enlace);
+        contenedor.appendChild(tarjeta);
       });
-    });
 
-    tarjeta.appendChild(enlace);
-    contenedor.appendChild(tarjeta);
-  });
-
-  renderizarBotones(lista);
-}
-
-
-function renderizarBotones(lista) {
-  // Crear contenedor arriba
-  let topContainer = document.getElementById('botones-paginacion-top');
-  if (!topContainer) {
-    topContainer = document.createElement('div');
-    topContainer.id = 'botones-paginacion-top';
-    topContainer.className = 'botones-paginacion';
-    contenedor.parentNode.insertBefore(topContainer, contenedor);
-  }
-
-  // Crear contenedor abajo
-  let bottomContainer = document.getElementById('botones-paginacion-bottom');
-  if (!bottomContainer) {
-    bottomContainer = document.createElement('div');
-    bottomContainer.id = 'botones-paginacion-bottom';
-    bottomContainer.className = 'botones-paginacion';
-    contenedor.parentNode.appendChild(bottomContainer);
-  }
-
-  // Renderizar en ambos
-  [topContainer, bottomContainer].forEach(container => {
-    container.innerHTML = '';
-
-    const btnInicio = document.createElement('button');
-    btnInicio.textContent = 'Inicio';
-    btnInicio.onclick = () => {
-      paginaActual = 1;
-      mostrarPagina(paginaActual, lista);
-    };
-    container.appendChild(btnInicio);
-
-    if (paginaActual > 1) {
-      const btnAnterior = document.createElement('button');
-      btnAnterior.textContent = 'Anterior';
-      btnAnterior.onclick = () => {
-        paginaActual--;
-        mostrarPagina(paginaActual, lista);
-      };
-      container.appendChild(btnAnterior);
+      renderizarBotones(lista);
     }
 
-    if (paginaActual * perfumesPorPagina < lista.length) {
-      const btnSiguiente = document.createElement('button');
-      btnSiguiente.textContent = 'Siguiente';
-      btnSiguiente.onclick = () => {
-        paginaActual++;
-        mostrarPagina(paginaActual, lista);
-      };
-      container.appendChild(btnSiguiente);
+    function renderizarBotones(lista) {
+      let topContainer = document.getElementById('botones-paginacion-top');
+      if (!topContainer) {
+        topContainer = document.createElement('div');
+        topContainer.id = 'botones-paginacion-top';
+        topContainer.className = 'botones-paginacion';
+        contenedor.parentNode.insertBefore(topContainer, contenedor);
+      }
+
+      let bottomContainer = document.getElementById('botones-paginacion-bottom');
+      if (!bottomContainer) {
+        bottomContainer = document.createElement('div');
+        bottomContainer.id = 'botones-paginacion-bottom';
+        bottomContainer.className = 'botones-paginacion';
+        contenedor.parentNode.appendChild(bottomContainer);
+      }
+
+      [topContainer, bottomContainer].forEach(container => {
+        container.innerHTML = '';
+
+        const btnInicio = document.createElement('button');
+        btnInicio.textContent = 'Inicio';
+        btnInicio.onclick = () => {
+          paginaActual = 1;
+          mostrarPagina(paginaActual, lista);
+        };
+        container.appendChild(btnInicio);
+
+        if (paginaActual > 1) {
+          const btnAnterior = document.createElement('button');
+          btnAnterior.textContent = 'Anterior';
+          btnAnterior.onclick = () => {
+            paginaActual--;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnAnterior);
+        }
+
+        if (paginaActual * perfumesPorPagina < lista.length) {
+          const btnSiguiente = document.createElement('button');
+          btnSiguiente.textContent = 'Siguiente';
+          btnSiguiente.onclick = () => {
+            paginaActual++;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnSiguiente);
+        }
+      });
     }
-  });
-}
+
+    // 👉 Llamada inicial para mostrar la primera página
+    mostrarPagina(paginaActual, arabes);
 
     // Sidebar dinámico con marcas
     const marcasUnicas = [...new Set(arabes.map(p => p.marca))];
@@ -260,24 +252,4 @@ function renderizarBotones(lista) {
     const checkboxes = marcasContainer.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', () => {
-        const seleccionadas = [...checkboxes]
-          .filter(cb => cb.checked)
-          .map(cb => cb.value);
-
-        const filtrados = arabes.filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca));
-        paginaActual = 1;
-        mostrarPagina(paginaActual, filtrados);
-      });
-    });
-
-  } catch (error) {
-    console.error("Error cargando perfumes:", error);
-    contenedor.innerHTML = '<p>Error al cargar perfumes.</p>';
-  }
-}
-
-cargarPerfumes();
-</script>
-
-</body>
-</html>
+        const seleccionadas = [...checkbox
