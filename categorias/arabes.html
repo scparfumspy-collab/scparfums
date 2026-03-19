@@ -5,83 +5,10 @@
   <title>Fragancias Árabes - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles-base.css">
-
-  <!-- Google tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-C1MM9FN44X');
-  </script>
 </head>
 <body>
 
 <div id="header"></div>
-<script>
-  fetch('../header.html')
-    .then(resp => resp.text())
-    .then(html => {
-      document.getElementById('header').innerHTML = html;
-      initHeaderSearch();
-    });
-
-  function initHeaderSearch() {
-    const searchInput = document.getElementById("searchInput");
-    const searchButton = document.getElementById("searchButton");
-    const suggestionsBox = document.getElementById("searchSuggestions");
-    let perfumesCache = [];
-
-    if (!searchInput || !searchButton || !suggestionsBox) return;
-    
-    fetch("../data/perfumes.json")
-      .then(resp => resp.json())
-      .then(data => { perfumesCache = data; });
-
-    searchInput.addEventListener("input", () => {
-      const query = searchInput.value.trim().toLowerCase();
-      suggestionsBox.innerHTML = "";
-      if (!query) {
-        suggestionsBox.style.display = "none";
-        return;
-      }
-
-      const resultados = perfumesCache.filter(p =>
-        p.nombre.toLowerCase().includes(query) ||
-        p.marca.toLowerCase().includes(query)
-      ).slice(0, 10);
-
-      if (resultados.length === 0) {
-        suggestionsBox.style.display = "none";
-        return;
-      }
-
-      resultados.forEach(perfume => {
-        const item = document.createElement("div");
-        item.textContent = perfume.marca + " - " + perfume.nombre;
-        item.addEventListener("click", () => {
-          window.location.href = "/scparfums/" + perfume.pagina;
-        });
-        suggestionsBox.appendChild(item);
-      });
-
-      suggestionsBox.style.display = "block";
-    });
-
-    searchButton.addEventListener("click", () => {
-      const query = searchInput.value.trim().toLowerCase();
-      if (query) {
-        window.location.href = "/scparfums/buscar.html?q=" + encodeURIComponent(query);
-      }
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
-        suggestionsBox.style.display = "none";
-      }
-    });
-  }
-</script>
 
 <section class="hero">
   <div class="hero-text">Fragancias Árabes</div>
@@ -162,14 +89,6 @@ async function cargarPerfumes() {
           <p class="precio">${precio}</p>
         `;
 
-        enlace.addEventListener("click", () => {
-          gtag('event', 'click_perfume', {
-            event_category: 'Perfumes',
-            event_label: perfume.nombre,
-            value: 1
-          });
-        });
-
         tarjeta.appendChild(enlace);
         contenedor.appendChild(tarjeta);
       });
@@ -182,7 +101,6 @@ async function cargarPerfumes() {
       if (!topContainer) {
         topContainer = document.createElement('div');
         topContainer.id = 'botones-paginacion-top';
-        topContainer.className = 'botones-paginacion';
         contenedor.parentNode.insertBefore(topContainer, contenedor);
       }
 
@@ -190,7 +108,6 @@ async function cargarPerfumes() {
       if (!bottomContainer) {
         bottomContainer = document.createElement('div');
         bottomContainer.id = 'botones-paginacion-bottom';
-        bottomContainer.className = 'botones-paginacion';
         contenedor.parentNode.appendChild(bottomContainer);
       }
 
@@ -227,7 +144,7 @@ async function cargarPerfumes() {
       });
     }
 
-    // 👉 Mostrar la primera página al cargar
+    // Mostrar la primera página al cargar
     mostrarPagina(paginaActual, arabes);
 
     // Sidebar dinámico con marcas
@@ -251,4 +168,20 @@ async function cargarPerfumes() {
           .filter(cb => cb.checked)
           .map(cb => cb.value);
 
-        const filtrados = arabes.filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.m
+        const filtrados = arabes.filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca));
+        paginaActual = 1;
+        mostrarPagina(paginaActual, filtrados);
+      });
+    });
+
+  } catch (error) {
+    console.error("Error cargando perfumes:", error);
+    contenedor.innerHTML = '<p>Error al cargar perfumes.</p>';
+  }
+}
+
+cargarPerfumes();
+</script>
+
+</body>
+</html>
