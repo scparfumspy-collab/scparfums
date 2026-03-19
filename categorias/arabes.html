@@ -5,9 +5,19 @@
   <title>Fragancias Árabes - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles-base.css">
-  <div id="header"></div>
 </head>
 <body>
+
+<!-- Header dinámico -->
+<div id="header"></div>
+<script>
+  fetch('../header.html')
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+      initHeaderSearch(); // tu función de búsqueda
+    });
+</script>
 
 <section class="hero">
   <div class="hero-text">Fragancias Árabes</div>
