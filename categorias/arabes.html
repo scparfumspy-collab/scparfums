@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <title>Fragancias Árabes - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS centralizado -->
   <link rel="stylesheet" href="../css/styles-base.css">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -18,7 +17,6 @@
 </head>
 <body>
 
-<!-- Header dinámico -->
 <div id="header"></div>
 <script>
   fetch('../header.html')
@@ -38,8 +36,7 @@
     
     fetch("../data/perfumes.json")
       .then(resp => resp.json())
-      .then(data => { perfumesCache = data; })
-      .catch(err => console.error("Error cargando perfumes:", err));
+      .then(data => { perfumesCache = data; });
 
     searchInput.addEventListener("input", () => {
       const query = searchInput.value.trim().toLowerCase();
@@ -123,16 +120,14 @@ async function cargarPerfumes() {
     contenedor.innerHTML = '';
 
     // Filtrar por categoria2 = "Árabes"
-    const arabes = perfumes
-      .filter(p => {
-        if (!p.categoria2) return false;
-        const cat = p.categoria2
-          .toLowerCase()
-          .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-          .trim();
-        return cat === "arabes";
-      })
-      .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+    const arabes = perfumes.filter(p => {
+      if (!p.categoria2) return false;
+      const cat = p.categoria2
+        .toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .trim();
+      return cat === "arabes";
+    }).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
 
     const perfumesPorPagina = 20;
     let paginaActual = 1;
@@ -253,3 +248,7 @@ async function cargarPerfumes() {
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', () => {
         const seleccionadas = [...checkboxes]
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        const filtrados = arabes.filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca
