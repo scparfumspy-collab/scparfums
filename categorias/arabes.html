@@ -133,9 +133,16 @@ async function cargarPerfumes() {
     contenedor.innerHTML = '';
 
     // Filtrar por categoria2 = "Árabes"
-   const arabes = perfumes
-  .filter(p => p.categoria2 && p.categoria2.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") === "arabes")
+const arabes = perfumes
+  .filter(p => {
+    if (!p.categoria2) return false;
+    const cat = p.categoria2.toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .trim();
+    return cat === "arabes";
+  })
   .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+
 
 const perfumesPorPagina = 20;
 let paginaActual = 1;
