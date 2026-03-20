@@ -134,17 +134,34 @@
     <h2>Lo Nuevo</h2>
     <a href="lonuevo.html" class="btn-ver-todos">Ver todos</a>
   </div>
-  <div class="barra-scroll" id="lo-nuevo"></div>
+  <div class="barra-scroll-wrapper">
+    <button class="scroll-btn left" onclick="scrollBarra('lo-nuevo', -1)">&#10094;</button>
+    <div class="barra-scroll" id="lo-nuevo"></div>
+    <button class="scroll-btn right" onclick="scrollBarra('lo-nuevo', 1)">&#10095;</button>
+  </div>
 </section>
 
-<!-- Más Populares -->
 <section class="destacados-card">
   <div class="destacados-header">
     <h2>Más Populares</h2>
     <a href="maspopulares.html" class="btn-ver-todos">Ver todos</a>
   </div>
-  <div class="barra-scroll" id="mas-populares"></div>
+  <div class="barra-scroll-wrapper">
+    <button class="scroll-btn left" onclick="scrollBarra('mas-populares', -1)">&#10094;</button>
+    <div class="barra-scroll" id="mas-populares"></div>
+    <button class="scroll-btn right" onclick="scrollBarra('mas-populares', 1)">&#10095;</button>
+  </div>
 </section>
+  <script>
+function scrollBarra(id, direction) {
+  const contenedor = document.getElementById(id);
+  const cardWidth = contenedor.querySelector('.perfume-card')?.offsetWidth || 150;
+  contenedor.scrollBy({
+    left: direction * (cardWidth * 5), // desplaza 5 tarjetas por click
+    behavior: 'smooth'
+  });
+}
+</script>
 
 
 <!-- Info -->
