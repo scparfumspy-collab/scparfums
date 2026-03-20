@@ -5,6 +5,15 @@
   <title>Los Últimos Lanzamientos - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles-base.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C1MM9FN44X');
+  </script>
 </head>
 <body>
 
@@ -49,10 +58,10 @@ async function cargarPerfumes() {
   contenedor.innerHTML = '<p id="loader">Cargando últimos lanzamientos...</p>';
 
   try {
-    const respuesta = await fetch('./data/perfumes.json');
+    const respuesta = await fetch('./data/perfumes.json'); // ruta ajustada porque lonuevo.html está en raíz
     const perfumes = await respuesta.json();
 
-    const preciosResp = await fetch(CONFIG.preciosURL);
+    const preciosResp = await fetch(CONFIG.preciosURL); // tu Apps Script
     const precios = await preciosResp.json();
 
     contenedor.innerHTML = '';
@@ -72,12 +81,21 @@ async function cargarPerfumes() {
       tarjeta.setAttribute('data-marca', perfume.marca);
 
       const enlace = document.createElement('a');
-      enlace.href = `../${perfume.pagina}`;
+      enlace.href = `./${perfume.pagina}`;
       enlace.innerHTML = `
-        <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+        <img src="./${perfume.imagen}" alt="${perfume.nombre}">
         <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
         <p class="precio">${precio}</p>
       `;
+
+      // Evento de Analytics para "Más Populares"
+      enlace.addEventListener("click", () => {
+        gtag('event', 'click_perfume', {
+          event_category: 'MasPopulares',
+          event_label: perfume.nombre,
+          value: 1
+        });
+      });
 
       tarjeta.appendChild(enlace);
       contenedor.appendChild(tarjeta);
@@ -118,12 +136,21 @@ async function cargarPerfumes() {
           tarjeta.setAttribute('data-marca', perfume.marca);
 
           const enlace = document.createElement('a');
-          enlace.href = `../${perfume.pagina}`;
+          enlace.href = `./${perfume.pagina}`;
           enlace.innerHTML = `
-            <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+            <img src="./${perfume.imagen}" alt="${perfume.nombre}">
             <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
             <p class="precio">${precio}</p>
           `;
+
+          // Evento de Analytics
+          enlace.addEventListener("click", () => {
+            gtag('event', 'click_perfume', {
+              event_category: 'MasPopulares',
+              event_label: perfume.nombre,
+              value: 1
+            });
+          });
 
           tarjeta.appendChild(enlace);
           contenedor.appendChild(tarjeta);
