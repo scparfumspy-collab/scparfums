@@ -10,12 +10,18 @@
 
 <!-- Header dinámico -->
 <div id="header"></div>
+
+<script src="../data/config.js"></script>
+<script src="../js/header.js"></script> <!-- primero -->
+<script src="../js/render.js"></script> <!-- después -->
+
 <script>
+  // Cargar header y activar buscador
   fetch('../header.html')
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
-      initHeaderSearch(); // tu función de búsqueda
+      initHeaderSearch(); // ahora sí existe
     });
 </script>
 
@@ -42,10 +48,6 @@
   <a href="https://wa.me/595991861112">WhatsApp</a>
 </footer>
 
-<script src="../data/config.js"></script>
-<script src="../js/render.js"></script>
- <script src="../js/header.js"></script>
-  
 <script>
 async function cargarPerfumes() {
   const contenedor = document.getElementById('perfume-list');
@@ -89,50 +91,50 @@ async function cargarPerfumes() {
         return;
       }
 
-perfumesPagina.forEach(perfume => {
-  const tarjeta = renderTarjeta(perfume, precios, ofertas);
-  contenedor.appendChild(tarjeta);
-});
+      perfumesPagina.forEach(perfume => {
+        const tarjeta = renderTarjeta(perfume, precios, ofertas);
+        contenedor.appendChild(tarjeta);
+      });
 
       renderizarBotones(lista);
     }
 
     function renderizarBotones(lista) {
-  const topContainer = document.getElementById('botones-paginacion-top');
-  const bottomContainer = document.getElementById('botones-paginacion-bottom');
+      const topContainer = document.getElementById('botones-paginacion-top');
+      const bottomContainer = document.getElementById('botones-paginacion-bottom');
 
-  [topContainer, bottomContainer].forEach(container => {
-    container.innerHTML = '';
+      [topContainer, bottomContainer].forEach(container => {
+        container.innerHTML = '';
 
-    const btnInicio = document.createElement('button');
-    btnInicio.textContent = 'Inicio';
-    btnInicio.onclick = () => {
-      paginaActual = 1;
-      mostrarPagina(paginaActual, lista);
-    };
-    container.appendChild(btnInicio);
+        const btnInicio = document.createElement('button');
+        btnInicio.textContent = 'Inicio';
+        btnInicio.onclick = () => {
+          paginaActual = 1;
+          mostrarPagina(paginaActual, lista);
+        };
+        container.appendChild(btnInicio);
 
-    if (paginaActual > 1) {
-      const btnAnterior = document.createElement('button');
-      btnAnterior.textContent = 'Anterior';
-      btnAnterior.onclick = () => {
-        paginaActual--;
-        mostrarPagina(paginaActual, lista);
-      };
-      container.appendChild(btnAnterior);
+        if (paginaActual > 1) {
+          const btnAnterior = document.createElement('button');
+          btnAnterior.textContent = 'Anterior';
+          btnAnterior.onclick = () => {
+            paginaActual--;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnAnterior);
+        }
+
+        if (paginaActual * perfumesPorPagina < lista.length) {
+          const btnSiguiente = document.createElement('button');
+          btnSiguiente.textContent = 'Siguiente';
+          btnSiguiente.onclick = () => {
+            paginaActual++;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnSiguiente);
+        }
+      });
     }
-
-    if (paginaActual * perfumesPorPagina < lista.length) {
-      const btnSiguiente = document.createElement('button');
-      btnSiguiente.textContent = 'Siguiente';
-      btnSiguiente.onclick = () => {
-        paginaActual++;
-        mostrarPagina(paginaActual, lista);
-      };
-      container.appendChild(btnSiguiente);
-    }
-  });
-}
 
     // Mostrar la primera página al cargar
     mostrarPagina(paginaActual, arabes);
@@ -172,10 +174,6 @@ perfumesPagina.forEach(perfume => {
 
 cargarPerfumes();
 </script>
-
-</body>
-</html>
-
 
 </body>
 </html>
