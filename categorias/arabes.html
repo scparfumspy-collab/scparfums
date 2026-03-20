@@ -56,7 +56,7 @@ async function cargarPerfumes() {
   contenedor.innerHTML = '<p id="loader">Cargando fragancias árabes...</p>';
 
   try {
-    const respuesta = await fetch('../data/perfumes.json');
+    const respuesta = await fetch('../data/perfumes.json'); // ajustá según ubicación real
     const perfumes = await respuesta.json();
 
     const preciosResp = await fetch(CONFIG.preciosURL);
