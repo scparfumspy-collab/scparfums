@@ -5,24 +5,84 @@
   <title>Fragancias Árabes - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles-base.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C1MM9FN44X');
+  </script>
 </head>
 <body>
 
 <!-- Header dinámico -->
 <div id="header"></div>
-
-<script src="../data/config.js"></script>
-<script src="../js/header.js"></script> <!-- primero -->
-<script src="../js/render.js"></script> <!-- después -->
-
 <script>
-  // Cargar header y activar buscador
   fetch('../header.html')
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
-      initHeaderSearch(); // ahora sí existe
+      initHeaderSearch(); // buscador igual que en diseñador.html
     });
+
+  function initHeaderSearch() {
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+    const suggestionsBox = document.getElementById("searchSuggestions");
+    let perfumesCache = [];
+
+    if (!searchInput || !searchButton || !suggestionsBox) return;
+
+    fetch("../data/perfumes.json")
+      .then(resp => resp.json())
+      .then(data => { perfumesCache = data; })
+      .catch(err => console.error("Error cargando perfumes:", err));
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      suggestionsBox.innerHTML = "";
+      if (!query) {
+        suggestionsBox.style.display = "none";
+        return;
+      }
+
+      const resultados = perfumesCache.filter(p =>
+        p.nombre.toLowerCase().includes(query) ||
+        p.marca.toLowerCase().includes(query)
+      ).slice(0, 10);
+
+      if (resultados.length === 0) {
+        suggestionsBox.style.display = "none";
+        return;
+      }
+
+      resultados.forEach(perfume => {
+        const item = document.createElement("div");
+        item.textContent = perfume.marca + " - " + perfume.nombre;
+        item.addEventListener("click", () => {
+          window.location.href = "/scparfums/" + perfume.pagina;
+        });
+        suggestionsBox.appendChild(item);
+      });
+
+      suggestionsBox.style.display = "block";
+    });
+
+    searchButton.addEventListener("click", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (query) {
+        window.location.href = "/scparfums/buscar.html?q=" + encodeURIComponent(query);
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+        suggestionsBox.style.display = "none";
+      }
+    });
+  }
 </script>
 
 <section class="hero">
@@ -48,6 +108,9 @@
   <a href="https://wa.me/595991861112">WhatsApp</a>
 </footer>
 
+<script src="../data/config.js"></script>
+<script src="../js/render.js"></script>
+
 <script>
 async function cargarPerfumes() {
   const contenedor = document.getElementById('perfume-list');
@@ -56,7 +119,7 @@ async function cargarPerfumes() {
   contenedor.innerHTML = '<p id="loader">Cargando fragancias árabes...</p>';
 
   try {
-    const respuesta = await fetch('../data/perfumes.json'); // ajustá según ubicación real
+    const respuesta = await fetch('../data/perfumes.json');
     const perfumes = await respuesta.json();
 
     const preciosResp = await fetch(CONFIG.preciosURL);
