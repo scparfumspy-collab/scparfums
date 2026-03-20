@@ -182,44 +182,42 @@ function mostrarPagina(pagina, lista = disenador) {
 }
 
     function renderizarBotones(lista) {
-      let botonesContainer = document.getElementById('botones-paginacion');
-      if (!botonesContainer) {
-        botonesContainer = document.createElement('div');
-        botonesContainer.id = 'botones-paginacion';
-        botonesContainer.style.textAlign = 'center';
-        botonesContainer.style.marginTop = '20px';
-        contenedor.parentNode.appendChild(botonesContainer);
-      }
-      botonesContainer.innerHTML = '';
+  const topContainer = document.getElementById('botones-paginacion-top');
+  const bottomContainer = document.getElementById('botones-paginacion-bottom');
 
-      const btnInicio = document.createElement('button');
-      btnInicio.textContent = 'Inicio';
-      btnInicio.onclick = () => {
-        paginaActual = 1;
+  [topContainer, bottomContainer].forEach(container => {
+    container.innerHTML = '';
+
+    const btnInicio = document.createElement('button');
+    btnInicio.textContent = 'Inicio';
+    btnInicio.onclick = () => {
+      paginaActual = 1;
+      mostrarPagina(paginaActual, lista);
+    };
+    container.appendChild(btnInicio);
+
+    if (paginaActual > 1) {
+      const btnAnterior = document.createElement('button');
+      btnAnterior.textContent = 'Anterior';
+      btnAnterior.onclick = () => {
+        paginaActual--;
         mostrarPagina(paginaActual, lista);
       };
-      botonesContainer.appendChild(btnInicio);
-
-      if (paginaActual > 1) {
-        const btnAnterior = document.createElement('button');
-        btnAnterior.textContent = 'Anterior';
-        btnAnterior.onclick = () => {
-          paginaActual--;
-          mostrarPagina(paginaActual, lista);
-        };
-        botonesContainer.appendChild(btnAnterior);
-      }
-
-      if (paginaActual * perfumesPorPagina < lista.length) {
-        const btnSiguiente = document.createElement('button');
-        btnSiguiente.textContent = 'Siguiente';
-        btnSiguiente.onclick = () => {
-          paginaActual++;
-          mostrarPagina(paginaActual, lista);
-        };
-        botonesContainer.appendChild(btnSiguiente);
-      }
+      container.appendChild(btnAnterior);
     }
+
+    if (paginaActual * perfumesPorPagina < lista.length) {
+      const btnSiguiente = document.createElement('button');
+      btnSiguiente.textContent = 'Siguiente';
+      btnSiguiente.onclick = () => {
+        paginaActual++;
+        mostrarPagina(paginaActual, lista);
+      };
+      container.appendChild(btnSiguiente);
+    }
+  });
+}
+
 
     mostrarPagina(paginaActual);
 
