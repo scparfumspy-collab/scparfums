@@ -4,20 +4,16 @@
   <meta charset="UTF-8">
   <title>Fragancias de Diseñador - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS centralizado -->
   <link rel="stylesheet" href="../css/styles-base.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  // Tu ID de medición
-  gtag('config', 'G-C1MM9FN44X');
-</script>
-
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C1MM9FN44X');
+  </script>
 </head>
 <body>
 
@@ -28,10 +24,10 @@
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
-      initHeaderSearch();
+      initHeaderSearch(); // buscador igual que en árabes
     });
 
-
+  // Función de buscador (igual que en árabes)
   function initHeaderSearch() {
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
@@ -90,18 +86,17 @@
   }
 </script>
 
-
 <section class="hero">
   <div class="hero-text">Fragancias de Diseñador</div>
 </section>
 
 <section class="layout">
   <aside class="sidebar"></aside>
-<main class="perfumes-wrapper">
-  <div id="botones-paginacion-top" class="botones-paginacion"></div>
-  <div class="perfumes" id="perfume-list"></div>
-  <div id="botones-paginacion-bottom" class="botones-paginacion"></div>
-</main>
+  <main class="perfumes-wrapper">
+    <div id="botones-paginacion-top" class="botones-paginacion"></div>
+    <div class="perfumes" id="perfume-list"></div>
+    <div id="botones-paginacion-bottom" class="botones-paginacion"></div>
+  </main>
 </section>
 
 <footer>
@@ -115,6 +110,8 @@
 </footer>
 
 <script src="../data/config.js"></script>
+<script src="../js/render.js"></script>
+
 <script>
 async function cargarPerfumes() {
   const contenedor = document.getElementById('perfume-list');
@@ -129,97 +126,82 @@ async function cargarPerfumes() {
     const preciosResp = await fetch(CONFIG.preciosURL);
     const precios = await preciosResp.json();
 
+    const ofertasResp = await fetch('../data/ofertas.json');
+    const ofertas = await ofertasResp.json();
+
     contenedor.innerHTML = '';
 
     // Filtrar por categoria2 = "Diseñador"
-   const disenador = perfumes
-  .filter(p => p.categoria2 && p.categoria2.toLowerCase().trim() === "diseñador")
-  .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+    const disenador = perfumes.filter(p => {
+      if (!p.categoria2) return false;
+      const cat = p.categoria2
+        .toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .trim();
+      return cat === "diseñador";
+    }).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
 
-const perfumesPorPagina = 20;
-let paginaActual = 1;
+    const perfumesPorPagina = 20;
+    let paginaActual = 1;
 
-function mostrarPagina(pagina, lista = disenador) {
-  contenedor.innerHTML = '';
-  const inicio = (pagina - 1) * perfumesPorPagina;
-  const fin = inicio + perfumesPorPagina;
-  const perfumesPagina = lista.slice(inicio, fin);
+    function mostrarPagina(pagina, lista = disenador) {
+      contenedor.innerHTML = '';
+      const inicio = (pagina - 1) * perfumesPorPagina;
+      const fin = inicio + perfumesPorPagina;
+      const perfumesPagina = lista.slice(inicio, fin);
 
-  perfumesPagina.forEach(perfume => {
-    const precioData = precios.find(pr => pr.id === perfume.id);
-    let precio = "Consultar";
-    if (precioData && precioData.precio != null) {
-      precio = "₲ " + precioData.precio.toLocaleString("es-PY");
-    }
+      if (perfumesPagina.length === 0) {
+        contenedor.innerHTML = '<p>No se encontraron perfumes en esta categoría.</p>';
+        return;
+      }
 
-    const tarjeta = document.createElement('div');
-    tarjeta.className = 'perfume-card';
-    tarjeta.setAttribute('data-marca', perfume.marca);
-
-    // Crear enlace
-    const enlace = document.createElement('a');
-    enlace.href = `../${perfume.pagina}`;
-    enlace.innerHTML = `
-      <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-      <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-      <p class="precio">${precio}</p>
-    `;
-
-    // Evento de Analytics
-    enlace.addEventListener("click", () => {
-      gtag('event', 'click_perfume', {
-        event_category: 'Perfumes',
-        event_label: perfume.nombre,
-        value: 1
+      perfumesPagina.forEach(perfume => {
+        const tarjeta = renderTarjeta(perfume, precios, ofertas);
+        contenedor.appendChild(tarjeta);
       });
-    });
 
-    tarjeta.appendChild(enlace);
-    contenedor.appendChild(tarjeta);
-  });
-
-  renderizarBotones(lista);
-}
+      renderizarBotones(lista);
+    }
 
     function renderizarBotones(lista) {
-  const topContainer = document.getElementById('botones-paginacion-top');
-  const bottomContainer = document.getElementById('botones-paginacion-bottom');
+      const topContainer = document.getElementById('botones-paginacion-top');
+      const bottomContainer = document.getElementById('botones-paginacion-bottom');
 
-  [topContainer, bottomContainer].forEach(container => {
-    container.innerHTML = '';
+      [topContainer, bottomContainer].forEach(container => {
+        container.innerHTML = '';
 
-    const btnInicio = document.createElement('button');
-    btnInicio.textContent = 'Inicio';
-    btnInicio.onclick = () => {
-      paginaActual = 1;
-      mostrarPagina(paginaActual, lista);
-    };
-    container.appendChild(btnInicio);
+        const btnInicio = document.createElement('button');
+        btnInicio.textContent = 'Inicio';
+        btnInicio.onclick = () => {
+          paginaActual = 1;
+          mostrarPagina(paginaActual, lista);
+        };
+        container.appendChild(btnInicio);
 
-    if (paginaActual > 1) {
-      const btnAnterior = document.createElement('button');
-      btnAnterior.textContent = 'Anterior';
-      btnAnterior.onclick = () => {
-        paginaActual--;
-        mostrarPagina(paginaActual, lista);
-      };
-      container.appendChild(btnAnterior);
+        if (paginaActual > 1) {
+          const btnAnterior = document.createElement('button');
+          btnAnterior.textContent = 'Anterior';
+          btnAnterior.onclick = () => {
+            paginaActual--;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnAnterior);
+        }
+
+        if (paginaActual * perfumesPorPagina < lista.length) {
+          const btnSiguiente = document.createElement('button');
+          btnSiguiente.textContent = 'Siguiente';
+          btnSiguiente.onclick = () => {
+            paginaActual++;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnSiguiente);
+        }
+      });
     }
 
-    if (paginaActual * perfumesPorPagina < lista.length) {
-      const btnSiguiente = document.createElement('button');
-      btnSiguiente.textContent = 'Siguiente';
-      btnSiguiente.onclick = () => {
-        paginaActual++;
-        mostrarPagina(paginaActual, lista);
-      };
-      container.appendChild(btnSiguiente);
-    }
-  });
-}
-
-
-    mostrarPagina(paginaActual);
+    // Mostrar la primera página al cargar
+    mostrarPagina(paginaActual, disenador);
 
     // Sidebar dinámico con marcas
     const marcasUnicas = [...new Set(disenador.map(p => p.marca))];
