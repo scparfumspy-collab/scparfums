@@ -281,12 +281,14 @@ nav a:hover {
 /* ===== PAGINACIÓN ===== */
 .botones-paginacion {
   display: flex;
-  justify-content: center;   /* centra el grupo de botones */
+  justify-content: center;   /* centra el grupo */
+  align-items: center;
   gap: 12px;                 /* espacio entre botones */
   margin: 20px 0;
 }
 
 .botones-paginacion button {
+  flex: 0;                   /* evita que se estiren */
   padding: 6px 14px;         /* tamaño compacto */
   border: none;
   border-radius: 6px;
@@ -294,13 +296,13 @@ nav a:hover {
   color: #fff;
   font-size: 14px;
   cursor: pointer;
-  flex: 0;                   /* evita que se estiren */
   transition: background-color 0.3s;
 }
 
 .botones-paginacion button:hover {
   background-color: #333;
 }
+
 
 
 /* ===== INFO SECTION ===== */
