@@ -432,3 +432,10 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Grid de Lo Nuevo: 4 columnas */
+.perfumes-wrapper .perfumes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
