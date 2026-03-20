@@ -60,8 +60,7 @@ async function cargarPerfumes() {
     const precios = await preciosResp.json();
 
     const ofertasResp = await fetch('../data/ofertas.json');
-const ofertas = await ofertasResp.json();
-
+    const ofertas = await ofertasResp.json();
 
     contenedor.innerHTML = '';
 
@@ -75,76 +74,27 @@ const ofertas = await ofertasResp.json();
       return cat === "arabes";
     }).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
 
-    function renderTarjeta(perfume, precios, ofertas) {
-  const precioData = precios.find(pr => pr.id === perfume.id);
-  const precioNormal = precioData ? precioData.precio : null;
-  const ofertaData = ofertas.find(o => o.id === perfume.id);
-
-  let precioFinal = precioNormal;
-  let descuento = null;
-
-  if (precioNormal && ofertaData) {
-    descuento = ofertaData.descuento;
-    precioFinal = Math.round(precioNormal * (1 - descuento / 100));
-  }
-
-  const tarjeta = document.createElement('div');
-  tarjeta.className = 'perfume-card';
-  tarjeta.setAttribute('data-marca', perfume.marca);
-
-  // Si está en oferta, agregamos clase y atributo para CSS
-  if (ofertaData && precioNormal) {
-    tarjeta.classList.add("en-oferta");
-    tarjeta.setAttribute("data-descuento", `-${descuento}%`);
-  }
-
-  let html = `
-    <a href="../${perfume.pagina}">
-      <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-      <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-  `;
-
-  if (ofertaData && precioNormal) {
-    html += `
-      <p class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</p>
-      <p class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></p>
-    `;
-  } else if (precioNormal) {
-    html += `<p class="precio">₲ ${precioNormal.toLocaleString("es-PY")}</p>`;
-  } else {
-    html += `<p class="precio">Consultar</p>`;
-  }
-
-  html += `</a>`;
-  tarjeta.innerHTML = html;
-  return tarjeta;
-}
-
-
     const perfumesPorPagina = 20;
     let paginaActual = 1;
 
-function mostrarPagina(pagina, lista = arabes) {
-  contenedor.innerHTML = '';
-  const inicio = (pagina - 1) * perfumesPorPagina;
-  const fin = inicio + perfumesPorPagina;
-  const perfumesPagina = lista.slice(inicio, fin);
+    function mostrarPagina(pagina, lista = arabes) {
+      contenedor.innerHTML = '';
+      const inicio = (pagina - 1) * perfumesPorPagina;
+      const fin = inicio + perfumesPorPagina;
+      const perfumesPagina = lista.slice(inicio, fin);
 
-  if (perfumesPagina.length === 0) {
-    contenedor.innerHTML = '<p>No se encontraron perfumes en esta categoría.</p>';
-    return;
-  }
+      if (perfumesPagina.length === 0) {
+        contenedor.innerHTML = '<p>No se encontraron perfumes en esta categoría.</p>';
+        return;
+      }
 
-  perfumesPagina.forEach(perfume => {
-    const tarjeta = renderTarjeta(perfume, precios, ofertas);
-    contenedor.appendChild(tarjeta);
-  });
+      perfumesPagina.forEach(perfume => {
+        const tarjeta = renderTarjeta(perfume, precios, ofertas);
+        contenedor.appendChild(tarjeta);
+      });
 
-  renderizarBotones(lista);
-}
-
-
-
+      renderizarBotones(lista);
+    }
 
     // Mostrar la primera página al cargar
     mostrarPagina(paginaActual, arabes);
@@ -184,6 +134,10 @@ function mostrarPagina(pagina, lista = arabes) {
 
 cargarPerfumes();
 </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
