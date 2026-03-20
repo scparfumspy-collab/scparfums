@@ -146,6 +146,12 @@ nav a:hover {
   letter-spacing: 1px;
   text-shadow: 0 3px 8px rgba(0,0,0,0.4);
 }
+.hero-lonuevo {
+  background: url('../imagenes/backgrounds/background-lonuevo.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  height: 400px;
+}
 
 /* ===== INDEX CATEGORY CARDS (Árabes, Diseñador, Nicho, Decants) ===== */
 .index-categories {
