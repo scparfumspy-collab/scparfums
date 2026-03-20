@@ -128,6 +128,21 @@
   </a>
 </section>
 
+<!-- Lo Nuevo -->
+<section class="destacados">
+  <h2>Lo Nuevo</h2>
+  <div class="barra-scroll" id="lo-nuevo"></div>
+  <a href="lonuevo.html" class="btn-ver-todos">Ver todos</a>
+</section>
+
+<!-- Más Populares -->
+<section class="destacados">
+  <h2>Más Populares</h2>
+  <div class="barra-scroll" id="mas-populares"></div>
+  <a href="maspopulares.html" class="btn-ver-todos">Ver todos</a>
+</section>
+
+
 <!-- Info -->
 <section class="info-section">
   <div class="info-card">
@@ -162,3 +177,66 @@
 
 </body>
 </html>
+
+<script src="data/config.js"></script>
+<script>
+async function cargarIndex() {
+  try {
+    const resp = await fetch("data/perfumes.json");
+    const perfumes = await resp.json();
+
+    const preciosResp = await fetch(CONFIG.preciosURL);
+    const precios = await preciosResp.json();
+
+    // Lo Nuevo: últimos 10 perfumes
+    const loNuevo = perfumes.slice(-10).reverse();
+    renderBarra(loNuevo, "lo-nuevo", precios);
+
+    // Más Populares: aquí deberías cargar desde tu CSV/Analytics
+    // Por ahora, simulemos con los primeros 10 perfumes
+    const masPopulares = perfumes.slice(0, 10);
+    renderBarra(masPopulares, "mas-populares", precios);
+
+  } catch (err) {
+    console.error("Error cargando perfumes:", err);
+  }
+}
+
+function renderBarra(lista, contenedorId, precios) {
+  const contenedor = document.getElementById(contenedorId);
+  contenedor.innerHTML = "";
+
+  lista.forEach(perfume => {
+    const precioData = precios.find(pr => pr.id === perfume.id);
+    let precio = "Consultar";
+    if (precioData && precioData.precio != null) {
+      precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+    }
+
+    const tarjeta = document.createElement("div");
+    tarjeta.className = "perfume-card";
+
+    const enlace = document.createElement("a");
+    enlace.href = perfume.pagina;
+    enlace.innerHTML = `
+      <img src="${perfume.imagen}" alt="${perfume.nombre}">
+      <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+      <p class="precio">${precio}</p>
+    `;
+
+    // Evento Analytics
+    enlace.addEventListener("click", () => {
+      gtag('event', 'click_perfume', {
+        event_category: contenedorId,
+        event_label: perfume.nombre,
+        value: 1
+      });
+    });
+
+    tarjeta.appendChild(enlace);
+    contenedor.appendChild(tarjeta);
+  });
+}
+
+cargarIndex();
+</script>
