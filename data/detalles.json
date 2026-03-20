@@ -390,5 +390,53 @@
     "notas_corazon": ["Pimienta", "Lavanda", "Geranio", "Elemí"],
     "notas_base": ["Ambroxan", "Notas Amaderadas", "Cedro", "Vetiver"],
     "descripcion": "Una fragancia masculina oriental amaderada, perfecta para climas templados y frescos, ideal en ocasiones nocturnas y sofisticadas donde quieras transmitir fuerza, elegancia y un aire moderno con carácter poderoso y distintivo."
+  },
+      {
+      "id": "armani-acqua-d-gio-profondo-edp-mas-100ml",
+    "acordes": ["Marino", "Aromático", "Cítrico"],
+    "notas_salida": ["Notas Marinas", "Aquozone", "Bergamota", "Mandarina"],
+    "notas_corazon": ["Romero", "Lavanda", "Ciprés"],
+    "notas_base": ["Notas Minerales", "Almizcle", "Pachulí", "Ámbar"],
+    "descripcion": "Una fragancia masculina aromática fougère fresca y elegante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y sofisticadas donde quieras transmitir energía, serenidad y un aire moderno con carácter profundo y envolvente."
+  },
+      {
+      "id": "armani-swy-intensely-edp-100ml",
+    "acordes": ["Avainillado", "Dulce", "Ambarado"],
+    "notas_salida": ["Pimienta Rosa", "Enebro", "Violeta"],
+    "notas_corazon": ["Tófe", "Canela", "Lavanda", "Salvia"],
+    "notas_base": ["Vainilla", "Ámbar", "Haba Tonka", "Gamuza"],
+    "descripcion": "Una fragancia masculina oriental fougère intensa y envolvente, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y románticas donde quieras transmitir pasión, calidez y un aire sofisticado con carácter moderno y seductor."
+  },
+      {
+      "id": "bharara-king-edp-mas-100ml",
+    "acordes": ["Cítrico", "Dulce", "Afrutado"],
+    "notas_salida": ["Naranja", "Bergamota", "Limón"],
+    "notas_corazon": ["Notas Afrutadas"],
+    "notas_base": ["Vainilla", "Almizcle Blanco", "Ámbar"],
+    "descripcion": "Una fragancia masculina aromática fresca y vibrante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, vitalidad y un aire moderno con carácter juvenil y dinámico."
+  },
+         {
+      "id": "dumont-nitro-red",
+    "acordes": ["Amaderado", "Ozónico", "Acuático"],
+    "notas_salida": ["Manzana", "Lavanda", "Bergamota"],
+    "notas_corazon": ["Sandía", "Cedro", "Cálamo Aromático"],
+    "notas_base": ["Ámbar", "Sándalo", "Pachulí"],
+    "descripcion": "Una fragancia masculina aromática frutal fresca y dinámica, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir vitalidad, energía y un aire moderno con carácter juvenil y vibrante."
+  },
+         {
+      "id": "emper-stallion-53-edp-100ml",
+    "acordes": ["Amaderado", "Cuero", "Atalcado"],
+    "notas_salida": ["Cardamomo", "Violeta"],
+    "notas_corazon": ["Ámbar", "Iris"],
+    "notas_base": ["Sándalo", "Cuero", "Cedro", "Papiro de Egipto"],
+    "descripcion": "Una fragancia unisex oriental elegante y sofisticada, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir misterio, distinción y un aire moderno con carácter intenso y envolvente."
+  },
+         {
+      "id": "french-avenue-veneno-bianco-edp",
+    "acordes": ["Floral Blanco", "Cítrico", "Dulce"],
+    "notas_salida": ["Neroli", "Leche", "Bergamota"],
+    "notas_corazon": ["Flores Blancas", "Flor de Tiaré", "Ylang-Ylang"],
+    "notas_base": ["Coco", "Vainilla", "Ládano", "Madera de Gaiac"],
+    "descripcion": "Una fragancia unisex floral luminosa y envolvente, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y sofisticadas donde quieras transmitir frescura, sensualidad y un aire moderno con carácter elegante y exótico."
   }
 ]
