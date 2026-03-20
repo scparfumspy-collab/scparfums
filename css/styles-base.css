@@ -529,4 +529,20 @@ footer a:hover {
   font-size: 1.05rem; /* más destacado */
 }
 
+/*OFERTAS*/
+.precio-oferta {
+  font-weight: bold;
+  color: #c00;
+  font-size: 1.1rem;
+}
 
+.precio-normal {
+  color: #777;
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+
+.descuento {
+  color: #090;
+  font-size: 0.85rem;
+}
