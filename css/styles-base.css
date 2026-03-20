@@ -546,3 +546,23 @@ footer a:hover {
   color: #090;
   font-size: 0.85rem;
 }
+
+/* Tarjeta en oferta con borde rojo */
+.perfume-card.en-oferta {
+  border: 2px solid #c00;
+  position: relative; /* necesario para ubicar el badge */
+}
+
+/* Badge de descuento en la esquina */
+.perfume-card.en-oferta::before {
+  content: attr(data-descuento); /* usa el atributo con el porcentaje */
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #c00;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
