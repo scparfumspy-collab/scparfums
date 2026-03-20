@@ -64,7 +64,7 @@ async function cargarPerfumes() {
     contenedor.innerHTML = '';
 
     // Tomar los últimos 32 perfumes e invertir el orden
-    const ultimos = perfumes.slice(-32).reverse();
+    const ultimos = perfumes.slice(-50).reverse();
 
     ultimos.forEach(perfume => {
       const precioData = precios.find(pr => pr.id === perfume.id);
