@@ -157,7 +157,7 @@ function scrollBarra(id, direction) {
   const contenedor = document.getElementById(id);
   const cardWidth = contenedor.querySelector('.perfume-card')?.offsetWidth || 150;
   contenedor.scrollBy({
-    left: direction * (cardWidth * 5), // desplaza 5 tarjetas por click
+    left: direction * (cardWidth * 2), // desplaza 2 tarjetas por click
     behavior: 'smooth'
   });
 }
