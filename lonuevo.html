@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Los Últimos Lanzamientos - SC Parfums</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles-base.css">
+</head>
+<body>
+
+<!-- Header dinámico -->
+<div id="header"></div>
+<script>
+  fetch('../header.html')
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+      initHeaderSearch();
+    });
+</script>
+
+<section class="hero hero-lonuevo">
+  <div class="hero-text">Los Últimos Lanzamientos</div>
+</section>
+
+<section class="layout">
+  <aside class="sidebar"></aside>
+  <main class="perfumes-wrapper">
+    <div class="perfumes" id="perfume-list"></div>
+  </main>
+</section>
+
+<footer>
+  © 2026 SC Parfums | Paraguay<br>
+  Productos 100% originales | Medios de pago disponibles<br>
+  Seguinos en 
+  <a href="https://www.facebook.com/SCParfums">Facebook</a> |
+  <a href="https://www.instagram.com/scparfumspy">Instagram</a> |
+  <a href="https://www.tiktok.com/@scparfums">TikTok</a> |
+  <a href="https://wa.me/595991861112">WhatsApp</a>
+</footer>
+
+<script src="../data/config.js"></script>
+<script>
+async function cargarPerfumes() {
+  const contenedor = document.getElementById('perfume-list');
+  const sidebar = document.querySelector('.sidebar');
+
+  contenedor.innerHTML = '<p id="loader">Cargando últimos lanzamientos...</p>';
+
+  try {
+    const respuesta = await fetch('../data/perfumes.json');
+    const perfumes = await respuesta.json();
+
+    const preciosResp = await fetch(CONFIG.preciosURL);
+    const precios = await preciosResp.json();
+
+    contenedor.innerHTML = '';
+
+    // Tomar los últimos 32 perfumes
+    const ultimos = perfumes.slice(-32);
+
+    ultimos.forEach(perfume => {
+      const precioData = precios.find(pr => pr.id === perfume.id);
+      let precio = "Consultar";
+      if (precioData && precioData.precio != null) {
+        precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+      }
+
+      const tarjeta = document.createElement('div');
+      tarjeta.className = 'perfume-card';
+      tarjeta.setAttribute('data-marca', perfume.marca);
+
+      const enlace = document.createElement('a');
+      enlace.href = `../${perfume.pagina}`;
+      enlace.innerHTML = `
+        <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+        <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+        <p class="precio">${precio}</p>
+      `;
+
+      tarjeta.appendChild(enlace);
+      contenedor.appendChild(tarjeta);
+    });
+
+    // Sidebar dinámico con marcas
+    const marcasUnicas = [...new Set(ultimos.map(p => p.marca))];
+    const marcasContainer = document.createElement('div');
+    marcasContainer.innerHTML = "<h3>Marcas</h3>";
+
+    marcasUnicas.forEach(marca => {
+      const label = document.createElement('label');
+      label.innerHTML = `<input type="checkbox" value="${marca}"> ${marca}`;
+      marcasContainer.appendChild(label);
+    });
+
+    sidebar.innerHTML = '';
+    sidebar.appendChild(marcasContainer);
+
+    const checkboxes = marcasContainer.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const seleccionadas = [...checkboxes]
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        const filtrados = ultimos.filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca));
+        contenedor.innerHTML = '';
+        filtrados.forEach(perfume => {
+          const precioData = precios.find(pr => pr.id === perfume.id);
+          let precio = "Consultar";
+          if (precioData && precioData.precio != null) {
+            precio = "₲ " + precioData.precio.toLocaleString("es-PY");
+          }
+
+          const tarjeta = document.createElement('div');
+          tarjeta.className = 'perfume-card';
+          tarjeta.setAttribute('data-marca', perfume.marca);
+
+          const enlace = document.createElement('a');
+          enlace.href = `../${perfume.pagina}`;
+          enlace.innerHTML = `
+            <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+            <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+            <p class="precio">${precio}</p>
+          `;
+
+          tarjeta.appendChild(enlace);
+          contenedor.appendChild(tarjeta);
+        });
+      });
+    });
+
+  } catch (error) {
+    console.error("Error cargando perfumes:", error);
+    contenedor.innerHTML = '<p>Error al cargar perfumes.</p>';
+  }
+}
+
+cargarPerfumes();
+</script>
+
+</body>
+</html>
