@@ -487,24 +487,23 @@ footer a:hover {
 }
 
 .scroll-btn {
-  background: #000;
-  color: #fff;
+  background: transparent; /* sin fondo */
+  color: #000; /* flecha negra */
   border: none;
-  padding: 8px;
+  padding: 0;
   cursor: pointer;
-  border-radius: 50%;
-  font-size: 1.4rem;
+  font-size: 2rem; /* más grande y elegante */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
 }
 
-.scroll-btn.left { left: 5px; }
-.scroll-btn.right { right: 5px; }
+.scroll-btn.left { left: 10px; }
+.scroll-btn.right { right: 10px; }
 
 .perfume-card {
-  flex: 0 0 200px; /* más ancho */
+  flex: 0 0 200px; /* ancho fijo */
   border: 1px solid #eee;
   border-radius: 6px;
   padding: 6px;
@@ -514,19 +513,20 @@ footer a:hover {
 
 .perfume-card img {
   max-width: 100%;
-  height: 120px; /* más baja */
+  height: 150px; /* más grande */
   object-fit: contain;
   border-radius: 4px;
 }
 
 .perfume-card p {
-  font-size: 0.9rem; /* más legible */
+  font-size: 1rem; /* más grande */
   margin: 4px 0;
 }
 
 .perfume-card .precio {
   font-weight: bold;
-  color: #c00; /* rojo para destacar */
-  font-size: 0.95rem;
+  color: #c00;
+  font-size: 1.05rem; /* más destacado */
 }
+
 
