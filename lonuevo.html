@@ -33,7 +33,6 @@
 </section>
 
 <section class="layout">
-  <aside class="sidebar"></aside>
   <main class="perfumes-wrapper">
     <div class="perfumes" id="perfume-list"></div>
   </main>
@@ -53,12 +52,10 @@
 <script>
 async function cargarPerfumes() {
   const contenedor = document.getElementById('perfume-list');
-  const sidebar = document.querySelector('.sidebar');
-
   contenedor.innerHTML = '<p id="loader">Cargando últimos lanzamientos...</p>';
 
   try {
-    const respuesta = await fetch('data/perfumes.json'); // ruta ajustada porque lonuevo.html está en raíz
+    const respuesta = await fetch('data/perfumes.json');
     const perfumes = await respuesta.json();
 
     const preciosResp = await fetch(CONFIG.preciosURL); // tu Apps Script
@@ -66,8 +63,8 @@ async function cargarPerfumes() {
 
     contenedor.innerHTML = '';
 
-    // Tomar los últimos 32 perfumes
-    const ultimos = perfumes.slice(-32);
+    // Tomar los últimos 32 perfumes e invertir el orden
+    const ultimos = perfumes.slice(-32).reverse();
 
     ultimos.forEach(perfume => {
       const precioData = precios.find(pr => pr.id === perfume.id);
@@ -101,63 +98,6 @@ async function cargarPerfumes() {
       contenedor.appendChild(tarjeta);
     });
 
-    // Sidebar dinámico con marcas
-    const marcasUnicas = [...new Set(ultimos.map(p => p.marca))];
-    const marcasContainer = document.createElement('div');
-    marcasContainer.innerHTML = "<h3>Marcas</h3>";
-
-    marcasUnicas.forEach(marca => {
-      const label = document.createElement('label');
-      label.innerHTML = `<input type="checkbox" value="${marca}"> ${marca}`;
-      marcasContainer.appendChild(label);
-    });
-
-    sidebar.innerHTML = '';
-    sidebar.appendChild(marcasContainer);
-
-    const checkboxes = marcasContainer.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', () => {
-        const seleccionadas = [...checkboxes]
-          .filter(cb => cb.checked)
-          .map(cb => cb.value);
-
-        const filtrados = ultimos.filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca));
-        contenedor.innerHTML = '';
-        filtrados.forEach(perfume => {
-          const precioData = precios.find(pr => pr.id === perfume.id);
-          let precio = "Consultar";
-          if (precioData && precioData.precio != null) {
-            precio = "₲ " + precioData.precio.toLocaleString("es-PY");
-          }
-
-          const tarjeta = document.createElement('div');
-          tarjeta.className = 'perfume-card';
-          tarjeta.setAttribute('data-marca', perfume.marca);
-
-          const enlace = document.createElement('a');
-          enlace.href = `./${perfume.pagina}`;
-          enlace.innerHTML = `
-            <img src="./${perfume.imagen}" alt="${perfume.nombre}">
-            <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-            <p class="precio">${precio}</p>
-          `;
-
-          // Evento de Analytics
-          enlace.addEventListener("click", () => {
-            gtag('event', 'click_perfume', {
-              event_category: 'MasPopulares',
-              event_label: perfume.nombre,
-              value: 1
-            });
-          });
-
-          tarjeta.appendChild(enlace);
-          contenedor.appendChild(tarjeta);
-        });
-      });
-    });
-
   } catch (error) {
     console.error("Error cargando perfumes:", error);
     contenedor.innerHTML = '<p>Error al cargar perfumes.</p>';
@@ -169,3 +109,4 @@ cargarPerfumes();
 
 </body>
 </html>
+
