@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Los Últimos Lanzamientos - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/styles-base.css">
+  <link rel="stylesheet" href="css/styles-base.css">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
@@ -20,7 +20,7 @@
 <!-- Header dinámico -->
 <div id="header"></div>
 <script>
-  fetch('../header.html')
+  fetch('header.html')
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
@@ -49,7 +49,7 @@
   <a href="https://wa.me/595991861112">WhatsApp</a>
 </footer>
 
-<script src="../data/config.js"></script>
+<script src="/data/config.js"></script>
 <script>
 async function cargarPerfumes() {
   const contenedor = document.getElementById('perfume-list');
@@ -58,7 +58,7 @@ async function cargarPerfumes() {
   contenedor.innerHTML = '<p id="loader">Cargando últimos lanzamientos...</p>';
 
   try {
-    const respuesta = await fetch('./data/perfumes.json'); // ruta ajustada porque lonuevo.html está en raíz
+    const respuesta = await fetch('/data/perfumes.json'); // ruta ajustada porque lonuevo.html está en raíz
     const perfumes = await respuesta.json();
 
     const preciosResp = await fetch(CONFIG.preciosURL); // tu Apps Script
