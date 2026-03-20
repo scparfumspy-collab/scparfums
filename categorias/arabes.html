@@ -57,6 +57,10 @@ async function cargarPerfumes() {
     const preciosResp = await fetch(CONFIG.preciosURL);
     const precios = await preciosResp.json();
 
+    const ofertasResp = await fetch('../data/ofertas.json');
+const ofertas = await ofertasResp.json();
+
+
     contenedor.innerHTML = '';
 
     // Filtrar por categoria2 = "Árabes"
@@ -68,6 +72,47 @@ async function cargarPerfumes() {
         .trim();
       return cat === "arabes";
     }).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+
+    function renderTarjeta(perfume, precios, ofertas) {
+  const precioData = precios.find(pr => pr.id === perfume.id);
+  const precioNormal = precioData ? precioData.precio : null;
+  const ofertaData = ofertas.find(o => o.id === perfume.id);
+
+  let precioFinal = precioNormal;
+  let descuento = null;
+
+  if (precioNormal && ofertaData) {
+    descuento = ofertaData.descuento;
+    precioFinal = Math.round(precioNormal * (1 - descuento / 100));
+  }
+
+  const tarjeta = document.createElement('div');
+  tarjeta.className = 'perfume-card';
+  tarjeta.setAttribute('data-marca', perfume.marca);
+
+  let html = `
+    <a href="../${perfume.pagina}">
+      <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+      <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
+  `;
+
+  if (ofertaData && precioNormal) {
+    html += `
+      <p class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</p>
+      <p class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></p>
+      <p class="descuento">-${descuento}%</p>
+    `;
+  } else if (precioNormal) {
+    html += `<p class="precio">₲ ${precioNormal.toLocaleString("es-PY")}</p>`;
+  } else {
+    html += `<p class="precio">Consultar</p>`;
+  }
+
+  html += `</a>`;
+  tarjeta.innerHTML = html;
+  return tarjeta;
+}
+
 
     const perfumesPorPagina = 20;
     let paginaActual = 1;
