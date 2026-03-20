@@ -452,10 +452,26 @@ footer a:hover {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px 15px; /* menos padding vertical */
-  margin: 30px auto;
-  max-width: 1200px;
+  padding: 10px 15px; /* menos alto */
+  margin: 25px auto;
+  max-width: 1100px; /* más compacto */
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.destacados-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.btn-ver-todos {
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
 }
 
 .barra-scroll-wrapper {
@@ -474,26 +490,21 @@ footer a:hover {
   background: #000;
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
   border-radius: 50%;
   font-size: 1.4rem;
   position: absolute;
-  top: 40%; /* centrado vertical */
+  top: 50%;
   transform: translateY(-50%);
   z-index: 2;
 }
 
-.scroll-btn.left {
-  left: 5px;
-}
-
-.scroll-btn.right {
-  right: 5px;
-}
+.scroll-btn.left { left: 5px; }
+.scroll-btn.right { right: 5px; }
 
 .perfume-card {
-  flex: 0 0 190px; /* más ancho */
+  flex: 0 0 200px; /* más ancho */
   border: 1px solid #eee;
   border-radius: 6px;
   padding: 6px;
@@ -503,20 +514,19 @@ footer a:hover {
 
 .perfume-card img {
   max-width: 100%;
-  height: 130px; /* altura fija más baja */
+  height: 120px; /* más baja */
   object-fit: contain;
   border-radius: 4px;
 }
 
 .perfume-card p {
-  font-size: 0.8rem;
-  margin: 3px 0;
+  font-size: 0.9rem; /* más legible */
+  margin: 4px 0;
 }
 
 .perfume-card .precio {
   font-weight: bold;
-  color: #333;
-  font-size: 0.85rem;
+  color: #c00; /* rojo para destacar */
+  font-size: 0.95rem;
 }
-
 
