@@ -90,6 +90,12 @@ const ofertas = await ofertasResp.json();
   tarjeta.className = 'perfume-card';
   tarjeta.setAttribute('data-marca', perfume.marca);
 
+  // Si está en oferta, agregamos clase y atributo para CSS
+  if (ofertaData && precioNormal) {
+    tarjeta.classList.add("en-oferta");
+    tarjeta.setAttribute("data-descuento", `-${descuento}%`);
+  }
+
   let html = `
     <a href="../${perfume.pagina}">
       <img src="../${perfume.imagen}" alt="${perfume.nombre}">
@@ -100,7 +106,6 @@ const ofertas = await ofertasResp.json();
     html += `
       <p class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</p>
       <p class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></p>
-      <p class="descuento">-${descuento}%</p>
     `;
   } else if (precioNormal) {
     html += `<p class="precio">₲ ${precioNormal.toLocaleString("es-PY")}</p>`;
