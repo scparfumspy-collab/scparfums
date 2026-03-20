@@ -128,28 +128,10 @@ const ofertas = await ofertasResp.json();
         return;
       }
 
-      perfumesPagina.forEach(perfume => {
-        const precioData = precios.find(pr => pr.id === perfume.id);
-        let precio = "Consultar";
-        if (precioData && precioData.precio != null) {
-          precio = "₲ " + precioData.precio.toLocaleString("es-PY");
-        }
-
-        const tarjeta = document.createElement('div');
-        tarjeta.className = 'perfume-card';
-        tarjeta.setAttribute('data-marca', perfume.marca);
-
-        const enlace = document.createElement('a');
-        enlace.href = `../${perfume.pagina}`;
-        enlace.innerHTML = `
-          <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-          <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-          <p class="precio">${precio}</p>
-        `;
-
-        tarjeta.appendChild(enlace);
-        contenedor.appendChild(tarjeta);
-      });
+perfumesPagina.forEach(perfume => {
+  const tarjeta = renderTarjeta(perfume, precios, ofertas);
+  contenedor.appendChild(tarjeta);
+});
 
       renderizarBotones(lista);
     }
