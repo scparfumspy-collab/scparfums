@@ -4,21 +4,16 @@
   <meta charset="UTF-8">
   <title>Fragancias Unisex - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS centralizado -->
   <link rel="stylesheet" href="../css/styles-base.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  // Tu ID de medición
-  gtag('config', 'G-C1MM9FN44X');
-</script>
-
-  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C1MM9FN44X');
+  </script>
 </head>
 <body>
 
@@ -32,6 +27,7 @@
       initHeaderSearch();
     });
 
+  // buscador igual que en las otras páginas
   function initHeaderSearch() {
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
@@ -90,8 +86,7 @@
   }
 </script>
 
-
-  <section class="hero hero-unisex">
+<section class="hero hero-unisex">
   <div class="hero-text">Fragancias Unisex</div>
 </section>
 
@@ -114,7 +109,8 @@
   <a href="https://wa.me/595991861112">WhatsApp</a>
 </footer>
 
-  <script src="../data/config.js"></script>
+<script src="../data/config.js"></script>
+<script src="../js/render.js"></script>
 
 <script>
 async function cargarPerfumes() {
@@ -128,102 +124,81 @@ async function cargarPerfumes() {
     const perfumes = await respuesta.json();
 
     const preciosResp = await fetch(CONFIG.preciosURL);
-
     const precios = await preciosResp.json();
+
+    const ofertasResp = await fetch('../data/ofertas.json');
+    const ofertas = await ofertasResp.json();
 
     contenedor.innerHTML = '';
 
-    // Filtrar unisex y ordenar alfabéticamente por nombre
+    // Filtrar unisex
     const unisex = perfumes
-      .filter(p => p.categoria === "unisex")
+      .filter(p => p.categoria && p.categoria.toLowerCase().trim() === "unisex")
       .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
 
-        const perfumesPorPagina = 20;
+    const perfumesPorPagina = 20;
     let paginaActual = 1;
 
-function mostrarPagina(pagina, lista = unisex) {
-  contenedor.innerHTML = '';
-  const inicio = (pagina - 1) * perfumesPorPagina;
-  const fin = inicio + perfumesPorPagina;
-  const perfumesPagina = lista.slice(inicio, fin);
+    function mostrarPagina(pagina, lista = unisex) {
+      contenedor.innerHTML = '';
+      const inicio = (pagina - 1) * perfumesPorPagina;
+      const fin = inicio + perfumesPorPagina;
+      const perfumesPagina = lista.slice(inicio, fin);
 
-  perfumesPagina.forEach(perfume => {
-    const precioData = precios.find(pr => pr.id === perfume.id);
-    let precio = "Consultar";
-    if (precioData && precioData.precio != null) {
-      precio = "₲ " + precioData.precio.toLocaleString("es-PY");
-    }
+      if (perfumesPagina.length === 0) {
+        contenedor.innerHTML = '<p>No se encontraron perfumes en esta categoría.</p>';
+        return;
+      }
 
-    const tarjeta = document.createElement('div');
-    tarjeta.className = 'perfume-card';
-    tarjeta.setAttribute('data-marca', perfume.marca);
-
-    // Crear enlace
-    const enlace = document.createElement('a');
-    enlace.href = `../${perfume.pagina}`;
-    enlace.innerHTML = `
-      <img src="../${perfume.imagen}" alt="${perfume.nombre}">
-      <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
-      <p class="precio">${precio}</p>
-    `;
-
-    // Evento de Analytics
-    enlace.addEventListener("click", () => {
-      gtag('event', 'click_perfume', {
-        event_category: 'Perfumes',
-        event_label: perfume.nombre,
-        value: 1
+      perfumesPagina.forEach(perfume => {
+        const tarjeta = renderTarjeta(perfume, precios, ofertas);
+        contenedor.appendChild(tarjeta);
       });
-    });
 
-    tarjeta.appendChild(enlace);
-    contenedor.appendChild(tarjeta);
-  });
-
-  renderizarBotones(lista);
-}
-
-
-  function renderizarBotones(lista) {
-  const topContainer = document.getElementById('botones-paginacion-top');
-  const bottomContainer = document.getElementById('botones-paginacion-bottom');
-
-  [topContainer, bottomContainer].forEach(container => {
-    container.innerHTML = '';
-
-    const btnInicio = document.createElement('button');
-    btnInicio.textContent = 'Inicio';
-    btnInicio.onclick = () => {
-      paginaActual = 1;
-      mostrarPagina(paginaActual, lista);
-    };
-    container.appendChild(btnInicio);
-
-    if (paginaActual > 1) {
-      const btnAnterior = document.createElement('button');
-      btnAnterior.textContent = 'Anterior';
-      btnAnterior.onclick = () => {
-        paginaActual--;
-        mostrarPagina(paginaActual, lista);
-      };
-      container.appendChild(btnAnterior);
+      renderizarBotones(lista);
     }
 
-    if (paginaActual * perfumesPorPagina < lista.length) {
-      const btnSiguiente = document.createElement('button');
-      btnSiguiente.textContent = 'Siguiente';
-      btnSiguiente.onclick = () => {
-        paginaActual++;
-        mostrarPagina(paginaActual, lista);
-      };
-      container.appendChild(btnSiguiente);
+    function renderizarBotones(lista) {
+      const topContainer = document.getElementById('botones-paginacion-top');
+      const bottomContainer = document.getElementById('botones-paginacion-bottom');
+
+      [topContainer, bottomContainer].forEach(container => {
+        container.innerHTML = '';
+
+        const btnInicio = document.createElement('button');
+        btnInicio.textContent = 'Inicio';
+        btnInicio.onclick = () => {
+          paginaActual = 1;
+          mostrarPagina(paginaActual, lista);
+        };
+        container.appendChild(btnInicio);
+
+        if (paginaActual > 1) {
+          const btnAnterior = document.createElement('button');
+          btnAnterior.textContent = 'Anterior';
+          btnAnterior.onclick = () => {
+            paginaActual--;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnAnterior);
+        }
+
+        if (paginaActual * perfumesPorPagina < lista.length) {
+          const btnSiguiente = document.createElement('button');
+          btnSiguiente.textContent = 'Siguiente';
+          btnSiguiente.onclick = () => {
+            paginaActual++;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnSiguiente);
+        }
+      });
     }
-  });
-}
 
-    mostrarPagina(paginaActual);
+    // Mostrar la primera página al cargar
+    mostrarPagina(paginaActual, unisex);
 
-    // Sidebar dinámico
+    // Sidebar dinámico con marcas
     const marcasUnicas = [...new Set(unisex.map(p => p.marca))];
     const marcasContainer = document.createElement('div');
     marcasContainer.innerHTML = "<h3>Marcas</h3>";
