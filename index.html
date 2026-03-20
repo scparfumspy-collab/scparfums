@@ -155,9 +155,9 @@
   <script>
 function scrollBarra(id, direction) {
   const contenedor = document.getElementById(id);
-  const cardWidth = contenedor.querySelector('.perfume-card')?.offsetWidth || 150;
+  const cardWidth = contenedor.querySelector('.perfume-card')?.offsetWidth || 190;
   contenedor.scrollBy({
-    left: direction * (cardWidth * 2), // desplaza 2 tarjetas por click
+    left: direction * (cardWidth * 4), // desplaza 4 tarjetas por click
     behavior: 'smooth'
   });
 }
@@ -210,12 +210,12 @@ async function cargarIndex() {
     const precios = await preciosResp.json();
 
     // Lo Nuevo: últimos 10 perfumes
-    const loNuevo = perfumes.slice(-10).reverse();
+    const loNuevo = perfumes.slice(-12).reverse();
     renderBarra(loNuevo, "lo-nuevo", precios);
 
     // Más Populares: aquí deberías cargar desde tu CSV/Analytics
     // Por ahora, simulemos con los primeros 10 perfumes
-    const masPopulares = perfumes.slice(0, 10);
+    const masPopulares = perfumes.slice(0, 12);
     renderBarra(masPopulares, "mas-populares", precios);
 
   } catch (err) {
