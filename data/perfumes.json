@@ -439,5 +439,60 @@
     "pagina": "detalle/detalle.html?id=armaf-odyssey-tyrant-edp-100ml",
     "categoria": "masculinos",
     "categoria2": "Árabes"
+  },
+      {
+      "id": "armani-acqua-d-gio-profondo-edp-mas-100ml",
+   "nombre": "Acqua di Gio Profondo EDP 100ml",
+    "marca": "Armani",
+    "imagen": "imagenes/perfumes/armani-acqua-d-gio-profondo-edp-mas-100ml.png",
+    "pagina": "detalle/detalle.html?id=armani-acqua-d-gio-profondo-edp-mas-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Diseñador"
+  },
+      {
+      "id": "armani-swy-intensely-edp-100ml",
+   "nombre": "Stronger With You Intensely EDP 100ml",
+    "marca": "Armani",
+    "imagen": "imagenes/perfumes/armani-swy-intensely-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=armani-swy-intensely-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Diseñador"
+  },
+      {
+      "id": "bharara-king-edp-mas-100ml",
+   "nombre": "King EDP 100ml",
+    "marca": "Bharara",
+    "imagen": "imagenes/perfumes/bharara-king-edp-mas-100ml.png",
+    "pagina": "detalle/detalle.html?id=bharara-king-edp-mas-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+      {
+      "id": "dumont-nitro-red",
+   "nombre": "Nitro Red EDP 100ml",
+    "marca": "Dumont",
+    "imagen": "imagenes/perfumes/dumont-nitro-red.png",
+    "pagina": "detalle/detalle.html?id=dumont-nitro-red",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+         {
+      "id": "emper-stallion-53-edp-100ml",
+   "nombre": "Stallion 53 EDP 100ml",
+    "marca": "Emper",
+    "imagen": "imagenes/perfumes/emper-stallion-53-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=emper-stallion-53-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+         {
+      "id": "french-avenue-veneno-bianco-edp",
+   "nombre": "Veneno Bianco EDP 100ml",
+    "marca": "French Avenue",
+    "imagen": "imagenes/perfumes/french-avenue-veneno-bianco-edp.png",
+    "pagina": "detalle/detalle.html?id=french-avenue-veneno-bianco-edp",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
   }
+     
 ]
