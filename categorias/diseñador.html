@@ -24,10 +24,10 @@
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
-      initHeaderSearch(); // buscador igual que en árabes
+      initHeaderSearch();
     });
 
-  // Función de buscador (igual que en árabes)
+  // buscador igual que en árabes
   function initHeaderSearch() {
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
@@ -132,14 +132,9 @@ async function cargarPerfumes() {
     contenedor.innerHTML = '';
 
     // Filtrar por categoria2 = "Diseñador"
-    const disenador = perfumes.filter(p => {
-      if (!p.categoria2) return false;
-      const cat = p.categoria2
-        .toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        .trim();
-      return cat === "diseñador";
-    }).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+    const disenador = perfumes
+      .filter(p => p.categoria2 && p.categoria2.toLowerCase().trim() === "diseñador")
+      .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
 
     const perfumesPorPagina = 20;
     let paginaActual = 1;
@@ -237,6 +232,7 @@ async function cargarPerfumes() {
 }
 
 cargarPerfumes();
+
 </script>
 
 </body>
