@@ -152,6 +152,26 @@ let precio = "Consultar";
 if (precioData && precioData.precio != null) {
   precio = "₲ " + precioData.precio.toLocaleString("es-PY");
 }
+      const preciosResp = await fetch(CONFIG.preciosURL);
+const precios = await preciosResp.json();
+const precioData = precios.find(pr => pr.id === id);
+const precioNormal = precioData ? precioData.precio : null;
+
+// Cargar ofertas
+const ofertasResp = await fetch('../data/ofertas.json');
+const ofertas = await ofertasResp.json();
+const ofertaData = ofertas.find(o => o.id === id);
+
+let precioFinal = "Consultar";
+let descuento = null;
+
+if (precioNormal && ofertaData) {
+  descuento = ofertaData.descuento;
+  precioFinal = Math.round(precioNormal * (1 - descuento / 100));
+} else if (precioNormal) {
+  precioFinal = precioNormal;
+}
+
 
 
       if (!perfume) {
@@ -167,8 +187,16 @@ contenedor.innerHTML = `
     <div class="detalle-info">
       <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
       <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
-      <p class="precio">
-  ${precio}
+  <p class="precio">
+  ${ofertaData && precioNormal
+    ? `
+      <span class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</span>
+      <span class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></span>
+    `
+    : precioNormal
+      ? `₲ ${precioFinal.toLocaleString("es-PY")}`
+      : `Consultar`
+  }
   <a href="https://wa.me/595991861112?text=Hola, quiero hacer un pedido del perfume ${datosBasicos.nombre}" 
      target="_blank" class="pedido-btn">
     <img src="../imagenes/icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
