@@ -209,13 +209,20 @@ async function cargarIndex() {
     const preciosResp = await fetch(CONFIG.preciosURL);
     const precios = await preciosResp.json();
 
-    // Lo Nuevo: últimos 10 perfumes
+    // Lo Nuevo: últimos 12 perfumes
     const loNuevo = perfumes.slice(-12).reverse();
     renderBarra(loNuevo, "lo-nuevo", precios);
 
-    // Más Populares: aquí deberías cargar desde tu CSV/Analytics
-    // Por ahora, simulemos con los primeros 10 perfumes
-    const masPopulares = perfumes.slice(0, 12);
+    // Más Populares: cargar desde perfumes_populares.json
+    const respPop = await fetch("data/perfumes_populares.json");
+    const popularesData = await respPop.json();
+
+    // Ordenar por número de eventos (descendente)
+    const masPopulares = popularesData
+      .sort((a, b) => b["Número de eventos"] - a["Número de eventos"])
+      .map(item => perfumes.find(p => p.nombre === item["perfume clicado"]))
+      .filter(p => p); // filtra nulos si algún nombre no coincide
+
     renderBarra(masPopulares, "mas-populares", precios);
 
   } catch (err) {
@@ -261,3 +268,4 @@ function renderBarra(lista, contenedorId, precios) {
 
 cargarIndex();
 </script>
+
