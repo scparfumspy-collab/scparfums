@@ -646,5 +646,32 @@
     "pagina": "detalle/detalle.html?id=afnan-supremacy-in-oud",
     "categoria": "unisex",
     "categoria2": "Árabes"
+  },
+                   {
+      "id": "givenchy-gentleman-edt-intense",
+   "nombre": "Gentleman EDT Intense 100ml",
+    "marca": "Givenchy",
+    "imagen": "imagenes/perfumes/givenchy-gentleman-edt-intense.png",
+    "pagina": "detalle/detalle.html?id=givenchy-gentleman-edt-intense",
+    "categoria": "masculinos",
+    "categoria2": "Diseñador"
+  },
+                   {
+      "id": "givenchy-gentleman-edp-tester",
+   "nombre": "Gentleman EDP 100ml Tester",
+    "marca": "Givenchy",
+    "imagen": "imagenes/perfumes/givenchy-gentleman-edp-tester.png",
+    "pagina": "detalle/detalle.html?id=givenchy-gentleman-edp-tester",
+    "categoria": "testers masculinos",
+    "categoria2": "Diseñador"
+  },
+                   {
+      "id": "givenchy-gentleman-society-edp-tester",
+   "nombre": "Gentleman Society EDP 100ml Tester",
+    "marca": "Givenchy",
+    "imagen": "imagenes/perfumes/givenchy-gentleman-society-edp-tester.png",
+    "pagina": "detalle/detalle.html?id=givenchy-gentleman-society-edp-tester",
+    "categoria": "testers masculinos",
+    "categoria2": "Diseñador"
   }
 ]
