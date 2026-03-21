@@ -129,129 +129,120 @@
 
   
 <script>
-  async function cargarDetalle() {
-    const contenedor = document.getElementById('detalle-perfume');
-    contenedor.innerHTML = '<p id="loader">Cargando detalles del perfume...</p>';
+async function cargarDetalle() {
+  const contenedor = document.getElementById('detalle-perfume');
+  contenedor.innerHTML = '<p id="loader">Cargando detalles del perfume...</p>';
 
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const id = params.get("id");
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
 
-      const resp = await fetch('../data/detalles.json');
-      const detalles = await resp.json();
-      const perfume = detalles.find(p => p.id === id);
+    const resp = await fetch('../data/detalles.json');
+    const detalles = await resp.json();
+    const perfume = detalles.find(p => p.id === id);
 
-      const respCatalogo = await fetch('../data/perfumes.json');
-      const catalogo = await respCatalogo.json();
-      const datosBasicos = catalogo.find(p => p.id === id);
+    const respCatalogo = await fetch('../data/perfumes.json');
+    const catalogo = await respCatalogo.json();
+    const datosBasicos = catalogo.find(p => p.id === id);
 
-const preciosResp = await fetch(CONFIG.preciosURL);
-const precios = await preciosResp.json();
-const precioData = precios.find(pr => pr.id === id);
-let precio = "Consultar";
-if (precioData && precioData.precio != null) {
-  precio = "₲ " + precioData.precio.toLocaleString("es-PY");
-}
-      const preciosResp = await fetch(CONFIG.preciosURL);
-const precios = await preciosResp.json();
-const precioData = precios.find(pr => pr.id === id);
-const precioNormal = precioData ? precioData.precio : null;
+    // Precios
+    const preciosResp = await fetch(CONFIG.preciosURL);
+    const precios = await preciosResp.json();
+    const precioData = precios.find(pr => pr.id === id);
+    const precioNormal = precioData ? precioData.precio : null;
 
-// Cargar ofertas
-const ofertasResp = await fetch('../data/ofertas.json');
-const ofertas = await ofertasResp.json();
-const ofertaData = ofertas.find(o => o.id === id);
+    // Ofertas
+    const ofertasResp = await fetch('../data/ofertas.json');
+    const ofertas = await ofertasResp.json();
+    const ofertaData = ofertas.find(o => o.id === id);
 
-let precioFinal = "Consultar";
-let descuento = null;
+    let precioFinal = "Consultar";
+    let descuento = null;
 
-if (precioNormal && ofertaData) {
-  descuento = ofertaData.descuento;
-  precioFinal = Math.round(precioNormal * (1 - descuento / 100));
-} else if (precioNormal) {
-  precioFinal = precioNormal;
-}
-
-
-
-      if (!perfume) {
-        contenedor.innerHTML = '<p>Perfume no encontrado.</p>';
-        return;
-      }
-
-contenedor.innerHTML = `
-  <div class="detalle-container">
-    <div class="detalle-imagen">
-      <img src="../${datosBasicos.imagen}" alt="${datosBasicos.nombre}">
-    </div>
-    <div class="detalle-info">
-      <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
-      <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
-  <p class="precio">
-  ${ofertaData && precioNormal
-    ? `
-      <span class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</span>
-      <span class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></span>
-    `
-    : precioNormal
-      ? `₲ ${precioFinal.toLocaleString("es-PY")}`
-      : `Consultar`
-  }
-  <a href="https://wa.me/595991861112?text=Hola, quiero hacer un pedido del perfume ${datosBasicos.nombre}" 
-     target="_blank" class="pedido-btn">
-    <img src="../imagenes/icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
-    Hacer pedido
-  </a>
-</p>
-
-
-      <div class="detalle-card">
-        <h3>Descripción</h3>
-        <p>${perfume.descripcion}</p>
-      </div>
-
-      <div class="detalle-row">
-        <div class="detalle-card small-card">
-          <h3>Acordes principales</h3>
-          <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
-        </div>
-        <div class="detalle-card small-card">
-          <h3>Categoría</h3>
-          <p>${datosBasicos.categoria}</p>
-        </div>
-        <div class="detalle-card small-card">
-  <h3>Tipo de fragancia</h3>
-  <p>${datosBasicos.categoria2}</p>
-</div>
-      </div>
-
-<div class="detalle-card big-card">
-  <h3>Notas</h3>
-  <p><strong>Salida:</strong> ${perfume.notas_salida.join(', ')}</p>
-  <p><strong>Corazón:</strong> ${perfume.notas_corazon.join(', ')}</p>
-  <p><strong>Base:</strong> ${perfume.notas_base.join(', ')}</p>
-</div>
-
-    </div>
-  </div>
-`;
-      gtag('event', 'click_perfume', {
-  event_category: 'Perfumes',
-  event_label: datosBasicos.nombre,
-  value: 1
-});
-
-
-      const btnWhats = document.getElementById("btn-whatsapp");
-      btnWhats.href = `https://wa.me/595991861112?text=Hola, quiero consultar por el perfume ${perfume.nombre || perfume.id}`;
-    } catch (error) {
-      console.error("Error cargando detalle:", error);
-      contenedor.innerHTML = '<p>Error al cargar detalles.</p>';
+    if (precioNormal && ofertaData) {
+      descuento = ofertaData.descuento;
+      precioFinal = Math.round(precioNormal * (1 - descuento / 100));
+    } else if (precioNormal) {
+      precioFinal = precioNormal;
     }
-  }
 
-  cargarDetalle();
+    if (!perfume || !datosBasicos) {
+      contenedor.innerHTML = '<p>Perfume no encontrado.</p>';
+      return;
+    }
+
+    contenedor.innerHTML = `
+      <div class="detalle-container">
+        <div class="detalle-imagen">
+          <img src="../${datosBasicos.imagen}" alt="${datosBasicos.nombre}">
+        </div>
+        <div class="detalle-info">
+          <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
+          <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
+          <p class="precio">
+            ${ofertaData && precioNormal
+              ? `
+                <span class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</span>
+                <span class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></span>
+              `
+              : precioNormal
+                ? `₲ ${precioFinal.toLocaleString("es-PY")}`
+                : `Consultar`
+            }
+            <a href="https://wa.me/595991861112?text=Hola, quiero hacer un pedido del perfume ${datosBasicos.nombre}" 
+               target="_blank" class="pedido-btn">
+              <img src="../imagenes/icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+              Hacer pedido
+            </a>
+          </p>
+
+          <div class="detalle-card">
+            <h3>Descripción</h3>
+            <p>${perfume.descripcion}</p>
+          </div>
+
+          <div class="detalle-row">
+            <div class="detalle-card small-card">
+              <h3>Acordes principales</h3>
+              <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
+            </div>
+            <div class="detalle-card small-card">
+              <h3>Categoría</h3>
+              <p>${datosBasicos.categoria}</p>
+            </div>
+            <div class="detalle-card small-card">
+              <h3>Tipo de fragancia</h3>
+              <p>${datosBasicos.categoria2}</p>
+            </div>
+          </div>
+
+          <div class="detalle-card big-card">
+            <h3>Notas</h3>
+            <p><strong>Salida:</strong> ${perfume.notas_salida.join(', ')}</p>
+            <p><strong>Corazón:</strong> ${perfume.notas_corazon.join(', ')}</p>
+            <p><strong>Base:</strong> ${perfume.notas_base.join(', ')}</p>
+          </div>
+        </div>
+      </div>
+    `;
+
+    gtag('event', 'click_perfume', {
+      event_category: 'Perfumes',
+      event_label: datosBasicos.nombre,
+      value: 1
+    });
+
+    const btnWhats = document.getElementById("btn-whatsapp");
+    btnWhats.href = `https://wa.me/595991861112?text=Hola, quiero consultar por el perfume ${perfume.nombre || perfume.id}`;
+  } catch (error) {
+    console.error("Error cargando detalle:", error);
+    contenedor.innerHTML = '<p>Error al cargar detalles.</p>';
+  }
+}
+
+cargarDetalle();
 </script>
+
 </body>
 </html>
 
