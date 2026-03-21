@@ -176,25 +176,27 @@ async function cargarDetalle() {
         <div class="detalle-imagen">
           <img src="../${datosBasicos.imagen}" alt="${datosBasicos.nombre}">
         </div>
-        <div class="detalle-info">
-          <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
-          <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
-          <p class="precio">
-            ${ofertaData && precioNormal
-              ? `
-                <span class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</span>
-                <span class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></span>
-              `
-              : precioNormal
-                ? `₲ ${precioFinal.toLocaleString("es-PY")}`
-                : `Consultar`
-            }
-            <a href="https://wa.me/595991861112?text=Hola, quiero hacer un pedido del perfume ${datosBasicos.nombre}" 
-               target="_blank" class="pedido-btn">
-              <img src="../imagenes/icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
-              Hacer pedido
-            </a>
-          </p>
+       <div class="detalle-info ${ofertaData && precioNormal ? 'en-oferta' : ''}">
+  <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
+  <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
+
+  <p class="precio">
+    ${ofertaData && precioNormal
+      ? `
+        <span class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</span>
+        <span class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></span>
+        <span class="badge-descuento">-${descuento}%</span>
+      `
+      : precioNormal
+        ? `₲ ${precioFinal.toLocaleString("es-PY")}`
+        : `Consultar`
+    }
+    <a href="https://wa.me/595991861112?text=Hola, quiero hacer un pedido del perfume ${datosBasicos.nombre}" 
+       target="_blank" class="pedido-btn">
+      <img src="../imagenes/icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+      Hacer pedido
+    </a>
+  </p>
 
           <div class="detalle-card">
             <h3>Descripción</h3>
