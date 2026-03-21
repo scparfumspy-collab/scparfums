@@ -171,62 +171,64 @@ async function cargarDetalle() {
       return;
     }
 
-    contenedor.innerHTML = `
-      <div class="detalle-container">
-        <div class="detalle-imagen">
-          <img src="../${datosBasicos.imagen}" alt="${datosBasicos.nombre}">
+contenedor.innerHTML = `
+  <div class="detalle-container">
+    <div class="detalle-imagen ${ofertaData && precioNormal ? 'en-oferta' : ''}">
+      <img src="../${datosBasicos.imagen}" alt="${datosBasicos.nombre}">
+      ${ofertaData && precioNormal
+        ? `<span class="badge-descuento">-${descuento}%</span>`
+        : ""}
+    </div>
+    <div class="detalle-info">
+      <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
+      <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
+
+      <p class="precio">
+        ${ofertaData && precioNormal
+          ? `
+            <span class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</span>
+            <span class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></span>
+          `
+          : precioNormal
+            ? `₲ ${precioFinal.toLocaleString("es-PY")}`
+            : `Consultar`
+        }
+        <a href="https://wa.me/595991861112?text=Hola, quiero hacer un pedido del perfume ${datosBasicos.nombre}" 
+           target="_blank" class="pedido-btn">
+          <img src="../imagenes/icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+          Hacer pedido
+        </a>
+      </p>
+
+      <div class="detalle-card">
+        <h3>Descripción</h3>
+        <p>${perfume.descripcion}</p>
+      </div>
+
+      <div class="detalle-row">
+        <div class="detalle-card small-card">
+          <h3>Acordes principales</h3>
+          <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
         </div>
-       <div class="detalle-info ${ofertaData && precioNormal ? 'en-oferta' : ''}">
-  <h1 class="detalle-titulo">${datosBasicos.nombre}</h1>
-  <p class="detalle-marca"><strong>${datosBasicos.marca}</strong></p>
-
-  <p class="precio">
-    ${ofertaData && precioNormal
-      ? `
-        <span class="precio-oferta">₲ ${precioFinal.toLocaleString("es-PY")}</span>
-        <span class="precio-normal"><s>₲ ${precioNormal.toLocaleString("es-PY")}</s></span>
-        <span class="badge-descuento">-${descuento}%</span>
-      `
-      : precioNormal
-        ? `₲ ${precioFinal.toLocaleString("es-PY")}`
-        : `Consultar`
-    }
-    <a href="https://wa.me/595991861112?text=Hola, quiero hacer un pedido del perfume ${datosBasicos.nombre}" 
-       target="_blank" class="pedido-btn">
-      <img src="../imagenes/icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
-      Hacer pedido
-    </a>
-  </p>
-
-          <div class="detalle-card">
-            <h3>Descripción</h3>
-            <p>${perfume.descripcion}</p>
-          </div>
-
-          <div class="detalle-row">
-            <div class="detalle-card small-card">
-              <h3>Acordes principales</h3>
-              <ul>${perfume.acordes.map(a => `<li>${a}</li>`).join('')}</ul>
-            </div>
-            <div class="detalle-card small-card">
-              <h3>Categoría</h3>
-              <p>${datosBasicos.categoria}</p>
-            </div>
-            <div class="detalle-card small-card">
-              <h3>Tipo de fragancia</h3>
-              <p>${datosBasicos.categoria2}</p>
-            </div>
-          </div>
-
-          <div class="detalle-card big-card">
-            <h3>Notas</h3>
-            <p><strong>Salida:</strong> ${perfume.notas_salida.join(', ')}</p>
-            <p><strong>Corazón:</strong> ${perfume.notas_corazon.join(', ')}</p>
-            <p><strong>Base:</strong> ${perfume.notas_base.join(', ')}</p>
-          </div>
+        <div class="detalle-card small-card">
+          <h3>Categoría</h3>
+          <p>${datosBasicos.categoria}</p>
+        </div>
+        <div class="detalle-card small-card">
+          <h3>Tipo de fragancia</h3>
+          <p>${datosBasicos.categoria2}</p>
         </div>
       </div>
-    `;
+
+      <div class="detalle-card big-card">
+        <h3>Notas</h3>
+        <p><strong>Salida:</strong> ${perfume.notas_salida.join(', ')}</p>
+        <p><strong>Corazón:</strong> ${perfume.notas_corazon.join(', ')}</p>
+        <p><strong>Base:</strong> ${perfume.notas_base.join(', ')}</p>
+      </div>
+    </div>
+  </div>
+`;
 
     gtag('event', 'click_perfume', {
       event_category: 'Perfumes',
