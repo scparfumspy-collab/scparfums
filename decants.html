@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sección Decants - SC Parfums</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles-base.css">
+</head>
+<body>
+
+<!-- Header dinámico -->
+<div id="header"></div>
+<script>
+  fetch('../header.html')
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+      initHeaderSearch(); // tu función de búsqueda
+    });
+</script>
+
+<!-- Hero con background -->
+<section class="hero">
+  <div class="hero-text">Sección Decants</div>
+</section>
+
+<!-- Contenido principal -->
+<main class="decants-layout">
+  <div class="decants-intro">
+    <div class="decants-imagen">
+      <img src="../imagenes/decants/decants-muestra.png" alt="Imagen de Decants">
+    </div>
+    <div class="decants-card">
+      <h2>¿Qué es un Decant?</h2>
+      <p>
+        Un decant es una porción de perfume original cuidadosamente transferida a un atomizador más pequeño.
+        Es la forma ideal de probar fragancias exclusivas sin necesidad de comprar el frasco completo.
+      </p>
+    </div>
+  </div>
+
+  <div class="decants-card">
+    <h2>¿Por qué me conviene comprar un Decant?</h2>
+    <p>
+      Los decants son perfectos para quienes desean experimentar nuevas fragancias sin invertir en un frasco grande.
+      Actualmente ofrecemos decants en formatos de <strong>5 ml</strong> y <strong>10 ml</strong>, prácticos para llevar en viajes o en el día a día.
+    </p>
+    <ul>
+      <li>✔ Probar perfumes de lujo a un costo accesible</li>
+      <li>✔ Llevar tu fragancia favorita en tamaño de viaje</li>
+      <li>✔ Descubrir nuevas opciones antes de comprar el frasco completo</li>
+    </ul>
+  </div>
+
+  <div class="decants-catalogo">
+    <a href="https://heyzine.com/flip-book/tu-link" target="_blank" class="btn-flipbook">
+      👉 Ver Catálogo de Decants
+    </a>
+  </div>
+</main>
+
+<!-- Sección de info (igual que en otras categorías) -->
+<section class="info-section">
+  <div class="info-card">
+    <h3>💳 Métodos de Pago</h3>
+    <p>Efectivo</p>
+    <p>Transferencias Bancarias</p>
+    <p>Tarjeta de Crédito y Débito</p>
+  </div>
+  <div class="info-card">
+    <h3>✅ Productos 100% Originales</h3>
+    <p>Trabajamos únicamente con perfumes originales.</p>
+    <p>Garantía de autenticidad en cada compra.</p>
+  </div>
+  <div class="info-card">
+    <h3>🚚 Envíos a todo Paraguay</h3>
+    <p>Realizamos envíos por transportadora.</p>
+    <p>Entregas seguras y rápidas.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  © 2026 SC Parfums | Paraguay<br>
+  Productos 100% originales | Medios de pago disponibles<br>
+  Seguinos en 
+  <a href="https://www.facebook.com/SCParfums">Facebook</a> |
+  <a href="https://www.instagram.com/scparfumspy">Instagram</a> |
+  <a href="https://www.tiktok.com/@scparfums">TikTok</a> |
+  <a href="https://wa.me/595991861112">WhatsApp</a>
+</footer>
+
+</body>
+</html>
