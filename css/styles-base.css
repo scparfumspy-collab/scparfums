@@ -150,10 +150,10 @@ nav a:hover {
 
 /* Hero para Más Populares */
 .hero-populares {
-  background: url('../imagenes/backgrounds/background-populares.jpg') no-repeat center center;
+  background: url('../imagenes/backgrounds/background-populares.png') no-repeat center center;
   background-size: cover;
   background-color: #000;
-  height: 300px; /* más bajo que los 400px de index/categorías */
+  height: 350px; /* más bajo que los 400px de index/categorías */
 }
 
 .hero-populares .hero-text {
@@ -163,7 +163,19 @@ nav a:hover {
   text-shadow: 0 3px 8px rgba(0,0,0,0.4);
 }
 .hero-lonuevo {
-  background: url('../imagenes/backgrounds/background-lonuevo.jpg') no-repeat center center;
+  background: url('../imagenes/backgrounds/background-lonuevo.png') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  height: 400px;
+}
+.hero-ofertas {
+  background: url('../imagenes/backgrounds/background-ofertas.png') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  height: 400px;
+}
+.hero-decants {
+  background: url('../imagenes/backgrounds/background-decants.png') no-repeat center center;
   background-size: cover;
   background-color: #000;
   height: 400px;
