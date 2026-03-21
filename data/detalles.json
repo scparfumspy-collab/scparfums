@@ -438,5 +438,117 @@
     "notas_corazon": ["Flores Blancas", "Flor de Tiaré", "Ylang-Ylang"],
     "notas_base": ["Coco", "Vainilla", "Ládano", "Madera de Gaiac"],
     "descripcion": "Una fragancia unisex floral luminosa y envolvente, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y sofisticadas donde quieras transmitir frescura, sensualidad y un aire moderno con carácter elegante y exótico."
+  },
+           {
+      "id": "emper-genius-blush-edp-100ml",
+    "acordes": ["Avainillado", "Dulce", "Almendrado"],
+    "notas_salida": ["Almendra Amarga", "Bergamota"],
+    "notas_corazon": ["Peonía", "Ylang-Ylang"],
+    "notas_base": ["Vainilla", "Cumarina"],
+    "descripcion": "Una fragancia unisex oriental floral delicada y sofisticada, perfecta para climas templados y frescos, ideal en ocasiones románticas y elegantes donde quieras transmitir dulzura, sensualidad y un aire moderno con carácter envolvente y refinado."
+  },
+           {
+      "id": "emper-phantom-my-hero-edp-100ml",
+    "acordes": ["Cálido Especiado", "Chocolate", "Dulce"],
+    "notas_salida": ["Almendra", "Heliotropo"],
+    "notas_corazon": ["Chocolate", "Ron"],
+    "notas_base": ["Café", "Caramelo", "Caña de Azúcar", "Sándalo"],
+    "descripcion": "Una fragancia masculina gourmand intensa y atrevida, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y modernas donde quieras transmitir energía, sensualidad y un aire contemporáneo con carácter audaz y envolvente."
+  },
+           {
+      "id": "emper-falling-in-love-edp-100ml",
+    "acordes": ["Avainillado", "Almendrado", "Floral"],
+    "notas_salida": ["Leche de Almendras", "Almizcle Ambreta"],
+    "notas_corazon": ["Iris", "Rosa", "Fresía"],
+    "notas_base": ["Nardos", "Vainilla", "Haba Tonka", "Almizcle Blanco"],
+    "descripcion": "Una fragancia unisex almizcle floral amaderado delicada y romántica, perfecta para climas templados y frescos, ideal en ocasiones íntimas y elegantes donde quieras transmitir ternura, sofisticación y un aire moderno con carácter envolvente y seductor."
+  },
+           {
+      "id": "emper-legend-edp-100ml",
+    "acordes": ["Aromático", "Cítrico", "Fresco Especiado"],
+    "notas_salida": ["Flor de Azahar", "Toronja", "Limón", "Romero"],
+    "notas_corazon": ["Lavanda", "Nuez Moscada", "Madera de Gaiac", "Cilantro"],
+    "notas_base": ["Haba Tonka", "Almizcle", "Musgo de Roble"],
+    "descripcion": "Una fragancia masculina amaderada especiada clásica y poderosa, perfecta para climas templados y frescos, ideal en ocasiones diurnas y elegantes donde quieras transmitir carácter, confianza y un aire sofisticado con presencia distinguida."
+  },
+             {
+      "id": "french-avenue-liquid-brun",
+    "acordes": ["Cálido Especiado", "Avainillado", "Dulce"],
+    "notas_salida": ["Canela", "Flor de Azahar", "Cardamomo", "Bergamota"],
+    "notas_corazon": ["Vainilla Bourbon", "Elemí"],
+    "notas_base": ["Praliné", "Ambroxan", "Madera de Gaiac", "Almizcle"],
+    "descripcion": "Una fragancia masculina amaderada cálida y sofisticada, perfecta para climas templados y frescos, ideal en ocasiones nocturnas y elegantes donde quieras transmitir fuerza, distinción y un aire moderno con carácter envolvente y seductor."
+  },
+             {
+      "id": "french-avenue-azzure-aoud",
+    "acordes": ["Afrutado", "Oud", "Cuero"],
+    "notas_salida": ["Maracuyá", "Notas Afrutadas", "Rosa", "Azafrán"],
+    "notas_corazon": ["Oud", "Benjuí", "Pachulí"],
+    "notas_base": ["Cuero", "Madera de Gaiac", "Ámbar", "Cedro", "Vainilla", "Sándalo", "Ládano"],
+    "descripcion": "Una fragancia masculina oriental intensa y sofisticada, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir misterio, elegancia y un aire moderno con carácter profundo y envolvente."
+  },
+             {
+      "id": "french-avenue-cocoa-morado",
+    "acordes": ["Ambarado", "Cálido Especiado", "Dulce"],
+    "notas_salida": ["Canela", "Azafrán", "Nuez Moscada", "Cardamomo"],
+    "notas_corazon": ["Oud", "Dátiles", "Incienso", "Caramelo", "Mirra"],
+    "notas_base": ["Vainilla de Madagascar", "Manteca de Cacao", "Cuero"],
+    "descripcion": "Una fragancia unisex oriental amaderada intensa y exótica, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y sofisticadas donde quieras transmitir misterio, sensualidad y un aire moderno con carácter profundo y envolvente."
+  },
+             {
+      "id": "french-avenue-chaos-extrait-",
+    "acordes": ["Cuero", "Acerezado", "Dulce"],
+    "notas_salida": ["Cereza", "Frutos Rojos"],
+    "notas_corazon": ["Iris"],
+    "notas_base": ["Cuero", "Vainilla", "Musgo"],
+    "descripcion": "Una fragancia unisex cuero intensa y atrevida, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y modernas donde quieras transmitir misterio, rebeldía y un aire contemporáneo con carácter audaz y envolvente."
+  },
+               {
+      "id": "french-avenue-spectre-ghost",
+    "acordes": ["Avainillado", "Fresco Especiado", "Cálido Especiado"],
+    "notas_salida": ["Jengibre", "Cardamomo", "Bergamota"],
+    "notas_corazon": ["Pimienta Rosa", "Grosellas Negras", "Rosa"],
+    "notas_base": ["Vainilla", "Cedro", "Pachulí"],
+    "descripcion": "Una fragancia masculina amaderada aromática fresca y vibrante, perfecta para climas templados y cálidos, ideal en ocasiones diurnas y modernas donde quieras transmitir energía, confianza y un aire contemporáneo con carácter dinámico y elegante."
+  },
+               {
+      "id": "french-avenue-veneno-edp",
+    "acordes": ["Afrutado", "Ahumado", "Canela"],
+    "notas_salida": ["Manzana", "Humo", "Canela"],
+    "notas_corazon": ["Tabaco", "Musgo"],
+    "notas_base": ["Vainilla Bourbon", "Orcanox"],
+    "descripcion": "Una fragancia unisex aromática frutal intensa y misteriosa, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y modernas donde quieras transmitir sensualidad, rebeldía y un aire contemporáneo con carácter audaz y envolvente."
+  },
+               {
+      "id": "lattafa-asdaaf-ameer-al-arab",
+    "acordes": ["Fresco Especiado", "Aromático", "Cálido Especiado"],
+    "notas_salida": ["Jazmín", "Madre Selva"],
+    "notas_corazon": ["Lavanda", "Pimienta", "Azafrán"],
+    "notas_base": ["Cardamomo", "Menta", "Albahaca"],
+    "descripcion": "Una fragancia masculina aromática especiada fresca y vibrante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y modernas donde quieras transmitir energía, vitalidad y un aire contemporáneo con carácter dinámico y elegante."
+  },
+               {
+      "id": "lattafa-asdaaf-ameer-al-arab-imperium",
+    "acordes": ["Fresco Especiado", "Almizclado", "Cítrico"],
+    "notas_salida": ["Jengibre", "Bergamota", "Salvia"],
+    "notas_corazon": ["Manzana", "Cachemira", "Geranio"],
+    "notas_base": ["Almizcle", "Ámbar", "Sándalo"],
+    "descripcion": "Una fragancia masculina amaderada aromática fresca y sofisticada, perfecta para climas templados y cálidos, ideal en ocasiones diurnas y modernas donde quieras transmitir energía, elegancia y un aire contemporáneo con carácter seguro y distinguido."
+  },
+               {
+      "id": "lattafa-asdaaf-ameerat-al-arab-prive-rose",
+    "acordes": ["Rosas", "Dulce", "Afrutados"],
+    "notas_salida": ["Fresa", "Uvas", "Naranja"],
+    "notas_corazon": ["Rosas", "Almizcle Blanco", "Jazmín", "Ylang-Ylang", "Gardenia"]"
+    "notas_base": ["Haba Tonka", "Ámbar", "Sándalo"],
+    "descripcion": "Una fragancia femenina floral frutal delicada y encantadora, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y románticas donde quieras transmitir dulzura, frescura y un aire moderno con carácter elegante y envolvente."
+  },
+                 {
+      "id": "lattafa-asdaaf-ameerat-al-arab-rojo",
+    "acordes": ["Cítrico", "Floral Blanco", "Almizclado"],
+    "notas_salida": ["Cítricos", "Bergamota"],
+    "notas_corazon": ["Almizcle Blanco", "Sábila"],
+    "notas_base": ["Jazmín", "Almizcle", "Notas Amaderadas", "Oud"],
+    "descripcion": "Una fragancia femenina floral fresca y elegante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y románticas donde quieras transmitir pureza, sofisticación y un aire moderno con carácter delicado y envolvente."
   }
 ]
