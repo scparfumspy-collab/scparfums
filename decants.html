@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <title>Sección Decants - SC Parfums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/styles-base.css">
+  <link rel="stylesheet" href="css/styles-base.css">
 </head>
 <body>
 
 <!-- Header dinámico -->
 <div id="header"></div>
 <script>
-  fetch('../header.html')
+  fetch('header.html')
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
