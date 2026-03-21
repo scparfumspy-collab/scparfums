@@ -21,9 +21,14 @@ function renderTarjeta(perfume, precios, ofertas) {
     tarjeta.setAttribute("data-descuento", `-${descuento}%`);
   }
 
+  // Ajustar rutas según si estamos en raíz o en subcarpeta
+  const enCategorias = window.location.pathname.includes("categorias");
+  const rutaImagen = enCategorias ? `../${perfume.imagen}` : perfume.imagen;
+  const rutaPagina = enCategorias ? `../${perfume.pagina}` : perfume.pagina;
+
   let html = `
-    <a href="../${perfume.pagina}">
-      <img src="../${perfume.imagen}" alt="${perfume.nombre}">
+    <a href="${rutaPagina}">
+      <img src="${rutaImagen}" alt="${perfume.nombre}">
       <p><strong>${perfume.marca}</strong> - ${perfume.nombre}</p>
   `;
 
