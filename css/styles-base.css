@@ -132,6 +132,12 @@ nav a:hover {
   background-color: #000;
   }
 
+.hero-arabes {
+  background: url('../imagenes/backgrounds/background-arabes.png') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  }
+
 /* Hero para Más Populares */
 .hero-populares {
   background: url('../imagenes/backgrounds/background-populares.jpg') no-repeat center center;
