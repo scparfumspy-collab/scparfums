@@ -137,6 +137,16 @@ nav a:hover {
   background-size: cover;
   background-color: #000;
   }
+.hero-diseñador {
+  background: url('../imagenes/backgrounds/background-diseñador.png') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  }
+.hero-nicho {
+  background: url('../imagenes/backgrounds/background-nicho.png') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  }
 
 /* Hero para Más Populares */
 .hero-populares {
