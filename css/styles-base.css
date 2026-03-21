@@ -610,8 +610,8 @@ footer a:hover {
 }
 
 .decants-imagen img {
-  max-width: 250px;
-  border-radius: 8px;
+  max-width: 300px;
+  border-radius: 10px;
 }
 
 .decants-card {
