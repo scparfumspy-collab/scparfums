@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ofertas - SC Parfums</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles-base.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1MM9FN44X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C1MM9FN44X');
+  </script>
+</head>
+<body>
+
+<!-- Header dinámico -->
+<div id="header"></div>
+<script>
+  fetch('header.html')
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+      initHeaderSearch();
+    });
+
+  // buscador igual que en las otras páginas
+  function initHeaderSearch() {
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+    const suggestionsBox = document.getElementById("searchSuggestions");
+    let perfumesCache = [];
+
+    if (!searchInput || !searchButton || !suggestionsBox) return;
+
+    fetch("data/perfumes.json")
+      .then(resp => resp.json())
+      .then(data => { perfumesCache = data; })
+      .catch(err => console.error("Error cargando perfumes:", err));
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      suggestionsBox.innerHTML = "";
+      if (!query) {
+        suggestionsBox.style.display = "none";
+        return;
+      }
+
+      const resultados = perfumesCache.filter(p =>
+        p.nombre.toLowerCase().includes(query) ||
+        p.marca.toLowerCase().includes(query)
+      ).slice(0, 10);
+
+      if (resultados.length === 0) {
+        suggestionsBox.style.display = "none";
+        return;
+      }
+
+      resultados.forEach(perfume => {
+        const item = document.createElement("div");
+        item.textContent = perfume.marca + " - " + perfume.nombre;
+        item.addEventListener("click", () => {
+          window.location.href = "/scparfums/" + perfume.pagina;
+        });
+        suggestionsBox.appendChild(item);
+      });
+
+      suggestionsBox.style.display = "block";
+    });
+
+    searchButton.addEventListener("click", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (query) {
+        window.location.href = "/scparfums/buscar.html?q=" + encodeURIComponent(query);
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+        suggestionsBox.style.display = "none";
+      }
+    });
+  }
+</script>
+
+<section class="hero hero-ofertas">
+  <div class="hero-text">Ofertas Especiales</div>
+</section>
+
+<section class="layout">
+  <aside class="sidebar"></aside>
+  <main class="perfumes-wrapper">
+    <div id="botones-paginacion-top" class="botones-paginacion"></div>
+    <div class="perfumes" id="perfume-list"></div>
+    <div id="botones-paginacion-bottom" class="botones-paginacion"></div>
+  </main>
+</section>
+
+<footer>
+  © 2026 SC Parfums | Paraguay<br>
+  Productos 100% originales | Medios de pago disponibles<br>
+  Seguinos en 
+  <a href="https://www.facebook.com/SCParfums">Facebook</a> |
+  <a href="https://www.instagram.com/scparfumspy">Instagram</a> |
+  <a href="https://www.tiktok.com/@scparfums">TikTok</a> |
+  <a href="https://wa.me/595991861112">WhatsApp</a>
+</footer>
+
+<script src="data/config.js"></script>
+<script src="js/render.js"></script>
+
+<script>
+async function cargarOfertas() {
+  const contenedor = document.getElementById('perfume-list');
+  const sidebar = document.querySelector('.sidebar');
+
+  contenedor.innerHTML = '<p id="loader">Cargando ofertas...</p>';
+
+  try {
+    const respPerfumes = await fetch('data/perfumes.json');
+    const perfumes = await respPerfumes.json();
+
+    const preciosResp = await fetch(CONFIG.preciosURL);
+    const precios = await preciosResp.json();
+
+    const ofertasResp = await fetch('data/ofertas.json');
+    const ofertas = await ofertasResp.json();
+
+    contenedor.innerHTML = '';
+
+    // Filtrar perfumes que tengan oferta activa
+    const enOferta = perfumes.filter(p => ofertas.some(o => o.id === p.id));
+
+    const perfumesPorPagina = 20;
+    let paginaActual = 1;
+
+    function mostrarPagina(pagina, lista = enOferta) {
+      contenedor.innerHTML = '';
+      const inicio = (pagina - 1) * perfumesPorPagina;
+      const fin = inicio + perfumesPorPagina;
+      const perfumesPagina = lista.slice(inicio, fin);
+
+      if (perfumesPagina.length === 0) {
+        contenedor.innerHTML = '<p>No hay perfumes en oferta actualmente.</p>';
+        return;
+      }
+
+      perfumesPagina.forEach(perfume => {
+        const tarjeta = renderTarjeta(perfume, precios, ofertas);
+        contenedor.appendChild(tarjeta);
+      });
+
+      renderizarBotones(lista);
+    }
+
+    function renderizarBotones(lista) {
+      const topContainer = document.getElementById('botones-paginacion-top');
+      const bottomContainer = document.getElementById('botones-paginacion-bottom');
+
+      [topContainer, bottomContainer].forEach(container => {
+        container.innerHTML = '';
+
+        const btnInicio = document.createElement('button');
+        btnInicio.textContent = 'Inicio';
+        btnInicio.onclick = () => {
+          paginaActual = 1;
+          mostrarPagina(paginaActual, lista);
+        };
+        container.appendChild(btnInicio);
+
+        if (paginaActual > 1) {
+          const btnAnterior = document.createElement('button');
+          btnAnterior.textContent = 'Anterior';
+          btnAnterior.onclick = () => {
+            paginaActual--;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnAnterior);
+        }
+
+        if (paginaActual * perfumesPorPagina < lista.length) {
+          const btnSiguiente = document.createElement('button');
+          btnSiguiente.textContent = 'Siguiente';
+          btnSiguiente.onclick = () => {
+            paginaActual++;
+            mostrarPagina(paginaActual, lista);
+          };
+          container.appendChild(btnSiguiente);
+        }
+      });
+    }
+
+    // Mostrar primera página
+    mostrarPagina(paginaActual, enOferta);
+
+    // Sidebar dinámico con marcas
+    const marcasUnicas = [...new Set(enOferta.map(p => p.marca))];
+    const marcasContainer = document.createElement('div');
+    marcasContainer.innerHTML = "<h3>Marcas</h3>";
+
+    marcasUnicas.forEach(marca => {
+      const label = document.createElement('label');
+      label.innerHTML = `<input type="checkbox" value="${marca}"> ${marca}`;
+      marcasContainer.appendChild(label);
+    });
+
+    sidebar.innerHTML = '';
+    sidebar.appendChild(marcasContainer);
+
+    const checkboxes = marcasContainer.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const seleccionadas = [...checkboxes]
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        const filtrados = enOferta.filter(p => seleccionadas.length === 0 || seleccionadas.includes(p.marca));
+        paginaActual = 1;
+        mostrarPagina(paginaActual, filtrados);
+      });
+    });
+
+  } catch (error) {
+    console.error("Error cargando ofertas:", error);
+    contenedor.innerHTML = '<p>Error al cargar ofertas.</p>';
+  }
+}
+
+cargarOfertas();
+</script>
+
+</body>
+</html>
