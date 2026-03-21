@@ -272,8 +272,25 @@ footer a:hover {
   position: relative;
 }
 
-/* Badge de descuento */
-.detalle-container .badge-descuento {
+/* Contenedor de imagen en detalle */
+.detalle-imagen {
+  position: relative;
+  display: inline-block;
+}
+
+.detalle-imagen.en-oferta {
+  border: 2px solid #d32f2f; /* borde rojo alrededor de la imagen */
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.detalle-imagen img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Badge de descuento sobre la imagen */
+.detalle-imagen .badge-descuento {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -284,5 +301,4 @@ footer a:hover {
   padding: 4px 8px;
   border-radius: 4px;
 }
-
 
