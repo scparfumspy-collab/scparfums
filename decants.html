@@ -10,12 +10,18 @@
 
 <!-- Header dinámico -->
 <div id="header"></div>
+
+<!-- Script que define initHeaderSearch -->
+<script src="js/header.js"></script>
+
 <script>
   fetch('header.html')
     .then(resp => resp.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
-      initHeaderSearch(); // tu función de búsqueda
+      if (typeof initHeaderSearch === "function") {
+        initHeaderSearch(); // tu función de búsqueda
+      }
     });
 </script>
 
