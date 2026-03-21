@@ -574,5 +574,29 @@
     "notas_corazon": ["Oud", "Notas Dulces"],
     "notas_base": ["Pachulí", "Almizcle"],
     "descripcion": "Una fragancia unisex aromática especiada intensa y sofisticada, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir misterio, elegancia y un aire moderno con carácter profundo y envolvente."
+  },
+                   {
+      "id": "givenchy-gentleman-edt-intense",
+    "acordes": ["Amaderado", "Aromático", "Iris"],
+    "notas_salida": ["Cardamomo", "Bergamota", "Albahaca"],
+    "notas_corazon": ["Iris", "Ciprés"],
+    "notas_base": ["Cumarina", "Cedro"],
+    "descripcion": "Una fragancia masculina amaderada aromática elegante y sofisticada, perfecta para climas templados y frescos, ideal en ocasiones diurnas y formales donde quieras transmitir distinción, confianza y un aire moderno con carácter refinado y envolvente."
+  },
+                   {
+      "id": "givenchy-gentleman-edp-tester",
+    "acordes": ["Cálido Especiado", "Avainillado", "Ámbar"],
+    "notas_salida": ["Pimienta Negra", "Lavanda", "Bergamota"],
+    "notas_corazon": ["Raiz de Lirio", "Clavo de olor", "Canela"],
+    "notas_base": ["Vaina de Vainilla Negra", "Bálsamo de Tolú", "Haba Tonka", "Benjuí", "Pachulí"],
+    "descripcion": "Una fragancia masculina amaderada aromática intensa y sofisticada, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y elegantes donde quieras transmitir distinción, sensualidad y un aire moderno con carácter profundo y envolvente."
+  },
+                   {
+      "id": "givenchy-gentleman-society-edp-tester",
+    "acordes": ["Aromático", "Amaderado", "Avainillado"],
+    "notas_salida": ["Cardamomo", "Salvia"],
+    "notas_corazon": ["Narciso Francés", "Vetiver de Haití", "Vetiver de Madagascar"],
+    "notas_base": ["Vainilla", "Palo Santo", "Cedro"],
+    "descripcion": "Una fragancia femenina floral fresca y elegante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y románticas donde quieras transmitir pureza, sofisticación y un aire moderno con carácter delicado y envolvente."
   }
 ]
