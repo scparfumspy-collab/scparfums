@@ -619,5 +619,32 @@
     "pagina": "detalle/detalle.html?id=lattafa-asdaaf-ameerat-al-arab-rojo",
     "categoria": "femeninos",
     "categoria2": "Árabes"
+  },
+                 {
+      "id": "afnan-supremacy-not-only-intense",
+   "nombre": "Supremacy Not Only Intense EDP 100ml",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-supremacy-not-only-intense.png",
+    "pagina": "detalle/detalle.html?id=afnan-supremacy-not-only-intense",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+                 {
+      "id": "afnan-supremacy-collectors-edition",
+   "nombre": "Supremacy Collector's Edition EDP 100ml",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-supremacy-collectors-edition.png",
+    "pagina": "detalle/detalle.html?id=afnan-supremacy-collectors-edition",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+                 {
+      "id": "afnan-supremacy-in-oud",
+   "nombre": "Supremacy In Oud EDP 100ml",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-supremacy-in-oud.png",
+    "pagina": "detalle/detalle.html?id=afnan-supremacy-in-oud",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
   }
 ]
