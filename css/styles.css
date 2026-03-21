@@ -267,11 +267,6 @@ footer a:hover {
   margin-left: 8px;
 }
 
-.detalle-container .en-oferta {
-  border: 2px solid #d32f2f;
-  position: relative;
-}
-
 /* Contenedor de imagen en detalle */
 .detalle-imagen {
   position: relative;
@@ -301,4 +296,3 @@ footer a:hover {
   padding: 4px 8px;
   border-radius: 4px;
 }
-
