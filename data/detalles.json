@@ -550,5 +550,29 @@
     "notas_corazon": ["Almizcle Blanco", "Sábila"],
     "notas_base": ["Jazmín", "Almizcle", "Notas Amaderadas", "Oud"],
     "descripcion": "Una fragancia femenina floral fresca y elegante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y románticas donde quieras transmitir pureza, sofisticación y un aire moderno con carácter delicado y envolvente."
+  },
+                 {
+      "id": "afnan-supremacy-not-only-intense",
+    "acordes": ["Afrutado", "Musgoso", "Amaderado"],
+    "notas_salida": ["Grosellas Negras", "Bergamota", "Manzana"],
+    "notas_corazon": ["Musgo de Roble", "Pachulí", "Lavanda"],
+    "notas_base": ["Ámbar Gris", "Almizcle", "Azafrán"],
+    "descripcion": "Una fragancia masculina oriental especiada poderosa y sofisticada, perfecta para climas templados y frescos, ideal en ocasiones nocturnas y elegantes donde quieras transmitir fuerza, distinción y un aire moderno con carácter intenso y envolvente."
+  },
+                 {
+      "id": "afnan-supremacy-collectors-edition",
+    "acordes": ["Afrutado", "Dulce", "Floral"],
+    "notas_salida": ["Piña", "Bergamota", "Flores Blancas", "Manzana"],
+    "notas_corazon": ["Flor de Azahar", "Abedul", "Ámbar"],
+    "notas_base": ["Musgo de Roble", "Almizcle", "Ámbar Gris"],
+    "descripcion": "Una fragancia masculina chipre frutal fresca y sofisticada, perfecta para climas templados y cálidos, ideal en ocasiones diurnas y elegantes donde quieras transmitir energía, distinción y un aire moderno con carácter seguro y envolvente."
+  },
+                 {
+      "id": "afnan-supremacy-in-oud",
+    "acordes": ["Cálido Especiado", "Oud", "Fresco Especiado"],
+    "notas_salida": ["Azafrán", "Nuez Moscada", "Lavanda"],
+    "notas_corazon": ["Oud", "Notas Dulces"],
+    "notas_base": ["Pachulí", "Almizcle"],
+    "descripcion": "Una fragancia unisex aromática especiada intensa y sofisticada, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir misterio, elegancia y un aire moderno con carácter profundo y envolvente."
   }
 ]
