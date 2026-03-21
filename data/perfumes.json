@@ -493,6 +493,131 @@
     "pagina": "detalle/detalle.html?id=french-avenue-veneno-bianco-edp",
     "categoria": "unisex",
     "categoria2": "Árabes"
+  },
+           {
+      "id": "emper-genius-blush-edp-100ml",
+   "nombre": "Genius Blush EDP 100ml",
+    "marca": "Emper",
+    "imagen": "imagenes/perfumes/emper-genius-blush-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=emper-genius-blush-edp-100ml",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+           {
+      "id": "emper-phantom-my-hero-edp-100ml",
+   "nombre": "Phantom My Hero EDP 100ml",
+    "marca": "Emper",
+    "imagen": "imagenes/perfumes/emper-phantom-my-hero-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=emper-phantom-my-hero-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+           {
+      "id": "emper-falling-in-love-edp-100ml",
+   "nombre": "Falling In Love EDP 100ml",
+    "marca": "Emper",
+    "imagen": "imagenes/perfumes/emper-falling-in-love-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=emper-falling-in-love-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+           {
+      "id": "emper-legend-edp-100ml",
+   "nombre": "Legend EDP 100ml",
+    "marca": "Emper",
+    "imagen": "imagenes/perfumes/emper-legend-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=emper-legend-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+             {
+      "id": "french-avenue-liquid-brun",
+   "nombre": "Liquid Brun EDP 100ml",
+    "marca": "French Avenue",
+    "imagen": "imagenes/perfumes/french-avenue-liquid-brun.png",
+    "pagina": "detalle/detalle.html?id=french-avenue-liquid-brun",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+             {
+      "id": "french-avenue-azzure-aoud",
+   "nombre": "Azzure Aoud EDP 100ml",
+    "marca": "French Avenue",
+    "imagen": "imagenes/perfumes/french-avenue-azzure-aoud.png",
+    "pagina": "detalle/detalle.html?id=french-avenue-azzure-aoud",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+             {
+      "id": "french-avenue-cocoa-morado",
+   "nombre": "Cocoa Morado 100ml",
+    "marca": "French Avenue",
+    "imagen": "imagenes/perfumes/french-avenue-cocoa-morado.png",
+    "pagina": "detalle/detalle.html?id=french-avenue-cocoa-morado",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+             {
+      "id": "french-avenue-chaos-extrait-",
+   "nombre": "Chaos Extrait EDP 100ml",
+    "marca": "French Avenue",
+    "imagen": "imagenes/perfumes/french-avenue-chaos-extrait-.png",
+    "pagina": "detalle/detalle.html?id=french-avenue-chaos-extrait-",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+               {
+      "id": "french-avenue-spectre-ghost",
+   "nombre": "Spectre Ghost EDP 100ml",
+    "marca": "French Avenue",
+    "imagen": "imagenes/perfumes/french-avenue-spectre-ghost.png",
+    "pagina": "detalle/detalle.html?id=french-avenue-spectre-ghost",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+               {
+      "id": "french-avenue-veneno-edp",
+   "nombre": "Veneno EDP 100ml",
+    "marca": "French Avenue",
+    "imagen": "imagenes/perfumes/french-avenue-veneno-edp.png",
+    "pagina": "detalle/detalle.html?id=french-avenue-veneno-edp",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+               {
+      "id": "lattafa-asdaaf-ameer-al-arab",
+   "nombre": "Ameer Al Arab EDP 100ml",
+    "marca": "Asdaaf",
+    "imagen": "imagenes/perfumes/lattafa-asdaaf-ameer-al-arab.png",
+    "pagina": "detalle/detalle.html?id=lattafa-asdaaf-ameer-al-arab",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+               {
+      "id": "lattafa-asdaaf-ameer-al-arab-imperium",
+   "nombre": "Ameer Al Arab Imperium EDP 100ml",
+    "marca": "Asdaaf",
+    "imagen": "imagenes/perfumes/lattafa-asdaaf-ameer-al-arab-imperium.png",
+    "pagina": "detalle/detalle.html?id=lattafa-asdaaf-ameer-al-arab-imperium",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+               {
+      "id": "lattafa-asdaaf-ameerat-al-arab-prive-rose",
+   "nombre": "Ameerat Al Arab Privé Rosé EDP 100ml",
+    "marca": "Asdaaf",
+    "imagen": "imagenes/perfumes/lattafa-asdaaf-ameerat-al-arab-prive-rose.png",
+    "pagina": "detalle/detalle.html?id=lattafa-asdaaf-ameerat-al-arab-prive-rose",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+                 {
+      "id": "lattafa-asdaaf-ameerat-al-arab-rojo",
+   "nombre": "Ameerat Al Arab EDP 100ml",
+    "marca": "Asdaaf",
+    "imagen": "imagenes/perfumes/lattafa-asdaaf-ameerat-al-arab-rojo.png",
+    "pagina": "detalle/detalle.html?id=lattafa-asdaaf-ameerat-al-arab-rojo",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
   }
-     
 ]
