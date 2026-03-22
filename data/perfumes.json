@@ -673,5 +673,140 @@
     "pagina": "detalle/detalle.html?id=givenchy-gentleman-society-edp-tester",
     "categoria": "testers masculinos",
     "categoria2": "Diseñador"
+  },
+                   {
+      "id": "rayhaan-elixir-edp-100ml",
+   "nombre": "Elixir EDP 100ml",
+    "marca": "Rayhaan",
+    "imagen": "imagenes/perfumes/rayhaan-elixir-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=rayhaan-elixir-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+                   {
+      "id": "afnan-turathi-blue-100ml",
+   "nombre": "Turathi Blue EDP 100ml",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-turathi-blue-100ml.png",
+    "pagina": "detalle/detalle.html?id=afnan-turathi-blue-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+                   {
+      "id": "lattafa-liam-blue-shine-edp-mas-100ml",
+   "nombre": "Liam Blue EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-liam-blue-shine-edp-mas-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-liam-blue-shine-edp-mas-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+                     {
+      "id": "lattafa-hayaati-edp-100ml",
+   "nombre": "Hayaati EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-hayaati-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-hayaati-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+                     {
+      "id": "lattafa-hayaati-al-maleky",
+   "nombre": "Hayaati Al Maleky EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-hayaati-al-maleky.png",
+    "pagina": "detalle/detalle.html?id=lattafa-hayaati-al-maleky",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+            {
+      "id": "lattafa-fakhar-black-mas-edp-100ml",
+   "nombre": "Fakhar Black EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-fakhar-black-mas-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-fakhar-black-mas-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+           {
+      "id": "lattafa-fakhar-gold-edp-100ml",
+   "nombre": "Fakhar Gold EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-fakhar-gold-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-fakhar-gold-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+            {
+      "id": "lattafa-fakhar-rose-fem-edp-100ml",
+   "nombre": "Fakhar Rosé EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-fakhar-rose-fem-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-fakhar-rose-fem-edp-100ml",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+            {
+      "id": "lattafa-asad-edp-100ml",
+   "nombre": "Asad EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-asad-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-asad-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+             {
+      "id": "lattafa-asad-zanzibar-edp-100ml",
+   "nombre": "Asad Zanzibar EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-asad-zanzibar-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-asad-zanzibar-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+             {
+      "id": "lattafa-asad-bourbon",
+   "nombre": "Asad Bourbon EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-asad-bourbon.png",
+    "pagina": "detalle/detalle.html?id=lattafa-asad-bourbon",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+             {
+      "id": "lattafa-qaed-al-fursan-edp-90ml",
+   "nombre": "Qaed Al Fursan EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-qaed-al-fursan-edp-90ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-qaed-al-fursan-edp-90ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+              {
+      "id": "lattafa-qaed-al-fursan-unlimited-edp-90ml",
+   "nombre": "Qaed Al Fursan Unlimited EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-qaed-al-fursan-unlimited-edp-90ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-qaed-al-fursan-unlimited-edp-90ml",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+              {
+      "id": "lattafa-khamrah-qahwa-edp-100ml",
+   "nombre": "Khamrah Qahwa EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-khamrah-qahwa-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-khamrah-qahwa-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+              {
+      "id": "lattafa-bade'e-al-oud-amethyste-100ml",
+   "nombre": "Bade'e Al Oud Amethyst EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-bade'e-al-oud-amethyste-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-bade'e-al-oud-amethyste-100ml",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
   }
 ]
