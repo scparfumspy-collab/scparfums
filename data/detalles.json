@@ -598,5 +598,125 @@
     "notas_corazon": ["Narciso Francés", "Vetiver de Haití", "Vetiver de Madagascar"],
     "notas_base": ["Vainilla", "Palo Santo", "Cedro"],
     "descripcion": "Una fragancia femenina floral fresca y elegante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y románticas donde quieras transmitir pureza, sofisticación y un aire moderno con carácter delicado y envolvente."
+  },
+                   {
+      "id": "rayhaan-elixir-edp-100ml",
+    "acordes": ["Avainillado", "Ámbar", "Aromático"],
+    "notas_salida": ["Menta", "Bergamota"],
+    "notas_corazon": ["Lavanda", "Benjuí"],
+    "notas_base": ["Vainilla", "Haba Tonka"],
+    "descripcion": "Una fragancia masculina oriental amaderada fresca y envolvente, perfecta para climas templados y cálidos, ideal en ocasiones diurnas y modernas donde quieras transmitir vitalidad, elegancia y un aire contemporáneo con carácter sofisticado y seductor."
+  },
+                   {
+      "id": "afnan-turathi-blue-100ml",
+    "acordes": ["Cítrico", "Almizclado", "Amaderado"],
+    "notas_salida": ["Cítricos"],
+    "notas_corazon": ["Notas Amaderadas", "Ámbar"],
+    "notas_base": ["Almizcle", "Especias", "Pachulí"],
+    "descripcion": "Una fragancia masculina aromática acuática fresca y vibrante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, vitalidad y un aire moderno con carácter dinámico y elegante."
+  },
+                   {
+      "id": "lattafa-liam-blue-shine-edp-mas-100ml",
+    "acordes": ["Aromático", "Fresco Especiado", "Marino"],
+    "notas_salida": ["Bergamota", "Romero", "Pimienta"],
+    "notas_corazon": ["Notas Marinas", "Violeta"],
+    "notas_base": ["Almizcle", "Ámbar", "Pachulí"],
+    "descripcion": "Una fragancia fresca y moderna con matices marinos y especiados, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, vitalidad y un aire contemporáneo con carácter dinámico y elegante."
+  },
+                     {
+      "id": "lattafa-hayaati-edp-100ml",
+    "acordes": ["Afrutado", "Canela", "Almizclado"],
+    "notas_salida": ["Manzana", "Bergamota"],
+    "notas_corazon": ["Canela", "Notas Amaderadas"],
+    "notas_base": ["Almizcle", "Vainilla"],
+    "descripcion": "Una fragancia unisex amaderada aromática fresca y envolvente, perfecta para climas templados y cálidos, ideal en ocasiones diurnas y casuales donde quieras transmitir vitalidad, elegancia y un aire moderno con carácter dinámico y seductor."
+  },
+                     {
+      "id": "lattafa-hayaati-al-maleky",
+    "acordes": ["Ambarado", "Fresco Especiado", "Almizclado"],
+    "notas_salida": ["Pimienta Rosa", "Bergamota", "Jengibre", "Nuez Moscada"],
+    "notas_corazon": ["Cedro", "Notas Amaderadas", "Incienso", "Ládano"],
+    "notas_base": ["Almizcle", "Ámbar Gris", "Ámbar"],
+    "descripcion": "Una fragancia oriental especiada intensa y sofisticada, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir misterio, elegancia y un aire moderno con carácter profundo y envolvente."
+  },
+                     {
+      "id": "lattafa-fakhar-black-mas-edp-100ml",
+    "acordes": ["Aromático", "Fresco Especiado", "Amaderado"],
+    "notas_salida": ["Manzana", "Bergamota", "Jengibre"],
+    "notas_corazon": ["Lavanda", "Salvia", "Bayas de Enebro", "Geranio"],
+    "notas_base": ["Haba Tonka", "Cedro", "Amberwood", "Vetiver"],
+    "descripcion": "Una fragancia masculina oriental fresca y especiada, perfecta para climas templados y frescos, ideal en ocasiones nocturnas y modernas donde quieras transmitir fuerza, elegancia y un aire contemporáneo con carácter intenso y envolvente."
+  },
+                     {
+      "id": "lattafa-fakhar-gold-edp-100ml",
+    "acordes": ["Ambarado", "Nardos", "Floral Blanco"],
+    "notas_salida": ["Toronja", "Cardamomo", "Pimienta Rosa"],
+    "notas_corazon": ["Nardos", "Notas Solares", "Abrotano"],
+    "notas_base": ["Ámbar", "Cachemira", "Cuero", "Ládano"],
+    "descripcion": "Una fragancia masculina intensa y sofisticada con matices especiados y ambarinos, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y elegantes donde quieras transmitir distinción, fuerza y un aire moderno con carácter profundo y envolvente."
+  },
+                     {
+      "id": "lattafa-fakhar-rose-fem-edp-100ml",
+    "acordes": ["Floral Blaco", "Afrutado", "Nardos"],
+    "notas_salida": ["Frutas", "Azucena", "Granada"],
+    "notas_corazon": ["Nardos", "Jazmín", "Ylang-Ylang"],
+    "notas_base": ["Vainilla", "Almizcle", "Sándalo"],
+    "descripcion": "Una fragancia femenina floral luminosa y sofisticada, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y románticas donde quieras transmitir dulzura, frescura y un aire moderno con carácter elegante y envolvente."
+  },
+     {
+      "id": "lattafa-asad-edp-100ml",
+    "acordes": ["Ambarado", "Fresco Especiado", "Amaderado"],
+    "notas_salida": ["Pimienta Negra", "Tabaco", "Piña"],
+    "notas_corazon": ["Pachulí", "Café", "Iris"],
+    "notas_base": ["Vainilla", "Ámbar", "Madera Seca", "Benjuí", "Ládano"],
+    "descripcion": "Una fragancia masculina oriental intensa y sofisticada, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y elegantes donde quieras transmitir poder, distinción y un aire moderno con carácter profundo y envolvente."
+  },
+                       {
+      "id": "lattafa-asad-zanzibar-edp-100ml",
+    "acordes": ["Avainillado", "Iris", "Atalcado"],
+    "notas_salida": ["Lavanda", "Pimienta Negra"],
+    "notas_corazon": ["Agua de Coco", "Iris", "Sal"],
+    "notas_base": ["Vainilla", "Incienso"],
+    "descripcion": "Una fragancia masculina fresca y sofisticada con matices especiados y marinos, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y modernas donde quieras transmitir energía, elegancia y un aire contemporáneo con carácter dinámico y envolvente."
+  },
+                       {
+      "id": "lattafa-asad-bourbon",
+    "acordes": ["Avainillado", "Cacao", "Dulce"],
+    "notas_salida": ["Lavanda", "Ciruela", "Pimienta Rosa"],
+    "notas_corazon": ["Cacao", "Nuez Moscada", "Davana"],
+    "notas_base": ["Vainilla Bourbon", "Ámbar", "Vetiver"],
+    "descripcion": "Una fragancia masculina oriental especiada intensa y sofisticada, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir poder, elegancia y un aire moderno con carácter profundo y envolvente."
+  },
+                       {
+      "id": "lattafa-qaed-al-fursan-edp-90ml",
+    "acordes": ["Afrutado", "Dulce", "Amaderado"],
+    "notas_salida": ["Piña", "Azafrán"],
+    "notas_corazon": ["Abeto Balsámico", "Jazmín"],
+    "notas_base": ["Ámbar", "Cedro", "Oud"],
+    "descripcion": "Una fragancia oriental amaderada con un marcado perfil frutal y vibrante, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y versátiles donde quieras transmitir frescura, energía y un aire moderno con carácter dinámico y elegante."
+  },
+       {
+      "id": "lattafa-qaed-al-fursan-unlimited-edp-90ml",
+    "acordes": ["Dulce", "Avainillado", "Coco"],
+    "notas_salida": ["Coco", "Piña", "Cítrico"],
+    "notas_corazon": ["Ylang-Ylang", "Atapaima", "Jazmín"],
+    "notas_base": ["Vainilla", "Almizcle", "Sándalo", "Notas Dulces"],
+    "descripcion": "Una fragancia unisex floral, frutal, vibrante y exótica, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y versátiles donde quieras transmitir frescura, dulzura y un aire moderno con carácter dinámico y envolvente."
+  },
+       {
+      "id": "lattafa-khamrah-qahwa-edp-100ml",
+    "acordes": ["Cálido Especiado", "Dulce", "Avainillado"],
+    "notas_salida": ["Canela", "Cardamomo", "Jengibre"],
+    "notas_corazon": ["Praliné", "Frutas Confitadas", "Flores Blancas"],
+    "notas_base": ["Vainilla", "Café", "Haba Tonka", "Benjuí", "Almizcle"],
+    "descripcion": "Una fragancia unisex oriental vainilla cálida y gourmand, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y acogedoras donde quieras transmitir dulzura, sofisticación y un aire moderno con carácter envolvente y seductor."
+  },
+       {
+      "id": "lattafa-bade'e-al-oud-amethyste-100ml",
+    "acordes": ["Rosas", "Oud", "Ambarado"],
+    "notas_salida": ["Pimienta Rosa", "Bergamota"],
+    "notas_corazon": ["Rosa Turca", "Rosa de Bulgaria", "Jazmín"],
+    "notas_base": ["Vainilla", "Ámbar", "Oud"],
+    "descripcion": "Una fragancia unisex oriental vainilla elegante y envolvente, con un marcado carácter floral y especiado, perfecta para climas templados y frescos, ideal en ocasiones nocturnas y sofisticadas donde quieras transmitir distinción, misterio y un aire moderno con carácter profundo y seductor."
   }
 ]
