@@ -718,5 +718,133 @@
     "notas_corazon": ["Rosa Turca", "Rosa de Bulgaria", "Jazmín"],
     "notas_base": ["Vainilla", "Ámbar", "Oud"],
     "descripcion": "Una fragancia unisex oriental vainilla elegante y envolvente, con un marcado carácter floral y especiado, perfecta para climas templados y frescos, ideal en ocasiones nocturnas y sofisticadas donde quieras transmitir distinción, misterio y un aire moderno con carácter profundo y seductor."
+  },
+  {
+      "id": "lattafa-bade'e-al-honor-&-glory-100ml",
+    "acordes": ["Dulce", "Cálido Especiado", "Afrutado"],
+    "notas_salida": ["Piña", "Créme Brulée"],
+    "notas_corazon": ["Canela", "Cúrcuma", "Pimienta Negra", "Benjuí"],
+    "notas_base": ["Vainilla", "Sándalo", "Cachemira", "Musgo"],
+    "descripcion": "Una fragancia unisex gourmand especiada y sofisticada, con un contraste entre notas dulces y especiadas, perfecta para climas templados y frescos, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir elegancia, intensidad y un aire moderno con carácter envolvente y distinguido."
+  },
+    {
+      "id": "lattafa-bade'e-al-oud-sublime-100ml",
+    "acordes": ["Afrutado", "Fresco", "Musgoso"],
+    "notas_salida": ["Manzana", "Lichi", "Rosa"],
+    "notas_corazon": ["Ciruela", "Jazmín"],
+    "notas_base": ["Musgo", "Vainilla", "Pachulí"],
+    "descripcion": "Una fragancia unisex amaderada aromática con un toque frutal y floral, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y versátiles donde quieras transmitir frescura, elegancia y un aire moderno con carácter dinámico y envolvente."
+  },
+    {
+      "id": "lattafa-bade'e-al-oud-for-glory-100ml",
+    "acordes": ["Oud", "Cálido Especiado", "Fresco Especiado"],
+    "notas_salida": ["Azafrán", "Nuez Moscada", "Lavanda"],
+    "notas_corazon": ["Oud", "Pachulí"],
+    "notas_base": ["Oud", "Pachulí", "Almizcle"],
+    "descripcion": "Una fragancia unisex oriental amaderada intensa y poderosa, con un marcado carácter especiado y profundo, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir fuerza, misterio y un aire moderno con carácter distinguido y envolvente."
+  },
+         {
+      "id": "lattafa-ameer-al-oudh-intense-edp-100ml",
+    "acordes": ["Amaderado", "Dulce", "Avainillado"],
+    "notas_salida": ["Notas Amaderadas", "Oud"],
+    "notas_corazon": ["Azúcar", "Vainilla"],
+    "notas_base": ["Oud", "Sándalo", "Notas Herbales"],
+    "descripcion": "Una fragancia unisex oriental intensa y envolvente, con un marcado carácter amaderado y dulce, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y sofisticadas donde quieras transmitir misterio, elegancia y un aire moderno con carácter profundo y seductor."
+  },
+         {
+      "id": "lattafa-al-qiam-gold-edp-100ml",
+    "acordes": ["Cálido Especiado", "Cuero", "Oud"],
+    "notas_salida": ["Azafrán", "Frambuesa"],
+    "notas_corazon": ["Cuero", "Pachulí"],
+    "notas_base": ["Oud", "Benjuí", "Ámbar", "Madera de Gaiac", "Vetiver"],
+    "descripcion": "Una fragancia unisex intensa y sofisticada, con un marcado carácter especiado y amaderado, enriquecido por un toque afrutado y cuero elegante. Perfecta para climas templados y frescos, ideal en ocasiones nocturnas y exclusivas donde quieras transmitir poder, distinción y un aire moderno con carácter profundo y envolvente."
+  },
+         {
+      "id": "lattafa-emeer-edp-100ml-unisex",
+    "acordes": ["Cítrico", "Aromático", "Amaderado"],
+    "notas_salida": ["Limón", "Bergamota", "Esclarea", "Bayas de Enebro"],
+    "notas_corazon": ["Té Blanco", "Sándalo", "Cardamomo", "Incienso"],
+    "notas_base": ["Ámbar Gris", "Cedro", "Cachemira", "Pachulí"],
+    "descripcion": "Una fragancia unisex amaderada aromática fresca y sofisticada, con un marcado carácter cítrico y especiado, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y versátiles donde quieras transmitir energía, elegancia y un aire moderno con carácter dinámico y envolvente."
+  },
+      {
+      "id": "lattafa-ramz-silver-mas-edp-100ml",
+    "acordes": ["Avainillado", "Aromático", "Dulce", "Afrutado"],
+    "notas_salida": ["Pera", "Lavanda", "Menta", "Bergamota"],
+    "notas_corazon": ["Cardamomo", "Salvia"],
+    "notas_base": ["Vainilla", "Ámbar", "Almizcle", "Pachulí"],
+    "descripcion": "Una fragancia unisex oriental vainilla fresca y versátil, con un marcado carácter frutal y aromático, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y modernas donde quieras transmitir energía, elegancia y un aire contemporáneo con carácter dinámico y envolvente."
+  },
+      {
+      "id": "lattafa-ramz-gold-edp-100ml",
+    "acordes": ["Afrutado", "Amaderado", "Floral Blanco"],
+    "notas_salida": ["Manzana", "Durazno", "Grosellas Negras", "Pera"],
+    "notas_corazon": ["Rosa", "Jazmín", "Flor de Azahar"],
+    "notas_base": ["Sándalo", "Vainilla", "Almizcle Blanco"],
+    "descripcion": "Una fragancia unisex frutal floral con un fondo cálido y amaderado, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y elegantes donde quieras transmitir frescura, sofisticación y un aire moderno con carácter luminoso y envolvente."
+  },
+      {
+      "id": "lattafa-ansaam-silver-edp-100ml",
+    "acordes": ["Aromático", "Cálido Especiado", "Avainillado"],
+    "notas_salida": ["Cardamomo", "Bergamota"],
+    "notas_corazon": ["Lavanda", "Davana"],
+    "notas_base": ["Vainilla", "Ámbar", "Pachulí"],
+    "descripcion": "Una fragancia masculina cálida y aromática con un toque especiado y elegante, perfecta para climas frescos y templados, ideal en ocasiones nocturnas y elegantes donde quieras transmitir sensualidad, masculinidad y un aire moderno con carácter dinámico y envolvente."
+  },
+           {
+      "id": "lattafa-ansaam-gold-edp-100ml",
+    "acordes": ["Cítrico", "Dulce", "Afrutado"],
+    "notas_salida": ["Mandarina", "Pera"],
+    "notas_corazon": ["Notas Dulces", "Jazmín", "Rosa"],
+    "notas_base": ["Almizcle", "Vainilla", "Frambuesa"],
+    "descripcion": "Una fragancia femenina oriental floral luminosa y gourmand, con un marcado carácter dulce y romántico, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y especiales donde quieras transmitir frescura, feminidad y un aire moderno con carácter delicado y envolvente."
+  },
+           {
+      "id": "lattafa-pride-shaheen-gold-edp-100ml",
+    "acordes": ["Dulce", "Afrutado", "Avainillado"],
+    "notas_salida": ["Piña", "Toronja"],
+    "notas_corazon": ["Higo", "Lavanda"],
+    "notas_base": ["Vainilla", "Pachulí", "Haba Tonka"],
+    "descripcion": "Una fragancia unisex frutal aromática con un fondo cálido y gourmand, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y versátiles donde quieras transmitir frescura, elegancia y un aire moderno con carácter luminoso y envolvente."
+  },
+           {
+      "id": "lattafa-the-kingdom-masc",
+    "acordes": ["Avainillado", "Aromático", "Dulce"],
+    "notas_salida": ["Lavanda", "Menta", "Salvia"],
+    "notas_corazon": ["Vainilla", "Tabaco", "Flor de Azahar"],
+    "notas_base": ["Haba Tonka", "Benjuí", "Ládano"],
+    "descripcion": ": una fragancia masculina aromática moderna y sofisticada, con un equilibrio entre frescura herbal y calidez gourmand. Perfecta para climas templados y frescos, ideal en ocasiones nocturnas y elegantes donde quieras transmitir fuerza, distinción y un aire contemporáneo con carácter envolvente y seductor."
+  },
+        {
+      "id": "lattafa-the-kingdom-fem",
+    "acordes": ["Dulce", "Afrutado", "Fresco"],
+    "notas_salida": ["Pera", "Peonia", "Casis"],
+    "notas_corazon": ["Praliné", "Jazmín", "Haba Tonka"],
+    "notas_base": ["Vainilla", "Almizcle", "Sándalo", "Ámbar"],
+    "descripcion": "Una fragancia femenina floral frutal gourmand, con un marcado carácter dulce y romántico, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y especiales donde quieras transmitir frescura, feminidad y un aire moderno con carácter delicado y envolvente."
+  },
+        {
+      "id": "lattafa-haya-edp-fem-100ml",
+    "acordes": ["Cítrico", "Floral", "Afrutado"],
+    "notas_salida": ["Fresa", "Champaña", "Naranja"],
+    "notas_corazon": ["Gardenia", "Jazmín", "Orquídea de Vainilla"],
+    "notas_base": ["Sándalo", "Ámbar", "Castaña"],
+    "descripcion": "Una fragancia femenina vibrante y sofisticada, con un marcado carácter frutal y floral, enriquecida por un fondo cálido y gourmand. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y festivas donde quieras transmitir frescura, alegría y un aire moderno con carácter luminoso y envolvente."
+  },
+        {
+      "id": "lattafa-sakeena-edp-100ml",
+    "acordes": ["Dulce", "Afrutado", "Rosas"],
+    "notas_salida": ["Maracuyá", "Notas Ozónicas", "Mandarina"],
+    "notas_corazon": ["Frambuesa", "Rosa", "Sal de Mar", "Flor de Azahar"],
+    "notas_base": ["Tofé", "Praliné", "Vainilla", "Almizcle"],
+    "descripcion": "Una fragancia femenina floral, frutal, gourmand, vibrante y moderna, con un marcado carácter dulce y exótico, perfecta para climas cálidos y templados, ideal en ocasiones diurnas y festivas donde quieras transmitir frescura, alegría y un aire contemporáneo con carácter luminoso y envolvente."
+  },
+          {
+      "id": "lattafa-emaan",
+    "acordes": ["Cítrico", "Floral Blanco", "Nardos"],
+    "notas_salida": ["Flor de Azahar", "Grosellas Negras", "Bergamota"],
+    "notas_corazon": ["Nardos", "Jazmín", "Calendula"],
+    "notas_base": ["Almizcle", "Vainilla", "Cedro", "Pachulí"],
+    "descripcion": "Una fragancia femenina chipre floral elegante y sofisticada, con un marcado carácter cítrico y floral, enriquecida por un fondo cálido y amaderado. Perfecta para climas templados y cálidos, ideal en ocasiones diurnas y formales donde quieras transmitir frescura, distinción y un aire moderno con carácter refinado y envolvente."
   }
 ]
