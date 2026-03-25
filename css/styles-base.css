@@ -657,3 +657,35 @@ footer a:hover {
 .btn-flipbook:hover {
   background-color: #b71c1c;
 }
+
+/*SECCION CONTACTO*/
+
+.contacto-layout {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.contacto-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.contacto-card h2 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.contacto-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacto-card li {
+  margin: 8px 0;
+  font-weight: bold;
+}
+
