@@ -849,8 +849,8 @@
       "id": "lattafa-al-qiam-gold-edp-100ml",
    "nombre": "Al Qiam Gold EDP 100ml",
     "marca": "Lattafa",
-    "imagen": "imagenes/perfumes/lattafa-khamrah-qahwa-edp-100ml.png",
-    "pagina": "detalle/detalle.html?id=lattafa-khamrah-qahwa-edp-100ml",
+    "imagen": "imagenes/perfumes/lattafa-al-qiam-gold-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-al-qiam-gold-edp-100ml",
     "categoria": "unisex",
     "categoria2": "Árabes"
   },
@@ -1119,8 +1119,8 @@
       "id": "armaf-odyssey-spectra",
    "nombre": "Odyssey Spectra EDP 100ml",
     "marca": "Armaf",
-    "imagen": "imagenes/perfumes/maison-alhambra-jean-lowe-azure.png",
-    "pagina": "detalle/detalle.html?id=maison-alhambra-jean-lowe-azure",
+    "imagen": "imagenes/perfumes/armaf-odyssey-spectra.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-spectra",
     "categoria": "unisex",
     "categoria2": "Árabes"
   },
@@ -1139,6 +1139,204 @@
     "marca": "Al Haramain",
     "imagen": "imagenes/perfumes/al-haramain-amber-oud-bleu.png",
     "pagina": "detalle/detalle.html?id=al-haramain-amber-oud-bleu",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+                  {
+      "id": "al-haramain-detour-noir-exclusif",
+   "nombre": "Detour Noir Exclusif EDP 100ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-detour-noir-exclusif.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-detour-noir-exclusif",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+                  {
+      "id": "armaf-tag-him-edp-100ml",
+   "nombre": "Tag Him EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-tag-him-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=armaf-tag-him-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+                  {
+      "id": "armaf-tag-him-uomo-rosso",
+   "nombre": "Tag Him Uomo Rosso EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-tag-him-uomo-rosso.png",
+    "pagina": "detalle/detalle.html?id=armaf-tag-him-uomo-rosso",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+            {
+      "id": "armaf-tres-nuit-pour-homme",
+   "nombre": "Tres Nuit Pour Homme EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-tres-nuit-pour-homme.png",
+    "pagina": "detalle/detalle.html?id=armaf-tres-nuit-pour-homme",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+            {
+      "id": "armaf-yum-yum-edp",
+   "nombre": "Yum Yum EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-yum-yum-edp.png",
+    "pagina": "detalle/detalle.html?id=armaf-yum-yum-edp",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+            {
+      "id": "armaf-island-bliss",
+   "nombre": "Island Bliss EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-island-bliss.png",
+    "pagina": "detalle/detalle.html?id=armaf-island-bliss",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "armaf-eter-arabian-sky",
+   "nombre": "Éter Arabian Sky EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-eter-arabian-sky.png",
+    "pagina": "detalle/detalle.html?id=armaf-eter-arabian-sky",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "lattafa-qaed-al-fursan-untamed-edp-90ml",
+   "nombre": "Qaed Al Fursan Untamed EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-qaed-al-fursan-untamed-edp-90ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-qaed-al-fursan-untamed-edp-90ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "lattafa-eclaire",
+   "nombre": "Eclaire EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-eclaire.png",
+    "pagina": "detalle/detalle.html?id=lattafa-eclaire",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+      {
+      "id": "lattafa-angham",
+   "nombre": "Angham EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-angham.png",
+    "pagina": "detalle/detalle.html?id=lattafa-angham",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+      {
+      "id": "lattafa-atheeri",
+   "nombre": "Atheeri EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-atheeri.png",
+    "pagina": "detalle/detalle.html?id=lattafa-atheeri",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+      {
+      "id": "lattafa-mayar",
+   "nombre": "Mayar EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-mayar.png",
+    "pagina": "detalle/detalle.html?id=lattafa-mayar",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+      {
+      "id": "lattafa-mayar-natural-intense-edp-fem-100ml",
+   "nombre": "Mayar Natural Intense EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-mayar-natural-intense-edp-fem-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-mayar-natural-intense-edp-fem-100ml",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+      {
+      "id": "lattafa-mayar-cherry-intense",
+   "nombre": "Mayar Cherry EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-mayar-cherry-intense.png",
+    "pagina": "detalle/detalle.html?id=lattafa-mayar-cherry-intense",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+      {
+      "id": "lattafa-bade'e-al-oud-noble-blush-100ml",
+   "nombre": "Bade'e Al Oud Noble Blush EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-bade'e-al-oud-noble-blush-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-bade'e-al-oud-noble-blush-100ml",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "lattafa-her-confessions",
+   "nombre": "Her Confession EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-her-confessions.png",
+    "pagina": "detalle/detalle.html?id=lattafa-her-confessions",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "lattafa-his-confessions",
+   "nombre": "His Confession EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-his-confessions.png",
+    "pagina": "detalle/detalle.html?id=lattafa-his-confessions",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "lattafa-khamrah-dukhan-edp-100ml",
+   "nombre": "Khamrah Dukhan EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-khamrah-dukhan-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-khamrah-dukhan-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "lattafa-musaman-white-intense-edp-100ml",
+   "nombre": "Musamam White Intense EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-musaman-white-intense-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-musaman-white-intense-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "armaf-odyssey-mandarin-sky-elixir",
+   "nombre": "Mandarin Sky Elixir EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-mandarin-sky-elixir.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-mandarin-sky-elixir",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "armaf-odyssey-artisto",
+   "nombre": "Odyssey Artisto EDP 100ml",
+    "marca": "Armaf",
+    "imagen": "imagenes/perfumes/armaf-odyssey-artisto.png",
+    "pagina": "detalle/detalle.html?id=armaf-odyssey-artisto",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+       {
+      "id": "lattafa-art-of-universe",
+   "nombre": "Art Of Universe EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-art-of-universe.png",
+    "pagina": "detalle/detalle.html?id=lattafa-art-of-universe",
     "categoria": "unisex",
     "categoria2": "Árabes"
   }
