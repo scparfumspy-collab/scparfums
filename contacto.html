@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sección de Contacto - SC Parfums</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles-base.css">
+</head>
+<body>
+
+<!-- Header dinámico -->
+<div id="header"></div>
+<script src="js/header.js"></script>
+<script>
+  fetch('header.html')
+    .then(resp => resp.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+      if (typeof initHeaderSearch === "function") {
+        initHeaderSearch();
+      }
+    });
+</script>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">Sección de Contacto</div>
+</section>
+
+<!-- Contenido principal -->
+<main class="contacto-layout">
+  <div class="contacto-card">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      En <strong>SC Parfums</strong> nos apasiona el mundo de las fragancias. 
+      Ofrecemos perfumes 100% originales, decants prácticos y un catálogo premium pensado para cada ocasión. 
+      Nuestro compromiso es brindar calidad, confianza y atención personalizada.
+    </p>
+  </div>
+
+  <div class="contacto-card">
+    <h2>Datos de contacto</h2>
+    <p>📧 Correo: <a href="mailto:scparfumspy@gmail.com">scparfumspy@gmail.com</a></p>
+    <p>📱 WhatsApp: <a href="https://wa.me/595991861112">+595 991 861 112</a></p>
+    <p>🌐 Redes sociales:
+      <a href="https://www.facebook.com/SCParfums">Facebook</a> |
+      <a href="https://www.instagram.com/scparfumspy">Instagram</a> |
+      <a href="https://www.tiktok.com/@scparfums">TikTok</a>
+    </p>
+  </div>
+
+  <div class="contacto-card">
+    <h2>¿Cómo trabajamos?</h2>
+    <p>
+      Podés explorar nuestro catálogo online y realizar pedidos directamente por WhatsApp. 
+      Ofrecemos envíos a todo Paraguay y múltiples medios de pago: efectivo, transferencias bancarias y tarjetas de crédito/débito.
+    </p>
+  </div>
+
+  <div class="contacto-card">
+    <h2>¿Por qué elegirnos?</h2>
+    <ul>
+      <li>✔ Productos 100% originales</li>
+      <li>✔ Más de 800 fragancias disponibles</li>
+      <li>✔ Atención personalizada</li>
+      <li>✔ Envíos seguros y rápidos</li>
+    </ul>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  © 2026 SC Parfums | Paraguay<br>
+  Productos 100% originales | Medios de pago disponibles<br>
+  Seguinos en 
+  <a href="https://www.facebook.com/SCParfums">Facebook</a> |
+  <a href="https://www.instagram.com/scparfumspy">Instagram</a> |
+  <a href="https://www.tiktok.com/@scparfums">TikTok</a> |
+  <a href="https://wa.me/595991861112">WhatsApp</a>
+</footer>
+
+</body>
+</html>
