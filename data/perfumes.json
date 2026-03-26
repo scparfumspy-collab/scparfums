@@ -1339,5 +1339,140 @@
     "pagina": "detalle/detalle.html?id=lattafa-art-of-universe",
     "categoria": "unisex",
     "categoria2": "Árabes"
+  },
+    {
+      "id": "rasasi-hawas-fire-mas-100ml",
+   "nombre": "Hawas Fire EDP 100ml",
+    "marca": "Rasasi",
+    "imagen": "imagenes/perfumes/rasasi-hawas-fire-mas-100ml.png",
+    "pagina": "detalle/detalle.html?id=rasasi-hawas-fire-mas-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "rasasi-hawas-ice-edp-mas-100ml",
+   "nombre": "Hawas Ice EDP 100ml",
+    "marca": "Rasasi",
+    "imagen": "imagenes/perfumes/rasasi-hawas-ice-edp-mas-100ml.png",
+    "pagina": "detalle/detalle.html?id=rasasi-hawas-ice-edp-mas-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "rasasi-hawas-black-edp-mas-100ml",
+   "nombre": "Hawas Black EDP 100ml",
+    "marca": "Rasasi",
+    "imagen": "imagenes/perfumes/rasasi-hawas-black-edp-mas-100ml.png",
+    "pagina": "detalle/detalle.html?id=rasasi-hawas-black-edp-mas-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "rasasi-hawas-edp-mas-100ml",
+   "nombre": "Hawas EDP 100ml",
+    "marca": "Rasasi",
+    "imagen": "imagenes/perfumes/rasasi-hawas-edp-mas-100ml.png",
+    "pagina": "detalle/detalle.html?id=rasasi-hawas-edp-mas-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "rasasi-hawas-elixir-mas-100ml",
+   "nombre": "Hawas Elixir EDP 100ml",
+    "marca": "Rasasi",
+    "imagen": "imagenes/perfumes/rasasi-hawas-elixir-mas-100ml.png",
+    "pagina": "detalle/detalle.html?id=rasasi-hawas-elixir-mas-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+    {
+      "id": "rasasi-hawas-tropical",
+   "nombre": "Hawas Tropical EDP 100ml",
+    "marca": "Rasasi",
+    "imagen": "imagenes/perfumes/rasasi-hawas-tropical.png",
+    "pagina": "detalle/detalle.html?id=rasasi-hawas-tropical",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+   {
+      "id": "rasasi-hawas-for-her",
+   "nombre": "Hawas For Her EDP 100ml",
+    "marca": "Rasasi",
+    "imagen": "imagenes/perfumes/rasasi-hawas-for-her.png",
+    "pagina": "detalle/detalle.html?id=rasasi-hawas-for-her",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+   {
+      "id": "rasasi-hawas-eclat",
+   "nombre": "Hawas Éclat EDP 100ml",
+    "marca": "Rasasi",
+    "imagen": "imagenes/perfumes/rasasi-hawas-eclat.png",
+    "pagina": "detalle/detalle.html?id=rasasi-hawas-eclat",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+   {
+      "id": "maison-alhambra-alpine-homme-sport",
+   "nombre": "Alpine Homme Sport EDP 100ml",
+    "marca": "Maison Alhambra",
+    "imagen": "imagenes/perfumes/maison-alhambra-alpine-homme-sport.png",
+    "pagina": "detalle/detalle.html?id=maison-alhambra-alpine-homme-sport",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "maison-alhambra-bad-homme-edp",
+   "nombre": "B.A.D. Homme EDP 100ml",
+    "marca": "Maison Alhambra",
+    "imagen": "imagenes/perfumes/maison-alhambra-bad-homme-edp.png",
+    "pagina": "detalle/detalle.html?id=maison-alhambra-bad-homme-edp",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "maison-alhambra-blue-de-chance-edp-100ml",
+   "nombre": "Blue de Chance EDP 100ml",
+    "marca": "Maison Alhambra",
+    "imagen": "imagenes/perfumes/maison-alhambra-blue-de-chance-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=maison-alhambra-blue-de-chance-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "maison-alhambra-glacier-bold",
+   "nombre": "Glacier Bold EDP 100ml",
+    "marca": "Maison Alhambra",
+    "imagen": "imagenes/perfumes/maison-alhambra-glacier-bold.png",
+    "pagina": "detalle/detalle.html?id=maison-alhambra-glacier-bold",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "maison-alhambra-sceptre-malachite",
+   "nombre": "Sceptre Malachite EDP 100ml",
+    "marca": "Maison Alhambra",
+    "imagen": "imagenes/perfumes/maison-alhambra-sceptre-malachite.png",
+    "pagina": "detalle/detalle.html?id=maison-alhambra-sceptre-malachite",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "maison-alhambra-yeah-parfum",
+   "nombre": "Yeah! Parfum 100ml",
+    "marca": "Maison Alhambra",
+    "imagen": "imagenes/perfumes/maison-alhambra-yeah-parfum.png",
+    "pagina": "detalle/detalle.html?id=maison-alhambra-yeah-parfum",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+     {
+      "id": "lattafa-pride-ishq-al-shuy.gold-edp-100ml",
+   "nombre": "Ishq Al Shuyukh Gold EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-pride-ishq-al-shuy.gold-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-pride-ishq-al-shuy.gold-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
   }
 ]
