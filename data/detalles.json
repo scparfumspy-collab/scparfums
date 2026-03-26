@@ -1274,12 +1274,12 @@
     {
       "id": "maison-alhambra-blue-de-chance-edp-100ml",
     "acordes": ["Cítrico", "Amaderado", "Aromático", "Fresco Especiado"],
-    "notas_salida": ["Toronja", "Limón", "Menta", "Pimienta Rosa",
+    "notas_salida": ["Toronja", "Limón", "Menta", "Pimienta Rosa"],
     "notas_corazon": ["Jengibre", "Jazmín", "Nuez Moscada"],
     "notas_base": ["Almizcle Blanco", "Incienso", "Sándalo", "Vetiver"],
     "descripcion": "Una fragancia masculina amaderada aromática fresca y sofisticada, con un aire moderno y vibrante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, elegancia y un carácter dinámico con un toque distintivo."
-   },
-    {
+    },
+     {
       "id": "maison-alhambra-glacier-bold",
     "acordes": ["Coco", "Dulce", "Avainillado", "Cítrico"],
     "notas_salida": ["Coco"],
