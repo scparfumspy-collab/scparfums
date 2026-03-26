@@ -1474,5 +1474,194 @@
     "pagina": "detalle/detalle.html?id=lattafa-pride-ishq-al-shuy.gold-edp-100ml",
     "categoria": "masculinos",
     "categoria2": "Árabes"
+  },
+     {
+      "id": "lattafa-afeef",
+   "nombre": "Afeef EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-afeef.png",
+    "pagina": "detalle/detalle.html?id=lattafa-afeef",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "maison-alhambra-la-vivacité",
+   "nombre": "La Vivacité EDP 100ml",
+    "marca": "Maison Alhambra",
+    "imagen": "imagenes/perfumes/maison-alhambra-la-vivacité.png",
+    "pagina": "detalle/detalle.html?id=maison-alhambra-la-vivacité",
+    "categoria": "femeninas",
+    "categoria2": "Árabes"
+  },
+   {
+      "id": "sabrina-carpenter-sweet-tooth-cherry-baby",
+   "nombre": "Sweet Tooth Cherry Baby EDP 100ml",
+    "marca": "Sabrina Carpenter",
+    "imagen": "imagenes/perfumes/sabrina-carpenter-sweet-tooth-cherry-baby.png",
+    "pagina": "detalle/detalle.html?id=sabrina-carpenter-sweet-tooth-cherry-baby",
+    "categoria": "femeninos",
+    "categoria2": "Diseñador"
+  },
+  {
+      "id": "sabrina-carpenter-sweet-tooth-caramel-dream",
+   "nombre": "Sweet Tooth Caramel Dream EDP 100ml",
+    "marca": "Sabrina Carpenter",
+    "imagen": "imagenes/perfumes/sabrina-carpenter-sweet-tooth-caramel-dream.png",
+    "pagina": "detalle/detalle.html?id=sabrina-carpenter-sweet-tooth-caramel-dream",
+    "categoria": "femeninos",
+    "categoria2": "Diseñador"
+  },
+  {
+      "id": "sabrina-carpenter-sweet-tooth-white",
+   "nombre": "Sweet Tooth EDP 100ml",
+    "marca": "Sabrina Carpenter",
+    "imagen": "imagenes/perfumes/sabrina-carpenter-sweet-tooth-white.png",
+    "pagina": "detalle/detalle.html?id=sabrina-carpenter-sweet-tooth-white",
+    "categoria": "femeninos",
+    "categoria2": "Diseñador"
+  },
+  {
+      "id": "sabrina-carpenter-sweet-tooth-me-espresso",
+   "nombre": "Sweet Tooth Me Espresso EDP 100ml",
+    "marca": "Sabrina Carpenter",
+    "imagen": "imagenes/perfumes/sabrina-carpenter-sweet-tooth-me-espresso.png",
+    "pagina": "detalle/detalle.html?id=sabrina-carpenter-sweet-tooth-me-espresso",
+    "categoria": "femeninos",
+    "categoria2": "Diseñador"
+  },
+  {
+      "id": "al-haramain-l'aventure-edp-men",
+   "nombre": "L'Aventure EDP 100ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-l'aventure-edp-men.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-l'aventure-edp-men",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "al-haramain-l'aventure-fraiche",
+   "nombre": "L'Aventure Fraiche EDP 100ml",
+    "marca": "Al Haramain",
+    "imagen": "imagenes/perfumes/al-haramain-l'aventure-fraiche.png",
+    "pagina": "detalle/detalle.html?id=al-haramain-l'aventure-fraiche",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "rave-now-men-black-edp-100ml",
+   "nombre": "Now Men EDP 100ml",
+    "marca": "Rave",
+    "imagen": "imagenes/perfumes/rave-now-men-black-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=rave-now-men-black-edp-100ml",
+    "categoria": "masculinas",
+    "categoria2": "Árabes"
+  },
+   {
+      "id": "rave-now-white",
+   "nombre": "Now White EDP 100ml",
+    "marca": "Rave",
+    "imagen": "imagenes/perfumes/rave-now-white.png",
+    "pagina": "detalle/detalle.html?id=rave-now-white",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+   {
+      "id": "zimaya-tiramisu-coco",
+   "nombre": "Tiramisú Coco EDP 100ml",
+    "marca": "Zimaya",
+    "imagen": "imagenes/perfumes/zimaya-tiramisu-coco.png",
+    "pagina": "detalle/detalle.html?id=zimaya-tiramisu-coco",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+   {
+      "id": "zimaya-tiramisu-caramel",
+   "nombre": "Tiramisú Caramel EDP 100ml",
+    "marca": "Zimaya",
+    "imagen": "imagenes/perfumes/zimaya-tiramisu-caramel.png",
+    "pagina": "detalle/detalle.html?id=zimaya-tiramisu-caramel",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "french-avenue-vulcan-feu",
+   "nombre": "Vulcan Feu EDP 100ml",
+    "marca": "French Avenue",
+    "imagen": "imagenes/perfumes/french-avenue-vulcan-feu.png",
+    "pagina": "detalle/detalle.html?id=french-avenue-vulcan-feu",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "lattafa-fakhar-platin-edp-100ml",
+   "nombre": "Fakhar Platin EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-fakhar-platin-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=lattafa-fakhar-platin-edp-100ml",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "afnan-turathi-electric-100ml",
+   "nombre": "Turathi Electric EDP 100ml",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-turathi-electric-100ml.png",
+    "pagina": "detalle/detalle.html?id=afnan-turathi-electric-100ml",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "afnan-9am-fem-100ml-edp",
+   "nombre": "9AM Pour Femme EDP 90ml",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-9am-fem-100ml-edp.png",
+    "pagina": "detalle/detalle.html?id=afnan-9am-fem-100ml-edp",
+    "categoria": "femeninos",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "afnan-9am-edp-100ml-unisex",
+   "nombre": "9AM EDP 100ml",
+    "marca": "Afnan",
+    "imagen": "imagenes/perfumes/afnan-9am-edp-100ml-unisex.png",
+    "pagina": "detalle/detalle.html?id=afnan-9am-edp-100ml-unisex",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "dumont-nitro-white",
+   "nombre": "Nitro White EDP 100ml",
+    "marca": "Dumont",
+    "imagen": "imagenes/perfumes/dumont-nitro-white.png",
+    "pagina": "detalle/detalle.html?id=dumont-nitro-white",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+{
+      "id": "dumont-nitro-pour-homme-intense",
+   "nombre": "Nitro Intense EDP 100ml",
+    "marca": "Dumont",
+    "imagen": "imagenes/perfumes/dumont-nitro-pour-homme-intense.png",
+    "pagina": "detalle/detalle.html?id=dumont-nitro-pour-homme-intense",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "dumont-nitro-blue",
+   "nombre": "Nitro Blue EDP 100ml",
+    "marca": "Dumont",
+    "imagen": "imagenes/perfumes/dumont-nitro-blue.png",
+    "pagina": "detalle/detalle.html?id=dumont-nitro-blue",
+    "categoria": "masculinos",
+    "categoria2": "Árabes"
+  },
+  {
+      "id": "lattafa-al-noble-wazeer",
+   "nombre": "Al Noble Wazeer EDP 100ml",
+    "marca": "Lattafa",
+    "imagen": "imagenes/perfumes/lattafa-al-noble-wazeer.png",
+    "pagina": "detalle/detalle.html?id=lattafa-al-noble-wazeer",
+    "categoria": "unisex",
+    "categoria2": "Árabes"
   }
-]
+  ]
