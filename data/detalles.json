@@ -1190,5 +1190,125 @@
     "notas_corazon": ["Pera", "Flor de Azahar"],
     "notas_base": ["Ámbar", "Almizcle", "Cedro"],
     "descripcion": "Una fragancia unisex cítrica aromática fresca y vibrante, con un aire moderno y energizante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir vitalidad, elegancia y un carácter dinámico con un toque sofisticado."
+  },
+      {
+      "id": "rasasi-hawas-fire-mas-100ml",
+    "acordes": ["Ambarado", "Aromático", "Mineral"],
+    "notas_salida": ["Esclarea"],
+    "notas_corazon": ["Notas Marinas", "Jazmín Egipcio"],
+    "notas_base": ["Ámbar", "Notas Minerales", "Ámbar Gris"],
+    "descripcion": "Una fragancia aromática acuática fresca y vibrante, con un aire moderno y energizante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir vitalidad, elegancia y un carácter dinámico con un toque sofisticado."
+  },
+      {
+      "id": "rasasi-hawas-ice-edp-mas-100ml",
+    "acordes": ["Afrutado", "Cítrico", "Dulce"],
+    "notas_salida": ["Manzana", "Limón Italiano", "Lavanda", "Bergamota de Sicilia", "Anis Estrellado"],
+    "notas_corazon": ["Ciruela", "Flor de Azahar", "Cardamomo"],
+    "notas_base": ["Almizcle", "Ámbar", "Trozos de Madera", "Musgo"],
+    "descripcion": "Una fragancia masculina aromática fresca y vibrante, con un aire moderno y energizante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir vitalidad, elegancia y un carácter dinámico con un toque sofisticado."
+  },
+      {
+      "id": "rasasi-hawas-black-edp-mas-100ml",
+    "acordes": ["Amaderado", "Cítrico", "Musgoso"],
+    "notas_salida": ["Bergamota", "Piña", "Toronja"],
+    "notas_corazon": ["Pachulí", "Cedro", "Jazmín"],
+    "notas_base": ["Musgo de Roble", "Notas Amaderadas", "Ámbar"],
+    "descripcion": "Una fragancia masculina aromática frutal fresca y sofisticada, con un aire moderno y vibrante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, elegancia y un carácter dinámico con un toque distintivo."
+  },
+     {
+      "id": "rasasi-hawas-edp-mas-100ml",
+    "acordes": ["Afrutado", "Cítrico", "Acuático"],
+    "notas_salida": ["Manzana", "Bergamota", "Limón", "Canela"],
+    "notas_corazon": ["Notas Acuosas", "Ciruela", "Flor de Azahar", "Cardamomo"],
+    "notas_base": ["Ámbar Gris", "Almizcle", "Pachulí", "Trozos de Madera a la deriva"],
+    "descripcion": "Una fragancia masculina aromática, acuática, fresca y vibrante, con un aire moderno y energizante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir vitalidad, elegancia y un carácter dinámico con un toque sofisticado."
+  },
+     {
+      "id": "rasasi-hawas-elixir-mas-100ml",
+    "acordes": ["Avainillado", "Aromático", "Verde"],
+    "notas_salida": ["Menta", "Bergamota", "Abrotano"],
+    "notas_corazon": ["Chocolate Oscuro", "Lavanda", "Benjuí"],
+    "notas_base": ["Vainilla", "Haba Tonka", "Almizcle Blanco"],
+    "descripcion": "Una fragancia oriental, dulce y envolvente, con un aire moderno y sofisticado. Perfecta para climas templados y frescos, ideal en ocasiones nocturnas y especiales donde quieras transmitir sensualidad, elegancia y un carácter distintivo con un toque gourmand.."
+  },
+     {
+      "id": "rasasi-hawas-tropical",
+    "acordes": ["Dulce", "Verde", "Coco", "Amaderado"],
+    "notas_salida": ["Agua de Coco", "Hoja de Higuera", "Jengibre"],
+    "notas_corazon": ["Coco", "Higo", "Menta"],
+    "notas_base": ["Sándalo", "Haba Tonka", "Almizcle"],
+    "descripcion": "Una fragancia masculina aromática, verde, fresca y exótica, con un aire moderno y vibrante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, vitalidad y un carácter dinámico con un toque tropical."
+  },
+     {
+      "id": "rasasi-hawas-for-her",
+    "acordes": ["Amaderado", "Dulce", "Afrutado"],
+    "notas_salida": ["Granada", "Manzana", "Toronja"],
+    "notas_corazon": ["Iris", "Jazmpin Sambac", "Cítricos"],
+    "notas_base": ["Praliné", "Pachulí", "Vetiver"],
+    "descripcion": "Una fragancia femenina floral fresca y sofisticada, con un aire moderno y encantador. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y especiales donde quieras transmitir elegancia, dulzura y un carácter distintivo con un toque romántico."
+  },
+     {
+      "id": "rasasi-hawas-eclat",
+    "acordes": ["Afrutado", "Rosas", "Ambarado"],
+    "notas_salida": ["Lichi", "Bergamota", "Pera", "Pistacho"],
+    "notas_corazon": ["Rosas", "Incienso"],
+    "notas_base": ["Vainilla", "Almizcle", "Ámbar", "Notas Amaderadas"],
+    "descripcion": "Una fragancia femenina oriental, floral, elegante y sofisticada, con un aire moderno y encantador. Perfecta para climas templados y frescos, ideal en ocasiones nocturnas y especiales donde quieras transmitir sensualidad, distinción y un carácter romántico con un toque exótico."
+  },
+     {
+      "id": "maison-alhambra-alpine-homme-sport",
+    "acordes": ["Aromático", "Cítrico", "Amaderado"],
+    "notas_salida": ["Mandarina", "Menta", "Ciprés", "Salvia"],
+    "notas_corazon": ["Cedro", "Pimienta"],
+    "notas_base": ["Haba Tonka", "Almizcle", "Sándalo"],
+    "descripcion": "Una fragancia masculina amaderada aromática fresca y dinámica, con un aire moderno y deportivo. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, vitalidad y un carácter elegante con un toque vibrante."
+  },
+    {
+      "id": "maison-alhambra-bad-homme-edp",
+    "acordes": ["Cacao", "Cálido Especiado", "Aromático", "Dulce"],
+    "notas_salida": ["Pimienta Blanca", "Limón", "Pimienta Rosa"],
+    "notas_corazon": ["Cedro", "Salvia"],
+    "notas_base": ["Cacao", "Haba Tonka"],
+    "descripcion": "Una fragancia aromática especiada intensa y sofisticada, con un aire moderno y envolvente. Perfecta para climas templados y frescos, ideal en ocasiones nocturnas y especiales donde quieras transmitir fuerza, elegancia y un carácter distintivo con un toque atrevido."
+  },
+    {
+      "id": "maison-alhambra-blue-de-chance-edp-100ml",
+    "acordes": ["Cítrico", "Amaderado", "Aromático", "Fresco Especiado"],
+    "notas_salida": ["Toronja", "Limón", "Menta", "Pimienta Rosa",
+    "notas_corazon": ["Jengibre", "Jazmín", "Nuez Moscada"],
+    "notas_base": ["Almizcle Blanco", "Incienso", "Sándalo", "Vetiver"],
+    "descripcion": "Una fragancia masculina amaderada aromática fresca y sofisticada, con un aire moderno y vibrante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, elegancia y un carácter dinámico con un toque distintivo."
+  },
+    {
+      "id": "maison-alhambra-glacier-bold",
+    "acordes": ["Coco", "Dulce", "Avainillado", "Cítrico"],
+    "notas_salida": ["Coco"],
+    "notas_corazon": ["Bergamota"],
+    "notas_base": ["Haba Tonka"],
+    "descripcion": "Una fragancia fresca y moderna, con un aire vibrante y envolvente. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, sofisticación y un carácter distintivo con un toque exótico"
+  },
+     {
+      "id": "maison-alhambra-sceptre-malachite",
+    "acordes": ["Cítrico", "Aromático", "Amaderado"],
+    "notas_salida": ["Mandarina Verde", "Bergamota", "Grosellas Negras"],
+    "notas_corazon": ["Notas Aromáticas", "Notas Especiadas", "Jazmín", "Pimienta Rosa"],
+    "notas_base": ["Ámbar", "Almizcle", "Notas Amaderadas", "Vetiver"],
+    "descripcion": "Una fragancia unisex oriental amaderada intensa y sofisticada, con un aire moderno y envolvente. Perfecta para climas templados y frescos, ideal en ocasiones nocturnas y especiales donde quieras transmitir elegancia, fuerza y un carácter distintivo con un toque especiado."
+  },
+     {
+      "id": "maison-alhambra-yeah-parfum",
+    "acordes": ["Fresco Especiado", "Fresco", "Aromático"],
+    "notas_salida": ["Aldehídos", "Manzana", "Jengibre", "Toronja"],
+    "notas_corazon": ["Lavanda", "Salvia", "Geranio"],
+    "notas_base": ["Haba Tonka", "Incienso", "Cedro", "Pachulí"],
+    "descripcion": "Una fragancia masculina aromática fresca y vibrante, con un aire moderno y dinámico. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y casuales donde quieras transmitir energía, elegancia y un carácter distintivo con un toque especiado."
+  },
+     {
+      "id": "lattafa-pride-ishq-al-shuy.gold-edp-100ml",
+    "acordes": ["Cuero", "Avainillado", "Almizclado", "Atalcado"],
+    "notas_salida": ["Caramelo", "Azafrán"],
+    "notas_corazon": ["Gamuza", "Cuero", "Haba Tonka"],
+    "notas_base": ["Vainilla", "Ámbar", "Almizcle"],
+    "descripcion": "Una fragancia unisex oriental vainilla dulce y envolvente, con un aire moderno y sofisticado. Perfecta para climas templados y frescos, ideal en ocasiones nocturnas y especiales donde quieras transmitir sensualidad, elegancia y un carácter distintivo con un toque gourmand."
   }
 ]
