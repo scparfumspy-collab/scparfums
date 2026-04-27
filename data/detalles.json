@@ -1830,5 +1830,85 @@
     "notas_corazon": ["Jazmín", "Rosa"],
     "notas_base": ["Musgo de Roble", "Almizcle", "Pachulí"],
     "descripcion": "Una fragancia unisex chipre frutal fresca y sofisticada, con un aire moderno y vibrante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y especiales donde quieras transmitir energía, vitalidad y un carácter envolvente con un toque frutal, floral y amaderado."
-  }
+  },
+        {
+      "id": "montale-fruits-of-the-musk-edp-100ml",
+    "acordes": ["Afrutado", "Dulce", "Almizclado"],
+    "notas_salida": ["Frambuesa", "Zarzamora", "Bergamota"],
+    "notas_corazon": ["Hojas de Fresal", "Rosa"],
+    "notas_base": ["Almizcle"],
+    "descripcion": "Una fragancia unisex floral frutal fresca y sofisticada, con un aire moderno y vibrante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y especiales donde quieras transmitir elegancia, vitalidad y un carácter envolvente con un toque frutal, floral y almizclado."
+  },
+        {
+      "id": "montale-orchid-powder-edp-100ml",
+    "acordes": ["Dulce", "Floral Amarillo", "Coco"],
+    "notas_salida": ["Orquídea"],
+    "notas_corazon": ["Flores Blancas", "Ylang-Ylang"],
+    "notas_base": ["Coco"],
+    "descripcion": "Una fragancia unisex floral delicada y envolvente, con un aire sofisticado y sensual. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y especiales donde quieras transmitir elegancia, frescura y un carácter cautivador con un toque floral, exótico y cremoso"
+  },
+        {
+      "id": "montale-sandflowers-edp-100ml",
+    "acordes": ["Aromático", "Amaderado", "Marino"],
+    "notas_salida": ["Enebro"],
+    "notas_corazon": ["Agua de Mar"],
+    "notas_base": ["Musgo de Roble", "Sándalo"],
+    "descripcion": "Una fragancia unisex amaderada aromática fresca y sofisticada, con un aire moderno y vibrante. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y especiales donde quieras transmitir energía, vitalidad y un carácter envolvente con un toque marino, herbal y amaderado."
+  },
+       {
+      "id": "montale-white-aoud-edp-100ml",
+    "acordes": ["Cálido Especiado", "Amaderado", "Oud"],
+    "notas_salida": ["Cardamomo", "Ládano Francés", "Azafrán"],
+    "notas_corazon": ["Rosa", "Pachulí", "Jazmín"],
+    "notas_base": ["Musgo de Roble", "Oud", "Sándalo", "Ámbar", "Vainilla"],
+    "descripcion": "Una fragancia unisex almizclada floral amaderada intensa y sofisticada, con un aire majestuoso y envolvente. Perfecta para climas templados y fríos, ideal en ocasiones nocturnas y especiales donde quieras transmitir elegancia, misterio y un carácter profundo con un toque oriental, especiado y amaderado."
+  },
+       {
+      "id": "montale-dark-aoud-100ml",
+    "acordes": ["Oud", "Amaderado", "Atalcado"],
+    "notas_salida": ["Oud"],
+    "notas_corazon": ["Oud"],
+    "notas_base": ["Sándalo"],
+    "descripcion": "Una fragancia unisex amaderada intensa y enigmática, con un aire sofisticado y profundo. Perfecta para climas fríos y templados, ideal en ocasiones nocturnas y especiales donde quieras transmitir misterio, elegancia y un carácter envolvente con un toque oriental y amaderado."
+  },
+       {
+      "id": "versace-eros-energy-edp-100ml-tester",
+    "acordes": ["Aromático", "Cítrico", "Fresco Especiado"],
+    "notas_salida": ["Limón", "Lima", "Toronja", "Naranja Sanguina", "Bergamota", "Mandarina"],
+    "notas_corazon": ["Pimienta Rosa", "Ámbar Blanco", "Grosellas Negras"],
+    "notas_base": ["Musgo de Roble", "Almizcle", "Pachulí"],
+    "descripcion": "Una fragancia masculina cítrica aromática fresca y vibrante, con un aire moderno y dinámico. Perfecta para climas cálidos y templados, ideal en ocasiones diurnas y especiales donde quieras transmitir energía, vitalidad y un carácter envolvente con un toque cítrico, especiado y amaderado."
+  },
+      {
+      "id": "versace-eros-edp-tester",
+    "acordes": ["Aromático", "Cítrico", "Verde"],
+    "notas_salida": ["Menta", "Manzana Acaramelada", "Limón", "Mandarina"],
+    "notas_corazon": ["Ambroxan", "Geranio", "Esclarea"],
+    "notas_base": ["Vainilla", "Cedro", "Sándalo", "Naranja Amarga", "Pachulí", "Cuero"],
+    "descripcion": "Una fragancia masculina oriental amaderada intensa y sofisticada, con un aire moderno y seductor. Perfecta para climas templados y fríos, ideal en ocasiones nocturnas y especiales donde quieras transmitir elegancia, fuerza y un carácter envolvente con un toque especiado, cítrico y amaderado."
+  },
+      {
+      "id": "versace-eros-flame-edp-tester",
+    "acordes": ["Cítrico", "Fresco Especiado", "Avainillado"],
+    "notas_salida": ["Mandarina", "Pimienta de Madagascar", "Limón", "Chonotto"],
+    "notas_corazon": ["Geranio", "Rosa", "Pepperwood"],
+    "notas_base": ["Vainilla", "Haba Tonka", "Sándalo", "Cedro de Texas", "Musgo de Roble"],
+    "descripcion": "Una fragancia masculina amaderada especiada intensa y apasionada, con un aire moderno y vibrante. Perfecta para climas templados y fríos, ideal en ocasiones nocturnas y especiales donde quieras transmitir fuerza, elegancia y un carácter envolvente con un toque cítrico, especiado y amaderado."
+  },
+      {
+      "id": "montale-white-aoud-edp-100ml",
+    "acordes": ["Cálido Especiado", "Amaderado", "Oud"],
+    "notas_salida": ["Cardamomo", "Ládano Francés", "Azafrán"],
+    "notas_corazon": ["Rosa", "Pachulí", "Jazmín"],
+    "notas_base": ["Musgo de Roble", "Oud", "Sándalo", "Ámbar", "Vainilla"],
+    "descripcion": "Una fragancia unisex almizclada floral amaderada intensa y sofisticada, con un aire majestuoso y envolvente. Perfecta para climas templados y fríos, ideal en ocasiones nocturnas y especiales donde quieras transmitir elegancia, misterio y un carácter profundo con un toque oriental, especiado y amaderado."
+  },
+      {
+      "id": "montale-white-aoud-edp-100ml",
+    "acordes": ["Cálido Especiado", "Amaderado", "Oud"],
+    "notas_salida": ["Cardamomo", "Ládano Francés", "Azafrán"],
+    "notas_corazon": ["Rosa", "Pachulí", "Jazmín"],
+    "notas_base": ["Musgo de Roble", "Oud", "Sándalo", "Ámbar", "Vainilla"],
+    "descripcion": "Una fragancia unisex almizclada floral amaderada intensa y sofisticada, con un aire majestuoso y envolvente. Perfecta para climas templados y fríos, ideal en ocasiones nocturnas y especiales donde quieras transmitir elegancia, misterio y un carácter profundo con un toque oriental, especiado y amaderado."
+  },
 ]
