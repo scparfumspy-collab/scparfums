@@ -2044,7 +2044,7 @@
   },
         {
       "id": "montale-boise-vanille-edp-100ml",
-   "nombre": "Boise Vanille EDP 100ml Tester",
+   "nombre": "Boise Vanille EDP 100ml",
     "marca": "Montale",
     "imagen": "imagenes/perfumes/montale-boise-vanille-edp-100ml.png",
     "pagina": "detalle/detalle.html?id=montale-boise-vanille-edp-100ml",
@@ -2053,11 +2053,101 @@
   },
         {
       "id": "montale-chypre-fruite-edp-100ml",
-   "nombre": "Chypre Fruite EDP 100ml Tester",
+   "nombre": "Chypre Fruite EDP 100ml",
     "marca": "Montale",
     "imagen": "imagenes/perfumes/montale-chypre-fruite-edp-100ml.png",
     "pagina": "detalle/detalle.html?id=montale-chypre-fruite-edp-100ml",
     "categoria": "unisex",
     "categoria2": "Diseñador"
-  }
+  },
+       {
+      "id": "montale-fruits-of-the-musk-edp-100ml",
+   "nombre": "Fruits Of The Mousk EDP 100ml",
+    "marca": "Montale",
+    "imagen": "imagenes/perfumes/montale-fruits-of-the-musk-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=montale-fruits-of-the-musk-edp-100ml",
+    "categoria": "femeninos",
+    "categoria2": "Diseñador"
+  },
+       {
+      "id": "montale-orchid-powder-edp-100ml",
+   "nombre": "Orchid Powder EDP 100ml",
+    "marca": "Montale",
+    "imagen": "imagenes/perfumes/montale-orchid-powder-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=montale-orchid-powder-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Diseñador"
+  },
+       {
+      "id": "montale-sandflowers-edp-100ml",
+   "nombre": "Sandflowers EDP 100ml",
+    "marca": "Montale",
+    "imagen": "imagenes/perfumes/montale-sandflowers-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=montale-sandflowers-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Diseñador"
+  },
+    {
+      "id": "montale-white-aoud-edp-100ml",
+   "nombre": "White Aoud EDP 100ml",
+    "marca": "Montale",
+    "imagen": "imagenes/perfumes/montale-white-aoud-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=montale-white-aoud-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Diseñador"
+  },
+    {
+      "id": "montale-dark-aoud-100ml",
+   "nombre": "Dark Oud EDP 100ml",
+    "marca": "Montale",
+    "imagen": "imagenes/perfumes/montale-dark-aoud-100ml.png",
+    "pagina": "detalle/detalle.html?id=montale-dark-aoud-100ml",
+    "categoria": "unisex",
+    "categoria2": "Diseñador"
+  },
+    {
+      "id": "versace-eros-energy-edp-100ml-tester",
+   "nombre": "Eros Energy EDP 100ml Tester",
+    "marca": "Versace",
+    "imagen": "imagenes/perfumes/versace-eros-energy-edp-100ml-tester.png",
+    "pagina": "detalle/detalle.html?id=versace-eros-energy-edp-100ml-tester",
+    "categoria": "masculinos",
+    "categoria2": "Diseñador"
+  },
+   {
+      "id": "versace-eros-edp-tester",
+   "nombre": "Eros EDP 100ml Tester",
+    "marca": "Versace",
+    "imagen": "imagenes/perfumes/versace-eros-edp-tester.png",
+    "pagina": "detalle/detalle.html?id=versace-eros-edp-tester",
+    "categoria": "masculinos",
+    "categoria2": "Diseñador"
+  },
+     {
+      "id": "versace-eros-flame-edp-tester",
+   "nombre": "Eros Flame EDP 100ml Tester",
+    "marca": "Versace",
+    "imagen": "imagenes/perfumes/versace-eros-flame-edp-tester.png",
+    "pagina": "detalle/detalle.html?id=versace-eros-flame-edp-tester",
+    "categoria": "unisex",
+    "categoria2": "Diseñador"
+  },
+     {
+      "id": "montale-white-aoud-edp-100ml",
+   "nombre": "White Aoud EDP 100ml",
+    "marca": "Montale",
+    "imagen": "imagenes/perfumes/montale-white-aoud-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=montale-white-aoud-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Diseñador"
+  },
+     {
+      "id": "montale-white-aoud-edp-100ml",
+   "nombre": "White Aoud EDP 100ml",
+    "marca": "Montale",
+    "imagen": "imagenes/perfumes/montale-white-aoud-edp-100ml.png",
+    "pagina": "detalle/detalle.html?id=montale-white-aoud-edp-100ml",
+    "categoria": "unisex",
+    "categoria2": "Diseñador"
+  },
   ]
