@@ -179,6 +179,12 @@ nav a:hover {
   background-size: cover;
   background-color: #000;
   height: 400px;
+
+  .hero-contacto {
+  background: url('../imagenes/backgrounds/background-contacto.png') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  height: 400px;
 }
 
 /* ===== INDEX CATEGORY CARDS (Árabes, Diseñador, Nicho, Decants) ===== */
