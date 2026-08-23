@@ -272,7 +272,7 @@ const relacionados = detalles.filter(p => {
   const coincidenciasA = a.acordes.filter(ac => acordesActual.includes(ac.toLowerCase())).length;
   const coincidenciasB = b.acordes.filter(ac => acordesActual.includes(ac.toLowerCase())).length;
   return coincidenciasB - coincidenciasA;
-}).slice(0, 8);
+}).slice(0, 12);
 
 const relacionadosContainer = document.getElementById("relacionados-container");
 relacionados.forEach(p => {
@@ -294,7 +294,7 @@ relacionados.forEach(p => {
 });
 
 // --- Más de esta marca ---
-const mismosMarca = catalogo.filter(p => p.marca === datosBasicos.marca && p.id !== id).slice(0, 8);
+const mismosMarca = catalogo.filter(p => p.marca === datosBasicos.marca && p.id !== id).slice(0, 12);
 
 // Cambiar título dinámico según la marca
 const marcaSectionTitle = document.querySelector(".marca-section h2");
@@ -316,10 +316,7 @@ mismosMarca.forEach(p => {
   });
   marcaContainer.appendChild(card);
 });
-
-
-
-    
+   
     
   } catch (error) {
     console.error("Error cargando detalle:", error);
