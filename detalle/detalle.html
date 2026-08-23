@@ -258,66 +258,59 @@ contenedor.innerHTML = `
     const btnWhats = document.getElementById("btn-whatsapp");
     btnWhats.href = `https://wa.me/595991861112?text=Hola, quiero consultar por el perfume ${perfume.nombre || perfume.id}`;
 
-    // --- Productos relacionados ---
-    const acordesActual = Array.isArray(perfume.acordes)
-      ? perfume.acordes.map(a => a.toLowerCase())
-      : perfume.acordes.split(",").map(a => a.trim().toLowerCase());
+   // --- Productos relacionados ---
+const acordesActual = perfume.acordes.map(a => a.toLowerCase());
 
-    const relacionados = catalogo.filter(p => {
-      if (p.id === id) return false; // excluir el mismo perfume
-      if (!p.acordes) return false;
+const relacionados = detalles.filter(p => {
+  if (p.id === id) return false; // excluir el mismo perfume
+  if (!p.acordes) return false;
 
-      const acordesP = Array.isArray(p.acordes)
-        ? p.acordes.map(a => a.toLowerCase())
-        : p.acordes.split(",").map(a => a.trim().toLowerCase());
+  const acordesP = p.acordes.map(a => a.toLowerCase());
+  const coincidencias = acordesP.filter(a => acordesActual.includes(a));
+  return coincidencias.length > 0;
+}).sort((a, b) => {
+  const coincidenciasA = a.acordes.filter(ac => acordesActual.includes(ac.toLowerCase())).length;
+  const coincidenciasB = b.acordes.filter(ac => acordesActual.includes(ac.toLowerCase())).length;
+  return coincidenciasB - coincidenciasA;
+}).slice(0, 8);
 
-      const coincidencias = acordesP.filter(a => acordesActual.includes(a));
-      return coincidencias.length > 0;
-    }).sort((a, b) => {
-      const acordesA = Array.isArray(a.acordes)
-        ? a.acordes.map(ac => ac.toLowerCase())
-        : a.acordes.split(",").map(ac => ac.trim().toLowerCase());
-      const acordesB = Array.isArray(b.acordes)
-        ? b.acordes.map(ac => ac.toLowerCase())
-        : b.acordes.split(",").map(ac => ac.trim().toLowerCase());
+const relacionadosContainer = document.getElementById("relacionados-container");
+relacionados.forEach(p => {
+  // Buscar datos básicos en perfumes.json
+  const datosCatalogo = catalogo.find(c => c.id === p.id);
+  if (!datosCatalogo) return;
 
-      const coincidenciasA = acordesA.filter(ac => acordesActual.includes(ac)).length;
-      const coincidenciasB = acordesB.filter(ac => acordesActual.includes(ac)).length;
-      return coincidenciasB - coincidenciasA;
-    }).slice(0, 8);
+  const card = document.createElement("div");
+  card.className = "perfume-card";
+  card.innerHTML = `
+    <img src="../${datosCatalogo.imagen}" alt="${datosCatalogo.nombre}">
+    <p><strong>${datosCatalogo.nombre}</strong></p>
+    <p>${datosCatalogo.marca}</p>
+  `;
+  card.addEventListener("click", () => {
+    window.location.href = `detalle.html?id=${p.id}`;
+  });
+  relacionadosContainer.appendChild(card);
+});
 
-    const relacionadosContainer = document.getElementById("relacionados-container");
-    relacionados.forEach(p => {
-      const card = document.createElement("div");
-      card.className = "perfume-card";
-      card.innerHTML = `
-        <img src="../${p.imagen}" alt="${p.nombre}">
-        <p><strong>${p.nombre}</strong></p>
-        <p>${p.marca}</p>
-      `;
-      card.addEventListener("click", () => {
-        window.location.href = \`detalle.html?id=\${p.id}\`;
-      });
-      relacionadosContainer.appendChild(card);
-    });
+// --- Más de esta marca ---
+const mismosMarca = catalogo.filter(p => p.marca === datosBasicos.marca && p.id !== id).slice(0, 8);
 
-    // --- Más de esta marca ---
-    const mismosMarca = catalogo.filter(p => p.marca === datosBasicos.marca && p.id !== id).slice(0, 8);
+const marcaContainer = document.getElementById("marca-container");
+mismosMarca.forEach(p => {
+  const card = document.createElement("div");
+  card.className = "perfume-card";
+  card.innerHTML = `
+    <img src="../${p.imagen}" alt="${p.nombre}">
+    <p><strong>${p.nombre}</strong></p>
+    <p>${p.marca}</p>
+  `;
+  card.addEventListener("click", () => {
+    window.location.href = `detalle.html?id=${p.id}`;
+  });
+  marcaContainer.appendChild(card);
+});
 
-    const marcaContainer = document.getElementById("marca-container");
-    mismosMarca.forEach(p => {
-      const card = document.createElement("div");
-      card.className = "perfume-card";
-      card.innerHTML = `
-        <img src="../${p.imagen}" alt="${p.nombre}">
-        <p><strong>${p.nombre}</strong></p>
-        <p>${p.marca}</p>
-      `;
-      card.addEventListener("click", () => {
-        window.location.href = \`detalle.html?id=\${p.id}\`;
-      });
-      marcaContainer.appendChild(card);
-    });
 
     
     
