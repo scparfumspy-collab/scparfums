@@ -296,3 +296,66 @@ footer a:hover {
   padding: 4px 8px;
   border-radius: 4px;
 }
+
+/*Scroll de perfumes Relacionados */
+.barra-scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.barra-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding: 10px;
+}
+
+.barra-scroll::-webkit-scrollbar {
+  display: none; /* ocultar scrollbar */
+}
+
+.perfume-card {
+  flex: 0 0 auto;
+  width: 180px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.perfume-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.perfume-card:hover {
+  transform: scale(1.05);
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
