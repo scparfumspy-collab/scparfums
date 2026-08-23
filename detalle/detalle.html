@@ -321,6 +321,17 @@ mismosMarca.forEach(p => {
 }
 
 cargarDetalle();
+  
+document.querySelectorAll(".barra-scroll-wrapper").forEach(wrapper => {
+  const scrollBox = wrapper.querySelector(".barra-scroll");
+  wrapper.querySelector(".scroll-btn.left").addEventListener("click", () => {
+    scrollBox.scrollBy({ left: -300, behavior: "smooth" });
+  });
+  wrapper.querySelector(".scroll-btn.right").addEventListener("click", () => {
+    scrollBox.scrollBy({ left: 300, behavior: "smooth" });
+  });
+});
+ 
 </script>
 
 </body>
