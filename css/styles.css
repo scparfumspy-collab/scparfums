@@ -298,19 +298,22 @@ footer a:hover {
 }
 
 /*Scroll de perfumes Relacionados */
+/* Secciones de carrusel */
 .relacionados-section, .marca-section {
-  max-width: 1200px;
-  margin: 50px auto;   /* más margen arriba y abajo */
-  padding: 0 40px;     /* margen lateral más amplio */
+  max-width: 1100px;
+  margin: 30px auto;     /* margen vertical moderado */
+  padding: 0 30px;       /* margen lateral */
 }
 
+/* Títulos más discretos */
 .relacionados-section h2, .marca-section h2 {
-  color: #d32f2f;
-  margin-bottom: 20px; /* más espacio entre título y carrusel */
-  font-size: 1.6em;
-  text-align: left;
+  color: #b71c1c;        /* rojo más sobrio */
+  margin-bottom: 12px;   /* menos espacio */
+  font-size: 1.2em;      /* más pequeño */
+  font-weight: 600;
 }
 
+/* Contenedor scroll */
 .barra-scroll-wrapper {
   position: relative;
   overflow: hidden;
@@ -320,59 +323,63 @@ footer a:hover {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 20px;           /* más espacio entre tarjetas */
-  padding: 10px 0;
+  gap: 12px;             /* espacio entre tarjetas */
+  padding: 5px 0;
 }
 
 .barra-scroll::-webkit-scrollbar {
   display: none;
 }
 
+/* Tarjetas compactas */
 .perfume-card {
   flex: 0 0 auto;
-  width: 150px;        /* más pequeñas que antes */
+  width: 140px;          /* ancho compacto */
+  height: 200px;         /* más cortas */
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 6px;
   text-align: center;
   background: #fff;
-  padding: 8px;
+  padding: 6px;
   cursor: pointer;
   transition: transform 0.2s;
 }
 
 .perfume-card img {
   width: 100%;
-  height: auto;
-  border-radius: 6px;
+  height: 130px;         /* imagen más baja */
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.perfume-card p {
+  font-size: 0.8em;      /* texto más discreto */
+  margin: 3px 0;
 }
 
 .perfume-card:hover {
   transform: scale(1.05);
 }
 
+/* Botones scroll */
 .scroll-btn {
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.4);
   color: #fff;
   border: none;
-  font-size: 24px;
+  font-size: 20px;       /* más pequeños */
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 4px 8px;
   z-index: 10;
 }
 
 .scroll-btn.left {
-  left: 10px;   /* un poco separado del borde */
+  left: 10px;
 }
 
 .scroll-btn.right {
   right: 10px;
-}
-
-
-.scroll-btn.right {
-  right: 0;
 }
 
