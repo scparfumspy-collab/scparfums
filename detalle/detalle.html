@@ -296,6 +296,12 @@ relacionados.forEach(p => {
 // --- Más de esta marca ---
 const mismosMarca = catalogo.filter(p => p.marca === datosBasicos.marca && p.id !== id).slice(0, 8);
 
+// Cambiar título dinámico según la marca
+const marcaSectionTitle = document.querySelector(".marca-section h2");
+if (marcaSectionTitle) {
+  marcaSectionTitle.textContent = `Más perfumes de ${datosBasicos.marca}`;
+}
+
 const marcaContainer = document.getElementById("marca-container");
 mismosMarca.forEach(p => {
   const card = document.createElement("div");
@@ -310,6 +316,7 @@ mismosMarca.forEach(p => {
   });
   marcaContainer.appendChild(card);
 });
+
 
 
     
