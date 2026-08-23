@@ -328,6 +328,17 @@ mismosMarca.forEach(p => {
 }
 
 cargarDetalle();
+
+  // Permitir scroll horizontal con la rueda del mouse
+document.querySelectorAll(".barra-scroll").forEach(scrollBox => {
+  scrollBox.addEventListener("wheel", (e) => {
+    e.preventDefault(); // evita el scroll vertical
+    scrollBox.scrollBy({
+      left: e.deltaY < 0 ? -100 : 100, // mueve a izquierda/derecha
+      behavior: "smooth"
+    });
+  });
+});
   
 document.querySelectorAll(".barra-scroll-wrapper").forEach(wrapper => {
   const scrollBox = wrapper.querySelector(".barra-scroll");
