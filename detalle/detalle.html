@@ -259,15 +259,30 @@ contenedor.innerHTML = `
     btnWhats.href = `https://wa.me/595991861112?text=Hola, quiero consultar por el perfume ${perfume.nombre || perfume.id}`;
 
     // --- Productos relacionados ---
-    const acordesActual = perfume.acordes.map(a => a.toLowerCase());
+    const acordesActual = Array.isArray(perfume.acordes)
+      ? perfume.acordes.map(a => a.toLowerCase())
+      : perfume.acordes.split(",").map(a => a.trim().toLowerCase());
+
     const relacionados = catalogo.filter(p => {
       if (p.id === id) return false; // excluir el mismo perfume
       if (!p.acordes) return false;
-      const coincidencias = p.acordes.filter(a => acordesActual.includes(a.toLowerCase()));
+
+      const acordesP = Array.isArray(p.acordes)
+        ? p.acordes.map(a => a.toLowerCase())
+        : p.acordes.split(",").map(a => a.trim().toLowerCase());
+
+      const coincidencias = acordesP.filter(a => acordesActual.includes(a));
       return coincidencias.length > 0;
     }).sort((a, b) => {
-      const coincidenciasA = a.acordes.filter(ac => acordesActual.includes(ac.toLowerCase())).length;
-      const coincidenciasB = b.acordes.filter(ac => acordesActual.includes(ac.toLowerCase())).length;
+      const acordesA = Array.isArray(a.acordes)
+        ? a.acordes.map(ac => ac.toLowerCase())
+        : a.acordes.split(",").map(ac => ac.trim().toLowerCase());
+      const acordesB = Array.isArray(b.acordes)
+        ? b.acordes.map(ac => ac.toLowerCase())
+        : b.acordes.split(",").map(ac => ac.trim().toLowerCase());
+
+      const coincidenciasA = acordesA.filter(ac => acordesActual.includes(ac)).length;
+      const coincidenciasB = acordesB.filter(ac => acordesActual.includes(ac)).length;
       return coincidenciasB - coincidenciasA;
     }).slice(0, 8);
 
@@ -281,7 +296,7 @@ contenedor.innerHTML = `
         <p>${p.marca}</p>
       `;
       card.addEventListener("click", () => {
-        window.location.href = `detalle.html?id=${p.id}`;
+        window.location.href = \`detalle.html?id=\${p.id}\`;
       });
       relacionadosContainer.appendChild(card);
     });
@@ -299,9 +314,11 @@ contenedor.innerHTML = `
         <p>${p.marca}</p>
       `;
       card.addEventListener("click", () => {
-        window.location.href = `detalle.html?id=${p.id}`;
+        window.location.href = \`detalle.html?id=\${p.id}\`;
       });
       marcaContainer.appendChild(card);
+    });
+
     
     
   } catch (error) {
