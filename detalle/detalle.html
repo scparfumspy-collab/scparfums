@@ -94,6 +94,26 @@
   <a id="btn-whatsapp" href="#" target="_blank">Consultar por WhatsApp</a>
 </div>
 
+  <!-- Productos relacionados -->
+<section class="relacionados-section">
+  <h2>Productos relacionados</h2>
+  <div class="barra-scroll-wrapper">
+    <button class="scroll-btn left">‹</button>
+    <div class="barra-scroll" id="relacionados-container"></div>
+    <button class="scroll-btn right">›</button>
+  </div>
+</section>
+
+<!-- Más de esta marca -->
+<section class="marca-section">
+  <h2>Más de esta marca</h2>
+  <div class="barra-scroll-wrapper">
+    <button class="scroll-btn left">‹</button>
+    <div class="barra-scroll" id="marca-container"></div>
+    <button class="scroll-btn right">›</button>
+  </div>
+</section>
+
 <!-- Info extra (igual que en categorías) -->
 <section class="info-section">
   <div class="info-card">
@@ -237,6 +257,53 @@ contenedor.innerHTML = `
 
     const btnWhats = document.getElementById("btn-whatsapp");
     btnWhats.href = `https://wa.me/595991861112?text=Hola, quiero consultar por el perfume ${perfume.nombre || perfume.id}`;
+
+    // --- Productos relacionados ---
+    const acordesActual = perfume.acordes.map(a => a.toLowerCase());
+    const relacionados = catalogo.filter(p => {
+      if (p.id === id) return false; // excluir el mismo perfume
+      if (!p.acordes) return false;
+      const coincidencias = p.acordes.filter(a => acordesActual.includes(a.toLowerCase()));
+      return coincidencias.length > 0;
+    }).sort((a, b) => {
+      const coincidenciasA = a.acordes.filter(ac => acordesActual.includes(ac.toLowerCase())).length;
+      const coincidenciasB = b.acordes.filter(ac => acordesActual.includes(ac.toLowerCase())).length;
+      return coincidenciasB - coincidenciasA;
+    }).slice(0, 8);
+
+    const relacionadosContainer = document.getElementById("relacionados-container");
+    relacionados.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "perfume-card";
+      card.innerHTML = `
+        <img src="../${p.imagen}" alt="${p.nombre}">
+        <p><strong>${p.nombre}</strong></p>
+        <p>${p.marca}</p>
+      `;
+      card.addEventListener("click", () => {
+        window.location.href = `detalle.html?id=${p.id}`;
+      });
+      relacionadosContainer.appendChild(card);
+    });
+
+    // --- Más de esta marca ---
+    const mismosMarca = catalogo.filter(p => p.marca === datosBasicos.marca && p.id !== id).slice(0, 8);
+
+    const marcaContainer = document.getElementById("marca-container");
+    mismosMarca.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "perfume-card";
+      card.innerHTML = `
+        <img src="../${p.imagen}" alt="${p.nombre}">
+        <p><strong>${p.nombre}</strong></p>
+        <p>${p.marca}</p>
+      `;
+      card.addEventListener("click", () => {
+        window.location.href = `detalle.html?id=${p.id}`;
+      });
+      marcaContainer.appendChild(card);
+    
+    
   } catch (error) {
     console.error("Error cargando detalle:", error);
     contenedor.innerHTML = '<p>Error al cargar detalles.</p>';
